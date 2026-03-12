@@ -1,0 +1,123 @@
+---
+/**
+ * pSEO 2.0: /estatura/[cm] — "¿Qué famosos miden Xcm?"
+ * Genera una página por cada valor de cm que tiene al menos 1 famoso.
+ * Patrón escalable: añadir famosos al JSON → páginas nuevas automáticas.
+ */
+import Base from '../../layouts/Base.astro';
+import famososData from '../../data/famosos.json';
+
+export function getStaticPaths() {
+  // Get unique heights that have at least one celebrity
+  const heights = [...new Set(famososData.map(f => f.estaturaCm))].sort((a, b) => a - b);
+  return heights.map(cm => ({
+    params: { cm: String(cm) },
+    props: { cm },
+  }));
+}
+
+const { cm } = Astro.props;
+
+const cmToFtIn = (cm: number) => {
+  const i = cm / 2.54, ft = Math.floor(i / 12);
+  return `${ft}'${Math.round(i % 12)}"`;
+};
+
+const exact = famososData.filter(f => f.estaturaCm === cm);
+const nearby = famososData.filter(f => Math.abs(f.estaturaCm - cm) <= 2 && f.estaturaCm !== cm);
+const ftIn = cmToFtIn(cm);
+
+const PROMEDIO_H = 176, PROMEDIO_M = 163;
+const diff = cm - PROMEDIO_H;
+const diffM = cm - PROMEDIO_M;
+---
+<Base
+  title={`Famosos que miden ${cm}cm (${ftIn}) | estaturas.com`}
+  description={`${exact.length > 0 ? exact.map(f => f.nombre).join(', ') + ' miden' : 'Famosos que miden'} ${cm}cm (${ftIn}). ${exact.length + nearby.length} celebridades con esta estatura aproximada.`}
+>
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <a href="/calculadora-estatura" class="hover:text-slate-300 transition-colors">Estaturas</a>
+      <span>›</span>
+      <span class="text-slate-300">{cm}cm</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">
+      Famosos que miden {cm}cm
+    </h1>
+    <p class="text-slate-400 text-lg mb-2">{ftIn} en pies y pulgadas</p>
+    <p class="text-slate-500 mb-10">
+      {diff > 0 ? `${diff}cm por encima` : `${Math.abs(diff)}cm por debajo`} del promedio masculino español (176cm) ·
+      {diffM > 0 ? `${diffM}cm por encima` : `${Math.abs(diffM)}cm por debajo`} del femenino (163cm)
+    </p>
+
+    {exact.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-white mb-4">Miden exactamente {cm}cm</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {exact.map(f => (
+            <a href={`/${f.id}`}
+              class="glass rounded-2xl p-4 text-center transition-all hover:-translate-y-1 group"
+              onmouseover={`this.style.borderColor='${f.color}44'`}
+              onmouseout={`this.style.borderColor=''`}>
+              <span class="text-2xl block mb-2">{f.bandera}</span>
+              <p class="text-white font-bold text-sm group-hover:text-sky-400 transition-colors">{f.nombre}</p>
+              <p class="text-xs mt-1 font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm · {ftIn}</p>
+              <p class="text-slate-500 text-xs">{f.profesion?.split('/')[0].trim()}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {nearby.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-white mb-4">Miden casi lo mismo (±2cm)</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {nearby.map(f => (
+            <a href={`/${f.id}`}
+              class="glass rounded-2xl p-4 text-center transition-all hover:-translate-y-1 group"
+              style={`opacity: 0.85`}>
+              <span class="text-2xl block mb-2">{f.bandera}</span>
+              <p class="text-white font-semibold text-sm group-hover:text-sky-400 transition-colors">{f.nombre}</p>
+              <p class="text-xs mt-1" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- CTA -->
+    <div class="glass rounded-2xl p-6 text-center">
+      <p class="text-slate-400 mb-4">¿Tú también mides {cm}cm? Compárate con estos famosos.</p>
+      <a href="/"
+        class="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white"
+        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        🔄 Abrir comparador
+      </a>
+    </div>
+
+    <!-- Browse nearby heights -->
+    <div class="mt-10">
+      <p class="text-slate-500 text-sm mb-3">Otras estaturas:</p>
+      <div class="flex flex-wrap gap-2">
+        {[-5, -4, -3, -2, -1, 1, 2, 3, 4, 5].map(offset => {
+          const targetCm = cm + offset;
+          const hasFamous = famososData.some(f => f.estaturaCm === targetCm);
+          if (!hasFamous) return null;
+          return (
+            <a href={`/estatura/${targetCm}`}
+              class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+              {targetCm}cm
+            </a>
+          );
+        })}
+        <a href="/calculadora-estatura" class="glass px-3 py-1.5 rounded-full text-sm text-sky-400 hover:text-sky-300 transition-colors">
+          Ver tabla completa →
+        </a>
+      </div>
+    </div>
+  </div>
+</Base>

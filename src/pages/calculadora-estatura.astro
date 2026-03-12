@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+import famososData from '../data/famosos.json';
+
+const cmToFtIn = (cm: number) => {
+  const i = cm / 2.54, ft = Math.floor(i / 12);
+  return `${ft}'${Math.round(i % 12)}"`;
+};
+
+const TABLE_HEIGHTS = [142,155,157,160,163,165,168,170,172,173,175,176,178,179,180,182,184,185,186,187,188,190,192,194,195,198,206,216];
+const tableRows = TABLE_HEIGHTS.map(h => ({
+  h,
+  ftIn: cmToFtIn(h),
+  m: (h / 100).toFixed(2),
+  similar: famososData.find(f => {
+    const diff = f.estaturaCm - h;
+    return diff >= -1 && diff <= 1;
+  }) ?? null,
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Estatura — ¿Cuánto mides en pies?",
+  "url": "https://estaturas.com/calculadora-estatura",
+  "description": "Convierte tu estatura de centímetros a pies y pulgadas. Compárate con famosos.",
+  "applicationCategory": "UtilityApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+};
+---
+<Base
+  title="Calculadora de Estatura: cm a pies y pulgadas | estaturas.com"
+  description="Convierte tu estatura de centímetros a pies y pulgadas al instante. Descubre con qué famoso compartes altura. Gratis."
+  schema={schema}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <nav class="text-sm text-slate-500 mb-8 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <span class="text-slate-300">Calculadora de estatura</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-3">
+      Calculadora de estatura
+    </h1>
+    <p class="text-slate-400 text-lg mb-10">
+      Convierte entre centímetros, metros, pies y pulgadas. Y compárate con tus famosos favoritos.
+    </p>
+
+    <!-- Interactive calculator (progressive enhancement) -->
+    <div class="glass rounded-2xl p-6 sm:p-8 mb-10" id="calc">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label class="block text-slate-400 text-sm font-semibold mb-2 uppercase tracking-wider">Centímetros</label>
+          <input type="number" id="input-cm" min="50" max="280" placeholder="ej: 175"
+            class="w-full text-3xl font-black text-white bg-transparent border-b-2 border-slate-700 focus:border-sky-500 outline-none py-2 transition-colors"
+          />
+        </div>
+        <div>
+          <label class="block text-slate-400 text-sm font-semibold mb-2 uppercase tracking-wider">Pies y pulgadas</label>
+          <div class="flex gap-3 items-end">
+            <div class="flex-1">
+              <input type="number" id="input-ft" min="1" max="9" placeholder="5"
+                class="w-full text-3xl font-black text-white bg-transparent border-b-2 border-slate-700 focus:border-sky-500 outline-none py-2 transition-colors"
+              />
+              <span class="text-slate-500 text-xs">pies</span>
+            </div>
+            <div class="flex-1">
+              <input type="number" id="input-in" min="0" max="11" placeholder="9"
+                class="w-full text-3xl font-black text-white bg-transparent border-b-2 border-slate-700 focus:border-sky-500 outline-none py-2 transition-colors"
+              />
+              <span class="text-slate-500 text-xs">pulgadas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="result" class="hidden">
+        <div class="border-t border-slate-800 pt-5 space-y-3">
+          <div class="flex flex-wrap gap-4">
+            <div class="glass rounded-xl px-4 py-3 text-center">
+              <p class="text-slate-500 text-xs uppercase tracking-wider mb-1">Centímetros</p>
+              <p id="r-cm" class="text-2xl font-black text-white">—</p>
+            </div>
+            <div class="glass rounded-xl px-4 py-3 text-center">
+              <p class="text-slate-500 text-xs uppercase tracking-wider mb-1">Pies/Pulgadas</p>
+              <p id="r-ftIn" class="text-2xl font-black text-white">—</p>
+            </div>
+            <div class="glass rounded-xl px-4 py-3 text-center">
+              <p class="text-slate-500 text-xs uppercase tracking-wider mb-1">Metros</p>
+              <p id="r-m" class="text-2xl font-black text-white">—</p>
+            </div>
+          </div>
+          <div id="similar-wrap" class="mt-4"></div>
+          <a id="compare-link" href="/"
+            class="btn-glow inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white text-sm mt-2"
+            style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+            🔄 Comparar con famosos
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversion table -->
+    <h2 class="text-2xl font-black text-white mb-4">Tabla de conversión de estaturas</h2>
+    <div class="glass rounded-2xl overflow-hidden">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-800 text-slate-500 text-xs uppercase tracking-wider">
+            <th class="px-4 py-3 text-left">Centímetros</th>
+            <th class="px-4 py-3 text-left">Metros</th>
+            <th class="px-4 py-3 text-left">Pies y pulgadas</th>
+            <th class="px-4 py-3 text-left hidden sm:table-cell">Famoso con esa estatura</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/50">
+          {tableRows.map(row => (
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="px-4 py-2.5 font-bold text-white">{row.h}cm</td>
+              <td class="px-4 py-2.5 text-slate-400">{row.m}m</td>
+              <td class="px-4 py-2.5 text-slate-400">{row.ftIn}</td>
+              <td class="px-4 py-2.5 hidden sm:table-cell">
+                {row.similar ? (
+                  <a href={`/${row.similar.id}`}
+                    class="text-sm font-semibold hover:text-sky-400 transition-colors"
+                    style={`color:${row.similar.color}`}>
+                    {row.similar.nombre}
+                  </a>
+                ) : null}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Base>
+
+<script>
+  // Calculator logic
+  const inputCm = document.getElementById('input-cm') as HTMLInputElement;
+  const inputFt = document.getElementById('input-ft') as HTMLInputElement;
+  const inputIn = document.getElementById('input-in') as HTMLInputElement;
+  const resultDiv = document.getElementById('result')!;
+  const rCm = document.getElementById('r-cm')!;
+  const rFtIn = document.getElementById('r-ftIn')!;
+  const rM = document.getElementById('r-m')!;
+  const compareLink = document.getElementById('compare-link') as HTMLAnchorElement;
+
+  const toFtIn = (cm: number) => {
+    const totalIn = cm / 2.54;
+    const ft = Math.floor(totalIn / 12);
+    const inLeft = Math.round(totalIn % 12);
+    return { ft, in: inLeft, str: `${ft}'${inLeft}"` };
+  };
+
+  const updateFromCm = (cm: number) => {
+    if (isNaN(cm) || cm < 50 || cm > 280) return;
+    const { ft, in: inLeft, str } = toFtIn(cm);
+    rCm.textContent = `${cm}cm`;
+    rFtIn.textContent = str;
+    rM.textContent = `${(cm / 100).toFixed(2)}m`;
+    inputFt.value = String(ft);
+    inputIn.value = String(inLeft);
+    compareLink.href = `/?tu=${cm}`;
+    resultDiv.classList.remove('hidden');
+  };
+
+  const updateFromFtIn = () => {
+    const ft = parseInt(inputFt.value) || 0;
+    const inLeft = parseInt(inputIn.value) || 0;
+    const cm = Math.round((ft * 12 + inLeft) * 2.54);
+    if (cm < 50 || cm > 280) return;
+    inputCm.value = String(cm);
+    updateFromCm(cm);
+  };
+
+  inputCm.addEventListener('input', () => updateFromCm(parseInt(inputCm.value)));
+  inputFt.addEventListener('input', updateFromFtIn);
+  inputIn.addEventListener('input', updateFromFtIn);
+</script>
