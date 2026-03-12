@@ -114,6 +114,9 @@ const heroW = Math.round(heroDisplayH * 0.4);
           <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-1">
             {famoso.nombre}
           </h1>
+          {(famoso as any).fullName && (famoso as any).fullName !== famoso.nombre && (
+            <p class="text-slate-500 text-base mb-1">{(famoso as any).fullName}</p>
+          )}
           {famoso.apodo && (
             <p class="text-slate-400 text-lg mb-4">"{famoso.apodo}"</p>
           )}
@@ -182,6 +185,19 @@ const heroW = Math.round(heroDisplayH * 0.4);
         <span>Más alto</span>
       </div>
     </div>
+
+    <!-- Fun fact -->
+    {(famoso as any).funFact && (
+      <div class="glass rounded-2xl p-6 reveal" style={`border-left: 3px solid ${famoso.color}`}>
+        <div class="flex items-start gap-3">
+          <span class="text-2xl flex-shrink-0">💡</span>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider mb-1.5" style={`color: ${famoso.color}`}>¿Sabías que…?</p>
+            <p class="text-slate-300 leading-relaxed">{(famoso as any).funFact}</p>
+          </div>
+        </div>
+      </div>
+    )}
 
     <!-- Context paragraph -->
     <div class="glass rounded-2xl p-6 reveal">

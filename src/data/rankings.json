@@ -1,27 +1,13 @@
 [
-  {
-    "slug": "futbolistas-mas-altos",
-    "titulo": "Los 10 futbolistas más altos del mundo",
-    "descripcion": "Descubre qué futbolistas profesionales tienen la mayor estatura. Rankings actualizados.",
-    "tags": ["futbol"],
-    "criterio": "altos",
-    "orden": "desc"
-  },
-  {
-    "slug": "cantantes-mas-bajas",
-    "titulo": "Las 10 cantantes más bajas del mundo",
-    "descripcion": "Pequeñas en tamaño, enormes en talento. Las cantantes famosas con menor estatura.",
-    "tags": ["musica"],
-    "criterio": "bajos",
-    "orden": "asc",
-    "genero": "femenino"
-  },
-  {
-    "slug": "famosos-espanoles",
-    "titulo": "Estaturas de famosos españoles",
-    "descripcion": "Cuánto miden los famosos de España. Futbolistas, cantantes y actores.",
-    "tags": ["espana"],
-    "criterio": null,
-    "orden": "desc"
-  }
+  { "slug": "futbolistas-mas-altos", "titulo": "Los futbolistas más altos del mundo", "descripcion": "Ranking de los futbolistas profesionales con mayor estatura. Haaland, Cristiano, Bellingham y más.", "categoria": "futbol", "orden": "desc" },
+  { "slug": "futbolistas-mas-bajos", "titulo": "Los futbolistas más bajos del mundo", "descripcion": "Pequeños en tamaño, enormes en talento. Los futbolistas profesionales con menor estatura.", "categoria": "futbol", "orden": "asc" },
+  { "slug": "cantantes-mas-altos", "titulo": "Los cantantes más altos", "descripcion": "Los artistas musicales con mayor estatura: pop, trap, reggaeton y más géneros.", "categoria": "musica", "orden": "desc" },
+  { "slug": "cantantes-mas-bajos", "titulo": "Los cantantes más bajos", "descripcion": "Pequeños en altura, gigantes en ventas. Los músicos más famosos con menor estatura.", "categoria": "musica", "orden": "asc" },
+  { "slug": "actores-mas-altos", "titulo": "Los actores más altos de Hollywood", "descripcion": "Chris Hemsworth, Ryan Gosling y los actores de cine con mayor estatura.", "categoria": "cine-tv", "orden": "desc" },
+  { "slug": "actrices-mas-bajas", "titulo": "Las actrices más bajas de Hollywood", "descripcion": "Las actrices de cine y televisión con menor estatura. ¡Te sorprenderá cuánto miden!", "categoria": "cine-tv", "orden": "asc" },
+  { "slug": "deportistas-mas-altos", "titulo": "Los deportistas más altos del mundo", "descripcion": "Shaq, LeBron, Usain Bolt... los deportistas de élite con mayor estatura.", "categoria": "deportes", "orden": "desc" },
+  { "slug": "influencers-espanoles", "titulo": "Estaturas de influencers españoles", "descripcion": "Cuánto miden Ibai, ElRubius, AuronPlay, Jordi Wild y más creadores de contenido españoles.", "categoria": "influencers", "orden": "desc", "filtrosPais": ["España", "España / Noruega"] },
+  { "slug": "famosos-espanoles", "titulo": "Estaturas de famosos españoles", "descripcion": "Cuánto miden los famosos de España: futbolistas, cantantes, actores y youtubers.", "filtroPais": "espana", "orden": "desc" },
+  { "slug": "los-mas-altos", "titulo": "Los 15 famosos más altos del mundo", "descripcion": "Ranking general de los famosos más altos en todas las categorías: deportes, cine, música.", "categoria": null, "orden": "desc" },
+  { "slug": "los-mas-bajos", "titulo": "Los 15 famosos más bajos del mundo", "descripcion": "Los famosos con menor estatura. Simone Biles, Shakira, Billie Eilish y más.", "categoria": null, "orden": "asc" }
 ]
