@@ -8,112 +8,150 @@ const schema = {
   "@type": "WebApplication",
   "name": "Comparador de Estaturas de Famosos",
   "url": "https://estaturas.com",
-  "description": "Compara visualmente la estatura de famosos y celebridades. Herramienta gratuita e interactiva.",
+  "description": "Compara visualmente la estatura de famosos. Gratis e interactivo.",
   "applicationCategory": "LifestyleApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
 };
 
-const popularPairs = [
-  { a: 'lionel-messi', b: 'cristiano-ronaldo', label: 'Messi vs Cristiano' },
+const pairs = [
+  { a: 'lionel-messi', b: 'cristiano-ronaldo', label: 'Messi vs CR7' },
   { a: 'lebron-james', b: 'lionel-messi', label: 'LeBron vs Messi' },
   { a: 'taylor-swift', b: 'shakira', label: 'Taylor vs Shakira' },
-  { a: 'dwayne-johnson', b: 'cristiano-ronaldo', label: 'The Rock vs CR7' },
+  { a: 'dwayne-johnson', b: 'kylian-mbappe', label: 'The Rock vs Mbappé' },
+  { a: 'bad-bunny', b: 'rosalia', label: 'Bad Bunny vs Rosalía' },
+];
+
+const stats = [
+  { n: '15+', label: 'famosos' },
+  { n: '105', label: 'comparaciones' },
+  { n: '5', label: 'personas máx.' },
 ];
 ---
 <Base
   title="Comparador de Estaturas de Famosos — estaturas.com"
-  description="¿Cuánto mide Messi? ¿LeBron es más alto que Cristiano Ronaldo? Compara visualmente la estatura de tus famosos favoritos. Gratis e interactivo."
+  description="¿Cuánto mide Messi? ¿LeBron es más alto que Cristiano? Compara visualmente la estatura de tus famosos favoritos. Gratis, rápido, shareable."
   schema={schema}
 >
-  <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center">
-    <div class="inline-flex items-center gap-2 bg-brand-900/50 border border-brand-700/50 rounded-full px-4 py-1.5 text-sm text-brand-300 mb-6">
-      📏 El comparador de estaturas más completo en español
+  <!-- ── Hero ── -->
+  <section class="max-w-6xl mx-auto px-4 pt-16 pb-6 text-center">
+    <div class="hero-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-8 px-4 py-2 rounded-full"
+      style="background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); color: #38bdf8;">
+      📏 Comparador de estaturas en español
     </div>
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
-      Compara la estatura<br class="hidden sm:block" />
-      <span class="text-gradient">de tus famosos favoritos</span>
+
+    <h1 class="hero-2 text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.08] tracking-tight mb-6">
+      ¿Cuánto miden<br />
+      <span class="text-gradient">tus famosos favoritos?</span>
     </h1>
-    <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
-      ¿Messi llega al hombro de LeBron? ¿Taylor Swift es más alta que Cristiano?
-      Compruébalo visualmente — y compárate tú también.
+
+    <p class="hero-3 text-slate-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
+      Compara visualmente. Añade tu estatura. Descarga la imagen y compártela.
     </p>
 
-    <!-- Popular pairs quick links -->
-    <div class="flex flex-wrap justify-center gap-2 mb-10">
-      {popularPairs.map(pair => (
-        <a href={`/comparar/${pair.a}-vs-${pair.b}`}
-          class="bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white px-3 py-1.5 rounded-full text-sm transition-all">
-          {pair.label}
+    <!-- Stats row -->
+    <div class="hero-4 flex items-center justify-center gap-8 mb-12">
+      {stats.map(s => (
+        <div class="text-center">
+          <p class="text-2xl font-black text-white">{s.n}</p>
+          <p class="text-slate-500 text-xs uppercase tracking-wide">{s.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Quick pair links -->
+    <div class="hero-4 flex flex-wrap justify-center gap-2 mb-14">
+      {pairs.map(p => (
+        <a href={`/comparar/${p.a}-vs-${p.b}`}
+          class="glass text-slate-400 hover:text-white text-sm px-3.5 py-1.5 rounded-full transition-all hover:-translate-y-0.5">
+          {p.label}
         </a>
       ))}
     </div>
   </section>
 
-  <!-- Comparador -->
-  <section class="max-w-3xl mx-auto px-4 pb-16">
+  <!-- ── Comparador ── -->
+  <section class="max-w-3xl mx-auto px-4 pb-20">
     <Comparador client:load famosos={famosos} />
   </section>
 
-  <!-- Features strip -->
-  <section class="border-t border-slate-800 py-12">
+  <!-- ── Features ── -->
+  <section class="border-t py-16 reveal" style="border-color: rgba(255,255,255,0.06);">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
-          { icon: '👥', title: 'Hasta 5 personas', desc: 'Añade famosos y compárate tú mismo' },
-          { icon: '📸', title: 'Exporta la imagen', desc: 'Descarga PNG para compartir en redes' },
-          { icon: '🔗', title: 'Enlace único', desc: 'Cada comparación tiene su propia URL' },
+          { icon: '👥', title: 'Hasta 5 personas', desc: 'Famosos, amigos, tú mismo — todos en la misma vista.' },
+          { icon: '📸', title: 'Imagen descargable', desc: 'Genera un PNG bonito para compartir en redes.' },
+          { icon: '🔗', title: 'Enlace único', desc: 'Cada comparación tiene su propia URL compartible.' },
         ].map(f => (
-          <div class="bg-slate-900 rounded-xl p-5">
-            <div class="text-3xl mb-3">{f.icon}</div>
-            <h3 class="font-semibold text-white mb-1">{f.title}</h3>
-            <p class="text-slate-400 text-sm">{f.desc}</p>
+          <div class="glass rounded-2xl p-6 transition-all hover:-translate-y-1">
+            <div class="text-3xl mb-4">{f.icon}</div>
+            <h3 class="font-bold text-white mb-2">{f.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{f.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Famosos grid preview -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-bold text-white">Famosos más buscados</h2>
-      <a href="/famosos" class="text-brand-400 hover:text-brand-300 text-sm font-medium transition-colors">
-        Ver todos →
-      </a>
+  <!-- ── Famosos grid ── -->
+  <section class="max-w-6xl mx-auto px-4 py-12 reveal">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-black text-white">Famosos más buscados</h2>
+      <a href="/famosos" class="text-sm font-semibold transition-colors hover:opacity-80"
+        style="color: #38bdf8">Ver todos →</a>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {famosos.slice(0, 10).map(f => (
         <a href={`/${f.id}`}
-          class="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl p-4 text-center transition-all">
-          <div class="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-2xl"
-            style={`background-color: ${f.color}22; border: 2px solid ${f.color}44`}>
-            {f.bandera ?? '🌍'}
+          class="famoso-card glass rounded-2xl p-4 text-center"
+          style={`--glow: ${f.color}`}
+          onmouseover={`this.style.boxShadow='0 0 20px ${f.color}33'; this.style.borderColor='${f.color}44'`}
+          onmouseout={`this.style.boxShadow=''; this.style.borderColor=''`}>
+          <!-- Silhouette mini -->
+          <div class="w-10 h-14 mx-auto mb-3 relative flex items-end justify-center">
+            <svg viewBox="0 0 40 100" width="28" height={Math.round(28 * (f.estaturaCm / 210))}
+              style={{ minHeight: '20px', maxHeight: '40px' }}>
+              <defs>
+                <linearGradient id={`mini-${f.id}`} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color={f.color} stop-opacity="0.9" />
+                  <stop offset="100%" stop-color={f.color} stop-opacity="0.4" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="20" cy="7.5" rx="7.5" ry="8" fill={`url(#mini-${f.id})`} />
+              <rect x="17" y="15.5" width="6" height="3.5" rx="1" fill={`url(#mini-${f.id})`} />
+              <path d="M17,19 Q4,20 3,26 L37,26 Q36,20 23,19 Z" fill={`url(#mini-${f.id})`} />
+              <path d="M3,26 L0,54 L7,54 L8,26 Z" fill={`url(#mini-${f.id})`} />
+              <path d="M37,26 L40,54 L33,54 L32,26 Z" fill={`url(#mini-${f.id})`} />
+              <path d="M8,26 L32,26 L30,58 L10,58 Z" fill={`url(#mini-${f.id})`} />
+              <path d="M10,57 L20,57 L19.5,100 L10,100 Z" fill={`url(#mini-${f.id})`} />
+              <path d="M20,57 L30,57 L30,100 L20.5,100 Z" fill={`url(#mini-${f.id})`} />
+            </svg>
           </div>
-          <p class="text-white text-sm font-semibold leading-tight mb-1 group-hover:text-brand-400 transition-colors">
+          <p class="text-white text-sm font-bold leading-tight mb-1">
             {f.nombre.split(' ')[0]}
           </p>
-          <p class="text-slate-400 text-xs">{f.estaturaCm}cm</p>
+          <p class="text-xs font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
+          <p class="text-slate-600 text-xs mt-0.5">{f.profesion?.split('/')[0].trim()}</p>
         </a>
       ))}
     </div>
   </section>
 
-  <!-- Rankings teaser -->
-  <section class="max-w-6xl mx-auto px-4 pb-16">
-    <h2 class="text-2xl font-bold text-white mb-6">Rankings populares</h2>
+  <!-- ── Rankings teaser ── -->
+  <section class="max-w-6xl mx-auto px-4 pb-20 reveal">
+    <h2 class="text-2xl font-black text-white mb-6">Rankings y quizzes</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {[
         { href: '/ranking/futbolistas-mas-altos', emoji: '⚽', title: 'Futbolistas más altos', desc: 'Los gigantes del fútbol mundial' },
         { href: '/ranking/famosos-espanoles', emoji: '🇪🇸', title: 'Famosos españoles', desc: 'Cuánto miden Rosalía, Pedri y más' },
-        { href: '/quiz', emoji: '🎯', title: 'Quiz de estaturas', desc: '¿Puedes adivinar cuánto miden?' },
+        { href: '/quiz', emoji: '🎯', title: 'Adivina la estatura', desc: 'Quiz con racha y récord personal' },
       ].map(r => (
         <a href={r.href}
-          class="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl p-5 transition-all flex gap-4 items-center">
-          <span class="text-3xl">{r.emoji}</span>
+          class="glass rounded-2xl p-5 flex gap-4 items-start transition-all hover:-translate-y-1 group">
+          <span class="text-3xl mt-0.5">{r.emoji}</span>
           <div>
-            <p class="font-semibold text-white group-hover:text-brand-400 transition-colors">{r.title}</p>
-            <p class="text-slate-400 text-sm">{r.desc}</p>
+            <p class="font-bold text-white group-hover:text-sky-400 transition-colors">{r.title}</p>
+            <p class="text-slate-400 text-sm mt-0.5">{r.desc}</p>
           </div>
         </a>
       ))}

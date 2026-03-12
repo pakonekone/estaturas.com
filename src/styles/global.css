@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,15 +6,80 @@
 
 @layer base {
   html { @apply scroll-smooth; }
-  body { @apply bg-slate-950 text-slate-100 font-sans antialiased; }
-  h1, h2, h3 { @apply font-bold; }
-}
-
-@layer utilities {
-  .text-gradient {
-    background: linear-gradient(to right, #60a5fa, #22d3ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  body {
+    @apply text-slate-100 font-sans antialiased;
+    background: #08090e;
+    background-image:
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(14,165,233,0.12) 0%, transparent 70%),
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.025) 1px, transparent 0);
+    background-size: 100% 100%, 32px 32px;
+    min-height: 100vh;
   }
 }
+
+/* ── Text gradient ── */
+.text-gradient {
+  background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Famoso card glow on hover ── */
+.famoso-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.famoso-card:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* ── Number counter ── */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+.count-up { animation: count-up 0.5s ease-out forwards; }
+
+/* ── Hero fade-up ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-1 { animation: fade-up 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-2 { animation: fade-up 0.6s 0.15s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-3 { animation: fade-up 0.6s 0.25s cubic-bezier(0.16,1,0.3,1) both; }
+.hero-4 { animation: fade-up 0.6s 0.35s cubic-bezier(0.16,1,0.3,1) both; }
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glass:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* ── Glow button ── */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-glow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 24px rgba(14,165,233,0.4);
+}
+.btn-glow:active { transform: translateY(0); }
