@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estaturas.com/sitemap-index.xml

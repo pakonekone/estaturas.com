@@ -1,0 +1,103 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  schema?: object;
+}
+
+const {
+  title,
+  description = 'Compara la estatura de famosos y celebridades. Comparador visual interactivo. ¿Cuánto mide Messi? ¿Y LeBron James?',
+  ogImage = '/og-default.png',
+  canonical,
+  schema,
+} = Astro.props;
+
+const siteUrl = 'https://estaturas.com';
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- OG -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="estaturas.com" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={fullOgImage} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullOgImage} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
+
+  <!-- GA4 placeholder -->
+  <!-- Replace G-XXXXXXXXXX with real GA4 ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 font-bold text-lg text-white hover:text-brand-400 transition-colors">
+        <span class="text-2xl">📏</span>
+        <span>estaturas<span class="text-brand-400">.com</span></span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm font-medium">
+        <a href="/famosos" class="text-slate-400 hover:text-white transition-colors hidden sm:block">Famosos</a>
+        <a href="/quiz" class="text-slate-400 hover:text-white transition-colors hidden sm:block">Quiz</a>
+        <a href="/ranking/futbolistas-mas-altos" class="text-slate-400 hover:text-white transition-colors hidden md:block">Rankings</a>
+        <a href="/" class="bg-brand-600 hover:bg-brand-700 text-white px-3 py-1.5 rounded-lg transition-colors">
+          Comparar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="border-t border-slate-800 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm space-y-2">
+      <p>
+        <a href="/" class="hover:text-slate-300 transition-colors">estaturas.com</a>
+        {' '}·{' '}
+        <a href="/famosos" class="hover:text-slate-300 transition-colors">Famosos</a>
+        {' '}·{' '}
+        <a href="/quiz" class="hover:text-slate-300 transition-colors">Quiz</a>
+        {' '}·{' '}
+        <a href="/ranking/futbolistas-mas-altos" class="hover:text-slate-300 transition-colors">Rankings</a>
+      </p>
+      <p>© {new Date().getFullYear()} estaturas.com · Datos informativos, pueden variar.</p>
+    </div>
+  </footer>
+</body>
+</html>

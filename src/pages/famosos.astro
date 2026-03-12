@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import famososData from '../data/famosos.json';
+
+const sorted = [...famososData].sort((a, b) => b.estaturaCm - a.estaturaCm);
+
+const cmToFtIn = (cm: number) => {
+  const inches = cm / 2.54;
+  const ft = Math.floor(inches / 12);
+  return `${ft}'${Math.round(inches % 12)}"`;
+};
+---
+<Base
+  title="Estaturas de Famosos — Lista completa | estaturas.com"
+  description="Descubre cuánto miden tus famosos favoritos. Lista completa de estaturas de futbolistas, cantantes, actores y celebrities."
+>
+  <div class="max-w-5xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300">Inicio</a>
+      <span>›</span>
+      <span class="text-slate-300">Famosos</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
+      Estaturas de famosos
+    </h1>
+    <p class="text-slate-400 mb-8">{famososData.length} famosos en nuestra base de datos. Ordenados de mayor a menor.</p>
+
+    <!-- Table -->
+    <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-500 text-xs uppercase tracking-wider">
+              <th class="px-4 py-3 text-left">#</th>
+              <th class="px-4 py-3 text-left">Nombre</th>
+              <th class="px-4 py-3 text-left hidden sm:table-cell">País</th>
+              <th class="px-4 py-3 text-left hidden md:table-cell">Profesión</th>
+              <th class="px-4 py-3 text-right">Estatura</th>
+              <th class="px-4 py-3 text-right hidden sm:table-cell">Pies</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800">
+            {sorted.map((f, i) => (
+              <tr class="hover:bg-slate-800/50 transition-colors group">
+                <td class="px-4 py-3 text-slate-500 font-mono">{i + 1}</td>
+                <td class="px-4 py-3">
+                  <a href={`/${f.id}`} class="font-semibold text-white group-hover:text-brand-400 transition-colors">
+                    {f.nombre}
+                    {f.apodo && <span class="text-slate-500 font-normal ml-1 text-xs">"{f.apodo}"</span>}
+                  </a>
+                </td>
+                <td class="px-4 py-3 hidden sm:table-cell">
+                  <span>{f.bandera} {f.pais}</span>
+                </td>
+                <td class="px-4 py-3 text-slate-400 hidden md:table-cell">{f.profesion}</td>
+                <td class="px-4 py-3 text-right font-bold" style={`color: ${f.color}`}>
+                  {f.estaturaCm}cm
+                </td>
+                <td class="px-4 py-3 text-right text-slate-400 hidden sm:table-cell">
+                  {cmToFtIn(f.estaturaCm)}
+                </td>
+                <td class="px-4 py-3 text-right">
+                  <a href={`/${f.id}`} class="text-slate-500 hover:text-brand-400 transition-colors text-xs">
+                    Ver →
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Base>

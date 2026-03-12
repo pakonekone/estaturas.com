@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "futbolistas-mas-altos",
+    "titulo": "Los 10 futbolistas más altos del mundo",
+    "descripcion": "Descubre qué futbolistas profesionales tienen la mayor estatura. Rankings actualizados.",
+    "tags": ["futbol"],
+    "criterio": "altos",
+    "orden": "desc"
+  },
+  {
+    "slug": "cantantes-mas-bajas",
+    "titulo": "Las 10 cantantes más bajas del mundo",
+    "descripcion": "Pequeñas en tamaño, enormes en talento. Las cantantes famosas con menor estatura.",
+    "tags": ["musica"],
+    "criterio": "bajos",
+    "orden": "asc",
+    "genero": "femenino"
+  },
+  {
+    "slug": "famosos-espanoles",
+    "titulo": "Estaturas de famosos españoles",
+    "descripcion": "Cuánto miden los famosos de España. Futbolistas, cantantes y actores.",
+    "tags": ["espana"],
+    "criterio": null,
+    "orden": "desc"
+  }
+]

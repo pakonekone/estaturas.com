@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import famososData from '../../data/famosos.json';
+import rankingsData from '../../data/rankings.json';
+
+export function getStaticPaths() {
+  return rankingsData.map(r => ({
+    params: { slug: r.slug },
+    props: { ranking: r },
+  }));
+}
+
+const { ranking } = Astro.props;
+
+const cmToFtIn = (cm: number) => {
+  const inches = cm / 2.54;
+  const ft = Math.floor(inches / 12);
+  return `${ft}'${Math.round(inches % 12)}"`;
+};
+
+let filtered = ranking.tags && ranking.tags.length > 0
+  ? famososData.filter(f => f.tags.some(t => ranking.tags.includes(t)))
+  : famososData;
+
+if (ranking.genero === 'femenino') {
+  const femTags = ['musica', 'moda', 'influencer', 'cine', 'flamenco', 'pop'];
+  filtered = filtered.filter(f => femTags.some(t => f.tags.includes(t)) && f.peso && f.peso < 75);
+}
+
+const sorted = [...filtered].sort((a, b) =>
+  ranking.orden === 'asc' ? a.estaturaCm - b.estaturaCm : b.estaturaCm - a.estaturaCm
+);
+
+const top = sorted.slice(0, 10);
+const maxCm = top[0]?.estaturaCm ?? 1;
+---
+<Base
+  title={`${ranking.titulo} | estaturas.com`}
+  description={ranking.descripcion}
+>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300">Inicio</a>
+      <span>›</span>
+      <a href="/famosos" class="hover:text-slate-300">Famosos</a>
+      <span>›</span>
+      <span class="text-slate-300">Ranking</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">{ranking.titulo}</h1>
+    <p class="text-slate-400 mb-10">{ranking.descripcion}</p>
+
+    <div class="space-y-3">
+      {top.map((f, i) => {
+        const barPct = (f.estaturaCm / maxCm) * 100;
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : null;
+        return (
+          <a href={`/${f.id}`}
+            class="group block bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-2xl p-4 transition-all">
+            <div class="flex items-center gap-4">
+              <div class="w-8 text-center">
+                {medal
+                  ? <span class="text-xl">{medal}</span>
+                  : <span class="text-slate-500 font-mono text-sm">{i + 1}</span>
+                }
+              </div>
+              <div class="text-xl">{f.bandera}</div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="font-semibold text-white group-hover:text-brand-400 transition-colors">{f.nombre}</p>
+                  <div class="text-right">
+                    <span class="font-bold text-lg" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+                    <span class="text-slate-500 text-xs ml-2">{cmToFtIn(f.estaturaCm)}</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-700 rounded-full h-1.5">
+                  <div class="h-1.5 rounded-full transition-all duration-500"
+                    style={`width: ${barPct}%; background-color: ${f.color}`} />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 text-center">
+      <a href="/"
+        class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
+        🔄 Compara estas estaturas
+      </a>
+    </div>
+  </div>
+</Base>

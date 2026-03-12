@@ -1,0 +1,164 @@
+---
+import Base from '../layouts/Base.astro';
+import Comparador from '../components/Comparador';
+import famososData from '../data/famosos.json';
+
+export function getStaticPaths() {
+  return famososData.map(f => ({
+    params: { famoso: f.id },
+    props: { famoso: f },
+  }));
+}
+
+const { famoso } = Astro.props;
+
+const cmToFtIn = (cm: number) => {
+  const inches = cm / 2.54;
+  const ft = Math.floor(inches / 12);
+  const inLeft = Math.round(inches % 12);
+  return `${ft}'${inLeft}"`;
+};
+
+const promedioHombre = 176;
+const promedioMujer = 163;
+const promedio = promedio => Math.abs(famoso.estaturaCm - promedio);
+
+const similares = famososData
+  .filter(f => f.id !== famoso.id && Math.abs(f.estaturaCm - famoso.estaturaCm) <= 3)
+  .slice(0, 4);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": famoso.nombre,
+  "height": {
+    "@type": "QuantitativeValue",
+    "value": famoso.estaturaCm,
+    "unitCode": "CMT"
+  },
+  "nationality": famoso.pais,
+  "jobTitle": famoso.profesion,
+  "url": `https://estaturas.com/${famoso.id}`,
+};
+
+const diffHombre = famoso.estaturaCm - promedioHombre;
+const barPct = Math.min(100, (famoso.estaturaCm / 230) * 100);
+---
+<Base
+  title={`¿Cuánto mide ${famoso.nombre}? — ${famoso.estaturaCm}cm (${cmToFtIn(famoso.estaturaCm)})`}
+  description={`${famoso.nombre} mide ${famoso.estaturaCm}cm (${cmToFtIn(famoso.estaturaCm)}). ${famoso.profesion} de ${famoso.pais}. Compárate con ${famoso.nombre} en nuestro comparador interactivo.`}
+  schema={schema}
+>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <a href="/famosos" class="hover:text-slate-300 transition-colors">Famosos</a>
+      <span>›</span>
+      <span class="text-slate-300">{famoso.nombre}</span>
+    </nav>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Left: info -->
+      <div class="md:col-span-2 space-y-6">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-3xl">{famoso.bandera}</span>
+            <span class="text-sm text-slate-400 bg-slate-800 px-3 py-1 rounded-full">{famoso.profesion}</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+            {famoso.nombre}
+            {famoso.apodo && <span class="text-slate-400 font-normal text-2xl ml-2">"{famoso.apodo}"</span>}
+          </h1>
+        </div>
+
+        <!-- Main stat -->
+        <div class="bg-slate-900 rounded-2xl p-6 text-center"
+          style={`border: 2px solid ${famoso.color}44`}>
+          <p class="text-6xl font-black text-white mb-1">{famoso.estaturaCm}<span class="text-2xl font-semibold text-slate-400">cm</span></p>
+          <p class="text-2xl text-slate-400">{cmToFtIn(famoso.estaturaCm)}</p>
+          <div class="mt-4 w-full bg-slate-700 rounded-full h-3">
+            <div class="h-3 rounded-full transition-all duration-700"
+              style={`width: ${barPct}%; background-color: ${famoso.color}`} />
+          </div>
+          <p class="text-xs text-slate-500 mt-2">Escala: 0–230cm</p>
+        </div>
+
+        <!-- Stats grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {[
+            { label: 'Estatura', value: `${famoso.estaturaCm}cm` },
+            { label: 'En pies', value: cmToFtIn(famoso.estaturaCm) },
+            { label: 'Peso aprox.', value: famoso.peso ? `${famoso.peso}kg` : 'N/D' },
+            { label: 'Edad', value: famoso.edad ? `${famoso.edad} años` : 'N/D' },
+            { label: 'País', value: `${famoso.bandera} ${famoso.pais}` },
+            { label: 'vs. ♂ español', value: `${diffHombre > 0 ? '+' : ''}${diffHombre}cm` },
+          ].map(s => (
+            <div class="bg-slate-800 rounded-xl px-4 py-3">
+              <p class="text-slate-500 text-xs uppercase tracking-wider mb-1">{s.label}</p>
+              <p class="text-white font-semibold">{s.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Context text -->
+        <div class="prose prose-invert prose-sm max-w-none text-slate-400">
+          <p>
+            <strong class="text-white">{famoso.nombre}</strong> mide <strong class="text-white">{famoso.estaturaCm}cm</strong> ({cmToFtIn(famoso.estaturaCm)}),
+            lo que {diffHombre > 0 ? `le sitúa ${diffHombre}cm por encima` : diffHombre < 0 ? `le sitúa ${Math.abs(diffHombre)}cm por debajo` : 'coincide exactamente'} del promedio del hombre español (176cm).
+            {famoso.nombre.split(' ')[0]} es {famoso.profesion?.toLowerCase()} de {famoso.pais}.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: CTA -->
+      <div class="space-y-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-5 text-center sticky top-20">
+          <p class="text-slate-400 text-sm mb-3">¿Cuánto medirías junto a {famoso.nombre.split(' ')[0]}?</p>
+          <a href={`/?comparar=${famoso.id}`}
+            class="block w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-colors mb-3">
+            🔄 Compárate con {famoso.nombre.split(' ')[0]}
+          </a>
+          <!-- Quick comparison links -->
+          <div class="space-y-2">
+            {famososData.filter(f => f.id !== famoso.id).slice(0, 3).map(other => (
+              <a href={`/comparar/${famoso.id}-vs-${other.id}`}
+                class="block text-slate-400 hover:text-brand-400 text-sm transition-colors">
+                vs. {other.nombre} ({other.estaturaCm}cm)
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Similares -->
+    {similares.length > 0 && (
+      <section class="mt-12">
+        <h2 class="text-xl font-bold text-white mb-4">
+          Famosos con estatura similar (±3cm)
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {similares.map(s => (
+            <a href={`/${s.id}`}
+              class="group bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl p-4 text-center transition-all">
+              <div class="w-10 h-10 mx-auto mb-2 rounded-full flex items-center justify-center text-xl"
+                style={`background-color: ${s.color}22`}>
+                {s.bandera}
+              </div>
+              <p class="text-white text-sm font-medium group-hover:text-brand-400 transition-colors">{s.nombre}</p>
+              <p class="text-slate-400 text-xs mt-1">{s.estaturaCm}cm</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Comparador interactivo inline -->
+    <section class="mt-12">
+      <h2 class="text-xl font-bold text-white mb-4">Comparador interactivo</h2>
+      <Comparador client:idle famosos={famososData} inicial={{ a: famoso.id, b: famoso.id === 'lionel-messi' ? 'cristiano-ronaldo' : 'lionel-messi' }} />
+    </section>
+  </div>
+</Base>
