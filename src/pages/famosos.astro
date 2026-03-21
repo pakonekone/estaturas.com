@@ -1,14 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import famososData from '../data/famosos.json';
+import { cmToFtIn } from '../utils/height';
 
 const sorted = [...famososData].sort((a, b) => b.estaturaCm - a.estaturaCm);
-
-const cmToFtIn = (cm: number) => {
-  const inches = cm / 2.54;
-  const ft = Math.floor(inches / 12);
-  return `${ft}'${Math.round(inches % 12)}"`;
-};
 ---
 <Base
   title="Estaturas de Famosos — Lista completa | estaturas.com"
@@ -24,7 +19,7 @@ const cmToFtIn = (cm: number) => {
     <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
       Estaturas de famosos
     </h1>
-    <p class="text-slate-400 mb-8">{famososData.length} famosos en nuestra base de datos. Ordenados de mayor a menor.</p>
+    <p class="text-stone-400 mb-8">{famososData.length} famosos y contando. ¿Quién será el más alto? Spoiler: no es quien piensas 😏</p>
 
     <!-- Table -->
     <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800">

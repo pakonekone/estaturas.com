@@ -1,11 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import famososData from '../data/famosos.json';
-
-const cmToFtIn = (cm: number) => {
-  const i = cm / 2.54, ft = Math.floor(i / 12);
-  return `${ft}'${Math.round(i % 12)}"`;
-};
+import { cmToFtIn } from '../utils/height';
 
 const TABLE_HEIGHTS = [142,155,157,160,163,165,168,170,172,173,175,176,178,179,180,182,184,185,186,187,188,190,192,194,195,198,206,216];
 const tableRows = TABLE_HEIGHTS.map(h => ({
@@ -148,8 +144,9 @@ const schema = {
 
   const toFtIn = (cm: number) => {
     const totalIn = cm / 2.54;
-    const ft = Math.floor(totalIn / 12);
-    const inLeft = Math.round(totalIn % 12);
+    let ft = Math.floor(totalIn / 12);
+    let inLeft = Math.round(totalIn % 12);
+    if (inLeft === 12) { ft += 1; inLeft = 0; }
     return { ft, in: inLeft, str: `${ft}'${inLeft}"` };
   };
 

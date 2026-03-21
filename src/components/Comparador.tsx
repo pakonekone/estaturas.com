@@ -18,8 +18,11 @@ interface Props {
 /* ─── Helpers ───────────────────────────────────────────────────────── */
 const COLORS = ['#60a5fa','#34d399','#f59e0b','#f472b6','#a78bfa','#fb923c','#2dd4bf'];
 const cmToFtIn = (cm: number) => {
-  const i = cm / 2.54, ft = Math.floor(i / 12);
-  return `${ft}'${Math.round(i % 12)}"`;
+  const i = cm / 2.54;
+  let ft = Math.floor(i / 12);
+  let inches = Math.round(i % 12);
+  if (inches === 12) { ft += 1; inches = 0; }
+  return `${ft}'${inches}"`;
 };
 
 /* ─── Human Silhouette ──────────────────────────────────────────────── */

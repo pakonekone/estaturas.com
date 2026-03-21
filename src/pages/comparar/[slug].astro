@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Comparador from '../../components/Comparador';
 import famososData from '../../data/famosos.json';
+import { cmToFtIn } from '../../utils/height';
 
 export function getStaticPaths() {
   const paths = [];
@@ -19,13 +20,6 @@ export function getStaticPaths() {
 const { aId, bId } = Astro.props;
 const personaA = famososData.find(f => f.id === aId)!;
 const personaB = famososData.find(f => f.id === bId)!;
-
-const cmToFtIn = (cm: number) => {
-  const inches = cm / 2.54;
-  const ft = Math.floor(inches / 12);
-  const inLeft = Math.round(inches % 12);
-  return `${ft}'${inLeft}"`;
-};
 
 const diff = Math.abs(personaA.estaturaCm - personaB.estaturaCm);
 const masAlto = personaA.estaturaCm >= personaB.estaturaCm ? personaA : personaB;

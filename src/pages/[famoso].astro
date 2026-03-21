@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Comparador from '../components/Comparador';
 import famososData from '../data/famosos.json';
+import { cmToFtIn, PROMEDIO_H, PROMEDIO_M, MIN_HUMAN_H, MAX_HUMAN_H } from '../utils/height';
 
 export function getStaticPaths() {
   return famososData.map(f => ({ params: { famoso: f.id }, props: { famoso: f } }));
@@ -9,13 +10,7 @@ export function getStaticPaths() {
 
 const { famoso } = Astro.props;
 
-const cmToFtIn = (cm: number) => {
-  const i = cm / 2.54, ft = Math.floor(i / 12);
-  return `${ft}'${Math.round(i % 12)}"`;
-};
-
-const PROMEDIO_H = 176, PROMEDIO_M = 163;
-const MIN_H = 55, MAX_H = 272;
+const MIN_H = MIN_HUMAN_H, MAX_H = MAX_HUMAN_H;
 const barPct = Math.round(((famoso.estaturaCm - MIN_H) / (MAX_H - MIN_H)) * 100);
 const diffHombre = famoso.estaturaCm - PROMEDIO_H;
 const diffMujer  = famoso.estaturaCm - PROMEDIO_M;

@@ -22,9 +22,10 @@ const pairs = [
   { a: 'elrubius', b: 'ibai', label: 'ElRubius vs Ibai' },
 ];
 
+const totalComparaciones = famosos.length * (famosos.length - 1) / 2;
 const stats = [
-  { n: '15+', label: 'famosos' },
-  { n: '105', label: 'comparaciones' },
+  { n: String(famosos.length), label: 'famosos' },
+  { n: String(totalComparaciones), label: 'comparaciones' },
   { n: '5', label: 'personas máx.' },
 ];
 ---
@@ -45,8 +46,8 @@ const stats = [
       <span class="text-gradient">tus famosos favoritos?</span>
     </h1>
 
-    <p class="hero-3 text-slate-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-      Compara visualmente. Añade tu estatura. Descarga la imagen y compártela.
+    <p class="hero-3 text-stone-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
+      Messi, Bad Bunny, Zendaya... ¿quién es más alto? Compáralos visualmente y métete tú en la foto.
     </p>
 
     <!-- Stats row -->
@@ -80,9 +81,9 @@ const stats = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
-          { icon: '👥', title: 'Hasta 5 personas', desc: 'Famosos, amigos, tú mismo — todos en la misma vista.' },
-          { icon: '📸', title: 'Imagen descargable', desc: 'Genera un PNG bonito para compartir en redes.' },
-          { icon: '🔗', title: 'Enlace único', desc: 'Cada comparación tiene su propia URL compartible.' },
+          { icon: '👥', title: 'Hasta 5 personas', desc: 'Mete a Shaq, a Messi y a ti mismo. Verás la diferencia.' },
+          { icon: '📸', title: 'Imagen descargable', desc: 'Descarga la comparación como imagen y que tus amigos alucinen.' },
+          { icon: '🔗', title: 'Enlace único', desc: 'Copia el enlace y envíaselo a quien quieras. Cada comparación tiene su URL.' },
         ].map(f => (
           <div class="glass rounded-2xl p-6 transition-all hover:-translate-y-1">
             <div class="text-3xl mb-4">{f.icon}</div>

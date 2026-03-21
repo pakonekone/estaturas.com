@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import famososData from '../../data/famosos.json';
 import rankingsData from '../../data/rankings.json';
+import { cmToFtIn } from '../../utils/height';
 
 export function getStaticPaths() {
   return rankingsData.map(r => ({
@@ -11,11 +12,6 @@ export function getStaticPaths() {
 }
 
 const { ranking } = Astro.props;
-
-const cmToFtIn = (cm: number) => {
-  const i = cm / 2.54, ft = Math.floor(i / 12);
-  return `${ft}'${Math.round(i % 12)}"`;
-};
 
 // Filter logic
 let filtered = [...famososData];
