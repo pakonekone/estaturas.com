@@ -72,6 +72,56 @@ const PersonBar: FC<{
   );
 };
 
+/* ─── Person Visual (silhouette PNG with bar fallback) ──────────────── */
+const SIL_W = 80; // silhouette render width within SVG
+
+const PersonVisual: FC<{
+  persona: Persona; displayH: number; palette: { from: string; to: string };
+  gradId: string; animate: boolean;
+}> = ({ persona, displayH, palette, gradId, animate }) => {
+  const [hasSil, setHasSil] = useState<boolean | null>(null);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    if (!persona.esFamoso) { setHasSil(false); return; }
+    const img = new Image();
+    img.src = `/silhouettes/${persona.id}.png`;
+    img.onload = () => setHasSil(true);
+    img.onerror = () => setHasSil(false);
+  }, [persona.id, persona.esFamoso]);
+
+  useEffect(() => {
+    const t = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(t);
+  }, []);
+
+  // No silhouette or custom person → fallback to bar
+  if (hasSil !== true) {
+    return (
+      <PersonBar
+        colorFrom={palette.from} colorTo={palette.to}
+        gradId={gradId} displayH={displayH} animate={animate}
+      />
+    );
+  }
+
+  const scale = ready && animate ? 1 : animate ? 0 : 1;
+  const totalW = Math.max(BAR_W, HEAD_R * 2);
+
+  return (
+    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
+      <image
+        href={`/silhouettes/${persona.id}.png`}
+        x={(totalW - SIL_W) / 2}
+        y={0}
+        width={SIL_W}
+        height={displayH}
+        preserveAspectRatio="xMidYMax meet"
+      />
+    </g>
+  );
+};
+
 /* ─── Main component ────────────────────────────────────────────────── */
 const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const uid = useId().replace(/:/g, '');
@@ -367,10 +417,9 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
               <g key={p.key}>
                 {/* Person bar + head */}
                 <g transform={`translate(${baseX}, ${MAX_H - displayH})`}>
-                  <PersonBar
-                    colorFrom={palette.from} colorTo={palette.to}
-                    gradId={gradId} displayH={displayH}
-                    animate={newKeys.has(p.key)}
+                  <PersonVisual
+                    persona={p} displayH={displayH} palette={palette}
+                    gradId={gradId} animate={newKeys.has(p.key)}
                   />
                 </g>
 
