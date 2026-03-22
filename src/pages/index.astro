@@ -22,6 +22,16 @@ const pairs = [
   { a: 'elrubius', b: 'ibai', label: 'ElRubius vs Ibai' },
 ];
 
+// Curated top celebrities for homepage - most recognizable & searched
+const FEATURED_IDS = [
+  'lionel-messi', 'cristiano-ronaldo', 'taylor-swift', 'ibai-llanos',
+  'rosalia', 'bad-bunny', 'shakira', 'aitana', 'kylian-mbappe',
+  'auronplay', 'ilia-topuria', 'lamine-yamal', 'pedro-pascal',
+  'zendaya', 'tom-holland', 'billie-eilish', 'dua-lipa', 'erling-haaland',
+  'carlos-alcaraz', 'thegrefg',
+];
+const featured = FEATURED_IDS.map(id => famosos.find(f => f.id === id)).filter(Boolean).slice(0, 10);
+
 const totalComparaciones = famosos.length * (famosos.length - 1) / 2;
 const stats = [
   { n: String(famosos.length), label: 'famosos' },
@@ -103,7 +113,7 @@ const stats = [
         style="color: #f59e0b">Ver todos →</a>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-      {famosos.slice(0, 10).map(f => (
+      {featured.map(f => (
         <a href={`/${f.id}`}
           class="famoso-card glass rounded-2xl p-4 text-center"
           style={`--glow: ${f.color}`}
