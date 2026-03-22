@@ -107,26 +107,20 @@ const PersonVisual: FC<{
   const scale = ready && animate ? 1 : animate ? 0 : 1;
   const totalW = Math.max(BAR_W, HEAD_R * 2);
 
-  // Height FIXED to displayH (proportional to cm). Width from aspect ratio.
+  // Height is ALWAYS displayH (proportional to cm). NEVER reduced.
+  // Width follows natural aspect ratio. May overflow — that's fine.
   const aspect = silData.w / silData.h;
-  let imgW = displayH * aspect;
-  let imgH = displayH;
-  // If too wide (e.g. arms-out pose), cap width and reduce height proportionally
-  const MAX_SIL_W = 100;
-  if (imgW > MAX_SIL_W) {
-    imgW = MAX_SIL_W;
-    imgH = imgW / aspect;
-  }
-  // Position: bottom-aligned within displayH box, centered horizontally
+  const imgH = displayH;
+  const imgW = imgH * aspect;
+  // Center horizontally within person column
   const imgX = totalW / 2 - imgW / 2;
-  const imgY = displayH - imgH;
 
   return (
-    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)', overflow: 'visible' }}>
+    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
       <image
         href={`/silhouettes/${persona.id}.png`}
         x={imgX}
-        y={imgY}
+        y={0}
         width={imgW}
         height={imgH}
       />
@@ -169,7 +163,12 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const GAP = 32;
   const MAX_H = 260;
   const LABEL_H = 56;
-  const maxCm = Math.max(...personas.map(p => p.estaturaCm), 1);
+  const rawMax = Math.max(...personas.map(p => p.estaturaCm), 1);
+  const rawMin = Math.min(...personas.map(p => p.estaturaCm), rawMax);
+  // Scale range: don't start from 0. Show from (min - 30) to (max + 10) for visible difference.
+  const scaleMin = Math.max(0, Math.floor((rawMin - 30) / 10) * 10); // round down to nearest 10
+  const scaleMax = Math.ceil((rawMax + 10) / 10) * 10; // round up to nearest 10
+  const maxCm = rawMax; // keep for compatibility
 
   const svgW = RULER_W + personas.length * (PERSON_W + GAP) + GAP;
   const svgH = MAX_H + LABEL_H;
@@ -209,13 +208,17 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const removePerson = (key: string) =>
     setPersonas(prev => prev.filter(p => p.key !== key));
 
+  // Convert cm to y position in the SVG (scaleMin at bottom, scaleMax at top)
+  const cmToY = (cm: number) => MAX_H - ((cm - scaleMin) / (scaleMax - scaleMin)) * MAX_H;
+  const yToCm = (y: number) => Math.round(scaleMin + (scaleMax - scaleMin) * (MAX_H - y) / MAX_H);
+
   /* Hover line */
   const handleMouseMove = (e: MouseEvent<SVGSVGElement>) => {
     const rect = svgRef.current?.getBoundingClientRect();
     if (!rect) return;
     const y = e.clientY - rect.top;
-    const cm = Math.round(maxCm * (MAX_H - y) / MAX_H);
-    setHoverCm(cm > 0 && cm <= maxCm + 30 ? cm : null);
+    const cm = yToCm(y);
+    setHoverCm(cm >= scaleMin && cm <= scaleMax ? cm : null);
   };
 
   /* Share image — canvas draw */
@@ -359,7 +362,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
     });
   };
 
-  const hoverY = hoverCm !== null ? MAX_H - (hoverCm / maxCm) * MAX_H : null;
+  const hoverY = hoverCm !== null ? cmToY(hoverCm) : null;
 
   return (
     <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ background: 'linear-gradient(135deg, #0f0d13 0%, #1a1520 100%)', border: '1px solid rgba(245,158,11,0.12)' }}>
@@ -375,21 +378,23 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setHoverCm(null)}
         >
-          {/* Grid */}
-          {[150, 160, 170, 175, 180, 190, 200, 210, 220].map(h => {
-            const y = MAX_H - (h / maxCm) * MAX_H;
-            if (y < 4 || y > MAX_H) return null;
-            return (
-              <g key={h}>
-                <line x1={RULER_W} y1={y} x2={svgW} y2={y}
-                  stroke="rgba(245,158,11,0.06)" strokeWidth={1} />
-                <text x={RULER_W - 6} y={y + 4} textAnchor="end" fontSize={11}
-                  fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif" fontWeight="500">{h}</text>
-                <line x1={RULER_W - 4} y1={y} x2={RULER_W} y2={y}
-                  stroke="#78716c" strokeWidth={1.5} />
-              </g>
-            );
-          })}
+          {/* Grid — dynamic lines every 10cm within scale range */}
+          {Array.from({ length: Math.floor((scaleMax - scaleMin) / 10) + 1 }, (_, i) => scaleMin + i * 10)
+            .filter(h => h > scaleMin && h <= scaleMax)
+            .map(h => {
+              const y = cmToY(h);
+              if (y < 4 || y > MAX_H - 4) return null;
+              return (
+                <g key={h}>
+                  <line x1={RULER_W} y1={y} x2={svgW} y2={y}
+                    stroke="rgba(245,158,11,0.08)" strokeWidth={1} />
+                  <text x={RULER_W - 6} y={y + 4} textAnchor="end" fontSize={11}
+                    fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif" fontWeight="500">{h}</text>
+                  <line x1={RULER_W - 4} y1={y} x2={RULER_W} y2={y}
+                    stroke="#78716c" strokeWidth={1.5} />
+                </g>
+              );
+            })}
 
           {/* Baseline */}
           <line x1={RULER_W} y1={MAX_H} x2={svgW} y2={MAX_H}
@@ -412,7 +417,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
           {/* People */}
           {personas.map((p, i) => {
             const palette = getWarmColor(i);
-            const displayH = (p.estaturaCm / maxCm) * MAX_H;
+            const displayH = ((p.estaturaCm - scaleMin) / (scaleMax - scaleMin)) * MAX_H;
             const x = RULER_W + GAP / 2 + i * (PERSON_W + GAP);
             const barTotalW = Math.max(BAR_W, HEAD_R * 2);
             const baseX = x + PERSON_W / 2 - barTotalW / 2;
@@ -421,8 +426,9 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             // Height diff to next
             const next = personas[i + 1];
             const diff = next ? next.estaturaCm - p.estaturaCm : null;
+            const nextDisplayH = next ? ((next.estaturaCm - scaleMin) / (scaleMax - scaleMin)) * MAX_H : 0;
             const diffY = diff !== null
-              ? MAX_H - Math.max(displayH, (next!.estaturaCm / maxCm) * MAX_H) - 14
+              ? MAX_H - Math.max(displayH, nextDisplayH) - 14
               : null;
 
             return (
