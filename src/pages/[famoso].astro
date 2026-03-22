@@ -29,6 +29,7 @@ const schema = {
   "height": { "@type": "QuantitativeValue", "value": famoso.estaturaCm, "unitCode": "CMT" },
   "nationality": famoso.pais,
   "jobTitle": famoso.profesion,
+  "description": `${famoso.nombre} mide ${famoso.estaturaCm} cm (${cmToFtIn(famoso.estaturaCm)}). Descubre su estatura y compárala con otros famosos.`,
   "url": `https://estaturas.com/${famoso.id}`,
 };
 
@@ -39,8 +40,8 @@ const heroDisplayH = Math.round((famoso.estaturaCm / refH) * MAX_DISPLAY);
 const heroW = Math.round(heroDisplayH * 0.4);
 ---
 <Base
-  title={`¿Cuánto mide ${famoso.nombre}? ${famoso.estaturaCm}cm (${cmToFtIn(famoso.estaturaCm)}) | estaturas.com`}
-  description={`${famoso.nombre} mide ${famoso.estaturaCm}cm (${cmToFtIn(famoso.estaturaCm)}). ${famoso.profesion} de ${famoso.pais}. Compárate visualmente con ${famoso.nombre.split(' ')[0]}.`}
+  title={`¿Cuánto mide ${famoso.nombre}? | ${famoso.estaturaCm} cm - Estaturas.com`}
+  description={`¿Cuánto mide ${famoso.nombre}? ${famoso.nombre} mide ${famoso.estaturaCm} cm (${cmToFtIn(famoso.estaturaCm)}). Compara su estatura con otros famosos.`}
   schema={schema}
 >
 
