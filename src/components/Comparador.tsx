@@ -35,77 +35,16 @@ const cmToFtIn = (cm: number) => {
 };
 
 /* ─── Human Silhouette ──────────────────────────────────────────────── */
-// Anatomically proportioned human silhouette path in a 60×180 viewBox
-// Designed with natural curves: sloping shoulders, slight waist, relaxed stance
+// Clean minimal human silhouette - single path, arms at sides, standing straight
+// Normalized to a 40×100 viewBox for simplicity
 const HUMAN_PATH = `
-  M 30,8
-  C 23,8 18,13 18,20
-  C 18,27 23,32 30,32
-  C 37,32 42,27 42,20
-  C 42,13 37,8 30,8
-  Z
-  M 27,32
-  L 33,32
-  L 34,38
-  L 26,38
-  Z
-  M 26,38
-  C 14,39 6,44 5,50
-  L 3,50
-  C 2,50 1,51 1,52
-  L 0,72
-  C 0,74 1,75 3,75
-  L 8,75
-  L 9,54
-  L 13,54
-  L 13,38
-  Z
-  M 34,38
-  C 46,39 54,44 55,50
-  L 57,50
-  C 58,50 59,51 59,52
-  L 60,72
-  C 60,74 59,75 57,75
-  L 52,75
-  L 51,54
-  L 47,54
-  L 47,38
-  Z
-  M 13,38
-  L 47,38
-  C 48,38 49,39 49,40
-  L 47,68
-  C 47,69 46,70 45,70
-  L 15,70
-  C 14,70 13,69 13,68
-  L 11,40
-  C 11,39 12,38 13,38
-  Z
-  M 15,70
-  L 28,70
-  L 28,160
-  C 28,163 26,165 24,166
-  L 16,168
-  C 14,168 13,167 13,165
-  L 13,162
-  L 22,160
-  L 22,70
-  Z
-  M 32,70
-  L 45,70
-  L 38,70
-  L 38,160
-  L 47,162
-  L 47,165
-  C 47,167 46,168 44,168
-  L 36,166
-  C 34,165 32,163 32,160
-  Z
+  M20,0 C23,0 25,2 25,5 C25,8 23,10 20,10 C17,10 15,8 15,5 C15,2 17,0 20,0 Z
+  M16,11 L24,11 C25,11 26,12 26,13 L28,25 L27,25 L25,16 L25,58 L30,58 L30,100 L23,100 L23,60 L20,60 L17,60 L17,100 L10,100 L10,58 L15,58 L15,16 L13,25 L12,25 L14,13 C14,12 15,11 16,11 Z
 `;
 
 // viewBox dimensions for the silhouette
-const SIL_VB_W = 60;
-const SIL_VB_H = 170;
+const SIL_VB_W = 40;
+const SIL_VB_H = 100;
 const SILHOUETTE_ASPECT = SIL_VB_W / SIL_VB_H;
 
 const SilhouettePath: FC<{
@@ -129,17 +68,10 @@ const SilhouettePath: FC<{
           <stop offset="0%" stopColor={colorFrom} stopOpacity="0.95" />
           <stop offset="100%" stopColor={colorTo} stopOpacity="0.55" />
         </linearGradient>
-        <linearGradient id={`${gradId}-highlight`} x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="white" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="white" stopOpacity="0" />
-        </linearGradient>
       </defs>
 
-      <svg width={pw} height={displayH} viewBox={`0 0 ${SIL_VB_W} ${SIL_VB_H}`} overflow="visible">
-        {/* Main body */}
+      <svg width={pw} height={displayH} viewBox="0 0 40 100" overflow="visible">
         <path d={HUMAN_PATH} fill={`url(#${gradId})`} />
-        {/* Subtle highlight on the left side for depth */}
-        <path d={HUMAN_PATH} fill={`url(#${gradId}-highlight)`} />
       </svg>
     </g>
   );
@@ -176,7 +108,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
 
   // Layout constants - wider to accommodate full names
   const RULER_W = 44;
-  const PERSON_W = 90;
+  const PERSON_W = 110;
   const GAP = 32;
   const MAX_H = 260;
   const LABEL_H = 56;
@@ -235,7 +167,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
     try {
       const canvas = canvasRef.current!;
       const PAD = 40, TITLE_H = 64, FOOTER_H = 36;
-      const personW = 90, personGap = 36;
+      const personW = 110, personGap = 36;
       const bodyH = 300;
       const W = PAD * 2 + personas.length * (personW + personGap) - personGap + PAD;
       const H = TITLE_H + bodyH + FOOTER_H + PAD * 2;
@@ -289,7 +221,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
         const cx = PAD + personW / 2 + i * (personW + personGap);
         const baseY = TITLE_H + PAD + bodyH;
 
-        // Draw silhouette with curves on canvas
+        // Draw clean silhouette on canvas using the same simple path approach
         const silW = displayH * SILHOUETTE_ASPECT;
         const silX = cx - silW / 2;
         const silY = baseY - displayH;
@@ -301,83 +233,42 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
         grad.addColorStop(1, palette.to + '88');
         ctx.fillStyle = grad;
 
-        // Simplified anatomical silhouette for canvas
-        const headR = Math.max(7, displayH * 0.065);
-        const neckH = displayH * 0.03;
-        const shoulderW = silW * 0.85;
-        const torsoH = displayH * 0.32;
-        const waistW = silW * 0.55;
-        const hipW = silW * 0.6;
-        const legH = displayH * 0.44;
-
-        const headY = silY + headR;
-        const neckY = headY + headR;
-        const shoulderY = neckY + neckH;
-        const waistY = shoulderY + torsoH * 0.7;
-        const hipY = shoulderY + torsoH;
-        const armLen = torsoH * 0.9;
+        // Use Path2D with transform for the simple silhouette
+        ctx.save();
+        ctx.translate(silX, silY);
+        ctx.scale(scaleX, scaleY);
 
         // Head
-        ctx.beginPath(); ctx.arc(cx, headY, headR, 0, Math.PI * 2); ctx.fill();
-
-        // Neck
-        ctx.fillRect(cx - silW * 0.07, neckY, silW * 0.14, neckH);
-
-        // Torso with waist curve
         ctx.beginPath();
-        ctx.moveTo(cx - shoulderW / 2, shoulderY);
-        ctx.quadraticCurveTo(cx - waistW / 2 - 2, waistY, cx - hipW / 2, hipY);
-        ctx.lineTo(cx + hipW / 2, hipY);
-        ctx.quadraticCurveTo(cx + waistW / 2 + 2, waistY, cx + shoulderW / 2, shoulderY);
+        ctx.moveTo(20, 0);
+        ctx.bezierCurveTo(23, 0, 25, 2, 25, 5);
+        ctx.bezierCurveTo(25, 8, 23, 10, 20, 10);
+        ctx.bezierCurveTo(17, 10, 15, 8, 15, 5);
+        ctx.bezierCurveTo(15, 2, 17, 0, 20, 0);
         ctx.closePath();
         ctx.fill();
 
-        // Arms
+        // Body - arms at sides, two legs
         ctx.beginPath();
-        ctx.moveTo(cx - shoulderW / 2, shoulderY);
-        ctx.quadraticCurveTo(cx - shoulderW / 2 - 4, shoulderY + armLen / 2, cx - shoulderW / 2 + 2, shoulderY + armLen);
-        ctx.lineTo(cx - shoulderW / 2 + silW * 0.12, shoulderY + armLen);
-        ctx.quadraticCurveTo(cx - shoulderW / 2 + silW * 0.1, shoulderY + armLen / 2, cx - shoulderW / 2 + silW * 0.14, shoulderY);
+        ctx.moveTo(16, 11); ctx.lineTo(24, 11);
+        ctx.bezierCurveTo(25, 11, 26, 12, 26, 13);
+        ctx.lineTo(28, 25); ctx.lineTo(27, 25); ctx.lineTo(25, 16);
+        ctx.lineTo(25, 58); ctx.lineTo(30, 58); ctx.lineTo(30, 100);
+        ctx.lineTo(23, 100); ctx.lineTo(23, 60); ctx.lineTo(20, 60);
+        ctx.lineTo(17, 60); ctx.lineTo(17, 100); ctx.lineTo(10, 100);
+        ctx.lineTo(10, 58); ctx.lineTo(15, 58); ctx.lineTo(15, 16);
+        ctx.lineTo(13, 25); ctx.lineTo(12, 25); ctx.lineTo(14, 13);
+        ctx.bezierCurveTo(14, 12, 15, 11, 16, 11);
         ctx.closePath();
         ctx.fill();
 
-        ctx.beginPath();
-        ctx.moveTo(cx + shoulderW / 2, shoulderY);
-        ctx.quadraticCurveTo(cx + shoulderW / 2 + 4, shoulderY + armLen / 2, cx + shoulderW / 2 - 2, shoulderY + armLen);
-        ctx.lineTo(cx + shoulderW / 2 - silW * 0.12, shoulderY + armLen);
-        ctx.quadraticCurveTo(cx + shoulderW / 2 - silW * 0.1, shoulderY + armLen / 2, cx + shoulderW / 2 - silW * 0.14, shoulderY);
-        ctx.closePath();
-        ctx.fill();
-
-        // Legs
-        const legGap = 2;
-        ctx.beginPath();
-        ctx.moveTo(cx - hipW / 2, hipY);
-        ctx.quadraticCurveTo(cx - hipW / 4, hipY + legH * 0.5, cx - hipW / 4 - 1, baseY);
-        ctx.lineTo(cx - legGap, baseY);
-        ctx.quadraticCurveTo(cx - legGap, hipY + legH * 0.3, cx - legGap, hipY);
-        ctx.closePath();
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.moveTo(cx + hipW / 2, hipY);
-        ctx.quadraticCurveTo(cx + hipW / 4, hipY + legH * 0.5, cx + hipW / 4 + 1, baseY);
-        ctx.lineTo(cx + legGap, baseY);
-        ctx.quadraticCurveTo(cx + legGap, hipY + legH * 0.3, cx + legGap, hipY);
-        ctx.closePath();
-        ctx.fill();
-
-        // Subtle ground shadow
-        ctx.fillStyle = palette.from + '30';
-        ctx.beginPath();
-        ctx.ellipse(cx, baseY + 2, silW * 0.4, 3, 0, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.restore();
 
         // Label
         ctx.textAlign = 'center';
         ctx.font = 'bold 11px Inter, system-ui, sans-serif';
         ctx.fillStyle = palette.from;
-        const displayName = p.nombre.length > 18 ? p.nombre.slice(0, 17) + '…' : p.nombre;
+        const displayName = p.nombre.length > 20 ? p.nombre.slice(0, 19) + '…' : p.nombre;
         ctx.fillText(displayName, cx, baseY + 18);
         ctx.font = '9px Inter, system-ui, sans-serif';
         ctx.fillStyle = '#a8a29e';
@@ -489,10 +380,9 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
               ? MAX_H - Math.max(displayH, (next!.estaturaCm / maxCm) * MAX_H) - 14
               : null;
 
-            // Truncate name smartly: show as much as fits
-            const maxNameLen = Math.floor(PERSON_W / 6.5);
-            const displayName = p.nombre.length > maxNameLen
-              ? p.nombre.slice(0, maxNameLen - 1) + '…'
+            // Show full name up to 20 chars
+            const displayName = p.nombre.length > 20
+              ? p.nombre.slice(0, 19) + '…'
               : p.nombre;
 
             return (
@@ -506,10 +396,6 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
                     label={p.nombre} cm={p.estaturaCm}
                   />
                 </g>
-
-                {/* Subtle ground shadow */}
-                <ellipse cx={x + PERSON_W / 2} cy={MAX_H + 1} rx={displayH * 0.13} ry={2}
-                  fill={palette.from} opacity={0.2} filter="blur(1px)" />
 
                 {/* Height marker at top of head */}
                 <line
