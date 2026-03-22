@@ -164,11 +164,10 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const MAX_H = 260;
   const LABEL_H = 56;
   const rawMax = Math.max(...personas.map(p => p.estaturaCm), 1);
-  const rawMin = Math.min(...personas.map(p => p.estaturaCm), rawMax);
-  // Scale range: don't start from 0. Show from (min - 30) to (max + 10) for visible difference.
-  const scaleMin = Math.max(0, Math.floor((rawMin - 30) / 10) * 10); // round down to nearest 10
-  const scaleMax = Math.ceil((rawMax + 10) / 10) * 10; // round up to nearest 10
-  const maxCm = rawMax; // keep for compatibility
+  // Scale from 0 to max+10 — full body silhouettes need full scale
+  const scaleMin = 0;
+  const scaleMax = Math.ceil((rawMax + 10) / 10) * 10;
+  const maxCm = rawMax;
 
   const svgW = RULER_W + personas.length * (PERSON_W + GAP) + GAP;
   const svgH = MAX_H + LABEL_H;
