@@ -73,21 +73,20 @@ const PersonBar: FC<{
 };
 
 /* ─── Person Visual (silhouette PNG with bar fallback) ──────────────── */
-const SIL_W = 80; // silhouette render width within SVG
-
 const PersonVisual: FC<{
   persona: Persona; displayH: number; palette: { from: string; to: string };
   gradId: string; animate: boolean;
 }> = ({ persona, displayH, palette, gradId, animate }) => {
-  const [hasSil, setHasSil] = useState<boolean | null>(null);
+  const [silData, setSilData] = useState<{ w: number; h: number } | null>(null);
+  const [error, setError] = useState(false);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    if (!persona.esFamoso) { setHasSil(false); return; }
+    if (!persona.esFamoso) { setError(true); return; }
     const img = new Image();
     img.src = `/silhouettes/${persona.id}.png`;
-    img.onload = () => setHasSil(true);
-    img.onerror = () => setHasSil(false);
+    img.onload = () => setSilData({ w: img.naturalWidth, h: img.naturalHeight });
+    img.onerror = () => setError(true);
   }, [persona.id, persona.esFamoso]);
 
   useEffect(() => {
@@ -96,7 +95,7 @@ const PersonVisual: FC<{
   }, []);
 
   // No silhouette or custom person → fallback to bar
-  if (hasSil !== true) {
+  if (error || !silData) {
     return (
       <PersonBar
         colorFrom={palette.from} colorTo={palette.to}
@@ -108,15 +107,28 @@ const PersonVisual: FC<{
   const scale = ready && animate ? 1 : animate ? 0 : 1;
   const totalW = Math.max(BAR_W, HEAD_R * 2);
 
+  // Height FIXED to displayH (proportional to cm). Width from aspect ratio.
+  const aspect = silData.w / silData.h;
+  let imgW = displayH * aspect;
+  let imgH = displayH;
+  // If too wide (e.g. arms-out pose), cap width and reduce height proportionally
+  const MAX_SIL_W = 100;
+  if (imgW > MAX_SIL_W) {
+    imgW = MAX_SIL_W;
+    imgH = imgW / aspect;
+  }
+  // Position: bottom-aligned within displayH box, centered horizontally
+  const imgX = totalW / 2 - imgW / 2;
+  const imgY = displayH - imgH;
+
   return (
-    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
+    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)', overflow: 'visible' }}>
       <image
         href={`/silhouettes/${persona.id}.png`}
-        x={(totalW - SIL_W) / 2}
-        y={0}
-        width={SIL_W}
-        height={displayH}
-        preserveAspectRatio="xMidYMax meet"
+        x={imgX}
+        y={imgY}
+        width={imgW}
+        height={imgH}
       />
     </g>
   );
