@@ -170,10 +170,10 @@ const stats = [
     <h2 class="text-2xl font-black text-white mb-6">Explora por categoría</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
       {[
-        { href: '/famosos', emoji: '⚽', label: 'Futbolistas', count: famosos.filter(f => f.categoria === 'futbol').length },
-        { href: '/famosos', emoji: '🎵', label: 'Cantantes', count: famosos.filter(f => f.categoria === 'musica').length },
-        { href: '/famosos', emoji: '🎬', label: 'Actores', count: famosos.filter(f => f.categoria === 'cine-tv').length },
-        { href: '/famosos', emoji: '📱', label: 'Streamers', count: famosos.filter(f => f.categoria === 'influencers').length },
+        { href: '/famosos?cat=futbol', emoji: '⚽', label: 'Futbolistas', count: famosos.filter(f => f.categoria === 'futbol').length },
+        { href: '/famosos?cat=musica', emoji: '🎵', label: 'Cantantes', count: famosos.filter(f => f.categoria === 'musica').length },
+        { href: '/famosos?cat=cine-tv', emoji: '🎬', label: 'Actores', count: famosos.filter(f => f.categoria === 'cine-tv').length },
+        { href: '/famosos?cat=influencers', emoji: '📱', label: 'Streamers', count: famosos.filter(f => f.categoria === 'influencers').length },
       ].map(cat => (
         <a href={cat.href}
           class="glass rounded-2xl p-5 text-center group transition-all hover:-translate-y-1">

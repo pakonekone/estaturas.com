@@ -86,33 +86,36 @@ const categories = [
       const cards = document.querySelectorAll<HTMLElement>('#famosos-grid > a');
       const noResults = document.getElementById('no-results');
 
+      function filterByCategory(cat: string) {
+        tabs.forEach(t => {
+          t.classList.remove('bg-brand-500', 'text-white');
+          t.classList.add('text-stone-400');
+          if (!t.classList.contains('glass')) t.classList.add('glass');
+          if ((t as HTMLElement).dataset.category === cat) {
+            t.classList.add('bg-brand-500', 'text-white');
+            t.classList.remove('glass', 'text-stone-400');
+          }
+        });
+        let visible = 0;
+        cards.forEach(card => {
+          if (cat === 'todos' || card.dataset.category === cat) {
+            card.style.display = '';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (noResults) noResults.classList.toggle('hidden', visible > 0);
+      }
+
+      // Auto-filter from URL param
+      const urlCat = new URLSearchParams(window.location.search).get('cat');
+      if (urlCat) filterByCategory(urlCat);
+
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-          const cat = (tab as HTMLElement).dataset.category;
-
-          // Update tab styles
-          tabs.forEach(t => {
-            t.classList.remove('bg-brand-500', 'text-white');
-            t.classList.add('text-stone-400');
-            if (!t.classList.contains('glass')) t.classList.add('glass');
-          });
-          tab.classList.add('bg-brand-500', 'text-white');
-          tab.classList.remove('glass', 'text-stone-400');
-
-          // Filter cards
-          let visible = 0;
-          cards.forEach(card => {
-            if (cat === 'todos' || card.dataset.category === cat) {
-              card.style.display = '';
-              visible++;
-            } else {
-              card.style.display = 'none';
-            }
-          });
-
-          if (noResults) {
-            noResults.classList.toggle('hidden', visible > 0);
-          }
+          const cat = (tab as HTMLElement).dataset.category!;
+          filterByCategory(cat);
         });
       });
     });
