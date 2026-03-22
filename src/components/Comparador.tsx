@@ -51,7 +51,6 @@ const SilhouettePath: FC<{
           <stop offset="0%" stopColor={color} stopOpacity="0.95" />
           <stop offset="100%" stopColor={color} stopOpacity="0.45" />
         </linearGradient>
-        {photo && <clipPath id={`cp-${gradId}`}><circle cx={pw / 2} cy={-14} r={12} /></clipPath>}
       </defs>
 
       {/* Body — normalized to pw × displayH */}
@@ -76,16 +75,7 @@ const SilhouettePath: FC<{
         <path d="M18,19 Q20,18 22,19 L21.5,55 L18.5,55 Z" fill="white" opacity="0.12" />
       </svg>
 
-      {/* Photo overlay */}
-      {photo && (
-        <image
-          href={photo}
-          x={pw / 2 - 12} y={-26}
-          width={24} height={24}
-          preserveAspectRatio="xMidYMid slice"
-          clipPath={`url(#cp-${gradId})`}
-        />
-      )}
+      {/* Photos shown in cards/lists only — silhouettes are the comparator's identity */}
     </g>
   );
 };
