@@ -108,7 +108,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
 
   // Layout constants - wider to accommodate full names
   const RULER_W = 44;
-  const PERSON_W = 110;
+  const PERSON_W = 120;
   const GAP = 32;
   const MAX_H = 260;
   const LABEL_H = 56;
@@ -406,9 +406,9 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
 
                 {/* Name label */}
                 <text x={x + PERSON_W / 2} y={MAX_H + 20} textAnchor="middle"
-                  fontSize={11} fill={palette.from} fontWeight="700"
+                  fontSize={10.5} fill={palette.from} fontWeight="700"
                   fontFamily="Inter, system-ui, sans-serif">
-                  {displayName}
+                  {p.nombre}
                 </text>
                 <text x={x + PERSON_W / 2} y={MAX_H + 34} textAnchor="middle"
                   fontSize={10} fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif">
