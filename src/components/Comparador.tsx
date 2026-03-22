@@ -34,24 +34,17 @@ const cmToFtIn = (cm: number) => {
   return `${ft}'${inches}"`;
 };
 
-/* ─── Human Silhouette ──────────────────────────────────────────────── */
-// Clean minimal human silhouette - single path, arms at sides, standing straight
-// Normalized to a 40×100 viewBox for simplicity
-const HUMAN_PATH = `
-  M20,0 C23,0 25,2 25,5 C25,8 23,10 20,10 C17,10 15,8 15,5 C15,2 17,0 20,0 Z
-  M16,11 L24,11 C25,11 26,12 26,13 L28,25 L27,25 L25,16 L25,58 L30,58 L30,100 L23,100 L23,60 L20,60 L17,60 L17,100 L10,100 L10,58 L15,58 L15,16 L13,25 L12,25 L14,13 C14,12 15,11 16,11 Z
-`;
+/* ─── Person Bar ─────────────────────────────────────────────────────── */
+// Clean modern approach: rounded bar + circle head. Like a stylized bar chart.
+// No complex SVG silhouettes — just shapes that always look good.
+const BAR_W = 28;   // body bar width
+const HEAD_R = 10;  // head radius
+const NECK_GAP = 3; // gap between head and bar
 
-// viewBox dimensions for the silhouette
-const SIL_VB_W = 40;
-const SIL_VB_H = 100;
-const SILHOUETTE_ASPECT = SIL_VB_W / SIL_VB_H;
-
-const SilhouettePath: FC<{
+const PersonBar: FC<{
   colorFrom: string; colorTo: string; gradId: string; displayH: number;
-  animate: boolean; label: string; cm: number;
-}> = ({ colorFrom, colorTo, gradId, displayH, animate, label, cm }) => {
-  const pw = displayH * SILHOUETTE_ASPECT;
+  animate: boolean;
+}> = ({ colorFrom, colorTo, gradId, displayH, animate }) => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -60,19 +53,21 @@ const SilhouettePath: FC<{
   }, []);
 
   const scale = ready && animate ? 1 : animate ? 0 : 1;
+  const barH = Math.max(displayH - HEAD_R * 2 - NECK_GAP, 10);
+  const totalW = Math.max(BAR_W, HEAD_R * 2);
 
   return (
     <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={colorFrom} stopOpacity="0.95" />
-          <stop offset="100%" stopColor={colorTo} stopOpacity="0.55" />
+          <stop offset="100%" stopColor={colorTo} stopOpacity="0.45" />
         </linearGradient>
       </defs>
-
-      <svg width={pw} height={displayH} viewBox="0 0 40 100" overflow="visible">
-        <path d={HUMAN_PATH} fill={`url(#${gradId})`} />
-      </svg>
+      {/* Head circle */}
+      <circle cx={totalW / 2} cy={HEAD_R} r={HEAD_R} fill={`url(#${gradId})`} />
+      {/* Body bar with rounded bottom */}
+      <rect x={(totalW - BAR_W) / 2} y={HEAD_R * 2 + NECK_GAP} width={BAR_W} height={barH} rx={8} fill={`url(#${gradId})`} />
     </g>
   );
 };
@@ -221,48 +216,35 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
         const cx = PAD + personW / 2 + i * (personW + personGap);
         const baseY = TITLE_H + PAD + bodyH;
 
-        // Draw clean silhouette on canvas using the same simple path approach
-        const silW = displayH * SILHOUETTE_ASPECT;
-        const silX = cx - silW / 2;
+        // Draw person bar + head on canvas
         const silY = baseY - displayH;
-        const scaleX = silW / SIL_VB_W;
-        const scaleY = displayH / SIL_VB_H;
-
         const grad = ctx.createLinearGradient(cx, silY, cx, baseY);
         grad.addColorStop(0, palette.from + 'ee');
-        grad.addColorStop(1, palette.to + '88');
+        grad.addColorStop(1, palette.to + '77');
         ctx.fillStyle = grad;
 
-        // Use Path2D with transform for the simple silhouette
-        ctx.save();
-        ctx.translate(silX, silY);
-        ctx.scale(scaleX, scaleY);
-
-        // Head
+        // Head circle
+        const headR = 10;
         ctx.beginPath();
-        ctx.moveTo(20, 0);
-        ctx.bezierCurveTo(23, 0, 25, 2, 25, 5);
-        ctx.bezierCurveTo(25, 8, 23, 10, 20, 10);
-        ctx.bezierCurveTo(17, 10, 15, 8, 15, 5);
-        ctx.bezierCurveTo(15, 2, 17, 0, 20, 0);
-        ctx.closePath();
+        ctx.arc(cx, silY + headR, headR, 0, Math.PI * 2);
         ctx.fill();
 
-        // Body - arms at sides, two legs
+        // Body bar with rounded corners
+        const barW = 26;
+        const barY = silY + headR * 2 + 3;
+        const barH = Math.max(displayH - headR * 2 - 3, 8);
+        const rr = 7;
         ctx.beginPath();
-        ctx.moveTo(16, 11); ctx.lineTo(24, 11);
-        ctx.bezierCurveTo(25, 11, 26, 12, 26, 13);
-        ctx.lineTo(28, 25); ctx.lineTo(27, 25); ctx.lineTo(25, 16);
-        ctx.lineTo(25, 58); ctx.lineTo(30, 58); ctx.lineTo(30, 100);
-        ctx.lineTo(23, 100); ctx.lineTo(23, 60); ctx.lineTo(20, 60);
-        ctx.lineTo(17, 60); ctx.lineTo(17, 100); ctx.lineTo(10, 100);
-        ctx.lineTo(10, 58); ctx.lineTo(15, 58); ctx.lineTo(15, 16);
-        ctx.lineTo(13, 25); ctx.lineTo(12, 25); ctx.lineTo(14, 13);
-        ctx.bezierCurveTo(14, 12, 15, 11, 16, 11);
-        ctx.closePath();
+        ctx.moveTo(cx - barW/2 + rr, barY);
+        ctx.lineTo(cx + barW/2 - rr, barY);
+        ctx.quadraticCurveTo(cx + barW/2, barY, cx + barW/2, barY + rr);
+        ctx.lineTo(cx + barW/2, barY + barH - rr);
+        ctx.quadraticCurveTo(cx + barW/2, barY + barH, cx + barW/2 - rr, barY + barH);
+        ctx.lineTo(cx - barW/2 + rr, barY + barH);
+        ctx.quadraticCurveTo(cx - barW/2, barY + barH, cx - barW/2, barY + barH - rr);
+        ctx.lineTo(cx - barW/2, barY + rr);
+        ctx.quadraticCurveTo(cx - barW/2, barY, cx - barW/2 + rr, barY);
         ctx.fill();
-
-        ctx.restore();
 
         // Label
         ctx.textAlign = 'center';
@@ -370,7 +352,8 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             const palette = getWarmColor(i);
             const displayH = (p.estaturaCm / maxCm) * MAX_H;
             const x = RULER_W + GAP / 2 + i * (PERSON_W + GAP);
-            const baseX = x + PERSON_W / 2 - (displayH * SILHOUETTE_ASPECT) / 2;
+            const barTotalW = Math.max(BAR_W, HEAD_R * 2);
+            const baseX = x + PERSON_W / 2 - barTotalW / 2;
             const gradId = `grad-${uid}-${i}`;
 
             // Height diff to next
@@ -380,29 +363,16 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
               ? MAX_H - Math.max(displayH, (next!.estaturaCm / maxCm) * MAX_H) - 14
               : null;
 
-            // Show full name up to 20 chars
-            const displayName = p.nombre.length > 20
-              ? p.nombre.slice(0, 19) + '…'
-              : p.nombre;
-
             return (
               <g key={p.key}>
-                {/* Silhouette */}
+                {/* Person bar + head */}
                 <g transform={`translate(${baseX}, ${MAX_H - displayH})`}>
-                  <SilhouettePath
+                  <PersonBar
                     colorFrom={palette.from} colorTo={palette.to}
                     gradId={gradId} displayH={displayH}
                     animate={newKeys.has(p.key)}
-                    label={p.nombre} cm={p.estaturaCm}
                   />
                 </g>
-
-                {/* Height marker at top of head */}
-                <line
-                  x1={x + PERSON_W / 2 - 8} y1={MAX_H - displayH}
-                  x2={x + PERSON_W / 2 + 8} y2={MAX_H - displayH}
-                  stroke={palette.from} strokeWidth={1.5} opacity={0.6}
-                />
 
                 {/* Name label */}
                 <text x={x + PERSON_W / 2} y={MAX_H + 20} textAnchor="middle"
