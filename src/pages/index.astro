@@ -37,7 +37,7 @@ const stats = [
   <!-- ── Hero ── -->
   <section class="max-w-6xl mx-auto px-4 pt-16 pb-6 text-center">
     <div class="hero-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-8 px-4 py-2 rounded-full"
-      style="background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); color: #38bdf8;">
+      style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); color: #f59e0b;">
       📏 Comparador de estaturas en español
     </div>
 
@@ -55,7 +55,7 @@ const stats = [
       {stats.map(s => (
         <div class="text-center">
           <p class="text-2xl font-black text-white">{s.n}</p>
-          <p class="text-slate-500 text-xs uppercase tracking-wide">{s.label}</p>
+          <p class="text-stone-500 text-xs uppercase tracking-wide">{s.label}</p>
         </div>
       ))}
     </div>
@@ -64,7 +64,7 @@ const stats = [
     <div class="hero-4 flex flex-wrap justify-center gap-2 mb-14">
       {pairs.map(p => (
         <a href={`/comparar/${p.a}-vs-${p.b}`}
-          class="glass text-slate-400 hover:text-white text-sm px-3.5 py-1.5 rounded-full transition-all hover:-translate-y-0.5">
+          class="glass text-stone-400 hover:text-white text-sm px-3.5 py-1.5 rounded-full transition-all hover:-translate-y-0.5">
           {p.label}
         </a>
       ))}
@@ -77,7 +77,7 @@ const stats = [
   </section>
 
   <!-- ── Features ── -->
-  <section class="border-t py-16 reveal" style="border-color: rgba(255,255,255,0.06);">
+  <section class="border-t py-16 reveal" style="border-color: rgba(255,245,235,0.06);">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
@@ -88,19 +88,19 @@ const stats = [
           <div class="glass rounded-2xl p-6 transition-all hover:-translate-y-1">
             <div class="text-3xl mb-4">{f.icon}</div>
             <h3 class="font-bold text-white mb-2">{f.title}</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">{f.desc}</p>
+            <p class="text-stone-400 text-sm leading-relaxed">{f.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ── Famosos grid ── -->
+  <!-- ── Famosos grid with photos ── -->
   <section class="max-w-6xl mx-auto px-4 py-12 reveal">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-2xl font-black text-white">Famosos más buscados</h2>
       <a href="/famosos" class="text-sm font-semibold transition-colors hover:opacity-80"
-        style="color: #38bdf8">Ver todos →</a>
+        style="color: #f59e0b">Ver todos →</a>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {famosos.slice(0, 10).map(f => (
@@ -109,31 +109,77 @@ const stats = [
           style={`--glow: ${f.color}`}
           onmouseover={`this.style.boxShadow='0 0 20px ${f.color}33'; this.style.borderColor='${f.color}44'`}
           onmouseout={`this.style.boxShadow=''; this.style.borderColor=''`}>
-          <!-- Silhouette mini -->
-          <div class="w-10 h-14 mx-auto mb-3 relative flex items-end justify-center">
-            <svg viewBox="0 0 40 100" width="28" height={Math.round(28 * (f.estaturaCm / 210))}
-              style={{ minHeight: '20px', maxHeight: '40px' }}>
-              <defs>
-                <linearGradient id={`mini-${f.id}`} x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color={f.color} stop-opacity="0.9" />
-                  <stop offset="100%" stop-color={f.color} stop-opacity="0.4" />
-                </linearGradient>
-              </defs>
-              <ellipse cx="20" cy="7.5" rx="7.5" ry="8" fill={`url(#mini-${f.id})`} />
-              <rect x="17" y="15.5" width="6" height="3.5" rx="1" fill={`url(#mini-${f.id})`} />
-              <path d="M17,19 Q4,20 3,26 L37,26 Q36,20 23,19 Z" fill={`url(#mini-${f.id})`} />
-              <path d="M3,26 L0,54 L7,54 L8,26 Z" fill={`url(#mini-${f.id})`} />
-              <path d="M37,26 L40,54 L33,54 L32,26 Z" fill={`url(#mini-${f.id})`} />
-              <path d="M8,26 L32,26 L30,58 L10,58 Z" fill={`url(#mini-${f.id})`} />
-              <path d="M10,57 L20,57 L19.5,100 L10,100 Z" fill={`url(#mini-${f.id})`} />
-              <path d="M20,57 L30,57 L30,100 L20.5,100 Z" fill={`url(#mini-${f.id})`} />
-            </svg>
+          <!-- Photo/Avatar -->
+          <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden"
+            style={f.foto ? '' : `background: linear-gradient(135deg, ${f.color}40, ${f.color}20)`}>
+            {f.foto ? (
+              <img src={f.foto} alt={f.nombre} class="w-full h-full object-cover" loading="lazy" />
+            ) : (
+              <svg viewBox="0 0 100 100" class="w-full h-full" aria-hidden="true">
+                <circle cx="50" cy="35" r="18" fill={`${f.color}80`} />
+                <ellipse cx="50" cy="85" rx="30" ry="22" fill={`${f.color}60`} />
+              </svg>
+            )}
           </div>
           <p class="text-white text-sm font-bold leading-tight mb-1">
             {f.nombre.split(' ')[0]}
           </p>
           <p class="text-xs font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
-          <p class="text-slate-600 text-xs mt-0.5">{f.profesion?.split('/')[0].trim()}</p>
+          <p class="text-stone-600 text-xs mt-0.5">{f.profesion?.split('/')[0].trim()}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── Trending comparisons ── -->
+  <section class="max-w-6xl mx-auto px-4 py-12 reveal">
+    <h2 class="text-2xl font-black text-white mb-2">🔥 Los más buscados</h2>
+    <p class="text-stone-400 text-sm mb-6">Las comparaciones más populares</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {[
+        { a: 'lionel-messi', b: 'cristiano-ronaldo', emoji: '⚽' },
+        { a: 'taylor-swift', b: 'bad-bunny', emoji: '🎵' },
+        { a: 'tom-holland', b: 'zendaya', emoji: '🎬' },
+        { a: 'shaquille-oneal', b: 'simone-biles', emoji: '😱' },
+        { a: 'ibai', b: 'elrubius', emoji: '🎮' },
+        { a: 'erling-haaland', b: 'lionel-messi', emoji: '⚽' },
+      ].map(pair => {
+        const fa = famosos.find(f => f.id === pair.a);
+        const fb = famosos.find(f => f.id === pair.b);
+        if (!fa || !fb) return null;
+        const diff = Math.abs(fa.estaturaCm - fb.estaturaCm);
+        return (
+          <a href={`/comparar/${pair.a}-vs-${pair.b}`}
+            class="glass rounded-xl p-4 flex items-center gap-3 group transition-all hover:-translate-y-1">
+            <span class="text-2xl">{pair.emoji}</span>
+            <div class="flex-1 min-w-0">
+              <p class="text-white text-sm font-bold group-hover:text-brand-400 transition-colors truncate">
+                {fa.nombre} vs {fb.nombre}
+              </p>
+              <p class="text-stone-500 text-xs">{diff}cm de diferencia</p>
+            </div>
+            <span class="text-stone-600 text-xs">→</span>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- ── Category quick links ── -->
+  <section class="max-w-6xl mx-auto px-4 py-8 reveal">
+    <h2 class="text-2xl font-black text-white mb-6">Explora por categoría</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      {[
+        { href: '/famosos', emoji: '⚽', label: 'Futbolistas', count: famosos.filter(f => f.categoria === 'futbol').length },
+        { href: '/famosos', emoji: '🎵', label: 'Cantantes', count: famosos.filter(f => f.categoria === 'musica').length },
+        { href: '/famosos', emoji: '🎬', label: 'Actores', count: famosos.filter(f => f.categoria === 'cine-tv').length },
+        { href: '/famosos', emoji: '📱', label: 'Streamers', count: famosos.filter(f => f.categoria === 'influencers').length },
+      ].map(cat => (
+        <a href={cat.href}
+          class="glass rounded-2xl p-5 text-center group transition-all hover:-translate-y-1">
+          <span class="text-4xl block mb-2">{cat.emoji}</span>
+          <p class="font-bold text-white group-hover:text-brand-400">{cat.label}</p>
+          <p class="text-stone-500 text-xs mt-1">{cat.count} famosos</p>
         </a>
       ))}
     </div>
@@ -152,8 +198,8 @@ const stats = [
           class="glass rounded-2xl p-5 flex gap-4 items-start transition-all hover:-translate-y-1 group">
           <span class="text-3xl mt-0.5">{r.emoji}</span>
           <div>
-            <p class="font-bold text-white group-hover:text-sky-400 transition-colors">{r.title}</p>
-            <p class="text-slate-400 text-sm mt-0.5">{r.desc}</p>
+            <p class="font-bold text-white group-hover:text-brand-400 transition-colors">{r.title}</p>
+            <p class="text-stone-400 text-sm mt-0.5">{r.desc}</p>
           </div>
         </a>
       ))}

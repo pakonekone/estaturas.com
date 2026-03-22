@@ -8,21 +8,21 @@ import famososData from '../data/famosos.json';
   description="¿Puedes adivinar cuánto miden tus famosos favoritos? Pon a prueba tus conocimientos con nuestro quiz de estaturas."
 >
   <div class="max-w-xl mx-auto px-4 py-12">
-    <nav class="text-sm text-slate-500 mb-8 flex items-center gap-2">
-      <a href="/" class="hover:text-slate-300">Inicio</a>
+    <nav class="text-sm text-stone-500 mb-8 flex items-center gap-2">
+      <a href="/" class="hover:text-stone-300">Inicio</a>
       <span>›</span>
-      <span class="text-slate-300">Quiz</span>
+      <span class="text-stone-300">Quiz</span>
     </nav>
 
     <div class="text-center mb-8">
       <div class="text-5xl mb-4">🎯</div>
       <h1 class="text-3xl font-extrabold text-white mb-2">Adivina la estatura</h1>
-      <p class="text-slate-400">5 famosos, 3 opciones cada uno. ¿Cuántos aciertas?</p>
+      <p class="text-stone-400">5 famosos, 3 opciones cada uno. ¿Cuántos aciertas?</p>
     </div>
 
     <QuizEstatura client:load famosos={famososData} />
 
-    <p class="text-center text-slate-600 text-xs mt-8">
+    <p class="text-center text-stone-600 text-xs mt-8">
       Los resultados se guardan localmente en tu dispositivo.
     </p>
   </div>

@@ -39,14 +39,14 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
   description={ranking.descripcion}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
-    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
-      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+    <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-stone-300 transition-colors">Inicio</a>
       <span>›</span>
-      <span class="text-slate-300">Rankings</span>
+      <span class="text-stone-300">Rankings</span>
     </nav>
 
     <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">{ranking.titulo}</h1>
-    <p class="text-slate-400 mb-10 text-lg">{ranking.descripcion}</p>
+    <p class="text-stone-400 mb-10 text-lg">{ranking.descripcion}</p>
 
     <div class="space-y-2.5">
       {top.map((f, i) => {
@@ -61,21 +61,21 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
               <div class="w-8 flex-shrink-0 text-center">
                 {medal
                   ? <span class="text-xl">{medal}</span>
-                  : <span class="text-slate-500 font-mono text-sm font-bold">{i + 1}</span>
+                  : <span class="text-stone-500 font-mono text-sm font-bold">{i + 1}</span>
                 }
               </div>
               <div class="text-xl flex-shrink-0">{f.bandera}</div>
               <div class="flex-1 min-w-0">
                 <div class="flex items-baseline justify-between mb-1.5">
                   <div class="min-w-0">
-                    <p class="font-bold text-white group-hover:text-sky-400 transition-colors truncate">
+                    <p class="font-bold text-white group-hover:text-brand-400 transition-colors truncate">
                       {f.nombre}
                     </p>
-                    <p class="text-slate-500 text-xs truncate">{f.profesion?.split('/')[0].trim()}</p>
+                    <p class="text-stone-500 text-xs truncate">{f.profesion?.split('/')[0].trim()}</p>
                   </div>
                   <div class="text-right flex-shrink-0 ml-3">
                     <span class="font-black text-xl" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
-                    <span class="text-slate-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
+                    <span class="text-stone-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
                   </div>
                 </div>
                 <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
@@ -93,7 +93,7 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
     <div class="mt-10 text-center">
       <a href="/"
         class="btn-glow inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl"
-        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        style="background: linear-gradient(135deg, #d97706, #f59e0b)">
         🔄 Comparar estas estaturas
       </a>
     </div>
@@ -102,8 +102,8 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3">
       {rankingsData.filter(r => r.slug !== ranking.slug).slice(0, 4).map(r => (
         <a href={`/ranking/${r.slug}`}
-          class="glass rounded-xl p-4 text-sm text-slate-400 hover:text-white transition-colors group">
-          <p class="font-semibold group-hover:text-sky-400 transition-colors">{r.titulo}</p>
+          class="glass rounded-xl p-4 text-sm text-stone-400 hover:text-white transition-colors group">
+          <p class="font-semibold group-hover:text-brand-400 transition-colors">{r.titulo}</p>
         </a>
       ))}
     </div>

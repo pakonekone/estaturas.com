@@ -11,7 +11,7 @@ const random = famososData[Math.floor(Math.random() * famososData.length)];
   <div class="max-w-2xl mx-auto px-4 py-24 text-center">
     <div class="text-8xl mb-6">📏</div>
     <h1 class="text-4xl font-black text-white mb-4">404 — Página no encontrada</h1>
-    <p class="text-slate-400 text-lg mb-10">
+    <p class="text-stone-400 text-lg mb-10">
       Esta página no existe, pero podemos medirte algo mientras tanto.<br />
       ¿Sabías que <strong class="text-white">{random.nombre}</strong> mide{' '}
       <strong style={`color: ${random.color}`}>{random.estaturaCm}cm</strong>?
@@ -19,11 +19,11 @@ const random = famososData[Math.floor(Math.random() * famososData.length)];
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="/"
         class="btn-glow px-6 py-3 rounded-xl font-bold text-white"
-        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        style="background: linear-gradient(135deg, #d97706, #f59e0b)">
         🔄 Ir al comparador
       </a>
       <a href="/famosos"
-        class="glass px-6 py-3 rounded-xl font-semibold text-slate-300 hover:text-white transition-colors">
+        class="glass px-6 py-3 rounded-xl font-semibold text-stone-300 hover:text-white transition-colors">
         📋 Ver todos los famosos
       </a>
     </div>

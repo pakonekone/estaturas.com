@@ -459,7 +459,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             </div>
           ))}
           {personas.length === 0 && (
-            <p className="text-slate-600 text-sm">Añade personas para comparar →</p>
+            <p className="text-stone-600 text-sm">Añade personas para comparar →</p>
           )}
         </div>
 
@@ -467,10 +467,10 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {/* Famoso search */}
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">🔍</div>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-500 text-sm">🔍</div>
               <input type="text" placeholder="Buscar famoso..." value={query}
                 onChange={e => setQuery(e.target.value)}
-                className="w-full pl-8 pr-3 py-2.5 rounded-xl text-sm text-slate-200 placeholder-slate-600 focus:outline-none transition-colors"
+                className="w-full pl-8 pr-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none transition-colors"
                 style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
               />
               {suggestions.length > 0 && (
@@ -478,12 +478,12 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
                   style={{ background: '#1e293b', border: '1px solid rgba(148,163,184,0.15)' }}>
                   {suggestions.map(s => (
                     <button key={s.id} onClick={() => addFamoso(s)}
-                      className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-slate-700/50 transition-colors text-left">
+                      className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-stone-700/50 transition-colors text-left">
                       <div>
-                        <span className="text-slate-200 text-sm font-medium">{s.nombre}</span>
-                        {s.profesion && <span className="text-slate-500 text-xs ml-2">{s.profesion}</span>}
+                        <span className="text-stone-200 text-sm font-medium">{s.nombre}</span>
+                        {s.profesion && <span className="text-stone-500 text-xs ml-2">{s.profesion}</span>}
                       </div>
-                      <span className="text-slate-400 text-xs font-mono">{s.estaturaCm}cm</span>
+                      <span className="text-stone-400 text-xs font-mono">{s.estaturaCm}cm</span>
                     </button>
                   ))}
                 </div>
@@ -494,19 +494,19 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             <div className="flex gap-2">
               <input type="text" placeholder="Tu nombre" value={customNombre}
                 onChange={e => setCustomNombre(e.target.value)}
-                className="flex-1 px-3 py-2.5 rounded-xl text-sm text-slate-200 placeholder-slate-600 focus:outline-none transition-colors"
+                className="flex-1 px-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none transition-colors"
                 style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
               />
               <input type="number" placeholder="cm" value={customCm}
                 onChange={e => setCustomCm(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && addCustom()}
                 min={50} max={300}
-                className="w-20 px-2 py-2.5 rounded-xl text-sm text-slate-200 placeholder-slate-600 focus:outline-none text-center transition-colors"
+                className="w-20 px-2 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none text-center transition-colors"
                 style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
               />
               <button onClick={addCustom}
                 className="px-4 py-2.5 rounded-xl text-sm font-bold text-white transition-all hover:scale-105 active:scale-95"
-                style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)' }}>
+                style={{ background: 'linear-gradient(135deg, #d97706, #f59e0b)' }}>
                 +
               </button>
             </div>

@@ -30,19 +30,19 @@ const diffM = cm - PROMEDIO_M;
   description={`${exact.length > 0 ? exact.map(f => f.nombre).join(', ') + ' miden' : 'Famosos que miden'} ${cm}cm (${ftIn}). ${exact.length + nearby.length} celebridades con esta estatura aproximada.`}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
-    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
-      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+    <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-stone-300 transition-colors">Inicio</a>
       <span>›</span>
-      <a href="/calculadora-estatura" class="hover:text-slate-300 transition-colors">Estaturas</a>
+      <a href="/calculadora-estatura" class="hover:text-stone-300 transition-colors">Estaturas</a>
       <span>›</span>
-      <span class="text-slate-300">{cm}cm</span>
+      <span class="text-stone-300">{cm}cm</span>
     </nav>
 
     <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">
       Famosos que miden {cm}cm
     </h1>
-    <p class="text-slate-400 text-lg mb-2">{ftIn} en pies y pulgadas</p>
-    <p class="text-slate-500 mb-10">
+    <p class="text-stone-400 text-lg mb-2">{ftIn} en pies y pulgadas</p>
+    <p class="text-stone-500 mb-10">
       {diff > 0 ? `${diff}cm por encima` : `${Math.abs(diff)}cm por debajo`} del promedio masculino español (176cm) ·
       {diffM > 0 ? `${diffM}cm por encima` : `${Math.abs(diffM)}cm por debajo`} del femenino (163cm)
     </p>
@@ -57,9 +57,9 @@ const diffM = cm - PROMEDIO_M;
               onmouseover={`this.style.borderColor='${f.color}44'`}
               onmouseout={`this.style.borderColor=''`}>
               <span class="text-2xl block mb-2">{f.bandera}</span>
-              <p class="text-white font-bold text-sm group-hover:text-sky-400 transition-colors">{f.nombre}</p>
+              <p class="text-white font-bold text-sm group-hover:text-brand-400 transition-colors">{f.nombre}</p>
               <p class="text-xs mt-1 font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm · {ftIn}</p>
-              <p class="text-slate-500 text-xs">{f.profesion?.split('/')[0].trim()}</p>
+              <p class="text-stone-500 text-xs">{f.profesion?.split('/')[0].trim()}</p>
             </a>
           ))}
         </div>
@@ -75,7 +75,7 @@ const diffM = cm - PROMEDIO_M;
               class="glass rounded-2xl p-4 text-center transition-all hover:-translate-y-1 group"
               style={`opacity: 0.85`}>
               <span class="text-2xl block mb-2">{f.bandera}</span>
-              <p class="text-white font-semibold text-sm group-hover:text-sky-400 transition-colors">{f.nombre}</p>
+              <p class="text-white font-semibold text-sm group-hover:text-brand-400 transition-colors">{f.nombre}</p>
               <p class="text-xs mt-1" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
             </a>
           ))}
@@ -85,17 +85,17 @@ const diffM = cm - PROMEDIO_M;
 
     <!-- CTA -->
     <div class="glass rounded-2xl p-6 text-center">
-      <p class="text-slate-400 mb-4">¿Tú también mides {cm}cm? Compárate con estos famosos.</p>
+      <p class="text-stone-400 mb-4">¿Tú también mides {cm}cm? Compárate con estos famosos.</p>
       <a href="/"
         class="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white"
-        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        style="background: linear-gradient(135deg, #d97706, #f59e0b)">
         🔄 Abrir comparador
       </a>
     </div>
 
     <!-- Browse nearby heights -->
     <div class="mt-10">
-      <p class="text-slate-500 text-sm mb-3">Otras estaturas:</p>
+      <p class="text-stone-500 text-sm mb-3">Otras estaturas:</p>
       <div class="flex flex-wrap gap-2">
         {[-5, -4, -3, -2, -1, 1, 2, 3, 4, 5].map(offset => {
           const targetCm = cm + offset;
@@ -103,12 +103,12 @@ const diffM = cm - PROMEDIO_M;
           if (!hasFamous) return null;
           return (
             <a href={`/estatura/${targetCm}`}
-              class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+              class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-stone-400 hover:text-white">
               {targetCm}cm
             </a>
           );
         })}
-        <a href="/calculadora-estatura" class="glass px-3 py-1.5 rounded-full text-sm text-sky-400 hover:text-sky-300 transition-colors">
+        <a href="/calculadora-estatura" class="glass px-3 py-1.5 rounded-full text-sm text-brand-400 hover:text-sky-300 transition-colors">
           Ver tabla completa →
         </a>
       </div>

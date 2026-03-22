@@ -108,14 +108,14 @@ const QuizEstatura: FC<Props> = ({ famosos }) => {
         <div className="p-8 text-center space-y-5">
           <div className="text-6xl">{emoji}</div>
           <div>
-            <p className="text-5xl font-black text-white">{score}<span className="text-slate-500 font-normal text-2xl">/{TOTAL}</span></p>
-            <p className="text-slate-400 mt-2">{msg}</p>
+            <p className="text-5xl font-black text-white">{score}<span className="text-stone-500 font-normal text-2xl">/{TOTAL}</span></p>
+            <p className="text-stone-400 mt-2">{msg}</p>
           </div>
 
           {/* Score bar */}
           <div className="w-full rounded-full h-2 overflow-hidden" style={{ background: 'rgba(148,163,184,0.1)' }}>
             <div className="h-full rounded-full transition-all duration-1000"
-              style={{ width: `${(score/TOTAL)*100}%`, background: 'linear-gradient(to right, #0284c7, #34d399)' }} />
+              style={{ width: `${(score/TOTAL)*100}%`, background: 'linear-gradient(to right, #d97706, #34d399)' }} />
           </div>
 
           {isNewBest && score > 0 && (
@@ -125,13 +125,13 @@ const QuizEstatura: FC<Props> = ({ famosos }) => {
             </div>
           )}
           {!isNewBest && best > 0 && (
-            <p className="text-slate-600 text-sm">Tu récord: {best}/{TOTAL}</p>
+            <p className="text-stone-600 text-sm">Tu récord: {best}/{TOTAL}</p>
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <button onClick={startQuiz}
               className="flex-1 py-3 rounded-xl font-bold text-white transition-all hover:scale-105 active:scale-95"
-              style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)' }}>
+              style={{ background: 'linear-gradient(135deg, #d97706, #f59e0b)' }}>
               🔄 Jugar de nuevo
             </button>
             <button onClick={shareResult}
@@ -158,7 +158,7 @@ const QuizEstatura: FC<Props> = ({ famosos }) => {
       {/* Progress bar */}
       <div className="h-1" style={{ background: 'rgba(148,163,184,0.08)' }}>
         <div className="h-full transition-all duration-500"
-          style={{ width: `${((cur)/TOTAL)*100}%`, background: 'linear-gradient(to right, #0284c7, #0ea5e9)' }} />
+          style={{ width: `${((cur)/TOTAL)*100}%`, background: 'linear-gradient(to right, #d97706, #f59e0b)' }} />
       </div>
 
       {/* Header */}
@@ -167,12 +167,12 @@ const QuizEstatura: FC<Props> = ({ famosos }) => {
           {Array.from({length:TOTAL}).map((_,i) => (
             <div key={i} className={`w-2 h-2 rounded-full transition-all duration-300 ${
               i < cur ? 'scale-100' : i === cur ? 'scale-125 animate-pulse' : 'opacity-30'
-            }`} style={{ background: i < cur ? '#34d399' : i === cur ? '#0ea5e9' : '#334155' }} />
+            }`} style={{ background: i < cur ? '#34d399' : i === cur ? '#f59e0b' : '#334155' }} />
           ))}
         </div>
         <div className="flex items-center gap-3">
           {streak >= 2 && <span className="text-orange-400 text-sm font-bold">🔥 ×{streak}</span>}
-          <span className="text-slate-500 text-sm font-mono">{cur + 1} / {TOTAL}</span>
+          <span className="text-stone-500 text-sm font-mono">{cur + 1} / {TOTAL}</span>
         </div>
       </div>
 
@@ -205,9 +205,9 @@ const QuizEstatura: FC<Props> = ({ famosos }) => {
 
           {/* Name */}
           <div className="text-center">
-            <p className="text-slate-500 text-xs uppercase tracking-widest mb-1">¿Cuánto mide?</p>
+            <p className="text-stone-500 text-xs uppercase tracking-widest mb-1">¿Cuánto mide?</p>
             <h3 className="text-2xl font-black text-white">{q.famoso.nombre}</h3>
-            <p className="text-slate-500 text-sm mt-1">{q.famoso.profesion} {q.famoso.bandera}</p>
+            <p className="text-stone-500 text-sm mt-1">{q.famoso.profesion} {q.famoso.bandera}</p>
           </div>
         </div>
 
