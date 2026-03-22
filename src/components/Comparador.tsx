@@ -16,7 +16,16 @@ interface Props {
 }
 
 /* ─── Helpers ───────────────────────────────────────────────────────── */
-const COLORS = ['#60a5fa','#34d399','#f59e0b','#f472b6','#a78bfa','#fb923c','#2dd4bf'];
+const WARM_PALETTE = [
+  { from: '#f59e0b', to: '#d97706' },   // Amber/orange
+  { from: '#8b5cf6', to: '#7c3aed' },   // Purple/violet
+  { from: '#f43f5e', to: '#e11d48' },   // Coral/pink
+  { from: '#14b8a6', to: '#0d9488' },   // Teal
+  { from: '#fb923c', to: '#ea580c' },   // Rose gold
+];
+
+const getWarmColor = (i: number) => WARM_PALETTE[i % WARM_PALETTE.length];
+
 const cmToFtIn = (cm: number) => {
   const i = cm / 2.54;
   let ft = Math.floor(i / 12);
@@ -26,18 +35,87 @@ const cmToFtIn = (cm: number) => {
 };
 
 /* ─── Human Silhouette ──────────────────────────────────────────────── */
-// Normalized viewBox: 40 × 100 units. Feet at y=100, head at y=0.
-const SILHOUETTE_ASPECT = 40 / 100; // width / height
+// Anatomically proportioned human silhouette path in a 60×180 viewBox
+// Designed with natural curves: sloping shoulders, slight waist, relaxed stance
+const HUMAN_PATH = `
+  M 30,8
+  C 23,8 18,13 18,20
+  C 18,27 23,32 30,32
+  C 37,32 42,27 42,20
+  C 42,13 37,8 30,8
+  Z
+  M 27,32
+  L 33,32
+  L 34,38
+  L 26,38
+  Z
+  M 26,38
+  C 14,39 6,44 5,50
+  L 3,50
+  C 2,50 1,51 1,52
+  L 0,72
+  C 0,74 1,75 3,75
+  L 8,75
+  L 9,54
+  L 13,54
+  L 13,38
+  Z
+  M 34,38
+  C 46,39 54,44 55,50
+  L 57,50
+  C 58,50 59,51 59,52
+  L 60,72
+  C 60,74 59,75 57,75
+  L 52,75
+  L 51,54
+  L 47,54
+  L 47,38
+  Z
+  M 13,38
+  L 47,38
+  C 48,38 49,39 49,40
+  L 47,68
+  C 47,69 46,70 45,70
+  L 15,70
+  C 14,70 13,69 13,68
+  L 11,40
+  C 11,39 12,38 13,38
+  Z
+  M 15,70
+  L 28,70
+  L 28,160
+  C 28,163 26,165 24,166
+  L 16,168
+  C 14,168 13,167 13,165
+  L 13,162
+  L 22,160
+  L 22,70
+  Z
+  M 32,70
+  L 45,70
+  L 38,70
+  L 38,160
+  L 47,162
+  L 47,165
+  C 47,167 46,168 44,168
+  L 36,166
+  C 34,165 32,163 32,160
+  Z
+`;
+
+// viewBox dimensions for the silhouette
+const SIL_VB_W = 60;
+const SIL_VB_H = 170;
+const SILHOUETTE_ASPECT = SIL_VB_W / SIL_VB_H;
 
 const SilhouettePath: FC<{
-  color: string; gradId: string; displayH: number;
-  animate: boolean; photo?: string | null; label: string; cm: number;
-}> = ({ color, gradId, displayH, animate, photo, label, cm }) => {
+  colorFrom: string; colorTo: string; gradId: string; displayH: number;
+  animate: boolean; label: string; cm: number;
+}> = ({ colorFrom, colorTo, gradId, displayH, animate, label, cm }) => {
   const pw = displayH * SILHOUETTE_ASPECT;
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // stagger so CSS transition fires
     const t = requestAnimationFrame(() => setReady(true));
     return () => cancelAnimationFrame(t);
   }, []);
@@ -45,37 +123,24 @@ const SilhouettePath: FC<{
   const scale = ready && animate ? 1 : animate ? 0 : 1;
 
   return (
-    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.45s cubic-bezier(0.34,1.2,0.64,1)' }}>
+    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity="0.95" />
-          <stop offset="100%" stopColor={color} stopOpacity="0.45" />
+          <stop offset="0%" stopColor={colorFrom} stopOpacity="0.95" />
+          <stop offset="100%" stopColor={colorTo} stopOpacity="0.55" />
+        </linearGradient>
+        <linearGradient id={`${gradId}-highlight`} x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="white" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
 
-      {/* Body — normalized to pw × displayH */}
-      <svg width={pw} height={displayH} viewBox="0 0 40 100" overflow="visible">
-        {/* Head */}
-        <ellipse cx="20" cy="7.5" rx="7.5" ry="8" fill={`url(#${gradId})`} />
-        {/* Neck */}
-        <rect x="17" y="15.5" width="6" height="3.5" rx="1" fill={`url(#${gradId})`} />
-        {/* Shoulders */}
-        <path d="M17,19 Q4,20 3,26 L37,26 Q36,20 23,19 Z" fill={`url(#${gradId})`} />
-        {/* Left arm */}
-        <path d="M3,26 L0,54 L7,54 L8,26 Z" rx="2" fill={`url(#${gradId})`} />
-        {/* Right arm */}
-        <path d="M37,26 L40,54 L33,54 L32,26 Z" rx="2" fill={`url(#${gradId})`} />
-        {/* Torso (slight waist) */}
-        <path d="M8,26 L32,26 L30,58 L10,58 Z" fill={`url(#${gradId})`} />
-        {/* Left leg */}
-        <path d="M10,57 L20,57 L19.5,100 L10,100 Z" rx="2" fill={`url(#${gradId})`} />
-        {/* Right leg */}
-        <path d="M20,57 L30,57 L30,100 L20.5,100 Z" rx="2" fill={`url(#${gradId})`} />
-        {/* Highlight strip on torso */}
-        <path d="M18,19 Q20,18 22,19 L21.5,55 L18.5,55 Z" fill="white" opacity="0.12" />
+      <svg width={pw} height={displayH} viewBox={`0 0 ${SIL_VB_W} ${SIL_VB_H}`} overflow="visible">
+        {/* Main body */}
+        <path d={HUMAN_PATH} fill={`url(#${gradId})`} />
+        {/* Subtle highlight on the left side for depth */}
+        <path d={HUMAN_PATH} fill={`url(#${gradId}-highlight)`} />
       </svg>
-
-      {/* Photos shown in cards/lists only — silhouettes are the comparator's identity */}
     </g>
   );
 };
@@ -88,7 +153,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
     const make = (id: string, i: number): Persona | null => {
       const f = famosos.find(x => x.id === id);
       if (!f) return null;
-      return { ...f, key: `${id}-${Date.now()}-${i}`, esFamoso: true };
+      return { ...f, color: getWarmColor(i).from, key: `${id}-${Date.now()}-${i}`, esFamoso: true };
     };
     const a = inicial?.a ? make(inicial.a, 0) : null;
     const b = inicial?.b ? make(inicial.b, 1) : null;
@@ -109,12 +174,12 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Layout constants
-  const RULER_W = 32;
-  const PERSON_W = 72;
-  const GAP = 28;
-  const MAX_H = 240; // display px for tallest person
-  const LABEL_H = 52;
+  // Layout constants - wider to accommodate full names
+  const RULER_W = 44;
+  const PERSON_W = 90;
+  const GAP = 32;
+  const MAX_H = 260;
+  const LABEL_H = 56;
   const maxCm = Math.max(...personas.map(p => p.estaturaCm), 1);
 
   const svgW = RULER_W + personas.length * (PERSON_W + GAP) + GAP;
@@ -133,8 +198,9 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const addFamoso = (f: FamosoData) => {
     if (personas.length >= 5) return;
     const key = `${f.id}-${Date.now()}`;
+    const palette = getWarmColor(personas.length);
     setNewKeys(prev => new Set(prev).add(key));
-    setPersonas(prev => [...prev, { ...f, key, esFamoso: true }]);
+    setPersonas(prev => [...prev, { ...f, color: palette.from, key, esFamoso: true }]);
     setQuery(''); setSuggestions([]);
   };
 
@@ -142,10 +208,11 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
     const cm = parseInt(customCm);
     if (!customNombre.trim() || isNaN(cm) || cm < 50 || cm > 300) return;
     const key = `custom-${Date.now()}`;
+    const palette = getWarmColor(personas.length);
     setNewKeys(prev => new Set(prev).add(key));
     setPersonas(prev => [...prev, {
       id: key, nombre: customNombre, estaturaCm: cm,
-      color: COLORS[prev.length % COLORS.length], key, esFamoso: false,
+      color: palette.from, key, esFamoso: false,
     }]);
     setCustomNombre(''); setCustomCm('');
   };
@@ -168,8 +235,8 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
     try {
       const canvas = canvasRef.current!;
       const PAD = 40, TITLE_H = 64, FOOTER_H = 36;
-      const personW = 80, personGap = 32;
-      const bodyH = 280;
+      const personW = 90, personGap = 36;
+      const bodyH = 300;
       const W = PAD * 2 + personas.length * (personW + personGap) - personGap + PAD;
       const H = TITLE_H + bodyH + FOOTER_H + PAD * 2;
 
@@ -177,106 +244,161 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
       const ctx = canvas.getContext('2d')!;
       ctx.scale(2, 2);
 
-      // BG gradient
+      // BG warm dark
       const bg = ctx.createLinearGradient(0, 0, W, H);
-      bg.addColorStop(0, '#0a0a14'); bg.addColorStop(1, '#0f172a');
+      bg.addColorStop(0, '#0f0d13'); bg.addColorStop(1, '#1a1520');
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
-      // Dot grid
-      ctx.fillStyle = 'rgba(255,255,255,0.025)';
-      for (let x = 0; x < W; x += 24) for (let y = 0; y < H; y += 24) {
-        ctx.beginPath(); ctx.arc(x, y, 1, 0, Math.PI * 2); ctx.fill();
-      }
+      // Subtle warm radial
+      const radial = ctx.createRadialGradient(W/2, 0, 0, W/2, H/2, H);
+      radial.addColorStop(0, 'rgba(245,158,11,0.04)');
+      radial.addColorStop(1, 'transparent');
+      ctx.fillStyle = radial; ctx.fillRect(0, 0, W, H);
 
       // Title
       ctx.textAlign = 'center';
       ctx.font = 'bold 18px Inter, system-ui, sans-serif';
-      ctx.fillStyle = '#f1f5f9';
+      ctx.fillStyle = '#fef3c7';
       const title = personas.map(p => p.nombre.split(' ')[0]).join(' vs ');
       ctx.fillText(title, W / 2, PAD + 22);
 
-      // Subtitle
       ctx.font = '11px Inter, system-ui, sans-serif';
-      ctx.fillStyle = '#64748b';
+      ctx.fillStyle = '#92856b';
       ctx.fillText('estaturas.com', W / 2, PAD + 40);
 
       // Grid lines
       const maxC = Math.max(...personas.map(p => p.estaturaCm));
-      ctx.strokeStyle = 'rgba(148,163,184,0.07)';
+      ctx.strokeStyle = 'rgba(245,158,11,0.06)';
       ctx.lineWidth = 1;
       for (let h = 150; h <= maxC + 20; h += 10) {
         const y = TITLE_H + PAD + bodyH - (h / maxC) * bodyH;
         if (y < TITLE_H + PAD) continue;
         ctx.beginPath(); ctx.moveTo(PAD, y); ctx.lineTo(W - PAD, y); ctx.stroke();
-        if (h % 20 === 0) {
-          ctx.font = '8px Inter, system-ui, sans-serif';
-          ctx.fillStyle = '#334155';
+        if (h % 10 === 0) {
+          ctx.font = '9px Inter, system-ui, sans-serif';
+          ctx.fillStyle = '#78716c';
           ctx.textAlign = 'left';
-          ctx.fillText(`${h}`, PAD, y - 2);
+          ctx.fillText(`${h}`, PAD + 2, y - 3);
         }
       }
 
       // Draw each person
       personas.forEach((p, i) => {
+        const palette = getWarmColor(i);
         const displayH = (p.estaturaCm / maxC) * bodyH;
         const cx = PAD + personW / 2 + i * (personW + personGap);
         const baseY = TITLE_H + PAD + bodyH;
 
-        // Silhouette — simplified human shape on canvas
-        const grad = ctx.createLinearGradient(cx, baseY - displayH, cx, baseY);
-        grad.addColorStop(0, p.color + 'f0');
-        grad.addColorStop(1, p.color + '60');
+        // Draw silhouette with curves on canvas
+        const silW = displayH * SILHOUETTE_ASPECT;
+        const silX = cx - silW / 2;
+        const silY = baseY - displayH;
+        const scaleX = silW / SIL_VB_W;
+        const scaleY = displayH / SIL_VB_H;
+
+        const grad = ctx.createLinearGradient(cx, silY, cx, baseY);
+        grad.addColorStop(0, palette.from + 'ee');
+        grad.addColorStop(1, palette.to + '88');
         ctx.fillStyle = grad;
 
-        const sx = displayH * 0.4; // silhouette width
-        const headR = Math.max(6, displayH * 0.075);
-        const neckH = displayH * 0.04;
-        const torsoH = displayH * 0.38;
-        const legH = displayH * 0.42;
-        const armW = sx * 0.14;
-        const bodyW = sx * 0.52;
+        // Simplified anatomical silhouette for canvas
+        const headR = Math.max(7, displayH * 0.065);
+        const neckH = displayH * 0.03;
+        const shoulderW = silW * 0.85;
+        const torsoH = displayH * 0.32;
+        const waistW = silW * 0.55;
+        const hipW = silW * 0.6;
+        const legH = displayH * 0.44;
 
-        const top = baseY - displayH;
+        const headY = silY + headR;
+        const neckY = headY + headR;
+        const shoulderY = neckY + neckH;
+        const waistY = shoulderY + torsoH * 0.7;
+        const hipY = shoulderY + torsoH;
+        const armLen = torsoH * 0.9;
+
         // Head
-        ctx.beginPath(); ctx.arc(cx, top + headR, headR, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx, headY, headR, 0, Math.PI * 2); ctx.fill();
+
         // Neck
-        ctx.fillRect(cx - sx * 0.08, top + headR * 2, sx * 0.16, neckH);
-        // Body
-        const bodyTop = top + headR * 2 + neckH;
-        ctx.fillRect(cx - bodyW / 2, bodyTop, bodyW, torsoH);
+        ctx.fillRect(cx - silW * 0.07, neckY, silW * 0.14, neckH);
+
+        // Torso with waist curve
+        ctx.beginPath();
+        ctx.moveTo(cx - shoulderW / 2, shoulderY);
+        ctx.quadraticCurveTo(cx - waistW / 2 - 2, waistY, cx - hipW / 2, hipY);
+        ctx.lineTo(cx + hipW / 2, hipY);
+        ctx.quadraticCurveTo(cx + waistW / 2 + 2, waistY, cx + shoulderW / 2, shoulderY);
+        ctx.closePath();
+        ctx.fill();
+
         // Arms
-        ctx.fillRect(cx - bodyW / 2 - armW, bodyTop, armW, torsoH * 0.85);
-        ctx.fillRect(cx + bodyW / 2, bodyTop, armW, torsoH * 0.85);
+        ctx.beginPath();
+        ctx.moveTo(cx - shoulderW / 2, shoulderY);
+        ctx.quadraticCurveTo(cx - shoulderW / 2 - 4, shoulderY + armLen / 2, cx - shoulderW / 2 + 2, shoulderY + armLen);
+        ctx.lineTo(cx - shoulderW / 2 + silW * 0.12, shoulderY + armLen);
+        ctx.quadraticCurveTo(cx - shoulderW / 2 + silW * 0.1, shoulderY + armLen / 2, cx - shoulderW / 2 + silW * 0.14, shoulderY);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(cx + shoulderW / 2, shoulderY);
+        ctx.quadraticCurveTo(cx + shoulderW / 2 + 4, shoulderY + armLen / 2, cx + shoulderW / 2 - 2, shoulderY + armLen);
+        ctx.lineTo(cx + shoulderW / 2 - silW * 0.12, shoulderY + armLen);
+        ctx.quadraticCurveTo(cx + shoulderW / 2 - silW * 0.1, shoulderY + armLen / 2, cx + shoulderW / 2 - silW * 0.14, shoulderY);
+        ctx.closePath();
+        ctx.fill();
+
         // Legs
-        const hipY = bodyTop + torsoH;
-        ctx.fillRect(cx - bodyW / 2, hipY, bodyW / 2 - 1, legH);
-        ctx.fillRect(cx + 1, hipY, bodyW / 2 - 1, legH);
+        const legGap = 2;
+        ctx.beginPath();
+        ctx.moveTo(cx - hipW / 2, hipY);
+        ctx.quadraticCurveTo(cx - hipW / 4, hipY + legH * 0.5, cx - hipW / 4 - 1, baseY);
+        ctx.lineTo(cx - legGap, baseY);
+        ctx.quadraticCurveTo(cx - legGap, hipY + legH * 0.3, cx - legGap, hipY);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(cx + hipW / 2, hipY);
+        ctx.quadraticCurveTo(cx + hipW / 4, hipY + legH * 0.5, cx + hipW / 4 + 1, baseY);
+        ctx.lineTo(cx + legGap, baseY);
+        ctx.quadraticCurveTo(cx + legGap, hipY + legH * 0.3, cx + legGap, hipY);
+        ctx.closePath();
+        ctx.fill();
+
+        // Subtle ground shadow
+        ctx.fillStyle = palette.from + '30';
+        ctx.beginPath();
+        ctx.ellipse(cx, baseY + 2, silW * 0.4, 3, 0, 0, Math.PI * 2);
+        ctx.fill();
 
         // Label
         ctx.textAlign = 'center';
-        ctx.font = 'bold 10px Inter, system-ui, sans-serif';
-        ctx.fillStyle = p.color;
-        ctx.fillText(p.nombre.length > 13 ? p.nombre.slice(0, 12) + '…' : p.nombre, cx, baseY + 16);
+        ctx.font = 'bold 11px Inter, system-ui, sans-serif';
+        ctx.fillStyle = palette.from;
+        const displayName = p.nombre.length > 18 ? p.nombre.slice(0, 17) + '…' : p.nombre;
+        ctx.fillText(displayName, cx, baseY + 18);
         ctx.font = '9px Inter, system-ui, sans-serif';
-        ctx.fillStyle = '#94a3b8';
-        ctx.fillText(`${p.estaturaCm}cm · ${cmToFtIn(p.estaturaCm)}`, cx, baseY + 28);
+        ctx.fillStyle = '#a8a29e';
+        ctx.fillText(`${p.estaturaCm}cm · ${cmToFtIn(p.estaturaCm)}`, cx, baseY + 30);
 
-        // Diff to next person
+        // Diff to next
         if (i < personas.length - 1) {
           const next = personas[i + 1];
           const diff = next.estaturaCm - p.estaturaCm;
-          const diffY = baseY - Math.min(displayH, (next.estaturaCm / maxC) * bodyH) - 8;
+          const diffY = baseY - Math.min(displayH, (next.estaturaCm / maxC) * bodyH) - 10;
           const diffX = cx + personW / 2 + personGap / 2;
           ctx.font = 'bold 9px Inter, system-ui, sans-serif';
-          ctx.fillStyle = diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#94a3b8';
+          ctx.fillStyle = diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#a8a29e';
           ctx.textAlign = 'center';
           ctx.fillText(`${diff > 0 ? '+' : ''}${diff}cm`, diffX, diffY);
         }
       });
 
-      // Footer watermark
+      // Footer
       ctx.font = '10px Inter, system-ui, sans-serif';
-      ctx.fillStyle = '#334155';
+      ctx.fillStyle = '#57534e';
       ctx.textAlign = 'right';
       ctx.fillText('estaturas.com', W - PAD, H - 12);
 
@@ -305,11 +427,11 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const hoverY = hoverCm !== null ? MAX_H - (hoverCm / maxCm) * MAX_H : null;
 
   return (
-    <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ background: 'linear-gradient(135deg, #0d1117 0%, #0f172a 100%)', border: '1px solid rgba(148,163,184,0.1)' }}>
+    <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ background: 'linear-gradient(135deg, #0f0d13 0%, #1a1520 100%)', border: '1px solid rgba(245,158,11,0.12)' }}>
 
       {/* ── Visualization ── */}
       <div className="relative overflow-x-auto"
-        style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(14,165,233,0.06) 0%, transparent 70%)' }}>
+        style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(245,158,11,0.04) 0%, transparent 70%)' }}>
         <svg
           ref={svgRef}
           width={svgW} height={svgH}
@@ -325,28 +447,28 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             return (
               <g key={h}>
                 <line x1={RULER_W} y1={y} x2={svgW} y2={y}
-                  stroke="rgba(148,163,184,0.07)" strokeWidth={1} />
-                <text x={RULER_W - 4} y={y + 4} textAnchor="end" fontSize={8}
-                  fill="#334155" fontFamily="Inter, system-ui, sans-serif">{h}</text>
-                <line x1={RULER_W - 6} y1={y} x2={RULER_W} y2={y}
-                  stroke="#334155" strokeWidth={1} />
+                  stroke="rgba(245,158,11,0.06)" strokeWidth={1} />
+                <text x={RULER_W - 6} y={y + 4} textAnchor="end" fontSize={11}
+                  fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif" fontWeight="500">{h}</text>
+                <line x1={RULER_W - 4} y1={y} x2={RULER_W} y2={y}
+                  stroke="#78716c" strokeWidth={1.5} />
               </g>
             );
           })}
 
           {/* Baseline */}
           <line x1={RULER_W} y1={MAX_H} x2={svgW} y2={MAX_H}
-            stroke="rgba(148,163,184,0.2)" strokeWidth={1} />
+            stroke="rgba(245,158,11,0.15)" strokeWidth={1} />
 
           {/* Hover height line */}
           {hoverY !== null && hoverCm !== null && (
             <g>
               <line x1={RULER_W} y1={hoverY} x2={svgW} y2={hoverY}
-                stroke="rgba(250,250,250,0.35)" strokeWidth={1} strokeDasharray="4 4" />
-              <rect x={svgW - 52} y={hoverY - 10} width={50} height={16}
-                rx={4} fill="#1e293b" stroke="rgba(148,163,184,0.3)" strokeWidth={0.5} />
-              <text x={svgW - 27} y={hoverY + 1.5} textAnchor="middle" fontSize={9}
-                fill="#e2e8f0" fontFamily="Inter, system-ui, sans-serif" fontWeight="600">
+                stroke="rgba(253,224,71,0.4)" strokeWidth={1} strokeDasharray="4 4" />
+              <rect x={svgW - 56} y={hoverY - 11} width={54} height={18}
+                rx={5} fill="#292524" stroke="rgba(245,158,11,0.3)" strokeWidth={0.5} />
+              <text x={svgW - 29} y={hoverY + 2} textAnchor="middle" fontSize={10}
+                fill="#fef3c7" fontFamily="Inter, system-ui, sans-serif" fontWeight="600">
                 {hoverCm}cm
               </text>
             </g>
@@ -354,6 +476,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
 
           {/* People */}
           {personas.map((p, i) => {
+            const palette = getWarmColor(i);
             const displayH = (p.estaturaCm / maxCm) * MAX_H;
             const x = RULER_W + GAP / 2 + i * (PERSON_W + GAP);
             const baseX = x + PERSON_W / 2 - (displayH * SILHOUETTE_ASPECT) / 2;
@@ -363,39 +486,46 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             const next = personas[i + 1];
             const diff = next ? next.estaturaCm - p.estaturaCm : null;
             const diffY = diff !== null
-              ? MAX_H - Math.max(displayH, (next!.estaturaCm / maxCm) * MAX_H) - 12
+              ? MAX_H - Math.max(displayH, (next!.estaturaCm / maxCm) * MAX_H) - 14
               : null;
+
+            // Truncate name smartly: show as much as fits
+            const maxNameLen = Math.floor(PERSON_W / 6.5);
+            const displayName = p.nombre.length > maxNameLen
+              ? p.nombre.slice(0, maxNameLen - 1) + '…'
+              : p.nombre;
 
             return (
               <g key={p.key}>
                 {/* Silhouette */}
                 <g transform={`translate(${baseX}, ${MAX_H - displayH})`}>
                   <SilhouettePath
-                    color={p.color} gradId={gradId} displayH={displayH}
-                    animate={newKeys.has(p.key)} photo={p.foto}
+                    colorFrom={palette.from} colorTo={palette.to}
+                    gradId={gradId} displayH={displayH}
+                    animate={newKeys.has(p.key)}
                     label={p.nombre} cm={p.estaturaCm}
                   />
                 </g>
 
-                {/* Glow at feet */}
-                <ellipse cx={x + PERSON_W / 2} cy={MAX_H} rx={displayH * 0.2} ry={3}
-                  fill={p.color} opacity={0.25} />
+                {/* Subtle ground shadow */}
+                <ellipse cx={x + PERSON_W / 2} cy={MAX_H + 1} rx={displayH * 0.13} ry={2}
+                  fill={palette.from} opacity={0.2} filter="blur(1px)" />
 
-                {/* Height line */}
+                {/* Height marker at top of head */}
                 <line
-                  x1={x + PERSON_W / 2} y1={MAX_H - displayH - 2}
-                  x2={x + PERSON_W / 2} y2={MAX_H}
-                  stroke={p.color} strokeWidth={0.5} strokeDasharray="2 2" opacity={0.4}
+                  x1={x + PERSON_W / 2 - 8} y1={MAX_H - displayH}
+                  x2={x + PERSON_W / 2 + 8} y2={MAX_H - displayH}
+                  stroke={palette.from} strokeWidth={1.5} opacity={0.6}
                 />
 
                 {/* Name label */}
-                <text x={x + PERSON_W / 2} y={MAX_H + 18} textAnchor="middle"
-                  fontSize={10} fill={p.color} fontWeight="700"
+                <text x={x + PERSON_W / 2} y={MAX_H + 20} textAnchor="middle"
+                  fontSize={11} fill={palette.from} fontWeight="700"
                   fontFamily="Inter, system-ui, sans-serif">
-                  {p.nombre.length > 12 ? p.nombre.slice(0, 11) + '…' : p.nombre}
+                  {displayName}
                 </text>
-                <text x={x + PERSON_W / 2} y={MAX_H + 32} textAnchor="middle"
-                  fontSize={9} fill="#64748b" fontFamily="Inter, system-ui, sans-serif">
+                <text x={x + PERSON_W / 2} y={MAX_H + 34} textAnchor="middle"
+                  fontSize={10} fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif">
                   {p.estaturaCm}cm · {cmToFtIn(p.estaturaCm)}
                 </text>
 
@@ -405,15 +535,15 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
                     <line
                       x1={x + PERSON_W + 2} y1={diffY + 8}
                       x2={x + PERSON_W + GAP - 2} y2={diffY + 8}
-                      stroke={diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#94a3b8'}
-                      strokeWidth={1.5} markerEnd="url(#arrow)"
+                      stroke={diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#a8a29e'}
+                      strokeWidth={1.5}
                     />
-                    <rect x={x + PERSON_W + GAP / 2 - 18} y={diffY - 1} width={36} height={14}
-                      rx={4} fill="#1e293b" />
+                    <rect x={x + PERSON_W + GAP / 2 - 20} y={diffY - 2} width={40} height={16}
+                      rx={5} fill="#292524" stroke={diff > 0 ? 'rgba(52,211,153,0.2)' : diff < 0 ? 'rgba(248,113,113,0.2)' : 'rgba(168,162,158,0.2)'} strokeWidth={0.5} />
                     <text
                       x={x + PERSON_W + GAP / 2} y={diffY + 9}
                       textAnchor="middle" fontSize={9} fontWeight="700"
-                      fill={diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#94a3b8'}
+                      fill={diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#a8a29e'}
                       fontFamily="Inter, system-ui, sans-serif">
                       {diff > 0 ? '+' : ''}{diff}cm
                     </text>
@@ -427,27 +557,29 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
       </div>
 
       {/* ── Controls ── */}
-      <div className="p-5 space-y-4 border-t" style={{ borderColor: 'rgba(148,163,184,0.08)' }}>
+      <div className="p-5 space-y-4 border-t" style={{ borderColor: 'rgba(245,158,11,0.08)' }}>
 
         {/* Person pills */}
         <div className="flex flex-wrap gap-2 min-h-[32px]">
-          {personas.map(p => (
-            <div key={p.key}
-              className="group flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-all"
-              style={{
-                backgroundColor: `${p.color}18`,
-                color: p.color,
-                border: `1px solid ${p.color}40`,
-                boxShadow: `0 0 0 0 ${p.color}`,
-              }}>
-              <span className="w-2 h-2 rounded-full inline-block" style={{ background: p.color }} />
-              {p.nombre}
-              <span className="opacity-60 font-normal text-xs">{p.estaturaCm}cm</span>
-              <button onClick={() => removePerson(p.key)}
-                className="ml-1 opacity-40 group-hover:opacity-100 transition-opacity text-base leading-none"
-                aria-label={`Eliminar ${p.nombre}`}>×</button>
-            </div>
-          ))}
+          {personas.map((p, i) => {
+            const palette = getWarmColor(i);
+            return (
+              <div key={p.key}
+                className="group flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-all"
+                style={{
+                  backgroundColor: `${palette.from}18`,
+                  color: palette.from,
+                  border: `1px solid ${palette.from}40`,
+                }}>
+                <span className="w-2 h-2 rounded-full inline-block" style={{ background: `linear-gradient(135deg, ${palette.from}, ${palette.to})` }} />
+                {p.nombre}
+                <span className="opacity-60 font-normal text-xs">{p.estaturaCm}cm</span>
+                <button onClick={() => removePerson(p.key)}
+                  className="ml-1 opacity-40 group-hover:opacity-100 transition-opacity text-base leading-none"
+                  aria-label={`Eliminar ${p.nombre}`}>×</button>
+              </div>
+            );
+          })}
           {personas.length === 0 && (
             <p className="text-stone-600 text-sm">Añade personas para comparar →</p>
           )}
@@ -460,12 +592,12 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
               <div className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-500 text-sm">🔍</div>
               <input type="text" placeholder="Buscar famoso..." value={query}
                 onChange={e => setQuery(e.target.value)}
-                className="w-full pl-8 pr-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none transition-colors"
-                style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
+                className="w-full pl-8 pr-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
+                style={{ background: 'rgba(41,37,36,0.8)', border: '1px solid rgba(245,158,11,0.12)' }}
               />
               {suggestions.length > 0 && (
                 <div className="absolute z-20 top-full mt-1.5 w-full rounded-xl shadow-2xl overflow-hidden"
-                  style={{ background: '#1e293b', border: '1px solid rgba(148,163,184,0.15)' }}>
+                  style={{ background: '#292524', border: '1px solid rgba(245,158,11,0.15)' }}>
                   {suggestions.map(s => (
                     <button key={s.id} onClick={() => addFamoso(s)}
                       className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-stone-700/50 transition-colors text-left">
@@ -484,15 +616,15 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
             <div className="flex gap-2">
               <input type="text" placeholder="Tu nombre" value={customNombre}
                 onChange={e => setCustomNombre(e.target.value)}
-                className="flex-1 px-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none transition-colors"
-                style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
+                className="flex-1 px-3 py-2.5 rounded-xl text-sm text-stone-200 placeholder-stone-600 focus:outline-none transition-colors"
+                style={{ background: 'rgba(41,37,36,0.8)', border: '1px solid rgba(245,158,11,0.12)' }}
               />
               <input type="number" placeholder="cm" value={customCm}
                 onChange={e => setCustomCm(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && addCustom()}
                 min={50} max={300}
-                className="w-20 px-2 py-2.5 rounded-xl text-sm text-stone-200 placeholder-slate-600 focus:outline-none text-center transition-colors"
-                style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.12)' }}
+                className="w-20 px-2 py-2.5 rounded-xl text-sm text-stone-200 placeholder-stone-600 focus:outline-none text-center transition-colors"
+                style={{ background: 'rgba(41,37,36,0.8)', border: '1px solid rgba(245,158,11,0.12)' }}
               />
               <button onClick={addCustom}
                 className="px-4 py-2.5 rounded-xl text-sm font-bold text-white transition-all hover:scale-105 active:scale-95"
@@ -507,12 +639,12 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
         <div className="flex flex-wrap gap-2 pt-1">
           <button onClick={handleShare} disabled={shareStatus === 'loading' || personas.length === 0}
             className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-            style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.15)', color: '#e2e8f0' }}>
+            style={{ background: 'rgba(41,37,36,0.8)', border: '1px solid rgba(245,158,11,0.15)', color: '#fef3c7' }}>
             {shareStatus === 'done' ? '✅ Descargado' : shareStatus === 'loading' ? '⏳ Generando…' : '📸 Descargar imagen'}
           </button>
           <button onClick={handleCopyLink}
             className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:scale-105 active:scale-95"
-            style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(148,163,184,0.15)', color: '#e2e8f0' }}>
+            style={{ background: 'rgba(41,37,36,0.8)', border: '1px solid rgba(245,158,11,0.15)', color: '#fef3c7' }}>
             {copied ? '✅ Copiado' : '🔗 Copiar enlace'}
           </button>
         </div>
