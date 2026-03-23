@@ -1027,5 +1027,349 @@
         "los-mas-altos-global"
       ]
     }
+  },
+  {
+    "slug": "futbolistas-espanoles-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "futbol",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Futbolistas españoles más altos | estaturas.com",
+      "description": "Ranking de los futbolistas españoles con mayor estatura. Piqué, Rodri, Borja Iglesias y más.",
+      "keywords": [
+        "futbolistas españoles mas altos",
+        "futbolistas españa estatura",
+        "cuanto mide pique"
+      ]
+    },
+    "content": {
+      "intro": "¿Cuáles son los futbolistas españoles más altos? De La Roja a La Liga, aquí tienes el ranking de los que más miden.",
+      "datos_extra": {
+        "gerard-pique": "Además de futbolista, es empresario y fundador de la Kings League, la competición de fútbol que ha revolucionado el streaming.",
+        "rodri": "Ganó el Balón de Oro 2024 siendo centrocampista, algo que no pasaba desde Modric en 2018."
+      },
+      "conclusion": "La media de estatura de los futbolistas españoles es de 180cm, similar al promedio de la selección.",
+      "related_rankings": [
+        "futbolistas-espanoles-mas-bajos",
+        "famosos-espana-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "futbolistas-espanoles-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "futbol",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Futbolistas españoles más bajos | estaturas.com",
+      "description": "Los futbolistas españoles con menor estatura. Xavi, Iniesta, Gavi y los bajitos que dominaron el fútbol mundial.",
+      "keywords": [
+        "futbolistas españoles mas bajos",
+        "futbolistas bajitos españa",
+        "cuanto mide iniesta"
+      ]
+    },
+    "content": {
+      "intro": "España ha dado algunos de los mejores futbolistas bajitos de la historia. Xavi, Iniesta, Gavi... el tiki-taka no entiende de centímetros.",
+      "datos_extra": {
+        "xavi-hernandez": "Dio 767 pases en el Mundial 2010, más que cualquier otro jugador del torneo. El cerebro del tiki-taka.",
+        "andres-iniesta": "Su gol en la final del Mundial 2010 lo dedicó a Dani Jarque, compañero fallecido un año antes, con un mensaje bajo la camiseta."
+      },
+      "conclusion": "El fútbol español demuestra que la técnica y la visión de juego importan más que la estatura.",
+      "related_rankings": [
+        "futbolistas-espanoles-mas-altos",
+        "futbol-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "streamers-espanoles-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "streamers",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Streamers españoles más altos | estaturas.com",
+      "description": "¿Cuánto miden los streamers españoles? Rubius, Knekro, Ibai... ranking de los más altos del streaming.",
+      "keywords": [
+        "streamers españoles mas altos",
+        "cuanto mide rubius",
+        "streamers estatura españa"
+      ]
+    },
+    "content": {
+      "intro": "Los streamers españoles más altos. Desde Rubius hasta Knekro, descubre quién domina en centímetros además de en viewers.",
+      "datos_extra": {
+        "rubius": "Su vídeo más visto en YouTube tiene más de 100 millones de reproducciones. Empezó haciendo gameplays de Skyrim en 2012.",
+        "knekro": "Es de los pocos streamers que ha competido en La Velada de Ibai y también hace contenido educativo sobre historia."
+      },
+      "conclusion": "El promedio de estatura de los streamers españoles supera los 180cm.",
+      "related_rankings": [
+        "streamers-espanoles-mas-bajos",
+        "influencers-espanoles"
+      ]
+    }
+  },
+  {
+    "slug": "streamers-espanoles-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "streamers",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Streamers españoles más bajos | estaturas.com",
+      "description": "Los streamers españoles con menor estatura. Espe, Gemita y más. ¡La estatura no importa para reventar Twitch!",
+      "keywords": [
+        "streamers españoles mas bajos",
+        "streamers bajitos",
+        "estatura streamers españa"
+      ]
+    },
+    "content": {
+      "intro": "Los streamers españoles más bajitos. Que nadie se engañe: llenan arenas y baten récords de audiencia sin importar los centímetros.",
+      "datos_extra": {
+        "espe": "Es una de las streamers más queridas de España y ha participado en múltiples eventos de La Velada."
+      },
+      "conclusion": "En el streaming, lo que cuenta es el carisma y el contenido, no los centímetros.",
+      "related_rankings": [
+        "streamers-espanoles-mas-altos",
+        "streamers-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "actrices-mas-altas",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "cine-tv",
+      "genero": "femenino"
+    },
+    "seo": {
+      "title": "Actrices más altas de Hollywood y España | estaturas.com",
+      "description": "Ranking de las actrices más altas. Zendaya, Jennifer Lawrence, Belén Rueda y las que más miden en el cine.",
+      "keywords": [
+        "actrices mas altas",
+        "actrices altas hollywood",
+        "cuanto mide zendaya"
+      ]
+    },
+    "content": {
+      "intro": "Las actrices más altas del cine y la televisión. De Hollywood a España, estas mujeres destacan tanto por su talento como por su estatura.",
+      "datos_extra": {
+        "zendaya": "Empezó como modelo infantil y bailarina antes de ser actriz. Su apellido real, Maree Stoermer Coleman, tiene raíces alemanas.",
+        "jennifer-lawrence": "Fue la actriz más joven en conseguir cuatro nominaciones al Oscar. Ganó su primera estatuilla con solo 22 años."
+      },
+      "conclusion": "La estatura media de las actrices más altas supera los 173cm, bastante por encima de la media femenina.",
+      "related_rankings": [
+        "actrices-mas-bajas",
+        "mujeres-mas-altas"
+      ]
+    }
+  },
+  {
+    "slug": "actores-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "cine-tv",
+      "genero": "masculino"
+    },
+    "seo": {
+      "title": "Actores más bajos de Hollywood y España | estaturas.com",
+      "description": "Los actores más bajos del cine. Scorsese, Gael García Bernal, Santiago Segura y más. El talento no se mide en centímetros.",
+      "keywords": [
+        "actores mas bajos",
+        "actores bajitos hollywood",
+        "actores baja estatura"
+      ]
+    },
+    "content": {
+      "intro": "Los actores más bajos del cine mundial. Directores, galanes y cómicos que demuestran que Hollywood no es solo para altos.",
+      "datos_extra": {
+        "martin-scorsese": "Ha dirigido más de 25 películas y ganó el Oscar a Mejor Director por 'The Departed'. También es un reconocido defensor de la preservación del cine.",
+        "santiago-segura": "Creador de la saga 'Torrente', la más taquillera del cine español. También dirige y produce películas infantiles."
+      },
+      "conclusion": "El cine demuestra que la presencia en pantalla no depende de los centímetros.",
+      "related_rankings": [
+        "actores-mas-altos",
+        "hombres-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-estados-unidos-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "Estados Unidos"
+    },
+    "seo": {
+      "title": "Famosos estadounidenses más bajos | estaturas.com",
+      "description": "Los famosos de Estados Unidos con menor estatura. Simone Biles, Ariana Grande, Jenna Ortega y más sorpresas.",
+      "keywords": [
+        "famosos americanos mas bajos",
+        "celebridades eeuu baja estatura",
+        "famosos bajitos estados unidos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Estados Unidos que menos miden. Desde gimnastas hasta cantantes, la estatura no les ha frenado.",
+      "datos_extra": {
+        "simone-biles": "Con 37 medallas mundiales, es la gimnasta más condecorada de la historia. Mide solo 142cm pero ha revolucionado su deporte.",
+        "ariana-grande": "Puede alcanzar 5 octavas vocales, un rango comparable al de Mariah Carey."
+      },
+      "conclusion": "Estados Unidos tiene famosos de todas las estaturas, demostrando que el éxito no conoce límites físicos.",
+      "related_rankings": [
+        "famosos-estados-unidos-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-canada-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Canadá"
+    },
+    "seo": {
+      "title": "Famosos canadienses más altos | estaturas.com",
+      "description": "Ranking de los famosos de Canadá más altos. Ryan Reynolds, Justin Trudeau, xQc y los canadienses que más miden.",
+      "keywords": [
+        "famosos canadienses mas altos",
+        "celebridades canada estatura",
+        "cuanto mide ryan reynolds"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Canadá que más miden. Actores, políticos y streamers del Gran Norte Blanco.",
+      "datos_extra": {
+        "ryan-reynolds": "Además de actor, es dueño del equipo de fútbol galés Wrexham AFC y de la marca de ginebra Aviation Gin.",
+        "xqc": "Es uno de los streamers con más horas de directo acumuladas en Twitch. Llegó a hacer streams de más de 24 horas seguidas."
+      },
+      "conclusion": "Los famosos canadienses tienen una media de estatura bastante alta, acorde con la media del país.",
+      "related_rankings": [
+        "famosos-estados-unidos-mas-altos",
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "musicos-espanoles-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "musica",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Músicos y cantantes españoles más altos | estaturas.com",
+      "description": "Los cantantes españoles que más miden. Quevedo, Enrique Iglesias, Julio Iglesias y más artistas patrios.",
+      "keywords": [
+        "cantantes españoles mas altos",
+        "musicos españa estatura",
+        "cuanto mide quevedo"
+      ]
+    },
+    "content": {
+      "intro": "Los músicos y cantantes españoles más altos. Del pop al trap, pasando por los clásicos, estos artistas destacan también por su estatura.",
+      "datos_extra": {
+        "quevedo": "Su tema 'Quédate' con Bizarrap fue número 1 en más de 30 países y lo catapultó a la fama internacional en 2022.",
+        "enrique-iglesias": "Ha vendido más de 180 millones de discos en todo el mundo, siendo uno de los artistas latinos más exitosos de la historia."
+      },
+      "conclusion": "Los músicos españoles más altos superan los 180cm de media.",
+      "related_rankings": [
+        "musica-mas-altos",
+        "famosos-espana-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "deportistas-espanoles-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "deportes",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Deportistas españoles más altos | estaturas.com",
+      "description": "Los deportistas de España con mayor estatura. Pau Gasol, Marc Gasol, Ricky Rubio y los gigantes del deporte español.",
+      "keywords": [
+        "deportistas españoles mas altos",
+        "deportistas españa estatura",
+        "cuanto mide pau gasol"
+      ]
+    },
+    "content": {
+      "intro": "Los deportistas españoles que más miden. El baloncesto domina este ranking, pero hay sorpresas de otros deportes.",
+      "datos_extra": {
+        "pau-gasol": "Además de ser dos veces campeón de la NBA, es embajador de UNICEF y tiene un asteroide con su nombre: (300815) Paugasol.",
+        "marc-gasol": "Es el único español que ha sido nombrado Jugador Defensivo del Año en la NBA."
+      },
+      "conclusion": "Con los hermanos Gasol a la cabeza, el deporte español tiene gigantes literales entre sus filas.",
+      "related_rankings": [
+        "deportes-mas-altos",
+        "famosos-espana-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-reino-unido-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "Reino Unido"
+    },
+    "seo": {
+      "title": "Famosos británicos más bajos | estaturas.com",
+      "description": "Los famosos del Reino Unido con menor estatura. Florence Pugh, Stephen Hawking y los británicos más bajitos.",
+      "keywords": [
+        "famosos britanicos mas bajos",
+        "celebridades uk baja estatura",
+        "famosos reino unido bajitos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos británicos que menos miden. De la ciencia al cine, estos referentes demuestran que los centímetros no definen la grandeza.",
+      "datos_extra": {
+        "florence-pugh": "Fue nominada al Oscar con solo 24 años por 'Mujercitas' y se ha convertido en una de las actrices más demandadas de Hollywood.",
+        "stephen-hawking": "Diagnosticado con ELA a los 21 años y con una esperanza de vida de 2 años, vivió hasta los 76 y revolucionó nuestra comprensión del universo."
+      },
+      "conclusion": "El Reino Unido ha dado genios y estrellas de todas las estaturas.",
+      "related_rankings": [
+        "famosos-reino-unido-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "futbolistas-argentinos-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "futbol",
+      "pais": "Argentina"
+    },
+    "seo": {
+      "title": "Futbolistas argentinos más altos | estaturas.com",
+      "description": "Ranking de los futbolistas argentinos más altos. Dibu Martínez, Di María y los más altos de la albiceleste.",
+      "keywords": [
+        "futbolistas argentinos mas altos",
+        "jugadores argentina estatura",
+        "cuanto mide dibu martinez"
+      ]
+    },
+    "content": {
+      "intro": "Los futbolistas argentinos que más miden. De la Scaloneta a Europa, estos jugadores destacan por su envergadura en el campo.",
+      "datos_extra": {
+        "emiliano-martinez": "El 'Dibu' se hizo viral por sus celebraciones en los penaltis del Mundial 2022, donde Argentina se coronó campeona.",
+        "angel-di-maria": "Anotó el gol de la final de la Copa América 2021 y el de la final del Mundial 2022 contra Francia."
+      },
+      "conclusion": "Los futbolistas argentinos más altos combinan altura con la garra característica del fútbol argentino.",
+      "related_rankings": [
+        "futbol-mas-altos",
+        "famosos-argentina-mas-altos"
+      ]
+    }
   }
 ]
