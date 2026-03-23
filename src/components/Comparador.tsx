@@ -157,17 +157,17 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Layout constants - wider to accommodate full names
-  const RULER_W = 44;
+  // Layout constants
+  const RULER_W = 48;
   const PERSON_W = 120;
   const GAP = 32;
-  const MAX_H = 260;
+  const MAX_H = 300;
   const LABEL_H = 56;
-  const rawMax = Math.max(...personas.map(p => p.estaturaCm), 1);
-  // Scale from 0 to max+10 — full body silhouettes need full scale
-  const scaleMin = 0;
-  const scaleMax = Math.ceil((rawMax + 10) / 10) * 10;
-  const maxCm = rawMax;
+  const rawMax = Math.max(...personas.map(p => p.estaturaCm), 170);
+  const rawMin = Math.min(...personas.map(p => p.estaturaCm), 170);
+  // Smart scale: show relevant range only (±20cm from actual range, snapped to 10)
+  const scaleMin = Math.floor((rawMin - 20) / 10) * 10;
+  const scaleMax = Math.ceil((rawMax + 15) / 10) * 10;
 
   const svgW = RULER_W + personas.length * (PERSON_W + GAP) + GAP;
   const svgH = MAX_H + LABEL_H;
@@ -257,15 +257,21 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
       ctx.fillStyle = '#92856b';
       ctx.fillText('estaturas.com', W / 2, PAD + 40);
 
-      // Grid lines
+      // Grid lines — smart scale matching the SVG
       const maxC = Math.max(...personas.map(p => p.estaturaCm));
-      ctx.strokeStyle = 'rgba(245,158,11,0.06)';
+      const minC = Math.min(...personas.map(p => p.estaturaCm));
+      const canvasScaleMin = Math.floor((minC - 20) / 10) * 10;
+      const canvasScaleMax = Math.ceil((maxC + 15) / 10) * 10;
+      const canvasRange = canvasScaleMax - canvasScaleMin;
+
       ctx.lineWidth = 1;
-      for (let h = 150; h <= maxC + 20; h += 10) {
-        const y = TITLE_H + PAD + bodyH - (h / maxC) * bodyH;
-        if (y < TITLE_H + PAD) continue;
+      for (let h = canvasScaleMin; h <= canvasScaleMax; h += 5) {
+        const y = TITLE_H + PAD + bodyH - ((h - canvasScaleMin) / canvasRange) * bodyH;
+        if (y < TITLE_H + PAD || y > TITLE_H + PAD + bodyH) continue;
+        const isMajor = h % 10 === 0;
+        ctx.strokeStyle = isMajor ? 'rgba(245,158,11,0.08)' : 'rgba(245,158,11,0.03)';
         ctx.beginPath(); ctx.moveTo(PAD, y); ctx.lineTo(W - PAD, y); ctx.stroke();
-        if (h % 10 === 0) {
+        if (isMajor) {
           ctx.font = '9px Inter, system-ui, sans-serif';
           ctx.fillStyle = '#78716c';
           ctx.textAlign = 'left';
@@ -276,7 +282,7 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
       // Draw each person
       personas.forEach((p, i) => {
         const palette = getWarmColor(i);
-        const displayH = (p.estaturaCm / maxC) * bodyH;
+        const displayH = ((p.estaturaCm - canvasScaleMin) / canvasRange) * bodyH;
         const cx = PAD + personW / 2 + i * (personW + personGap);
         const baseY = TITLE_H + PAD + bodyH;
 
@@ -324,7 +330,8 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
         if (i < personas.length - 1) {
           const next = personas[i + 1];
           const diff = next.estaturaCm - p.estaturaCm;
-          const diffY = baseY - Math.min(displayH, (next.estaturaCm / maxC) * bodyH) - 10;
+          const nextDisplayH = ((next.estaturaCm - canvasScaleMin) / canvasRange) * bodyH;
+          const diffY = baseY - Math.min(displayH, nextDisplayH) - 10;
           const diffX = cx + personW / 2 + personGap / 2;
           ctx.font = 'bold 9px Inter, system-ui, sans-serif';
           ctx.fillStyle = diff > 0 ? '#34d399' : diff < 0 ? '#f87171' : '#a8a29e';
@@ -377,20 +384,31 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setHoverCm(null)}
         >
-          {/* Grid — dynamic lines every 10cm within scale range */}
-          {Array.from({ length: Math.floor((scaleMax - scaleMin) / 10) + 1 }, (_, i) => scaleMin + i * 10)
+          {/* Ruler spine */}
+          <line x1={RULER_W} y1={0} x2={RULER_W} y2={MAX_H}
+            stroke="rgba(168,162,158,0.15)" strokeWidth={1} />
+
+          {/* Grid — major lines every 10cm, minor every 5cm */}
+          {Array.from({ length: Math.floor((scaleMax - scaleMin) / 5) + 1 }, (_, i) => scaleMin + i * 5)
             .filter(h => h > scaleMin && h <= scaleMax)
             .map(h => {
               const y = cmToY(h);
-              if (y < 4 || y > MAX_H - 4) return null;
+              if (y < 2 || y > MAX_H - 2) return null;
+              const isMajor = h % 10 === 0;
               return (
                 <g key={h}>
+                  {/* Horizontal gridline */}
                   <line x1={RULER_W} y1={y} x2={svgW} y2={y}
-                    stroke="rgba(245,158,11,0.08)" strokeWidth={1} />
-                  <text x={RULER_W - 6} y={y + 4} textAnchor="end" fontSize={11}
-                    fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif" fontWeight="500">{h}</text>
-                  <line x1={RULER_W - 4} y1={y} x2={RULER_W} y2={y}
-                    stroke="#78716c" strokeWidth={1.5} />
+                    stroke={isMajor ? "rgba(245,158,11,0.1)" : "rgba(245,158,11,0.04)"}
+                    strokeWidth={isMajor ? 1 : 0.5} />
+                  {/* Ruler tick */}
+                  <line x1={isMajor ? RULER_W - 8 : RULER_W - 4} y1={y} x2={RULER_W} y2={y}
+                    stroke={isMajor ? "#a8a29e" : "#57534e"} strokeWidth={isMajor ? 1.5 : 1} />
+                  {/* Label (major only) */}
+                  {isMajor && (
+                    <text x={RULER_W - 12} y={y + 4} textAnchor="end" fontSize={11}
+                      fill="#a8a29e" fontFamily="Inter, system-ui, sans-serif" fontWeight="600">{h}</text>
+                  )}
                 </g>
               );
             })}
@@ -398,6 +416,10 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
           {/* Baseline */}
           <line x1={RULER_W} y1={MAX_H} x2={svgW} y2={MAX_H}
             stroke="rgba(245,158,11,0.15)" strokeWidth={1} />
+
+          {/* Unit label */}
+          <text x={RULER_W - 12} y={-4} textAnchor="end" fontSize={9}
+            fill="#78716c" fontFamily="Inter, system-ui, sans-serif" fontWeight="500">cm</text>
 
           {/* Hover height line */}
           {hoverY !== null && hoverCm !== null && (
@@ -439,6 +461,13 @@ const Comparador: FC<Props> = ({ famosos, inicial }) => {
                     gradId={gradId} animate={newKeys.has(p.key)}
                   />
                 </g>
+
+                {/* Person height marker line */}
+                <line
+                  x1={x + 2} y1={cmToY(p.estaturaCm)}
+                  x2={x + PERSON_W - 2} y2={cmToY(p.estaturaCm)}
+                  stroke={palette.from} strokeWidth={1} strokeOpacity={0.3}
+                  strokeDasharray="2 3" />
 
                 {/* Name label */}
                 <text x={x + PERSON_W / 2} y={MAX_H + 20} textAnchor="middle"
