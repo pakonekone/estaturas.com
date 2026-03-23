@@ -1,0 +1,344 @@
+[
+  {
+    "slug": "musica-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "musica"
+    },
+    "seo": {
+      "title": "Músicos y Cantantes más altos | estaturas.com",
+      "description": "Ranking de los músicos y cantantes más altos. Drake lidera con 182cm.",
+      "keywords": [
+        "músicos y cantantes mas altos",
+        "músicos y cantantes estatura",
+        "ranking músicos y cantantes"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el más alto entre los músicos y cantantes? Aquí tienes el ranking completo ordenado de mayor a menor estatura.",
+      "datos_extra": {
+        "drake": "Antes de ser músico, fue actor durante 7 temporadas en la serie canadiense 'Degrassi: The Next Generation'.",
+        "bad-bunny": "Antes de ser famoso trabajaba como empacador en un supermercado Econo en Puerto Rico mientras grababa música en su habitación.",
+        "bizarrap": "Empezó produciendo música en su habitación y publicando vídeos en YouTube sin ningún presupuesto antes de convertirse en el productor más escuchado del mundo."
+      },
+      "conclusion": "El promedio de estatura entre los músicos y cantantes es de 170cm.",
+      "related_rankings": [
+        "musica-mas-bajos",
+        "los-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "musica-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "musica"
+    },
+    "seo": {
+      "title": "Músicos y Cantantes más bajos | estaturas.com",
+      "description": "Ranking de los músicos y cantantes con menor estatura. Shakira con 157cm.",
+      "keywords": [
+        "músicos y cantantes mas bajos",
+        "músicos y cantantes bajitos",
+        "ranking estatura músicos y cantantes"
+      ]
+    },
+    "content": {
+      "intro": "Los músicos y cantantes más bajos del momento. Pequeños en estatura, enormes en talento.",
+      "datos_extra": {
+        "shakira": "Habla cinco idiomas con fluidez: español, inglés, portugués, italiano y árabe, idioma que aprendió por sus raíces libanesas.",
+        "billie-eilish": "Grabó su primer hit mundial 'Ocean Eyes' a los 13 años en el dormitorio de su casa, una canción que su hermano Finneas había compuesto originalmente para su banda.",
+        "karol-g": "Su nombre artístico Karol G viene de su nombre real Carolina (Karol) y su apellido Giraldo (G). Empezó a cantar a los 14 años."
+      },
+      "conclusion": "Demuestran que la estatura no define el éxito en su campo.",
+      "related_rankings": [
+        "musica-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "futbol-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "futbol"
+    },
+    "seo": {
+      "title": "Futbolistas más altos | estaturas.com",
+      "description": "Ranking de los futbolistas más altos. Erling Haaland lidera con 194cm.",
+      "keywords": [
+        "futbolistas mas altos",
+        "futbolistas estatura",
+        "ranking futbolistas"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el más alto entre los futbolistas? Aquí tienes el ranking completo ordenado de mayor a menor estatura.",
+      "datos_extra": {
+        "erling-haaland": "Es hijo del ex futbolista Alfie Haaland. Erling nació en Leeds mientras su padre jugaba allí.",
+        "cristiano-ronaldo": "Es el único futbolista de la historia en marcar goles en cinco ediciones diferentes de la Copa del Mundo.",
+        "jude-bellingham": "Se convirtió en el primer jugador inglés en marcar en sus primeros seis partidos de Liga con el Real Madrid."
+      },
+      "conclusion": "El promedio de estatura entre los futbolistas es de 180cm.",
+      "related_rankings": [
+        "futbol-mas-bajos",
+        "los-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "futbol-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "futbol"
+    },
+    "seo": {
+      "title": "Futbolistas más bajos | estaturas.com",
+      "description": "Ranking de los futbolistas con menor estatura. Lionel Messi con 170cm.",
+      "keywords": [
+        "futbolistas mas bajos",
+        "futbolistas bajitos",
+        "ranking estatura futbolistas"
+      ]
+    },
+    "content": {
+      "intro": "Los futbolistas más bajos del momento. Pequeños en estatura, enormes en talento.",
+      "datos_extra": {
+        "lionel-messi": "Fue diagnosticado con deficiencia de hormona del crecimiento a los 11 años. El FC Barcelona pagó su costoso tratamiento a cambio de que firmara su primer contrato en una servilleta.",
+        "luka-modric": "De niño tuvo que huir con su familia durante la Guerra de los Balcanes y vivió en un hotel de refugiados antes de convertirse en Balón de Oro.",
+        "pedri": "Llegó al FC Barcelona con solo 17 años y en su primera temporada disputó 73 partidos, más que cualquier otro jugador del equipo ese año."
+      },
+      "conclusion": "Demuestran que la estatura no define el éxito en su campo.",
+      "related_rankings": [
+        "futbol-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "cine-tv-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "cine-tv"
+    },
+    "seo": {
+      "title": "Actores y Actrices más altos | estaturas.com",
+      "description": "Ranking de los actores y actrices más altos. Chris Hemsworth lidera con 190cm.",
+      "keywords": [
+        "actores y actrices mas altos",
+        "actores y actrices estatura",
+        "ranking actores y actrices"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el más alto entre los actores y actrices? Aquí tienes el ranking completo ordenado de mayor a menor estatura.",
+      "datos_extra": {
+        "chris-hemsworth": "Antes de conseguir el papel de Thor, fue eliminado en la fase previa de la versión australiana de 'Dancing with the Stars'.",
+        "ryan-gosling": "De niño era fan de 'La Jungla de Cristal' y convenció a un compañero de colegio para que posara mientras le lanzaba cuchillos. Fue suspendido del colegio.",
+        "pedro-pascal": "Sus padres fueron exiliados políticos de Chile durante la dictadura de Pinochet. Llegó a Estados Unidos siendo un bebé y creció en diversas ciudades americanas."
+      },
+      "conclusion": "El promedio de estatura entre los actores y actrices es de 174cm.",
+      "related_rankings": [
+        "cine-tv-mas-bajos",
+        "los-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "cine-tv-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "cine-tv"
+    },
+    "seo": {
+      "title": "Actores y Actrices más bajos | estaturas.com",
+      "description": "Ranking de los actores y actrices con menor estatura. Jenna Ortega con 157cm.",
+      "keywords": [
+        "actores y actrices mas bajos",
+        "actores y actrices bajitos",
+        "ranking estatura actores y actrices"
+      ]
+    },
+    "content": {
+      "intro": "Los actores y actrices más bajos del momento. Pequeños en estatura, enormes en talento.",
+      "datos_extra": {
+        "jenna-ortega": "Empezó su carrera actuando en anuncios publicitarios a los 8 años. Es la cuarta de seis hermanos en una familia de origen mexicano.",
+        "florence-pugh": "Empezó su carrera publicando covers de canciones en YouTube con su guitarra antes de que un cásting la descubriera para su primer papel cinematográfico.",
+        "ana-de-armas": "Se mudó a Madrid con 18 años sin hablar inglés. Tardó años en aprender el idioma y en llegar a Hollywood, donde fue nominada al Oscar por Blonde."
+      },
+      "conclusion": "Demuestran que la estatura no define el éxito en su campo.",
+      "related_rankings": [
+        "cine-tv-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "influencers-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "influencers"
+    },
+    "seo": {
+      "title": "Influencers y Streamers más altos | estaturas.com",
+      "description": "Ranking de los influencers y streamers más altos. ElRubius lidera con 192cm.",
+      "keywords": [
+        "influencers y streamers mas altos",
+        "influencers y streamers estatura",
+        "ranking influencers y streamers"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el más alto entre los influencers y streamers? Aquí tienes el ranking completo ordenado de mayor a menor estatura.",
+      "datos_extra": {
+        "elrubius": "Tiene padre español y madre noruega, y creció entre ambos países. Durante años fue el youtuber más seguido de España.",
+        "mrbeast": "Reinvierte casi la totalidad de sus ingresos en la producción de sus vídeos y ha donado decenas de millones de dólares a causas benéficas.",
+        "ksi": "Empezó en YouTube en 2009 haciendo vídeos del videojuego FIFA. Hoy es además boxeador profesional y músico."
+      },
+      "conclusion": "El promedio de estatura entre los influencers y streamers es de 177cm.",
+      "related_rankings": [
+        "influencers-mas-bajos",
+        "los-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "influencers-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "influencers"
+    },
+    "seo": {
+      "title": "Influencers y Streamers más bajos | estaturas.com",
+      "description": "Ranking de los influencers y streamers con menor estatura. Lele Pons con 165cm.",
+      "keywords": [
+        "influencers y streamers mas bajos",
+        "influencers y streamers bajitos",
+        "ranking estatura influencers y streamers"
+      ]
+    },
+    "content": {
+      "intro": "Los influencers y streamers más bajos del momento. Pequeños en estatura, enormes en talento.",
+      "datos_extra": {
+        "lele-pons": "Fue la primera persona en superar los 10 mil millones de vistas en la red social Vine antes de que cerrara en 2017.",
+        "addison-rae": "Según Forbes, fue la creadora de contenido de TikTok mejor pagada del mundo en 2020, con unos ingresos estimados de 5 millones de dólares.",
+        "charli-damelio": "Pasó de 0 a 1 millón de seguidores en TikTok en tan solo 6 meses en 2019, el crecimiento más rápido en la historia de la plataforma."
+      },
+      "conclusion": "Demuestran que la estatura no define el éxito en su campo.",
+      "related_rankings": [
+        "influencers-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "deportes-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "deportes"
+    },
+    "seo": {
+      "title": "Deportistas más altos | estaturas.com",
+      "description": "Ranking de los deportistas más altos. Shaquille O'Neal lidera con 216cm.",
+      "keywords": [
+        "deportistas mas altos",
+        "deportistas estatura",
+        "ranking deportistas"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el más alto entre los deportistas? Aquí tienes el ranking completo ordenado de mayor a menor estatura.",
+      "datos_extra": {
+        "shaquille-oneal": "A pesar de su imagen de estrella del deporte, Shaq tiene un doctorado en Liderazgo Educativo. Sus zapatos son del número 23 americano (talla 58 europea).",
+        "lebron-james": "En 2023 se convirtió en el máximo anotador de toda la historia de la NBA, superando el legendario récord de Kareem Abdul-Jabbar que llevaba 39 años invicto.",
+        "michael-jordan": "En su segundo año de instituto no fue seleccionado para el equipo de baloncesto por ser 'demasiado bajo'. Esa humillación se convirtió en su mayor motivación."
+      },
+      "conclusion": "El promedio de estatura entre los deportistas es de 187cm.",
+      "related_rankings": [
+        "deportes-mas-bajos",
+        "los-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "deportes-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "deportes"
+    },
+    "seo": {
+      "title": "Deportistas más bajos | estaturas.com",
+      "description": "Ranking de los deportistas con menor estatura. Simone Biles con 142cm.",
+      "keywords": [
+        "deportistas mas bajos",
+        "deportistas bajitos",
+        "ranking estatura deportistas"
+      ]
+    },
+    "content": {
+      "intro": "Los deportistas más bajos del momento. Pequeños en estatura, enormes en talento.",
+      "datos_extra": {
+        "simone-biles": "Con tan solo 1,42m, ha ganado más medallas en Campeonatos del Mundo de gimnasia que ningún otro deportista, hombre o mujer.",
+        "canelo-alvarez": "Es el único boxeador en la historia en haber unificado los cuatro títulos mundiales de la categoría supermedio de forma simultánea.",
+        "serena-williams": "Ganó el Abierto de Australia en 2017 cuando estaba embarazada de dos meses sin saberlo. Lo ganó compitiendo con un bebé en camino."
+      },
+      "conclusion": "Demuestran que la estatura no define el éxito en su campo.",
+      "related_rankings": [
+        "deportes-mas-altos",
+        "los-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "los-mas-altos-global",
+    "tipo": "mas-altos",
+    "filtro": {},
+    "seo": {
+      "title": "Los famosos más altos del mundo | estaturas.com",
+      "description": "Ranking general de los famosos más altos. Shaquille O'Neal lidera con 216cm.",
+      "keywords": [
+        "famosos mas altos",
+        "celebridades altas",
+        "ranking estatura famosos"
+      ]
+    },
+    "content": {
+      "intro": "El ranking definitivo de los famosos más altos del mundo, sin importar su profesión.",
+      "datos_extra": {
+        "shaquille-oneal": "A pesar de su imagen de estrella del deporte, Shaq tiene un doctorado en Liderazgo Educativo. Sus zapatos son del número 23 americano (talla 58 europea).",
+        "lebron-james": "En 2023 se convirtió en el máximo anotador de toda la historia de la NBA, superando el legendario récord de Kareem Abdul-Jabbar que llevaba 39 años invicto.",
+        "michael-jordan": "En su segundo año de instituto no fue seleccionado para el equipo de baloncesto por ser 'demasiado bajo'. Esa humillación se convirtió en su mayor motivación."
+      },
+      "conclusion": "El promedio general de nuestros 50 famosos es de 177cm.",
+      "related_rankings": [
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "los-mas-bajos-global",
+    "tipo": "mas-bajos",
+    "filtro": {},
+    "seo": {
+      "title": "Los famosos más bajos del mundo | estaturas.com",
+      "description": "Los famosos con menor estatura. Simone Biles con solo 142cm.",
+      "keywords": [
+        "famosos mas bajos",
+        "celebridades bajitas",
+        "famosos bajitos"
+      ]
+    },
+    "content": {
+      "intro": "Pequeños en estatura, gigantes en fama. Los famosos más bajitos del momento.",
+      "datos_extra": {
+        "simone-biles": "Con tan solo 1,42m, ha ganado más medallas en Campeonatos del Mundo de gimnasia que ningún otro deportista, hombre o mujer.",
+        "shakira": "Habla cinco idiomas con fluidez: español, inglés, portugués, italiano y árabe, idioma que aprendió por sus raíces libanesas.",
+        "jenna-ortega": "Empezó su carrera actuando en anuncios publicitarios a los 8 años. Es la cuarta de seis hermanos en una familia de origen mexicano."
+      },
+      "conclusion": "La estatura no es obstáculo para llegar a la cima del éxito.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  }
+]

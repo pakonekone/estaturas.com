@@ -1,0 +1,412 @@
+[
+  {
+    "slug": "estados-unidos",
+    "nombre": "Estados Unidos",
+    "bandera": "🇺🇸",
+    "seo": {
+      "title": "Estatura de famosos de Estados Unidos | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Estados Unidos? 14 celebridades. Promedio: 177cm. El más alto: Shaquille O'Neal.",
+      "keywords": [
+        "famosos estados unidos",
+        "estatura famosos estados unidos",
+        "cuanto miden famosos estados unidos"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 14 famosos de Estados Unidos en nuestra base de datos. Su estatura promedio es de 177cm.",
+      "fun_facts": [
+        "El famoso más alto de Estados Unidos es Shaquille O'Neal con 216cm.",
+        "El más bajo es Simone Biles con 142cm.",
+        "La diferencia entre el más alto y el más bajo es de 74cm."
+      ],
+      "paises_similares": [
+        "espana",
+        "francia",
+        "brasil"
+      ]
+    },
+    "stats": {
+      "total": 14,
+      "promedio": 177,
+      "max": {
+        "id": "shaquille-oneal",
+        "nombre": "Shaquille O'Neal",
+        "estaturaCm": 216
+      },
+      "min": {
+        "id": "simone-biles",
+        "nombre": "Simone Biles",
+        "estaturaCm": 142
+      }
+    }
+  },
+  {
+    "slug": "espana",
+    "nombre": "España",
+    "bandera": "🇪🇸",
+    "seo": {
+      "title": "Estatura de famosos de España | estaturas.com",
+      "description": "¿Cuánto miden los famosos de España? 10 celebridades. Promedio: 176cm. El más alto: ElRubius.",
+      "keywords": [
+        "famosos españa",
+        "estatura famosos españa",
+        "cuanto miden famosos españa"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 10 famosos de España en nuestra base de datos. Su estatura promedio es de 176cm.",
+      "fun_facts": [
+        "El famoso más alto de España es ElRubius con 192cm.",
+        "El más bajo es Aitana con 163cm.",
+        "La diferencia entre el más alto y el más bajo es de 29cm."
+      ],
+      "paises_similares": [
+        "brasil",
+        "estados-unidos",
+        "argentina"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 176,
+      "max": {
+        "id": "elrubius",
+        "nombre": "ElRubius",
+        "estaturaCm": 192
+      },
+      "min": {
+        "id": "aitana",
+        "nombre": "Aitana",
+        "estaturaCm": 163
+      }
+    }
+  },
+  {
+    "slug": "canada",
+    "nombre": "Canadá",
+    "bandera": "🇨🇦",
+    "seo": {
+      "title": "Estatura de famosos de Canadá | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Canadá? 3 celebridades. Promedio: 180cm. El más alto: Ryan Gosling.",
+      "keywords": [
+        "famosos canadá",
+        "estatura famosos canadá",
+        "cuanto miden famosos canadá"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 3 famosos de Canadá en nuestra base de datos. Su estatura promedio es de 180cm.",
+      "fun_facts": [
+        "El famoso más alto de Canadá es Ryan Gosling con 184cm.",
+        "El más bajo es The Weeknd con 173cm.",
+        "La diferencia entre el más alto y el más bajo es de 11cm."
+      ],
+      "paises_similares": [
+        "australia",
+        "francia",
+        "estados-unidos"
+      ]
+    },
+    "stats": {
+      "total": 3,
+      "promedio": 180,
+      "max": {
+        "id": "ryan-gosling",
+        "nombre": "Ryan Gosling",
+        "estaturaCm": 184
+      },
+      "min": {
+        "id": "the-weeknd",
+        "nombre": "The Weeknd",
+        "estaturaCm": 173
+      }
+    }
+  },
+  {
+    "slug": "reino-unido",
+    "nombre": "Reino Unido",
+    "bandera": "🇬🇧",
+    "seo": {
+      "title": "Estatura de famosos de Reino Unido | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Reino Unido? 3 celebridades. Promedio: 172cm. El más alto: KSI.",
+      "keywords": [
+        "famosos reino unido",
+        "estatura famosos reino unido",
+        "cuanto miden famosos reino unido"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 3 famosos de Reino Unido en nuestra base de datos. Su estatura promedio es de 172cm.",
+      "fun_facts": [
+        "El famoso más alto de Reino Unido es KSI con 180cm.",
+        "El más bajo es Florence Pugh con 163cm.",
+        "La diferencia entre el más alto y el más bajo es de 17cm."
+      ],
+      "paises_similares": [
+        "argentina",
+        "espana",
+        "brasil"
+      ]
+    },
+    "stats": {
+      "total": 3,
+      "promedio": 172,
+      "max": {
+        "id": "ksi",
+        "nombre": "KSI",
+        "estaturaCm": 180
+      },
+      "min": {
+        "id": "florence-pugh",
+        "nombre": "Florence Pugh",
+        "estaturaCm": 163
+      }
+    }
+  },
+  {
+    "slug": "colombia",
+    "nombre": "Colombia",
+    "bandera": "🇨🇴",
+    "seo": {
+      "title": "Estatura de famosos de Colombia | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Colombia? 2 celebridades. Promedio: 160cm. El más alto: Karol G.",
+      "keywords": [
+        "famosos colombia",
+        "estatura famosos colombia",
+        "cuanto miden famosos colombia"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Colombia en nuestra base de datos. Su estatura promedio es de 160cm.",
+      "fun_facts": [
+        "El famoso más alto de Colombia es Karol G con 162cm.",
+        "El más bajo es Shakira con 157cm.",
+        "La diferencia entre el más alto y el más bajo es de 5cm."
+      ],
+      "paises_similares": [
+        "reino-unido",
+        "argentina",
+        "espana"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 160,
+      "max": {
+        "id": "karol-g",
+        "nombre": "Karol G",
+        "estaturaCm": 162
+      },
+      "min": {
+        "id": "shakira",
+        "nombre": "Shakira",
+        "estaturaCm": 157
+      }
+    }
+  },
+  {
+    "slug": "argentina",
+    "nombre": "Argentina",
+    "bandera": "🇦🇷",
+    "seo": {
+      "title": "Estatura de famosos de Argentina | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Argentina? 2 celebridades. Promedio: 175cm. El más alto: Bizarrap.",
+      "keywords": [
+        "famosos argentina",
+        "estatura famosos argentina",
+        "cuanto miden famosos argentina"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Argentina en nuestra base de datos. Su estatura promedio es de 175cm.",
+      "fun_facts": [
+        "El famoso más alto de Argentina es Bizarrap con 180cm.",
+        "El más bajo es Lionel Messi con 170cm.",
+        "La diferencia entre el más alto y el más bajo es de 10cm."
+      ],
+      "paises_similares": [
+        "espana",
+        "brasil",
+        "estados-unidos"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 175,
+      "max": {
+        "id": "bizarrap",
+        "nombre": "Bizarrap",
+        "estaturaCm": 180
+      },
+      "min": {
+        "id": "lionel-messi",
+        "nombre": "Lionel Messi",
+        "estaturaCm": 170
+      }
+    }
+  },
+  {
+    "slug": "francia",
+    "nombre": "Francia",
+    "bandera": "🇫🇷",
+    "seo": {
+      "title": "Estatura de famosos de Francia | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Francia? 2 celebridades. Promedio: 178cm. El más alto: Kylian Mbappé.",
+      "keywords": [
+        "famosos francia",
+        "estatura famosos francia",
+        "cuanto miden famosos francia"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Francia en nuestra base de datos. Su estatura promedio es de 178cm.",
+      "fun_facts": [
+        "El famoso más alto de Francia es Kylian Mbappé con 178cm.",
+        "El más bajo es Kylian Mbappé con 178cm.",
+        "La diferencia entre el más alto y el más bajo es de 0cm."
+      ],
+      "paises_similares": [
+        "estados-unidos",
+        "australia",
+        "espana"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 178,
+      "max": {
+        "id": "kylian-mbappe",
+        "nombre": "Kylian Mbappé",
+        "estaturaCm": 178
+      },
+      "min": {
+        "id": "kylian-mbappe",
+        "nombre": "Kylian Mbappé",
+        "estaturaCm": 178
+      }
+    }
+  },
+  {
+    "slug": "noruega",
+    "nombre": "Noruega",
+    "bandera": "🇳🇴",
+    "seo": {
+      "title": "Estatura de famosos de Noruega | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Noruega? 2 celebridades. Promedio: 193cm. El más alto: Erling Haaland.",
+      "keywords": [
+        "famosos noruega",
+        "estatura famosos noruega",
+        "cuanto miden famosos noruega"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Noruega en nuestra base de datos. Su estatura promedio es de 193cm.",
+      "fun_facts": [
+        "El famoso más alto de Noruega es Erling Haaland con 194cm.",
+        "El más bajo es ElRubius con 192cm.",
+        "La diferencia entre el más alto y el más bajo es de 2cm."
+      ],
+      "paises_similares": [
+        "canada",
+        "australia",
+        "francia"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 193,
+      "max": {
+        "id": "erling-haaland",
+        "nombre": "Erling Haaland",
+        "estaturaCm": 194
+      },
+      "min": {
+        "id": "elrubius",
+        "nombre": "ElRubius",
+        "estaturaCm": 192
+      }
+    }
+  },
+  {
+    "slug": "brasil",
+    "nombre": "Brasil",
+    "bandera": "🇧🇷",
+    "seo": {
+      "title": "Estatura de famosos de Brasil | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Brasil? 2 celebridades. Promedio: 176cm. El más alto: Vinicius Jr..",
+      "keywords": [
+        "famosos brasil",
+        "estatura famosos brasil",
+        "cuanto miden famosos brasil"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Brasil en nuestra base de datos. Su estatura promedio es de 176cm.",
+      "fun_facts": [
+        "El famoso más alto de Brasil es Vinicius Jr. con 176cm.",
+        "El más bajo es Neymar Jr. con 175cm.",
+        "La diferencia entre el más alto y el más bajo es de 1cm."
+      ],
+      "paises_similares": [
+        "espana",
+        "estados-unidos",
+        "argentina"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 176,
+      "max": {
+        "id": "vinicius-jr",
+        "nombre": "Vinicius Jr.",
+        "estaturaCm": 176
+      },
+      "min": {
+        "id": "neymar",
+        "nombre": "Neymar Jr.",
+        "estaturaCm": 175
+      }
+    }
+  },
+  {
+    "slug": "australia",
+    "nombre": "Australia",
+    "bandera": "🇦🇺",
+    "seo": {
+      "title": "Estatura de famosos de Australia | estaturas.com",
+      "description": "¿Cuánto miden los famosos de Australia? 2 celebridades. Promedio: 179cm. El más alto: Chris Hemsworth.",
+      "keywords": [
+        "famosos australia",
+        "estatura famosos australia",
+        "cuanto miden famosos australia"
+      ]
+    },
+    "content": {
+      "intro": "Tenemos 2 famosos de Australia en nuestra base de datos. Su estatura promedio es de 179cm.",
+      "fun_facts": [
+        "El famoso más alto de Australia es Chris Hemsworth con 190cm.",
+        "El más bajo es Margot Robbie con 168cm.",
+        "La diferencia entre el más alto y el más bajo es de 22cm."
+      ],
+      "paises_similares": [
+        "canada",
+        "francia",
+        "estados-unidos"
+      ]
+    },
+    "stats": {
+      "total": 2,
+      "promedio": 179,
+      "max": {
+        "id": "chris-hemsworth",
+        "nombre": "Chris Hemsworth",
+        "estaturaCm": 190
+      },
+      "min": {
+        "id": "margot-robbie",
+        "nombre": "Margot Robbie",
+        "estaturaCm": 168
+      }
+    }
+  }
+]

@@ -1,0 +1,137 @@
+---
+/**
+ * pSEO 2.0: /estatura/[rango] — Range-based height pages
+ * e.g. /estatura/170-180, /estatura/famosos-altos
+ */
+import Base from '../../layouts/Base.astro';
+import rangosData from '../../data/rangos.json';
+import famososData from '../../data/famosos.json';
+
+export function getStaticPaths() {
+  return rangosData.map(r => ({
+    params: { rango: r.slug },
+    props: { rango: r },
+  }));
+}
+
+const { rango } = Astro.props;
+
+const members = famososData
+  .filter(f => f.estaturaCm >= rango.min_cm && f.estaturaCm < rango.max_cm)
+  .sort((a, b) => b.estaturaCm - a.estaturaCm);
+
+const cmToFtIn = (cm: number) => {
+  const i = cm / 2.54, ft = Math.floor(i / 12);
+  return `${ft}'${Math.round(i % 12)}"`;
+};
+
+const refCm = members.length > 0 ? Math.max(...members.map(f => f.estaturaCm)) : 1;
+
+const rangeLabel = rango.tipo === 'especial'
+  ? rango.slug.replace(/-/g, ' ')
+  : `${rango.min_cm}-${rango.max_cm}cm`;
+---
+<Base
+  title={rango.seo.title}
+  description={rango.seo.description}
+>
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <a href="/calculadora-estatura" class="hover:text-slate-300 transition-colors">Estaturas</a>
+      <span>›</span>
+      <span class="text-slate-300">{rangeLabel}</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">
+      {rango.tipo === 'especial'
+        ? `Famosos ${rango.slug.replace(/-/g, ' ')}`
+        : `Famosos que miden entre ${rango.min_cm} y ${rango.max_cm}cm`
+      }
+    </h1>
+    <p class="text-slate-400 text-lg mb-2">{rango.content.intro}</p>
+    <p class="text-slate-500 text-sm mb-8">{rango.content.dato_curioso}</p>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-3 gap-3 mb-10">
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black text-white">{members.length}</p>
+        <p class="text-slate-500 text-xs mt-1">Famosos</p>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black" style="color: #22c55e">
+          {members.length > 0 ? Math.max(...members.map(f => f.estaturaCm)) : '-'}cm
+        </p>
+        <p class="text-slate-500 text-xs mt-1">Más alto</p>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black" style="color: #f43f5e">
+          {members.length > 0 ? Math.min(...members.map(f => f.estaturaCm)) : '-'}cm
+        </p>
+        <p class="text-slate-500 text-xs mt-1">Más bajo</p>
+      </div>
+    </div>
+
+    <!-- Celebrity list -->
+    <div class="space-y-2.5">
+      {members.map((f, i) => {
+        const barPct = (f.estaturaCm / refCm) * 100;
+        return (
+          <a href={`/${f.id}`}
+            class="group block glass rounded-2xl p-4 transition-all hover:-translate-y-0.5"
+            onmouseover={`this.style.borderColor='${f.color}44'`}
+            onmouseout={`this.style.borderColor=''`}>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div class="w-8 flex-shrink-0 text-center">
+                <span class="text-slate-500 font-mono text-sm font-bold">{i + 1}</span>
+              </div>
+              <div class="text-xl flex-shrink-0">{f.bandera}</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="min-w-0">
+                    <p class="font-bold text-white group-hover:text-sky-400 transition-colors truncate">
+                      {f.nombre}
+                    </p>
+                    <p class="text-slate-500 text-xs truncate">{f.profesion?.split('/')[0].trim()}</p>
+                  </div>
+                  <div class="text-right flex-shrink-0 ml-3">
+                    <span class="font-black text-xl" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+                    <span class="text-slate-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
+                  </div>
+                </div>
+                <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
+                  <div class="h-1.5 rounded-full transition-all duration-700"
+                    style={`width: ${barPct}%; background: linear-gradient(to right, ${f.color}88, ${f.color})`} />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Browse ranges -->
+    <div class="mt-10">
+      <h3 class="text-lg font-bold text-white mb-4">Otros rangos de estatura</h3>
+      <div class="flex flex-wrap gap-2">
+        {rangosData.filter(r => r.slug !== rango.slug).map(r => (
+          <a href={`/estatura/${r.slug}`}
+            class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+            {r.tipo === 'especial' ? r.slug.replace(/-/g, ' ') : `${r.min_cm}-${r.max_cm}cm`}
+            <span class="text-slate-600 ml-1">({r.famosos_count})</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 text-center">
+      <a href="/"
+        class="btn-glow inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl"
+        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        🔄 Comparar estaturas
+      </a>
+    </div>
+  </div>
+</Base>

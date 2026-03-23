@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "150-160",
+    "tipo": "rango",
+    "min_cm": 150,
+    "max_cm": 160,
+    "seo": {
+      "title": "Famosos que miden entre 150-160cm | estaturas.com",
+      "description": "2 famosos que miden entre 150-160cm. De Shakira a Shakira.",
+      "keywords": [
+        "famosos 150-160cm",
+        "estatura 150-160cm",
+        "cuanto miden 150-160cm"
+      ]
+    },
+    "content": {
+      "intro": "2 famosos miden entre 150-160cm. El promedio de este grupo es 157cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 2
+  },
+  {
+    "slug": "160-170",
+    "tipo": "rango",
+    "min_cm": 160,
+    "max_cm": 170,
+    "seo": {
+      "title": "Famosos que miden entre 160-170cm | estaturas.com",
+      "description": "9 famosos que miden entre 160-170cm. De Billie Eilish a Margot Robbie.",
+      "keywords": [
+        "famosos 160-170cm",
+        "estatura 160-170cm",
+        "cuanto miden 160-170cm"
+      ]
+    },
+    "content": {
+      "intro": "9 famosos miden entre 160-170cm. El promedio de este grupo es 164cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 9
+  },
+  {
+    "slug": "170-180",
+    "tipo": "rango",
+    "min_cm": 170,
+    "max_cm": 180,
+    "seo": {
+      "title": "Famosos que miden entre 170-180cm | estaturas.com",
+      "description": "18 famosos que miden entre 170-180cm. De Lionel Messi a Zendaya.",
+      "keywords": [
+        "famosos 170-180cm",
+        "estatura 170-180cm",
+        "cuanto miden 170-180cm"
+      ]
+    },
+    "content": {
+      "intro": "18 famosos miden entre 170-180cm. El promedio de este grupo es 175cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 18
+  },
+  {
+    "slug": "180-190",
+    "tipo": "rango",
+    "min_cm": 180,
+    "max_cm": 190,
+    "seo": {
+      "title": "Famosos que miden entre 180-190cm | estaturas.com",
+      "description": "13 famosos que miden entre 180-190cm. De Bad Bunny a MrBeast.",
+      "keywords": [
+        "famosos 180-190cm",
+        "estatura 180-190cm",
+        "cuanto miden 180-190cm"
+      ]
+    },
+    "content": {
+      "intro": "13 famosos miden entre 180-190cm. El promedio de este grupo es 184cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 13
+  },
+  {
+    "slug": "190-200",
+    "tipo": "rango",
+    "min_cm": 190,
+    "max_cm": 200,
+    "seo": {
+      "title": "Famosos que miden entre 190-200cm | estaturas.com",
+      "description": "5 famosos que miden entre 190-200cm. De Chris Hemsworth a Michael Jordan.",
+      "keywords": [
+        "famosos 190-200cm",
+        "estatura 190-200cm",
+        "cuanto miden 190-200cm"
+      ]
+    },
+    "content": {
+      "intro": "5 famosos miden entre 190-200cm. El promedio de este grupo es 194cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 5
+  },
+  {
+    "slug": "200-210",
+    "tipo": "rango",
+    "min_cm": 200,
+    "max_cm": 210,
+    "seo": {
+      "title": "Famosos que miden entre 200-210cm | estaturas.com",
+      "description": "1 famosos que miden entre 200-210cm. De LeBron James a LeBron James.",
+      "keywords": [
+        "famosos 200-210cm",
+        "estatura 200-210cm",
+        "cuanto miden 200-210cm"
+      ]
+    },
+    "content": {
+      "intro": "1 famosos miden entre 200-210cm. El promedio de este grupo es 206cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 1
+  },
+  {
+    "slug": "210-220",
+    "tipo": "rango",
+    "min_cm": 210,
+    "max_cm": 220,
+    "seo": {
+      "title": "Famosos que miden entre 210-220cm | estaturas.com",
+      "description": "1 famosos que miden entre 210-220cm. De Shaquille O'Neal a Shaquille O'Neal.",
+      "keywords": [
+        "famosos 210-220cm",
+        "estatura 210-220cm",
+        "cuanto miden 210-220cm"
+      ]
+    },
+    "content": {
+      "intro": "1 famosos miden entre 210-220cm. El promedio de este grupo es 216cm.",
+      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+    },
+    "famosos_count": 1
+  },
+  {
+    "slug": "famosos-bajos",
+    "tipo": "especial",
+    "min_cm": 0,
+    "max_cm": 165,
+    "seo": {
+      "title": "Famosos famosos bajos (menos de 165cm) | estaturas.com",
+      "description": "7 famosos que miden menos de 165cm. De Simone Biles a Aitana.",
+      "keywords": [
+        "famosos famosos bajos",
+        "estatura menos de 165cm",
+        "cuanto miden menos de 165cm"
+      ]
+    },
+    "content": {
+      "intro": "7 famosos miden menos de 165cm. El promedio de este grupo es 158cm.",
+      "dato_curioso": "El rango incluye desde Simone Biles (142cm) hasta Aitana (163cm)."
+    },
+    "famosos_count": 7
+  },
+  {
+    "slug": "famosos-altos",
+    "tipo": "especial",
+    "min_cm": 190,
+    "max_cm": 999,
+    "seo": {
+      "title": "Famosos famosos altos (más de 190cm) | estaturas.com",
+      "description": "7 famosos que miden más de 190cm. De Chris Hemsworth a Shaquille O'Neal.",
+      "keywords": [
+        "famosos famosos altos",
+        "estatura más de 190cm",
+        "cuanto miden más de 190cm"
+      ]
+    },
+    "content": {
+      "intro": "7 famosos miden más de 190cm. El promedio de este grupo es 199cm.",
+      "dato_curioso": "El rango incluye desde Chris Hemsworth (190cm) hasta Shaquille O'Neal (216cm)."
+    },
+    "famosos_count": 7
+  }
+]

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "generate": "npx tsx src/scripts/generate-pseo-data.ts"
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",

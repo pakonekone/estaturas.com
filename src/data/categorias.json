@@ -1,0 +1,312 @@
+[
+  {
+    "slug": "musica",
+    "nombre": "Músicos y Cantantes",
+    "emoji": "🎵",
+    "seo": {
+      "title": "Estatura de Músicos y Cantantes famosos | estaturas.com",
+      "description": "¿Cuánto miden los músicos y cantantes? Ranking de estaturas de 10 músicos y cantantes famosos. El más alto: Drake (182cm).",
+      "keywords": [
+        "estatura músicos y cantantes",
+        "cuanto miden músicos y cantantes",
+        "músicos y cantantes mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 10 músicos y cantantes famosos. Desde Drake con 182cm hasta Shakira con 157cm.",
+      "fun_facts": [
+        "La estatura promedio de los músicos y cantantes en nuestra base es de 170cm.",
+        "El más alto es Drake con 182cm.",
+        "El más bajo es Shakira con 157cm."
+      ],
+      "subcategorias": [
+        "musica",
+        "reggaeton",
+        "latinoamerica",
+        "flamenco",
+        "espana",
+        "pop",
+        "eeuu",
+        "bajos"
+      ],
+      "related_rankings": [
+        "musica-mas-altos",
+        "musica-mas-bajos"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 170,
+      "max": {
+        "id": "drake",
+        "nombre": "Drake",
+        "estaturaCm": 182
+      },
+      "min": {
+        "id": "shakira",
+        "nombre": "Shakira",
+        "estaturaCm": 157
+      }
+    },
+    "top10": [
+      "drake",
+      "bad-bunny",
+      "bizarrap",
+      "taylor-swift",
+      "the-weeknd",
+      "rosalia",
+      "aitana",
+      "karol-g",
+      "billie-eilish",
+      "shakira"
+    ]
+  },
+  {
+    "slug": "futbol",
+    "nombre": "Futbolistas",
+    "emoji": "⚽",
+    "seo": {
+      "title": "Estatura de Futbolistas famosos | estaturas.com",
+      "description": "¿Cuánto miden los futbolistas? Ranking de estaturas de 10 futbolistas famosos. El más alto: Erling Haaland (194cm).",
+      "keywords": [
+        "estatura futbolistas",
+        "cuanto miden futbolistas",
+        "futbolistas mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 10 futbolistas famosos. Desde Erling Haaland con 194cm hasta Lionel Messi con 170cm.",
+      "fun_facts": [
+        "La estatura promedio de los futbolistas en nuestra base es de 180cm.",
+        "El más alto es Erling Haaland con 194cm.",
+        "El más bajo es Lionel Messi con 170cm."
+      ],
+      "subcategorias": [
+        "futbol",
+        "deportes",
+        "argentina",
+        "bajos",
+        "portugal",
+        "altos",
+        "francia",
+        "espana"
+      ],
+      "related_rankings": [
+        "futbol-mas-altos",
+        "futbol-mas-bajos"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 180,
+      "max": {
+        "id": "erling-haaland",
+        "nombre": "Erling Haaland",
+        "estaturaCm": 194
+      },
+      "min": {
+        "id": "lionel-messi",
+        "nombre": "Lionel Messi",
+        "estaturaCm": 170
+      }
+    },
+    "top10": [
+      "erling-haaland",
+      "cristiano-ronaldo",
+      "jude-bellingham",
+      "robert-lewandowski",
+      "kylian-mbappe",
+      "vinicius-jr",
+      "neymar",
+      "pedri",
+      "luka-modric",
+      "lionel-messi"
+    ]
+  },
+  {
+    "slug": "cine-tv",
+    "nombre": "Actores y Actrices",
+    "emoji": "🎬",
+    "seo": {
+      "title": "Estatura de Actores y Actrices famosos | estaturas.com",
+      "description": "¿Cuánto miden los actores y actrices? Ranking de estaturas de 10 actores y actrices famosos. El más alto: Chris Hemsworth (190cm).",
+      "keywords": [
+        "estatura actores y actrices",
+        "cuanto miden actores y actrices",
+        "actores y actrices mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 10 actores y actrices famosos. Desde Chris Hemsworth con 190cm hasta Jenna Ortega con 157cm.",
+      "fun_facts": [
+        "La estatura promedio de los actores y actrices en nuestra base es de 174cm.",
+        "El más alto es Chris Hemsworth con 190cm.",
+        "El más bajo es Jenna Ortega con 157cm."
+      ],
+      "subcategorias": [
+        "cine",
+        "marvel",
+        "reinounido",
+        "bajos",
+        "musica",
+        "eeuu",
+        "espana",
+        "latinoamerica"
+      ],
+      "related_rankings": [
+        "cine-tv-mas-altos",
+        "cine-tv-mas-bajos"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 174,
+      "max": {
+        "id": "chris-hemsworth",
+        "nombre": "Chris Hemsworth",
+        "estaturaCm": 190
+      },
+      "min": {
+        "id": "jenna-ortega",
+        "nombre": "Jenna Ortega",
+        "estaturaCm": 157
+      }
+    },
+    "top10": [
+      "chris-hemsworth",
+      "ryan-gosling",
+      "pedro-pascal",
+      "zendaya",
+      "timothee-chalamet",
+      "tom-holland",
+      "margot-robbie",
+      "ana-de-armas",
+      "florence-pugh",
+      "jenna-ortega"
+    ]
+  },
+  {
+    "slug": "influencers",
+    "nombre": "Influencers y Streamers",
+    "emoji": "📱",
+    "seo": {
+      "title": "Estatura de Influencers y Streamers famosos | estaturas.com",
+      "description": "¿Cuánto miden los influencers y streamers? Ranking de estaturas de 10 influencers y streamers famosos. El más alto: ElRubius (192cm).",
+      "keywords": [
+        "estatura influencers y streamers",
+        "cuanto miden influencers y streamers",
+        "influencers y streamers mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 10 influencers y streamers famosos. Desde ElRubius con 192cm hasta Lele Pons con 165cm.",
+      "fun_facts": [
+        "La estatura promedio de los influencers y streamers en nuestra base es de 177cm.",
+        "El más alto es ElRubius con 192cm.",
+        "El más bajo es Lele Pons con 165cm."
+      ],
+      "subcategorias": [
+        "influencer",
+        "youtube",
+        "eeuu",
+        "altos",
+        "streaming",
+        "espana",
+        "tiktok",
+        "reinounido"
+      ],
+      "related_rankings": [
+        "influencers-mas-altos",
+        "influencers-mas-bajos"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 177,
+      "max": {
+        "id": "elrubius",
+        "nombre": "ElRubius",
+        "estaturaCm": 192
+      },
+      "min": {
+        "id": "lele-pons",
+        "nombre": "Lele Pons",
+        "estaturaCm": 165
+      }
+    },
+    "top10": [
+      "elrubius",
+      "mrbeast",
+      "ksi",
+      "ibai",
+      "jordi-wild",
+      "auronplay",
+      "pewdiepie",
+      "charli-damelio",
+      "addison-rae",
+      "lele-pons"
+    ]
+  },
+  {
+    "slug": "deportes",
+    "nombre": "Deportistas",
+    "emoji": "🏆",
+    "seo": {
+      "title": "Estatura de Deportistas famosos | estaturas.com",
+      "description": "¿Cuánto miden los deportistas? Ranking de estaturas de 10 deportistas famosos. El más alto: Shaquille O'Neal (216cm).",
+      "keywords": [
+        "estatura deportistas",
+        "cuanto miden deportistas",
+        "deportistas mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 10 deportistas famosos. Desde Shaquille O'Neal con 216cm hasta Simone Biles con 142cm.",
+      "fun_facts": [
+        "La estatura promedio de los deportistas en nuestra base es de 187cm.",
+        "El más alto es Shaquille O'Neal con 216cm.",
+        "El más bajo es Simone Biles con 142cm."
+      ],
+      "subcategorias": [
+        "baloncesto",
+        "deportes",
+        "eeuu",
+        "altos",
+        "tenis",
+        "gimnasia",
+        "bajos",
+        "atletismo"
+      ],
+      "related_rankings": [
+        "deportes-mas-altos",
+        "deportes-mas-bajos"
+      ]
+    },
+    "stats": {
+      "total": 10,
+      "promedio": 187,
+      "max": {
+        "id": "shaquille-oneal",
+        "nombre": "Shaquille O'Neal",
+        "estaturaCm": 216
+      },
+      "min": {
+        "id": "simone-biles",
+        "nombre": "Simone Biles",
+        "estaturaCm": 142
+      }
+    },
+    "top10": [
+      "shaquille-oneal",
+      "lebron-james",
+      "michael-jordan",
+      "usain-bolt",
+      "novak-djokovic",
+      "rafa-nadal",
+      "carlos-alcaraz",
+      "canelo-alvarez",
+      "serena-williams",
+      "simone-biles"
+    ]
+  }
+]

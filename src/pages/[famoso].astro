@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import Comparador from '../components/Comparador';
 import famososData from '../data/famosos.json';
 import { cmToFtIn, PROMEDIO_H, PROMEDIO_M, MIN_HUMAN_H, MAX_HUMAN_H } from '../utils/height';
+import comparacionesData from '../data/top-comparaciones.json';
+import rankingsData from '../data/rankings.json';
 
 export function getStaticPaths() {
   return famososData.map(f => ({ params: { famoso: f.id }, props: { famoso: f } }));
@@ -15,23 +17,82 @@ const barPct = Math.round(((famoso.estaturaCm - MIN_H) / (MAX_H - MIN_H)) * 100)
 const diffHombre = famoso.estaturaCm - PROMEDIO_H;
 const diffMujer  = famoso.estaturaCm - PROMEDIO_M;
 
-const similares = famososData
-  .filter(f => f.id !== famoso.id && Math.abs(f.estaturaCm - famoso.estaturaCm) <= 4)
-  .slice(0, 4);
+// Category name mapping
+const NOMBRES_CATEGORIA: Record<string, string> = {
+  'futbol': 'Futbolistas', 'musica': 'Músicos', 'cine-tv': 'Cine y TV',
+  'influencers': 'Influencers', 'deportes': 'Deportistas', 'streamers': 'Streamers',
+  'politica': 'Políticos', 'la-velada': 'La Velada', 'otros': 'Otros',
+};
 
-const otroFamoso = famosos => famosos.find(f => f.id !== famoso.id);
+// Similar height: ±3cm, prioritize same category
+const similares = famososData
+  .filter(f => f.id !== famoso.id && Math.abs(f.estaturaCm - famoso.estaturaCm) <= 3)
+  .sort((a, b) => {
+    const aCat = a.categoria === famoso.categoria ? 0 : 1;
+    const bCat = b.categoria === famoso.categoria ? 0 : 1;
+    if (aCat !== bCat) return aCat - bCat;
+    return Math.abs(a.estaturaCm - famoso.estaturaCm) - Math.abs(b.estaturaCm - famoso.estaturaCm);
+  })
+  .slice(0, 5);
+
+// Popular comparisons from keyword research (top-comparaciones.json)
+const comparacionesPopulares = comparacionesData
+  .filter(c => c.famoso_a === famoso.id || c.famoso_b === famoso.id)
+  .slice(0, 5)
+  .map(c => {
+    const otherId = c.famoso_a === famoso.id ? c.famoso_b : c.famoso_a;
+    const other = famososData.find(f => f.id === otherId);
+    return { slug: c.slug, other, diff: c.diff_cm, volume: c.search_volume };
+  })
+  .filter(c => c.other);
+
+// Same category (exclude those already in similares)
+const similarIds = new Set(similares.map(s => s.id));
+const mismaCategoria = famososData
+  .filter(f => f.id !== famoso.id && f.categoria === famoso.categoria && !similarIds.has(f.id))
+  .sort((a, b) => Math.abs(a.estaturaCm - famoso.estaturaCm) - Math.abs(b.estaturaCm - famoso.estaturaCm))
+  .slice(0, 3);
+
+// Same country
+const mismoPais = famososData
+  .filter(f => f.id !== famoso.id && f.pais === famoso.pais)
+  .slice(0, 3);
+
+// Related rankings
+const rankingsRelacionados = rankingsData.filter(r =>
+  r.categoria === famoso.categoria || r.slug === 'los-mas-altos' || r.slug === 'los-mas-bajos'
+).slice(0, 3);
+
 const defaultB = (famoso.id === 'lionel-messi' ? 'cristiano-ronaldo' : 'lionel-messi');
 
-const schema = {
+// Person schema
+const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": famoso.nombre,
+  "name": famoso.fullName || famoso.nombre,
+  ...(famoso.apodo ? { "alternateName": famoso.apodo } : {}),
   "height": { "@type": "QuantitativeValue", "value": famoso.estaturaCm, "unitCode": "CMT" },
-  "nationality": famoso.pais,
+  ...(famoso.peso ? { "weight": { "@type": "QuantitativeValue", "value": typeof famoso.peso === 'number' ? famoso.peso : parseInt(famoso.peso), "unitCode": "KGM" } } : {}),
+  "nationality": { "@type": "Country", "name": famoso.pais },
   "jobTitle": famoso.profesion,
   "description": `${famoso.nombre} mide ${famoso.estaturaCm} cm (${cmToFtIn(famoso.estaturaCm)}). Descubre su estatura y compárala con otros famosos.`,
+  ...(famoso.foto ? { "image": famoso.foto } : {}),
   "url": `https://estaturas.com/${famoso.id}`,
 };
+
+// BreadcrumbList schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://estaturas.com/" },
+    { "@type": "ListItem", "position": 2, "name": NOMBRES_CATEGORIA[famoso.categoria] || famoso.categoria, "item": `https://estaturas.com/categoria/${famoso.categoria}` },
+    { "@type": "ListItem", "position": 3, "name": famoso.nombre },
+  ],
+};
+
+// Combined schemas
+const schema = [personSchema, breadcrumbSchema];
 
 // Silhouette proportional height for hero (max display 240px)
 const MAX_DISPLAY = 240;
@@ -48,10 +109,10 @@ const heroW = Math.round(heroDisplayH * 0.4);
   <!-- ── Hero visual ── -->
   <section class="relative overflow-hidden" style={`background: radial-gradient(ellipse 60% 50% at 50% 0%, ${famoso.color}15 0%, transparent 70%)`}>
     <div class="max-w-5xl mx-auto px-4 pt-10 pb-2">
-      <nav class="text-sm text-stone-500 mb-8 flex items-center gap-2">
+      <nav class="text-sm text-stone-500 mb-8 flex items-center gap-2 flex-wrap">
         <a href="/" class="hover:text-stone-300 transition-colors">Inicio</a>
         <span>›</span>
-        <a href="/famosos" class="hover:text-stone-300 transition-colors">Famosos</a>
+        <a href={`/categoria/${famoso.categoria}`} class="hover:text-stone-300 transition-colors">{NOMBRES_CATEGORIA[famoso.categoria] || famoso.categoria}</a>
         <span>›</span>
         <span class="text-stone-300">{famoso.nombre}</span>
       </nav>
@@ -217,13 +278,33 @@ const heroW = Math.round(heroDisplayH * 0.4);
       <Comparador client:idle famosos={famososData} inicial={{ a: famoso.id, b: defaultB }} />
     </div>
 
-    <!-- Famosos similares -->
+    <!-- Comparaciones populares -->
+    {comparacionesPopulares.length > 0 && (
+      <div class="reveal">
+        <h2 class="text-xl font-black text-white mb-4">Comparaciones populares</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {comparacionesPopulares.map(({ slug, other, diff }) => (
+            <a href={`/comparar/${slug}`}
+              class="glass rounded-xl px-4 py-3 flex items-center justify-between group transition-all hover:-translate-y-0.5">
+              <span class="text-slate-300 group-hover:text-white text-sm transition-colors">
+                {famoso.nombre.split(' ')[0]} vs {other.nombre}
+              </span>
+              <span class="text-sm font-semibold" style={`color: ${other.color}`}>
+                {diff > 0 ? `${diff}cm de diferencia` : 'Misma estatura'}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Famosos de estatura similar -->
     {similares.length > 0 && (
       <div class="reveal">
         <h2 class="text-xl font-black text-white mb-4">
-          Con estatura similar <span class="text-stone-500 font-normal text-base">(±4cm)</span>
+          Famosos con estatura similar <span class="text-stone-500 font-normal text-base">(±3cm)</span>
         </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
           {similares.map(s => (
             <a href={`/${s.id}`}
               class="famoso-card glass rounded-2xl p-4 text-center"
@@ -239,22 +320,65 @@ const heroW = Math.round(heroDisplayH * 0.4);
       </div>
     )}
 
-    <!-- Other comparisons -->
-    <div class="reveal">
-      <h2 class="text-xl font-black text-white mb-4">Compara con otros</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {famososData.filter(f => f.id !== famoso.id).slice(0, 6).map(other => (
-          <a href={`/comparar/${famoso.id}-vs-${other.id}`}
-            class="glass rounded-xl px-4 py-3 flex items-center justify-between group transition-all hover:-translate-y-0.5">
-            <span class="text-stone-300 group-hover:text-white text-sm transition-colors">
-              {famoso.nombre.split(' ')[0]} vs {other.nombre}
-            </span>
-            <span class="text-sm font-semibold" style={`color: ${other.color}`}>
-              {other.estaturaCm > famoso.estaturaCm ? '+' : ''}{other.estaturaCm - famoso.estaturaCm}cm
-            </span>
-          </a>
-        ))}
+    <!-- Misma categoría -->
+    {mismaCategoria.length > 0 && (
+      <div class="reveal">
+        <h2 class="text-xl font-black text-white mb-4">
+          Más {NOMBRES_CATEGORIA[famoso.categoria]?.toLowerCase() || famoso.categoria}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          {mismaCategoria.map(f => (
+            <a href={`/${f.id}`}
+              class="glass rounded-xl px-4 py-3 flex items-center justify-between group transition-all hover:-translate-y-0.5">
+              <span class="text-stone-300 group-hover:text-white text-sm transition-colors">
+                {f.bandera} {f.nombre}
+              </span>
+              <span class="text-sm font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+            </a>
+          ))}
+        </div>
+        <a href={`/categoria/${famoso.categoria}`}
+          class="inline-block mt-3 text-sm text-stone-500 hover:text-stone-300 transition-colors">
+          Ver todos los {NOMBRES_CATEGORIA[famoso.categoria]?.toLowerCase()} →
+        </a>
       </div>
-    </div>
+    )}
+
+    <!-- Mismo país -->
+    {mismoPais.length > 0 && (
+      <div class="reveal">
+        <h2 class="text-xl font-black text-white mb-4">
+          Famosos de {famoso.pais} {famoso.bandera}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          {mismoPais.map(f => (
+            <a href={`/${f.id}`}
+              class="glass rounded-xl px-4 py-3 flex items-center justify-between group transition-all hover:-translate-y-0.5">
+              <span class="text-slate-300 group-hover:text-white text-sm transition-colors">
+                {f.nombre}
+              </span>
+              <span class="text-sm font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Rankings relacionados -->
+    {rankingsRelacionados.length > 0 && (
+      <div class="reveal">
+        <h2 class="text-xl font-black text-white mb-4">Rankings relacionados</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          {rankingsRelacionados.map(r => (
+            <a href={`/ranking/${r.slug}`}
+              class="glass rounded-xl px-4 py-3 group transition-all hover:-translate-y-0.5">
+              <span class="text-slate-300 group-hover:text-white text-sm transition-colors">
+                {r.titulo}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 </Base>

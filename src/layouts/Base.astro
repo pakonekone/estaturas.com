@@ -6,7 +6,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   canonical?: string;
-  schema?: object;
+  schema?: object | object[];
 }
 const {
   title,
@@ -38,7 +38,10 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  {schema && (Array.isArray(schema)
+    ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
+    : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY7L2J94Q7"></script>
   <script is:inline>

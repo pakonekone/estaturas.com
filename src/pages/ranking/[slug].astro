@@ -2,41 +2,85 @@
 import Base from '../../layouts/Base.astro';
 import famososData from '../../data/famosos.json';
 import rankingsData from '../../data/rankings.json';
+import rankingsAutoData from '../../data/rankings-auto.json';
 import { cmToFtIn } from '../../utils/height';
 
 export function getStaticPaths() {
-  return rankingsData.map(r => ({
+  const manualSlugs = new Set(rankingsData.map(r => r.slug));
+
+  const manual = rankingsData.map(r => ({
     params: { slug: r.slug },
-    props: { ranking: r },
+    props: {
+      titulo: r.titulo,
+      descripcion: r.descripcion,
+      intro: undefined as string | undefined,
+      conclusion: undefined as string | undefined,
+      categoria: r.categoria ?? null,
+      filtroPais: (r as any).filtroPais as string | undefined,
+      filtrosPais: (r as any).filtrosPais as string[] | undefined,
+      filtroGenero: undefined as string | undefined,
+      orden: r.orden as 'asc' | 'desc',
+    },
   }));
+
+  const auto = rankingsAutoData
+    .filter(r => !manualSlugs.has(r.slug))
+    .map(r => ({
+      params: { slug: r.slug },
+      props: {
+        titulo: r.seo.title.replace(' | estaturas.com', ''),
+        descripcion: r.seo.description,
+        intro: r.content.intro,
+        conclusion: r.content.conclusion,
+        categoria: r.filtro.categoria ?? null,
+        filtroPais: undefined as string | undefined,
+        filtrosPais: undefined as string[] | undefined,
+        filtroGenero: r.filtro.genero as string | undefined,
+        orden: (r.tipo === 'mas-bajos' ? 'asc' : 'desc') as 'asc' | 'desc',
+      },
+    }));
+
+  return [...manual, ...auto];
 }
 
-const { ranking } = Astro.props;
+const { titulo, descripcion, intro, conclusion, categoria, filtroPais, filtrosPais, filtroGenero, orden } = Astro.props;
 
 // Filter logic
 let filtered = [...famososData];
 
-if (ranking.categoria) {
-  filtered = filtered.filter(f => f.categoria === ranking.categoria);
+if (categoria) {
+  filtered = filtered.filter(f => f.categoria === categoria);
 }
-if (ranking.filtroPais === 'espana') {
+if (filtroPais === 'espana') {
   filtered = filtered.filter(f => f.pais.toLowerCase().includes('españa'));
 }
-if (ranking.filtrosPais) {
-  filtered = filtered.filter(f => (ranking as any).filtrosPais.includes(f.pais));
+if (filtrosPais) {
+  filtered = filtered.filter(f => filtrosPais.includes(f.pais));
+}
+if (filtroGenero) {
+  filtered = filtered.filter(f => f.genero === filtroGenero);
 }
 
 const sorted = filtered.sort((a, b) =>
-  ranking.orden === 'asc' ? a.estaturaCm - b.estaturaCm : b.estaturaCm - a.estaturaCm
+  orden === 'asc' ? a.estaturaCm - b.estaturaCm : b.estaturaCm - a.estaturaCm
 );
 
 const top = sorted.slice(0, 15);
-const maxCm = ranking.orden === 'desc' ? (top[0]?.estaturaCm ?? 1) : (top[top.length-1]?.estaturaCm ?? 1);
-const refCm = Math.max(...top.map(f => f.estaturaCm));
+const refCm = top.length > 0 ? Math.max(...top.map(f => f.estaturaCm)) : 1;
+
+// Combine all ranking slugs for navigation
+const allSlugs = [
+  ...rankingsData.map(r => ({ slug: r.slug, titulo: r.titulo })),
+  ...rankingsAutoData
+    .filter(r => !new Set(rankingsData.map(m => m.slug)).has(r.slug))
+    .map(r => ({ slug: r.slug, titulo: r.seo.title.replace(' | estaturas.com', '') })),
+];
+const currentSlug = Astro.params.slug;
+const otherRankings = allSlugs.filter(r => r.slug !== currentSlug);
 ---
 <Base
-  title={`${ranking.titulo} | Estaturas.com`}
-  description={ranking.descripcion}
+  title={`${titulo} | Estaturas.com`}
+  description={descripcion}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
     <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2">
@@ -45,8 +89,10 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
       <span class="text-stone-300">Rankings</span>
     </nav>
 
-    <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">{ranking.titulo}</h1>
-    <p class="text-stone-400 mb-10 text-lg">{ranking.descripcion}</p>
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">{titulo}</h1>
+    <p class="text-stone-400 mb-4 text-lg">{descripcion}</p>
+    {intro && <p class="text-stone-500 mb-8">{intro}</p>}
+    {!intro && <div class="mb-6" />}
 
     <div class="space-y-2.5">
       {top.map((f, i) => {
@@ -89,6 +135,10 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
       })}
     </div>
 
+    {conclusion && (
+      <p class="mt-8 text-stone-400 text-sm glass rounded-2xl p-4">{conclusion}</p>
+    )}
+
     <!-- CTA -->
     <div class="mt-10 text-center">
       <a href="/"
@@ -100,7 +150,7 @@ const refCm = Math.max(...top.map(f => f.estaturaCm));
 
     <!-- Navigation to other rankings -->
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {rankingsData.filter(r => r.slug !== ranking.slug).slice(0, 4).map(r => (
+      {otherRankings.slice(0, 6).map(r => (
         <a href={`/ranking/${r.slug}`}
           class="glass rounded-xl p-4 text-sm text-stone-400 hover:text-white transition-colors group">
           <p class="font-semibold group-hover:text-brand-400 transition-colors">{r.titulo}</p>

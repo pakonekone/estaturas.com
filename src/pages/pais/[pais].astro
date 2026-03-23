@@ -1,0 +1,201 @@
+---
+import Base from '../../layouts/Base.astro';
+import paisesData from '../../data/paises.json';
+import famososData from '../../data/famosos.json';
+
+export function getStaticPaths() {
+  return paisesData.map(p => ({
+    params: { pais: p.slug },
+    props: { pais: p },
+  }));
+}
+
+const { pais } = Astro.props;
+
+// Match famosos from this country (handle "Cuba / España" → "Cuba", "España")
+const members = famososData
+  .filter(f => f.pais.split('/').map(s => s.trim()).includes(pais.nombre))
+  .sort((a, b) => b.estaturaCm - a.estaturaCm);
+
+const cmToFtIn = (cm: number) => {
+  const i = cm / 2.54, ft = Math.floor(i / 12);
+  return `${ft}'${Math.round(i % 12)}"`;
+};
+
+const refCm = Math.max(...members.map(f => f.estaturaCm));
+
+const PROMEDIO_H = 176;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": pais.seo.title,
+  "description": pais.seo.description,
+  "numberOfItems": members.length,
+  "itemListElement": members.slice(0, 10).map((f, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Person",
+      "name": f.fullName,
+      "nationality": pais.nombre,
+      "height": { "@type": "QuantitativeValue", "value": f.estaturaCm, "unitCode": "CMT" },
+    }
+  })),
+};
+---
+<Base
+  title={pais.seo.title}
+  description={pais.seo.description}
+  schema={schema}
+>
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <span class="text-slate-300">{pais.nombre}</span>
+    </nav>
+
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-4xl">{pais.bandera}</span>
+      <h1 class="text-3xl sm:text-4xl font-black text-white">Famosos de {pais.nombre}</h1>
+    </div>
+    <p class="text-slate-400 text-lg mb-8">{pais.content.intro}</p>
+
+    <!-- Stats cards -->
+    {pais.stats && (
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+        <div class="glass rounded-2xl p-4 text-center">
+          <p class="text-2xl font-black text-white">{pais.stats.total}</p>
+          <p class="text-slate-500 text-xs mt-1">Famosos</p>
+        </div>
+        <div class="glass rounded-2xl p-4 text-center">
+          <p class="text-2xl font-black" style="color: #f59e0b">{pais.stats.promedio}cm</p>
+          <p class="text-slate-500 text-xs mt-1">Promedio</p>
+        </div>
+        <div class="glass rounded-2xl p-4 text-center">
+          <p class="text-2xl font-black" style="color: #22c55e">{pais.stats.max.estaturaCm}cm</p>
+          <p class="text-slate-500 text-xs mt-1">Más alto</p>
+        </div>
+        <div class="glass rounded-2xl p-4 text-center">
+          <p class="text-2xl font-black" style="color: #f43f5e">{pais.stats.min.estaturaCm}cm</p>
+          <p class="text-slate-500 text-xs mt-1">Más bajo</p>
+        </div>
+      </div>
+    )}
+
+    <!-- Comparison vs Spanish average -->
+    {pais.stats && (
+      <div class="glass rounded-2xl p-5 mb-10">
+        <p class="text-sm text-slate-400">
+          El promedio de nuestros famosos de {pais.nombre} es de
+          <span class="font-bold text-white">{pais.stats.promedio}cm</span>,
+          {pais.stats.promedio > PROMEDIO_H
+            ? <span> <span class="text-green-400">{pais.stats.promedio - PROMEDIO_H}cm por encima</span> del promedio masculino español (176cm).</span>
+            : pais.stats.promedio < PROMEDIO_H
+            ? <span> <span class="text-red-400">{PROMEDIO_H - pais.stats.promedio}cm por debajo</span> del promedio masculino español (176cm).</span>
+            : <span> igual al promedio masculino español (176cm).</span>
+          }
+        </p>
+      </div>
+    )}
+
+    <!-- Celebrity list -->
+    <h2 class="text-xl font-bold text-white mb-4">Famosos de {pais.nombre} por estatura</h2>
+    <div class="space-y-2.5">
+      {members.map((f, i) => {
+        const barPct = (f.estaturaCm / refCm) * 100;
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : null;
+        return (
+          <a href={`/${f.id}`}
+            class="group block glass rounded-2xl p-4 transition-all hover:-translate-y-0.5"
+            onmouseover={`this.style.borderColor='${f.color}44'`}
+            onmouseout={`this.style.borderColor=''`}>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div class="w-8 flex-shrink-0 text-center">
+                {medal
+                  ? <span class="text-xl">{medal}</span>
+                  : <span class="text-slate-500 font-mono text-sm font-bold">{i + 1}</span>
+                }
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="min-w-0">
+                    <p class="font-bold text-white group-hover:text-sky-400 transition-colors truncate">
+                      {f.nombre}
+                    </p>
+                    <p class="text-slate-500 text-xs truncate">{f.profesion?.split('/')[0].trim()} · {f.categoria}</p>
+                  </div>
+                  <div class="text-right flex-shrink-0 ml-3">
+                    <span class="font-black text-xl" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+                    <span class="text-slate-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
+                  </div>
+                </div>
+                <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
+                  <div class="h-1.5 rounded-full transition-all duration-700"
+                    style={`width: ${barPct}%; background: linear-gradient(to right, ${f.color}88, ${f.color})`} />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Fun facts -->
+    {pais.content.fun_facts.length > 0 && (
+      <div class="mt-10 glass rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-white mb-3">Datos curiosos</h3>
+        <ul class="space-y-2">
+          {pais.content.fun_facts.map(fact => (
+            <li class="text-slate-400 text-sm flex items-start gap-2">
+              <span class="text-amber-400 mt-0.5">•</span>
+              <span>{fact}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Related countries -->
+    {pais.content.paises_similares.length > 0 && (
+      <div class="mt-10">
+        <h3 class="text-lg font-bold text-white mb-4">Países con estatura similar</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {paisesData
+            .filter(p => pais.content.paises_similares.includes(p.slug))
+            .map(p => (
+              <a href={`/pais/${p.slug}`}
+                class="glass rounded-xl p-4 text-center transition-all hover:-translate-y-0.5 group">
+                <span class="text-2xl block mb-1">{p.bandera}</span>
+                <p class="text-sm font-semibold text-white group-hover:text-sky-400 transition-colors">{p.nombre}</p>
+                <p class="text-xs text-slate-500 mt-1">{p.stats?.total} famosos · {p.stats?.promedio}cm avg</p>
+              </a>
+            ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Browse all countries -->
+    <div class="mt-10">
+      <h3 class="text-lg font-bold text-white mb-4">Todos los países</h3>
+      <div class="flex flex-wrap gap-2">
+        {paisesData.filter(p => p.slug !== pais.slug).map(p => (
+          <a href={`/pais/${p.slug}`}
+            class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+            {p.bandera} {p.nombre}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 text-center">
+      <a href="/"
+        class="btn-glow inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl"
+        style="background: linear-gradient(135deg, #0284c7, #0ea5e9)">
+        🔄 Comparar estaturas
+      </a>
+    </div>
+  </div>
+</Base>
