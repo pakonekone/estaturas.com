@@ -308,5 +308,229 @@
       "serena-williams",
       "simone-biles"
     ]
+  },
+  {
+    "slug": "streamers",
+    "nombre": "Streamers",
+    "emoji": "🎮",
+    "seo": {
+      "title": "Estatura de Streamers famosos | estaturas.com",
+      "description": "¿Cuánto miden los streamers? Ranking de estaturas de los 52 streamers más famosos. El más alto: Spreen (193cm). El más bajo: Rivers_gg (158cm).",
+      "keywords": [
+        "estatura streamers",
+        "cuanto miden streamers",
+        "streamers mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 52 streamers famosos. Desde Spreen con 193cm hasta Rivers_gg con 158cm. Los streamers españoles y latinos más conocidos del mundo.",
+      "fun_facts": [
+        "La estatura promedio de los streamers en nuestra base es de 177cm, ligeramente por encima del promedio español.",
+        "El más alto es Spreen con 193cm.",
+        "ElRubius mide 192cm, casi igualando a Spreen como el streamer más alto."
+      ],
+      "subcategorias": [
+        "twitch",
+        "youtube",
+        "gaming",
+        "espana",
+        "latinoamerica"
+      ],
+      "related_rankings": []
+    },
+    "stats": {
+      "total": 52,
+      "promedio": 177,
+      "max": {
+        "id": "spreen",
+        "nombre": "Spreen",
+        "estaturaCm": 193
+      },
+      "min": {
+        "id": "rivers_gg",
+        "nombre": "Rivers_gg",
+        "estaturaCm": 158
+      }
+    },
+    "top10": [
+      "spreen",
+      "rubius",
+      "rubiusz",
+      "knekro",
+      "xqc",
+      "mr-jagger",
+      "ninja",
+      "reven",
+      "vegetta777",
+      "djmariio"
+    ]
+  },
+  {
+    "slug": "la-velada",
+    "nombre": "La Velada",
+    "emoji": "🥊",
+    "seo": {
+      "title": "Estatura de participantes de La Velada | estaturas.com",
+      "description": "¿Cuánto miden los participantes de La Velada? Estaturas de los 33 famosos que han participado en el evento de boxeo de Ibai.",
+      "keywords": [
+        "estatura la velada",
+        "cuanto miden la velada",
+        "participantes la velada estaturas"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de los 33 participantes de La Velada, el evento de boxeo entre creadores de contenido organizado por Ibai Llanos.",
+      "fun_facts": [
+        "La estatura promedio de los participantes de La Velada es de 175cm.",
+        "El más alto es Misho con 195cm.",
+        "La diferencia entre el más alto y el más bajo es de 45cm."
+      ],
+      "subcategorias": [
+        "boxeo",
+        "streamers",
+        "ibai",
+        "espana",
+        "evento"
+      ],
+      "related_rankings": []
+    },
+    "stats": {
+      "total": 33,
+      "promedio": 175,
+      "max": {
+        "id": "misho",
+        "nombre": "Misho",
+        "estaturaCm": 195
+      },
+      "min": {
+        "id": "roro-bueno",
+        "nombre": "Roro Bueno",
+        "estaturaCm": 150
+      }
+    },
+    "top10": [
+      "misho",
+      "plex",
+      "el-mariana",
+      "viruzz",
+      "shelao",
+      "fernanfloo",
+      "guanyar",
+      "mister-jagger",
+      "german-garmendia",
+      "agustin51"
+    ]
+  },
+  {
+    "slug": "politica",
+    "nombre": "Políticos",
+    "emoji": "🏛️",
+    "seo": {
+      "title": "Estatura de Políticos famosos | estaturas.com",
+      "description": "¿Cuánto miden los políticos? Ranking de estaturas de 13 líderes mundiales. El más alto: Felipe VI (197cm). La más baja: Angela Merkel (165cm).",
+      "keywords": [
+        "estatura politicos",
+        "cuanto miden politicos",
+        "politicos mas altos"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 13 políticos y líderes mundiales famosos. Desde Felipe VI con 197cm hasta Angela Merkel con 165cm.",
+      "fun_facts": [
+        "La estatura promedio de los políticos en nuestra base es de 179cm, 3cm por encima del promedio español.",
+        "Felipe VI de España es el líder más alto con 197cm.",
+        "Pedro Sánchez mide 190cm, siendo uno de los presidentes más altos de Europa."
+      ],
+      "subcategorias": [
+        "presidentes",
+        "espana",
+        "eeuu",
+        "europa",
+        "lideres"
+      ],
+      "related_rankings": []
+    },
+    "stats": {
+      "total": 13,
+      "promedio": 179,
+      "max": {
+        "id": "felipe-vi-de-espana",
+        "nombre": "Felipe VI de España",
+        "estaturaCm": 197
+      },
+      "min": {
+        "id": "angela-merkel",
+        "nombre": "Angela Merkel",
+        "estaturaCm": 165
+      }
+    },
+    "top10": [
+      "felipe-vi-de-espana",
+      "donald-trump",
+      "pedro-sanchez",
+      "justin-trudeau",
+      "barack-obama",
+      "joe-biden",
+      "nayib-bukele",
+      "papa-francisco",
+      "emmanuel-macron",
+      "reina-letizia"
+    ]
+  },
+  {
+    "slug": "otros",
+    "nombre": "Otros Famosos",
+    "emoji": "⭐",
+    "seo": {
+      "title": "Estatura de Otros Famosos | estaturas.com",
+      "description": "¿Cuánto miden otros famosos? Estaturas de 69 celebridades de distintos ámbitos: empresarios, científicos, chefs, periodistas y más.",
+      "keywords": [
+        "estatura famosos",
+        "cuanto miden famosos",
+        "estaturas celebridades"
+      ]
+    },
+    "content": {
+      "intro": "Descubre las estaturas de 69 famosos de distintos ámbitos: empresarios, científicos, chefs, periodistas, deportistas y personalidades únicas.",
+      "fun_facts": [
+        "La estatura promedio de esta categoría es de 174cm.",
+        "Giannis Antetokounmpo es el más alto con 211cm.",
+        "Esta categoría incluye desde premios Nobel hasta estrellas de la gastronomía."
+      ],
+      "subcategorias": [
+        "empresarios",
+        "cientificos",
+        "chefs",
+        "periodistas",
+        "historicos"
+      ],
+      "related_rankings": []
+    },
+    "stats": {
+      "total": 69,
+      "promedio": 174,
+      "max": {
+        "id": "giannis-antetokounmpo",
+        "nombre": "Giannis Antetokounmpo",
+        "estaturaCm": 211
+      },
+      "min": {
+        "id": "marie-curie",
+        "nombre": "Marie Curie",
+        "estaturaCm": 153
+      }
+    },
+    "top10": [
+      "giannis-antetokounmpo",
+      "nikola-jokic",
+      "juan-y-medio",
+      "mariano-rajoy",
+      "byviruzz",
+      "elon-musk",
+      "jose-coronado",
+      "fernando-torres",
+      "sergio-carvajal",
+      "carlos-herrera"
+    ]
   }
 ]
