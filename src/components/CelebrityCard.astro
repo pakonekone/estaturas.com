@@ -1,0 +1,114 @@
+---
+/**
+ * CelebrityCard — Standardized card component for all celebrity listings.
+ *
+ * Variants:
+ *   "card"  — Grid card (homepage, famosos directory, estatura/[cm])
+ *   "row"   — List row with rank + progress bar (categoría, ranking, país, rango)
+ */
+import CelebrityAvatar from './CelebrityAvatar.astro';
+import { cmToFtIn } from '../utils/height';
+
+interface Props {
+  famoso: {
+    id: string;
+    nombre: string;
+    estaturaCm: number;
+    foto?: string | null;
+    color: string;
+    bandera?: string;
+    profesion?: string;
+    categoria?: string;
+  };
+  variant?: 'card' | 'row';
+  rank?: number;       // 1-based rank for row variant
+  refCm?: number;      // tallest cm for progress bar scaling
+  showFlag?: boolean;
+  showProfession?: boolean;
+  shortName?: boolean;  // show first name only (homepage)
+  class?: string;
+  /** data-category for client-side filtering */
+  dataCategory?: string;
+}
+
+const {
+  famoso: f,
+  variant = 'card',
+  rank,
+  refCm,
+  showFlag = true,
+  showProfession = true,
+  shortName = false,
+  class: className = '',
+  dataCategory,
+} = Astro.props;
+
+const displayName = shortName ? f.nombre.split(' ')[0] : f.nombre;
+const ftIn = cmToFtIn(f.estaturaCm);
+const barPct = refCm ? (f.estaturaCm / refCm) * 100 : 0;
+const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : null;
+const prof = f.profesion?.split('/')[0].trim();
+---
+
+{variant === 'card' ? (
+  <a href={`/${f.id}`}
+    class={`famoso-card glass rounded-2xl p-4 text-center group block ${className}`}
+    style={`--glow: ${f.color}`}
+    data-category={dataCategory}
+    onmouseover={`this.style.boxShadow='0 0 20px ${f.color}33';this.style.borderColor='${f.color}44'`}
+    onmouseout={`this.style.boxShadow='';this.style.borderColor=''`}>
+    <div class="mx-auto mb-3">
+      <CelebrityAvatar id={f.id} nombre={f.nombre} foto={f.foto ?? null} color={f.color} size="md" class="mx-auto" />
+    </div>
+    <p class="text-white text-sm font-bold leading-tight mb-1 group-hover:text-brand-400 transition-colors">
+      {displayName}
+    </p>
+    <p class="text-xs font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
+    {showProfession && prof && (
+      <p class="text-stone-500 text-xs mt-0.5">
+        {showFlag && f.bandera ? `${f.bandera} ` : ''}{prof}
+      </p>
+    )}
+  </a>
+) : (
+  <a href={`/${f.id}`}
+    class={`group block glass rounded-2xl p-4 transition-all hover:-translate-y-0.5 ${className}`}
+    onmouseover={`this.style.borderColor='${f.color}44'`}
+    onmouseout={`this.style.borderColor=''`}>
+    <div class="flex items-center gap-3 sm:gap-4">
+      {rank != null && (
+        <div class="w-8 flex-shrink-0 text-center">
+          {medal
+            ? <span class="text-xl">{medal}</span>
+            : <span class="text-slate-500 font-mono text-sm font-bold">{rank}</span>
+          }
+        </div>
+      )}
+      {showFlag && f.bandera && (
+        <div class="text-xl flex-shrink-0">{f.bandera}</div>
+      )}
+      <div class="flex-1 min-w-0">
+        <div class="flex items-baseline justify-between mb-1.5">
+          <div class="min-w-0">
+            <p class="font-bold text-white group-hover:text-sky-400 transition-colors truncate">
+              {displayName}
+            </p>
+            {showProfession && prof && (
+              <p class="text-slate-500 text-xs truncate">{prof}</p>
+            )}
+          </div>
+          <div class="text-right flex-shrink-0 ml-3">
+            <span class="font-black text-xl" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
+            <span class="text-slate-500 text-xs ml-1.5 hidden sm:inline">{ftIn}</span>
+          </div>
+        </div>
+        {refCm && (
+          <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
+            <div class="h-1.5 rounded-full transition-all duration-700"
+              style={`width: ${barPct}%; background: linear-gradient(to right, ${f.color}88, ${f.color})`} />
+          </div>
+        )}
+      </div>
+    </div>
+  </a>
+)}

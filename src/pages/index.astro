@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Comparador from '../components/Comparador';
+import CelebrityCard from '../components/CelebrityCard.astro';
 import famosos from '../data/famosos.json';
 
 const schema = {
@@ -114,29 +115,7 @@ const stats = [
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {featured.map(f => (
-        <a href={`/${f.id}`}
-          class="famoso-card glass rounded-2xl p-4 text-center"
-          style={`--glow: ${f.color}`}
-          onmouseover={`this.style.boxShadow='0 0 20px ${f.color}33'; this.style.borderColor='${f.color}44'`}
-          onmouseout={`this.style.boxShadow=''; this.style.borderColor=''`}>
-          <!-- Photo/Avatar -->
-          <div class="w-14 h-14 mx-auto mb-3 rounded-full overflow-hidden"
-            style={f.foto ? '' : `background: linear-gradient(135deg, ${f.color}40, ${f.color}20)`}>
-            {f.foto ? (
-              <img src={f.foto} alt={f.nombre} class="w-full h-full object-cover" loading="lazy" />
-            ) : (
-              <svg viewBox="0 0 100 100" class="w-full h-full" aria-hidden="true">
-                <circle cx="50" cy="35" r="18" fill={`${f.color}80`} />
-                <ellipse cx="50" cy="85" rx="30" ry="22" fill={`${f.color}60`} />
-              </svg>
-            )}
-          </div>
-          <p class="text-white text-sm font-bold leading-tight mb-1">
-            {f.nombre.split(' ')[0]}
-          </p>
-          <p class="text-xs font-semibold" style={`color: ${f.color}`}>{f.estaturaCm}cm</p>
-          <p class="text-stone-600 text-xs mt-0.5">{f.profesion?.split('/')[0].trim()}</p>
-        </a>
+        <CelebrityCard famoso={f} variant="card" shortName showFlag={false} />
       ))}
     </div>
   </section>

@@ -1,9 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
+import CelebrityCard from '../../components/CelebrityCard.astro';
 import famososData from '../../data/famosos.json';
 import rankingsData from '../../data/rankings.json';
 import rankingsAutoData from '../../data/rankings-auto.json';
-import { cmToFtIn } from '../../utils/height';
 
 export function getStaticPaths() {
   const manualSlugs = new Set(rankingsData.map(r => r.slug));
@@ -115,44 +115,9 @@ const schema = {
     {!intro && <div class="mb-6" />}
 
     <div class="space-y-2.5">
-      {top.map((f, i) => {
-        const barPct = (f.estaturaCm / refCm) * 100;
-        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : null;
-        return (
-          <a href={`/${f.id}`}
-            class="group block glass rounded-2xl p-4 transition-all hover:-translate-y-0.5"
-            onmouseover={`this.style.borderColor='${f.color}44'`}
-            onmouseout={`this.style.borderColor=''`}>
-            <div class="flex items-center gap-3 sm:gap-4">
-              <div class="w-8 flex-shrink-0 text-center">
-                {medal
-                  ? <span class="text-xl">{medal}</span>
-                  : <span class="text-stone-500 font-mono text-sm font-bold">{i + 1}</span>
-                }
-              </div>
-              <div class="text-xl flex-shrink-0">{f.bandera}</div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-baseline justify-between mb-1.5">
-                  <div class="min-w-0">
-                    <p class="font-bold text-white group-hover:text-brand-400 transition-colors truncate">
-                      {f.nombre}
-                    </p>
-                    <p class="text-stone-500 text-xs truncate">{f.profesion?.split('/')[0].trim()}</p>
-                  </div>
-                  <div class="text-right flex-shrink-0 ml-3">
-                    <span class="font-black text-xl" style={`color: ${f.color}`}>{f.estaturaCm}cm</span>
-                    <span class="text-stone-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
-                  </div>
-                </div>
-                <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
-                  <div class="h-1.5 rounded-full transition-all duration-700"
-                    style={`width: ${barPct}%; background: linear-gradient(to right, ${f.color}88, ${f.color})`} />
-                </div>
-              </div>
-            </div>
-          </a>
-        );
-      })}
+      {top.map((f, i) => (
+        <CelebrityCard famoso={f} variant="row" rank={i + 1} refCm={refCm} />
+      ))}
     </div>
 
     {conclusion && (
