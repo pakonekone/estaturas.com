@@ -131,12 +131,32 @@ const schema = {
 
     <!-- Browse ranges -->
     <div class="mt-10">
-      <h3 class="text-lg font-bold text-white mb-4">Otros rangos de estatura</h3>
-      <div class="flex flex-wrap gap-2">
-        {rangosData.filter(r => r.slug !== rango.slug).map(r => (
+      <h3 class="text-lg font-bold text-white mb-4">Rangos de 10cm</h3>
+      <div class="flex flex-wrap gap-2 mb-6">
+        {rangosData.filter(r => r.tipo === 'rango_10' && r.slug !== rango.slug).map(r => (
           <a href={`/estatura/${r.slug}`}
             class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
-            {r.tipo === 'especial' ? r.slug.replace(/-/g, ' ') : `${r.min_cm}-${r.max_cm}cm`}
+            {r.min_cm}-{r.max_cm}cm
+            <span class="text-slate-600 ml-1">({r.famosos_count})</span>
+          </a>
+        ))}
+      </div>
+      <h3 class="text-lg font-bold text-white mb-4">Rangos de 5cm</h3>
+      <div class="flex flex-wrap gap-2 mb-6">
+        {rangosData.filter(r => r.tipo === 'rango_5' && r.slug !== rango.slug).map(r => (
+          <a href={`/estatura/${r.slug}`}
+            class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+            {r.min_cm}-{r.max_cm}cm
+            <span class="text-slate-600 ml-1">({r.famosos_count})</span>
+          </a>
+        ))}
+      </div>
+      <h3 class="text-lg font-bold text-white mb-4">Categorías especiales</h3>
+      <div class="flex flex-wrap gap-2">
+        {rangosData.filter(r => r.tipo === 'especial' && r.slug !== rango.slug).map(r => (
+          <a href={`/estatura/${r.slug}`}
+            class="glass px-3 py-1.5 rounded-full text-sm transition-all hover:-translate-y-0.5 text-slate-400 hover:text-white">
+            {r.slug.replace(/-/g, ' ')}
             <span class="text-slate-600 ml-1">({r.famosos_count})</span>
           </a>
         ))}

@@ -111,14 +111,22 @@ const schema = {
       </a>
     </div>
 
-    <!-- Related rankings -->
+    <!-- Related rankings & ranges -->
     <div class="mt-10">
-      <h2 class="text-lg font-bold text-white mb-3">Rankings relacionados</h2>
+      <h2 class="text-lg font-bold text-white mb-3">Rankings y rangos relacionados</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <a href="/ranking/los-mas-altos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Los famosos más altos</a>
         <a href="/ranking/los-mas-bajos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Los famosos más bajos</a>
         {cm >= 190 && <a href="/estatura/famosos-altos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos altos (+190cm)</a>}
+        {cm >= 200 && <a href="/estatura/famosos-muy-altos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos muy altos (+200cm)</a>}
         {cm < 165 && <a href="/estatura/famosos-bajos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos bajos (-165cm)</a>}
+        {cm >= 170 && cm < 180 && <a href="/estatura/famosos-medianos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos de estatura media (170-180cm)</a>}
+        <a href={`/estatura/${Math.floor(cm / 10) * 10}-${Math.floor(cm / 10) * 10 + 10}`} class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">
+          Rango {Math.floor(cm / 10) * 10}-{Math.floor(cm / 10) * 10 + 10}cm
+        </a>
+        <a href={`/estatura/${Math.floor(cm / 5) * 5}-${Math.floor(cm / 5) * 5 + 5}`} class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">
+          Rango {Math.floor(cm / 5) * 5}-{Math.floor(cm / 5) * 5 + 5}cm
+        </a>
       </div>
     </div>
 

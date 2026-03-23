@@ -1,143 +1,463 @@
 [
   {
+    "slug": "140-150",
+    "tipo": "rango_10",
+    "min_cm": 140,
+    "max_cm": 150,
+    "seo": {
+      "title": "Famosos que miden entre 140-150cm | estaturas.com",
+      "description": "1 famosos que miden entre 140 y 150cm. De Simone Biles (142cm) a Simone Biles (142cm). Promedio: 142cm.",
+      "keywords": [
+        "famosos 140-150cm",
+        "estatura 140-150cm",
+        "celebridades entre 140 y 150cm"
+      ]
+    },
+    "content": {
+      "intro": "1 famosos miden entre 140 y 150cm. El promedio de este grupo es 142cm, con Simone Biles (142cm) como el más alto y Simone Biles (142cm) como el más bajo.",
+      "dato_curioso": "Todos los famosos de este rango miden exactamente 142cm."
+    },
+    "famosos_count": 1
+  },
+  {
     "slug": "150-160",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 150,
     "max_cm": 160,
     "seo": {
       "title": "Famosos que miden entre 150-160cm | estaturas.com",
-      "description": "2 famosos que miden entre 150-160cm. De Shakira a Shakira.",
+      "description": "12 famosos que miden entre 150 y 160cm. De Roro Bueno (150cm) a Rivers (158cm). Promedio: 155cm.",
       "keywords": [
         "famosos 150-160cm",
         "estatura 150-160cm",
-        "cuanto miden 150-160cm"
+        "celebridades entre 150 y 160cm"
       ]
     },
     "content": {
-      "intro": "2 famosos miden entre 150-160cm. El promedio de este grupo es 157cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "12 famosos miden entre 150 y 160cm. El promedio de este grupo es 155cm, con Rivers (158cm) como el más alto y Roro Bueno (150cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Rivers, 158cm) y el más bajo (Roro Bueno, 150cm) de este rango es de 8cm."
     },
-    "famosos_count": 2
+    "famosos_count": 12
   },
   {
     "slug": "160-170",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 160,
     "max_cm": 170,
     "seo": {
       "title": "Famosos que miden entre 160-170cm | estaturas.com",
-      "description": "9 famosos que miden entre 160-170cm. De Billie Eilish a Margot Robbie.",
+      "description": "74 famosos que miden entre 160 y 170cm. De Samy Rivers (160cm) a Marc Márquez (169cm). Promedio: 165cm.",
       "keywords": [
         "famosos 160-170cm",
         "estatura 160-170cm",
-        "cuanto miden 160-170cm"
+        "celebridades entre 160 y 170cm"
       ]
     },
     "content": {
-      "intro": "9 famosos miden entre 160-170cm. El promedio de este grupo es 164cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "74 famosos miden entre 160 y 170cm. El promedio de este grupo es 165cm, con Marc Márquez (169cm) como el más alto y Samy Rivers (160cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Marc Márquez, 169cm) y el más bajo (Samy Rivers, 160cm) de este rango es de 9cm."
     },
-    "famosos_count": 9
+    "famosos_count": 74
   },
   {
     "slug": "170-180",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 170,
     "max_cm": 180,
     "seo": {
       "title": "Famosos que miden entre 170-180cm | estaturas.com",
-      "description": "18 famosos que miden entre 170-180cm. De Lionel Messi a Zendaya.",
+      "description": "170 famosos que miden entre 170 y 180cm. De Kidd Keo (170cm) a Zendaya (179cm). Promedio: 174cm.",
       "keywords": [
         "famosos 170-180cm",
         "estatura 170-180cm",
-        "cuanto miden 170-180cm"
+        "celebridades entre 170 y 180cm"
       ]
     },
     "content": {
-      "intro": "18 famosos miden entre 170-180cm. El promedio de este grupo es 175cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "170 famosos miden entre 170 y 180cm. El promedio de este grupo es 174cm, con Zendaya (179cm) como el más alto y Kidd Keo (170cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Zendaya, 179cm) y el más bajo (Kidd Keo, 170cm) de este rango es de 9cm."
     },
-    "famosos_count": 18
+    "famosos_count": 170
   },
   {
     "slug": "180-190",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 180,
     "max_cm": 190,
     "seo": {
       "title": "Famosos que miden entre 180-190cm | estaturas.com",
-      "description": "13 famosos que miden entre 180-190cm. De Bad Bunny a MrBeast.",
+      "description": "130 famosos que miden entre 180 y 190cm. De Felipe González (180cm) a Viruzz (189cm). Promedio: 184cm.",
       "keywords": [
         "famosos 180-190cm",
         "estatura 180-190cm",
-        "cuanto miden 180-190cm"
+        "celebridades entre 180 y 190cm"
       ]
     },
     "content": {
-      "intro": "13 famosos miden entre 180-190cm. El promedio de este grupo es 184cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "130 famosos miden entre 180 y 190cm. El promedio de este grupo es 184cm, con Viruzz (189cm) como el más alto y Felipe González (180cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Viruzz, 189cm) y el más bajo (Felipe González, 180cm) de este rango es de 9cm."
     },
-    "famosos_count": 13
+    "famosos_count": 130
   },
   {
     "slug": "190-200",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 190,
     "max_cm": 200,
     "seo": {
       "title": "Famosos que miden entre 190-200cm | estaturas.com",
-      "description": "5 famosos que miden entre 190-200cm. De Chris Hemsworth a Michael Jordan.",
+      "description": "30 famosos que miden entre 190 y 200cm. De RubiusZ (190cm) a Michael Jordan (198cm). Promedio: 193cm.",
       "keywords": [
         "famosos 190-200cm",
         "estatura 190-200cm",
-        "cuanto miden 190-200cm"
+        "celebridades entre 190 y 200cm"
       ]
     },
     "content": {
-      "intro": "5 famosos miden entre 190-200cm. El promedio de este grupo es 194cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "30 famosos miden entre 190 y 200cm. El promedio de este grupo es 193cm, con Michael Jordan (198cm) como el más alto y RubiusZ (190cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Michael Jordan, 198cm) y el más bajo (RubiusZ, 190cm) de este rango es de 8cm."
     },
-    "famosos_count": 5
+    "famosos_count": 30
   },
   {
     "slug": "200-210",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 200,
     "max_cm": 210,
     "seo": {
       "title": "Famosos que miden entre 200-210cm | estaturas.com",
-      "description": "1 famosos que miden entre 200-210cm. De LeBron James a LeBron James.",
+      "description": "3 famosos que miden entre 200 y 210cm. De Thibaut Courtois (200cm) a LeBron James (206cm). Promedio: 202cm.",
       "keywords": [
         "famosos 200-210cm",
         "estatura 200-210cm",
-        "cuanto miden 200-210cm"
+        "celebridades entre 200 y 210cm"
       ]
     },
     "content": {
-      "intro": "1 famosos miden entre 200-210cm. El promedio de este grupo es 206cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "3 famosos miden entre 200 y 210cm. El promedio de este grupo es 202cm, con LeBron James (206cm) como el más alto y Thibaut Courtois (200cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (LeBron James, 206cm) y el más bajo (Thibaut Courtois, 200cm) de este rango es de 6cm."
     },
-    "famosos_count": 1
+    "famosos_count": 3
   },
   {
     "slug": "210-220",
-    "tipo": "rango",
+    "tipo": "rango_10",
     "min_cm": 210,
     "max_cm": 220,
     "seo": {
       "title": "Famosos que miden entre 210-220cm | estaturas.com",
-      "description": "1 famosos que miden entre 210-220cm. De Shaquille O'Neal a Shaquille O'Neal.",
+      "description": "5 famosos que miden entre 210 y 220cm. De Nikola Jokic (211cm) a Shaquille O'Neal (216cm). Promedio: 213cm.",
       "keywords": [
         "famosos 210-220cm",
         "estatura 210-220cm",
-        "cuanto miden 210-220cm"
+        "celebridades entre 210 y 220cm"
       ]
     },
     "content": {
-      "intro": "1 famosos miden entre 210-220cm. El promedio de este grupo es 216cm.",
-      "dato_curioso": "La mayoría de la población mundial se encuentra en el rango de 160-180cm."
+      "intro": "5 famosos miden entre 210 y 220cm. El promedio de este grupo es 213cm, con Shaquille O'Neal (216cm) como el más alto y Nikola Jokic (211cm) como el más bajo.",
+      "dato_curioso": "La diferencia entre el más alto (Shaquille O'Neal, 216cm) y el más bajo (Nikola Jokic, 211cm) de este rango es de 5cm."
+    },
+    "famosos_count": 5
+  },
+  {
+    "slug": "140-145",
+    "tipo": "rango_5",
+    "min_cm": 140,
+    "max_cm": 145,
+    "seo": {
+      "title": "Famosos que miden entre 140-145cm | estaturas.com",
+      "description": "1 famosos que miden entre 140 y 145cm. Promedio: 142cm.",
+      "keywords": [
+        "famosos 140-145cm",
+        "estatura 140 a 145cm",
+        "celebridades 140-145cm"
+      ]
+    },
+    "content": {
+      "intro": "1 famosos miden entre 140 y 145cm. El promedio del grupo es 142cm.",
+      "dato_curioso": "Todos los famosos de este rango miden exactamente 142cm."
     },
     "famosos_count": 1
+  },
+  {
+    "slug": "150-155",
+    "tipo": "rango_5",
+    "min_cm": 150,
+    "max_cm": 155,
+    "seo": {
+      "title": "Famosos que miden entre 150-155cm | estaturas.com",
+      "description": "5 famosos que miden entre 150 y 155cm. Promedio: 152cm.",
+      "keywords": [
+        "famosos 150-155cm",
+        "estatura 150 a 155cm",
+        "celebridades 150-155cm"
+      ]
+    },
+    "content": {
+      "intro": "5 famosos miden entre 150 y 155cm. El promedio del grupo es 152cm.",
+      "dato_curioso": "La diferencia entre el más alto (Ariana Grande, 153cm) y el más bajo (Roro Bueno, 150cm) de este rango es de 3cm."
+    },
+    "famosos_count": 5
+  },
+  {
+    "slug": "155-160",
+    "tipo": "rango_5",
+    "min_cm": 155,
+    "max_cm": 160,
+    "seo": {
+      "title": "Famosos que miden entre 155-160cm | estaturas.com",
+      "description": "7 famosos que miden entre 155 y 160cm. Promedio: 157cm.",
+      "keywords": [
+        "famosos 155-160cm",
+        "estatura 155 a 160cm",
+        "celebridades 155-160cm"
+      ]
+    },
+    "content": {
+      "intro": "7 famosos miden entre 155 y 160cm. El promedio del grupo es 157cm.",
+      "dato_curioso": "La diferencia entre el más alto (Rivers, 158cm) y el más bajo (Angie Velasco, 156cm) de este rango es de 2cm."
+    },
+    "famosos_count": 7
+  },
+  {
+    "slug": "160-165",
+    "tipo": "rango_5",
+    "min_cm": 160,
+    "max_cm": 165,
+    "seo": {
+      "title": "Famosos que miden entre 160-165cm | estaturas.com",
+      "description": "30 famosos que miden entre 160 y 165cm. Promedio: 162cm.",
+      "keywords": [
+        "famosos 160-165cm",
+        "estatura 160 a 165cm",
+        "celebridades 160-165cm"
+      ]
+    },
+    "content": {
+      "intro": "30 famosos miden entre 160 y 165cm. El promedio del grupo es 162cm.",
+      "dato_curioso": "La diferencia entre el más alto (Dulceida, 164cm) y el más bajo (Samy Rivers, 160cm) de este rango es de 4cm."
+    },
+    "famosos_count": 30
+  },
+  {
+    "slug": "165-170",
+    "tipo": "rango_5",
+    "min_cm": 165,
+    "max_cm": 170,
+    "seo": {
+      "title": "Famosos que miden entre 165-170cm | estaturas.com",
+      "description": "44 famosos que miden entre 165 y 170cm. Promedio: 167cm.",
+      "keywords": [
+        "famosos 165-170cm",
+        "estatura 165 a 170cm",
+        "celebridades 165-170cm"
+      ]
+    },
+    "content": {
+      "intro": "44 famosos miden entre 165 y 170cm. El promedio del grupo es 167cm.",
+      "dato_curioso": "La diferencia entre el más alto (Marc Márquez, 169cm) y el más bajo (Tatiana Kaer, 165cm) de este rango es de 4cm."
+    },
+    "famosos_count": 44
+  },
+  {
+    "slug": "170-175",
+    "tipo": "rango_5",
+    "min_cm": 170,
+    "max_cm": 175,
+    "seo": {
+      "title": "Famosos que miden entre 170-175cm | estaturas.com",
+      "description": "73 famosos que miden entre 170 y 175cm. Promedio: 172cm.",
+      "keywords": [
+        "famosos 170-175cm",
+        "estatura 170 a 175cm",
+        "celebridades 170-175cm"
+      ]
+    },
+    "content": {
+      "intro": "73 famosos miden entre 170 y 175cm. El promedio del grupo es 172cm.",
+      "dato_curioso": "La diferencia entre el más alto (Antonio Banderas, 174cm) y el más bajo (Kidd Keo, 170cm) de este rango es de 4cm."
+    },
+    "famosos_count": 73
+  },
+  {
+    "slug": "175-180",
+    "tipo": "rango_5",
+    "min_cm": 175,
+    "max_cm": 180,
+    "seo": {
+      "title": "Famosos que miden entre 175-180cm | estaturas.com",
+      "description": "97 famosos que miden entre 175 y 180cm. Promedio: 177cm.",
+      "keywords": [
+        "famosos 175-180cm",
+        "estatura 175 a 180cm",
+        "celebridades 175-180cm"
+      ]
+    },
+    "content": {
+      "intro": "97 famosos miden entre 175 y 180cm. El promedio del grupo es 177cm.",
+      "dato_curioso": "La diferencia entre el más alto (Zendaya, 179cm) y el más bajo (Princesa Leonor, 175cm) de este rango es de 4cm."
+    },
+    "famosos_count": 97
+  },
+  {
+    "slug": "180-185",
+    "tipo": "rango_5",
+    "min_cm": 180,
+    "max_cm": 185,
+    "seo": {
+      "title": "Famosos que miden entre 180-185cm | estaturas.com",
+      "description": "76 famosos que miden entre 180 y 185cm. Promedio: 182cm.",
+      "keywords": [
+        "famosos 180-185cm",
+        "estatura 180 a 185cm",
+        "celebridades 180-185cm"
+      ]
+    },
+    "content": {
+      "intro": "76 famosos miden entre 180 y 185cm. El promedio del grupo es 182cm.",
+      "dato_curioso": "La diferencia entre el más alto (Ryan Gosling, 184cm) y el más bajo (Felipe González, 180cm) de este rango es de 4cm."
+    },
+    "famosos_count": 76
+  },
+  {
+    "slug": "185-190",
+    "tipo": "rango_5",
+    "min_cm": 185,
+    "max_cm": 190,
+    "seo": {
+      "title": "Famosos que miden entre 185-190cm | estaturas.com",
+      "description": "54 famosos que miden entre 185 y 190cm. Promedio: 186cm.",
+      "keywords": [
+        "famosos 185-190cm",
+        "estatura 185 a 190cm",
+        "celebridades 185-190cm"
+      ]
+    },
+    "content": {
+      "intro": "54 famosos miden entre 185 y 190cm. El promedio del grupo es 186cm.",
+      "dato_curioso": "La diferencia entre el más alto (Viruzz, 189cm) y el más bajo (Vegetta777, 185cm) de este rango es de 4cm."
+    },
+    "famosos_count": 54
+  },
+  {
+    "slug": "190-195",
+    "tipo": "rango_5",
+    "min_cm": 190,
+    "max_cm": 195,
+    "seo": {
+      "title": "Famosos que miden entre 190-195cm | estaturas.com",
+      "description": "22 famosos que miden entre 190 y 195cm. Promedio: 192cm.",
+      "keywords": [
+        "famosos 190-195cm",
+        "estatura 190 a 195cm",
+        "celebridades 190-195cm"
+      ]
+    },
+    "content": {
+      "intro": "22 famosos miden entre 190 y 195cm. El promedio del grupo es 192cm.",
+      "dato_curioso": "La diferencia entre el más alto (Erling Haaland, 194cm) y el más bajo (RubiusZ, 190cm) de este rango es de 4cm."
+    },
+    "famosos_count": 22
+  },
+  {
+    "slug": "195-200",
+    "tipo": "rango_5",
+    "min_cm": 195,
+    "max_cm": 200,
+    "seo": {
+      "title": "Famosos que miden entre 195-200cm | estaturas.com",
+      "description": "8 famosos que miden entre 195 y 200cm. Promedio: 196cm.",
+      "keywords": [
+        "famosos 195-200cm",
+        "estatura 195 a 200cm",
+        "celebridades 195-200cm"
+      ]
+    },
+    "content": {
+      "intro": "8 famosos miden entre 195 y 200cm. El promedio del grupo es 196cm.",
+      "dato_curioso": "La diferencia entre el más alto (Michael Jordan, 198cm) y el más bajo (Plex, 195cm) de este rango es de 3cm."
+    },
+    "famosos_count": 8
+  },
+  {
+    "slug": "200-205",
+    "tipo": "rango_5",
+    "min_cm": 200,
+    "max_cm": 205,
+    "seo": {
+      "title": "Famosos que miden entre 200-205cm | estaturas.com",
+      "description": "2 famosos que miden entre 200 y 205cm. Promedio: 200cm.",
+      "keywords": [
+        "famosos 200-205cm",
+        "estatura 200 a 205cm",
+        "celebridades 200-205cm"
+      ]
+    },
+    "content": {
+      "intro": "2 famosos miden entre 200 y 205cm. El promedio del grupo es 200cm.",
+      "dato_curioso": "La diferencia entre el más alto (Luka Dončić, 201cm) y el más bajo (Thibaut Courtois, 200cm) de este rango es de 1cm."
+    },
+    "famosos_count": 2
+  },
+  {
+    "slug": "205-210",
+    "tipo": "rango_5",
+    "min_cm": 205,
+    "max_cm": 210,
+    "seo": {
+      "title": "Famosos que miden entre 205-210cm | estaturas.com",
+      "description": "1 famosos que miden entre 205 y 210cm. Promedio: 206cm.",
+      "keywords": [
+        "famosos 205-210cm",
+        "estatura 205 a 210cm",
+        "celebridades 205-210cm"
+      ]
+    },
+    "content": {
+      "intro": "1 famosos miden entre 205 y 210cm. El promedio del grupo es 206cm.",
+      "dato_curioso": "Todos los famosos de este rango miden exactamente 206cm."
+    },
+    "famosos_count": 1
+  },
+  {
+    "slug": "210-215",
+    "tipo": "rango_5",
+    "min_cm": 210,
+    "max_cm": 215,
+    "seo": {
+      "title": "Famosos que miden entre 210-215cm | estaturas.com",
+      "description": "3 famosos que miden entre 210 y 215cm. Promedio: 211cm.",
+      "keywords": [
+        "famosos 210-215cm",
+        "estatura 210 a 215cm",
+        "celebridades 210-215cm"
+      ]
+    },
+    "content": {
+      "intro": "3 famosos miden entre 210 y 215cm. El promedio del grupo es 211cm.",
+      "dato_curioso": "Todos los famosos de este rango miden exactamente 211cm."
+    },
+    "famosos_count": 3
+  },
+  {
+    "slug": "215-220",
+    "tipo": "rango_5",
+    "min_cm": 215,
+    "max_cm": 220,
+    "seo": {
+      "title": "Famosos que miden entre 215-220cm | estaturas.com",
+      "description": "2 famosos que miden entre 215 y 220cm. Promedio: 216cm.",
+      "keywords": [
+        "famosos 215-220cm",
+        "estatura 215 a 220cm",
+        "celebridades 215-220cm"
+      ]
+    },
+    "content": {
+      "intro": "2 famosos miden entre 215 y 220cm. El promedio del grupo es 216cm.",
+      "dato_curioso": "La diferencia entre el más alto (Shaquille O'Neal, 216cm) y el más bajo (Pau Gasol, 215cm) de este rango es de 1cm."
+    },
+    "famosos_count": 2
   },
   {
     "slug": "famosos-bajos",
@@ -145,19 +465,19 @@
     "min_cm": 0,
     "max_cm": 165,
     "seo": {
-      "title": "Famosos famosos bajos (menos de 165cm) | estaturas.com",
-      "description": "7 famosos que miden menos de 165cm. De Simone Biles a Aitana.",
+      "title": "Famosos bajos (menos de 165cm) | estaturas.com",
+      "description": "43 famosos bajos (menos de 165cm). De Simone Biles (142cm) a Dulceida (164cm).",
       "keywords": [
-        "famosos famosos bajos",
-        "estatura menos de 165cm",
-        "cuanto miden menos de 165cm"
+        "famosos bajos (menos de 165cm)",
+        "celebridades bajos (menos de 165cm)",
+        "estatura bajos (menos de 165cm)"
       ]
     },
     "content": {
-      "intro": "7 famosos miden menos de 165cm. El promedio de este grupo es 158cm.",
-      "dato_curioso": "El rango incluye desde Simone Biles (142cm) hasta Aitana (163cm)."
+      "intro": "43 famosos bajos (menos de 165cm). El promedio de este grupo es 159cm.",
+      "dato_curioso": "La diferencia entre el más alto (Dulceida, 164cm) y el más bajo (Simone Biles, 142cm) de este rango es de 22cm."
     },
-    "famosos_count": 7
+    "famosos_count": 43
   },
   {
     "slug": "famosos-altos",
@@ -165,18 +485,58 @@
     "min_cm": 190,
     "max_cm": 999,
     "seo": {
-      "title": "Famosos famosos altos (más de 190cm) | estaturas.com",
-      "description": "7 famosos que miden más de 190cm. De Chris Hemsworth a Shaquille O'Neal.",
+      "title": "Famosos altos (más de 190cm) | estaturas.com",
+      "description": "38 famosos altos (más de 190cm). De RubiusZ (190cm) a Shaquille O'Neal (216cm).",
       "keywords": [
-        "famosos famosos altos",
-        "estatura más de 190cm",
-        "cuanto miden más de 190cm"
+        "famosos altos (más de 190cm)",
+        "celebridades altos (más de 190cm)",
+        "estatura altos (más de 190cm)"
       ]
     },
     "content": {
-      "intro": "7 famosos miden más de 190cm. El promedio de este grupo es 199cm.",
-      "dato_curioso": "El rango incluye desde Chris Hemsworth (190cm) hasta Shaquille O'Neal (216cm)."
+      "intro": "38 famosos altos (más de 190cm). El promedio de este grupo es 196cm.",
+      "dato_curioso": "La diferencia entre el más alto (Shaquille O'Neal, 216cm) y el más bajo (RubiusZ, 190cm) de este rango es de 26cm."
     },
-    "famosos_count": 7
+    "famosos_count": 38
+  },
+  {
+    "slug": "famosos-muy-altos",
+    "tipo": "especial",
+    "min_cm": 200,
+    "max_cm": 999,
+    "seo": {
+      "title": "Famosos muy altos (más de 200cm) | estaturas.com",
+      "description": "8 famosos muy altos (más de 200cm). De Thibaut Courtois (200cm) a Shaquille O'Neal (216cm).",
+      "keywords": [
+        "famosos muy altos (más de 200cm)",
+        "celebridades muy altos (más de 200cm)",
+        "estatura muy altos (más de 200cm)"
+      ]
+    },
+    "content": {
+      "intro": "8 famosos muy altos (más de 200cm). El promedio de este grupo es 209cm.",
+      "dato_curioso": "La diferencia entre el más alto (Shaquille O'Neal, 216cm) y el más bajo (Thibaut Courtois, 200cm) de este rango es de 16cm."
+    },
+    "famosos_count": 8
+  },
+  {
+    "slug": "famosos-medianos",
+    "tipo": "especial",
+    "min_cm": 170,
+    "max_cm": 180,
+    "seo": {
+      "title": "Famosos de estatura media (170-180cm) | estaturas.com",
+      "description": "170 famosos de estatura media (170-180cm). De Kidd Keo (170cm) a Zendaya (179cm).",
+      "keywords": [
+        "famosos de estatura media (170-180cm)",
+        "celebridades de estatura media (170-180cm)",
+        "estatura de estatura media (170-180cm)"
+      ]
+    },
+    "content": {
+      "intro": "170 famosos de estatura media (170-180cm). El promedio de este grupo es 174cm.",
+      "dato_curioso": "La diferencia entre el más alto (Zendaya, 179cm) y el más bajo (Kidd Keo, 170cm) de este rango es de 9cm."
+    },
+    "famosos_count": 170
   }
 ]
