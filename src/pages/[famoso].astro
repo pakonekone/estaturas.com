@@ -65,6 +65,23 @@ const rankingsRelacionados = rankingsData.filter(r =>
 
 const defaultB = (famoso.id === 'lionel-messi' ? 'cristiano-ronaldo' : 'lionel-messi');
 
+// Find a valid comparison link: prefer top-comparaciones slug, fallback to homepage
+const defaultComp = comparacionesData.find(c =>
+  (c.famoso_a === famoso.id && c.famoso_b === defaultB) ||
+  (c.famoso_b === famoso.id && c.famoso_a === defaultB)
+);
+const firstComp = comparacionesPopulares[0];
+const compararHref = defaultComp
+  ? `/comparar/${defaultComp.slug}`
+  : firstComp
+    ? `/comparar/${firstComp.slug}`
+    : `/?a=${famoso.id}&b=${defaultB}`;
+const compararLabel = defaultComp
+  ? famososData.find(f => f.id === defaultB)?.nombre?.split(' ')[0] || 'otro famoso'
+  : firstComp
+    ? firstComp.other?.nombre?.split(' ')[0] || 'otro famoso'
+    : famososData.find(f => f.id === defaultB)?.nombre?.split(' ')[0] || 'otro famoso';
+
 // Person schema
 const personSchema = {
   "@context": "https://schema.org",
@@ -187,10 +204,10 @@ const heroW = Math.round(heroDisplayH * 0.4);
             </div>
           </div>
 
-          <a href={`/comparar/${famoso.id}-vs-${defaultB}`}
+          <a href={compararHref}
             class="btn-glow inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl font-bold text-white text-sm"
             style="background: linear-gradient(135deg, #d97706, #f59e0b);">
-            🔄 Compárate con {famoso.nombre.split(' ')[0]}
+            🔄 Compara con {compararLabel}
           </a>
         </div>
       </div>

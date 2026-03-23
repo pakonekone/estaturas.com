@@ -16,11 +16,11 @@ const schema = {
 
 const pairs = [
   { a: 'lionel-messi', b: 'cristiano-ronaldo', label: 'Messi vs CR7' },
-  { a: 'lebron-james', b: 'lionel-messi', label: 'LeBron vs Messi' },
-  { a: 'shaquille-oneal', b: 'simone-biles', label: 'Shaq vs Simone Biles' },
+  { a: 'lionel-messi', b: 'lebron-james', label: 'LeBron vs Messi' },
+  { a: 'simone-biles', b: 'shaquille-oneal', label: 'Shaq vs Simone Biles' },
   { a: 'taylor-swift', b: 'shakira', label: 'Taylor vs Shakira' },
   { a: 'erling-haaland', b: 'luka-modric', label: 'Haaland vs Modrić' },
-  { a: 'elrubius', b: 'ibai', label: 'ElRubius vs Ibai' },
+  { a: 'ibai', b: 'elrubius', label: 'ElRubius vs Ibai' },
 ];
 
 // Curated top celebrities for homepage - most recognizable & searched
@@ -127,11 +127,11 @@ const stats = [
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {[
         { a: 'lionel-messi', b: 'cristiano-ronaldo', emoji: '⚽' },
-        { a: 'taylor-swift', b: 'bad-bunny', emoji: '🎵' },
+        { a: 'bad-bunny', b: 'taylor-swift', emoji: '🎵' },
         { a: 'tom-holland', b: 'zendaya', emoji: '🎬' },
-        { a: 'shaquille-oneal', b: 'simone-biles', emoji: '😱' },
+        { a: 'simone-biles', b: 'shaquille-oneal', emoji: '😱' },
         { a: 'ibai', b: 'elrubius', emoji: '🎮' },
-        { a: 'erling-haaland', b: 'lionel-messi', emoji: '⚽' },
+        { a: 'lionel-messi', b: 'erling-haaland', emoji: '⚽' },
       ].map(pair => {
         const fa = famosos.find(f => f.id === pair.a);
         const fb = famosos.find(f => f.id === pair.b);
