@@ -1,0 +1,159 @@
+---
+/**
+ * pSEO: /comparar/[slug] — Top 500 static comparison pages
+ * Only generates pages for high-volume keyword pairs from top-comparaciones.json.
+ * Other pairs handled client-side via the comparator on the homepage.
+ */
+import Base from '../../layouts/Base.astro';
+import Comparador from '../../components/Comparador';
+import famososData from '../../data/famosos.json';
+import comparacionesData from '../../data/top-comparaciones.json';
+import { cmToFtIn } from '../../utils/height';
+
+export function getStaticPaths() {
+  return comparacionesData.map(c => {
+    const a = famososData.find(f => f.id === c.famoso_a);
+    const b = famososData.find(f => f.id === c.famoso_b);
+    if (!a || !b) return null;
+    return {
+      params: { slug: c.slug },
+      props: { aId: c.famoso_a, bId: c.famoso_b },
+    };
+  }).filter(Boolean);
+}
+
+const { aId, bId } = Astro.props;
+const personaA = famososData.find(f => f.id === aId)!;
+const personaB = famososData.find(f => f.id === bId)!;
+
+const diff = Math.abs(personaA.estaturaCm - personaB.estaturaCm);
+const masAlto = personaA.estaturaCm >= personaB.estaturaCm ? personaA : personaB;
+const masCorto = personaA.estaturaCm < personaB.estaturaCm ? personaA : personaB;
+
+const title = `${personaA.nombre} vs ${personaB.nombre} — ¿Quién es más alto? | estaturas.com`;
+const description = `${personaA.nombre} mide ${personaA.estaturaCm}cm y ${personaB.nombre} mide ${personaB.estaturaCm}cm. ${diff > 0 ? `${masAlto.nombre} es ${diff}cm más alto/a.` : 'Miden exactamente lo mismo.'} Comparativa visual interactiva.`;
+
+// Related comparisons for both people
+const relatedA = comparacionesData
+  .filter(c => (c.famoso_a === aId || c.famoso_b === aId) && c.slug !== `${aId}-vs-${bId}` && c.slug !== `${bId}-vs-${aId}`)
+  .slice(0, 3)
+  .map(c => {
+    const otherId = c.famoso_a === aId ? c.famoso_b : c.famoso_a;
+    return { slug: c.slug, other: famososData.find(f => f.id === otherId), persona: personaA };
+  })
+  .filter(c => c.other);
+
+const relatedB = comparacionesData
+  .filter(c => (c.famoso_a === bId || c.famoso_b === bId) && c.slug !== `${aId}-vs-${bId}` && c.slug !== `${bId}-vs-${aId}`)
+  .slice(0, 3)
+  .map(c => {
+    const otherId = c.famoso_a === bId ? c.famoso_b : c.famoso_a;
+    return { slug: c.slug, other: famososData.find(f => f.id === otherId), persona: personaB };
+  })
+  .filter(c => c.other);
+
+const related = [...relatedA, ...relatedB];
+
+// Schema.org
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": title,
+  "description": description,
+  "mainEntity": [
+    {
+      "@type": "Person",
+      "name": personaA.fullName || personaA.nombre,
+      "height": { "@type": "QuantitativeValue", "value": personaA.estaturaCm, "unitCode": "CMT" },
+    },
+    {
+      "@type": "Person",
+      "name": personaB.fullName || personaB.nombre,
+      "height": { "@type": "QuantitativeValue", "value": personaB.estaturaCm, "unitCode": "CMT" },
+    },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema}>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-stone-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <span class="text-stone-400">Comparar</span>
+      <span>›</span>
+      <span class="text-stone-300">{personaA.nombre} vs {personaB.nombre}</span>
+    </nav>
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2 text-center">
+      {personaA.nombre} <span class="text-stone-500">vs</span> {personaB.nombre}
+    </h1>
+    <p class="text-center text-stone-400 mb-8">{description}</p>
+
+    <!-- Quick stats -->
+    <div class="grid grid-cols-2 gap-4 mb-8">
+      {[personaA, personaB].map(p => (
+        <a href={`/${p.id}`}
+          class="glass rounded-2xl p-5 text-center transition-all group hover:-translate-y-0.5"
+          style={`border-color: ${p.color}44`}>
+          <div class="text-3xl mb-2">{p.bandera}</div>
+          <h2 class="font-bold text-white group-hover:text-sky-400 transition-colors mb-1">{p.nombre}</h2>
+          <p class="text-3xl font-black" style={`color: ${p.color}`}>{p.estaturaCm}cm</p>
+          <p class="text-stone-400 text-sm">{cmToFtIn(p.estaturaCm)}</p>
+          <p class="text-stone-500 text-xs mt-1">{p.profesion}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- Result verdict -->
+    <div class="glass rounded-2xl p-5 text-center mb-8" style={`border-left: 3px solid ${masAlto.color}`}>
+      <p class="text-stone-400 text-sm mb-1">Diferencia de estatura</p>
+      <p class="text-4xl font-black text-white">{diff}cm</p>
+      {diff > 0 ? (
+        <p class="text-stone-400 mt-2">
+          <strong class="text-white">{masAlto.nombre}</strong> es {diff}cm más alto/a que <strong class="text-white">{masCorto.nombre}</strong>
+        </p>
+      ) : (
+        <p class="text-stone-400 mt-2">
+          <strong class="text-white">{personaA.nombre}</strong> y <strong class="text-white">{personaB.nombre}</strong> miden exactamente lo mismo
+        </p>
+      )}
+    </div>
+
+    <!-- Interactive comparator -->
+    <Comparador client:idle famosos={famososData} inicial={{ a: aId, b: bId }} />
+
+    <!-- Related comparisons -->
+    {related.length > 0 && (
+      <section class="mt-12">
+        <h2 class="text-xl font-bold text-white mb-4">Comparaciones relacionadas</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {related.map(({ slug, other, persona }) => (
+            <a href={`/comparar/${slug}`}
+              class="glass rounded-xl px-4 py-3 flex items-center justify-between group transition-all hover:-translate-y-0.5">
+              <span class="text-stone-300 group-hover:text-white text-sm transition-colors">
+                {persona.nombre.split(' ')[0]} vs {other.nombre}
+              </span>
+              <span class="text-sm font-semibold" style={`color: ${other.color}`}>
+                {Math.abs(persona.estaturaCm - other.estaturaCm)}cm dif.
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Individual pages -->
+    <section class="mt-8">
+      <h3 class="text-lg font-bold text-white mb-3">Ver perfil individual</h3>
+      <div class="grid grid-cols-2 gap-3">
+        <a href={`/${personaA.id}`} class="glass rounded-xl px-4 py-3 text-center text-stone-400 hover:text-white text-sm transition-colors">
+          {personaA.bandera} {personaA.nombre} — {personaA.estaturaCm}cm
+        </a>
+        <a href={`/${personaB.id}`} class="glass rounded-xl px-4 py-3 text-center text-stone-400 hover:text-white text-sm transition-colors">
+          {personaB.bandera} {personaB.nombre} — {personaB.estaturaCm}cm
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>
