@@ -12,14 +12,14 @@
     "bandera": "🇨🇺",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cine",
       "espana",
       "latinoamerica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ana_de_Armas_by_Gage_Skidmore.jpg/500px-Ana_de_Armas_by_Gage_Skidmore.jpg",
-    "color": "#f9a8d4",
+    "color": "#14b8a6",
     "funFact": "Se mudó a Madrid con 18 años sin hablar inglés. Tardó años en aprender el idioma y en llegar a Hollywood, donde fue nominada al Oscar por Blonde."
   },
   {
@@ -35,14 +35,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Antonio_Banderas_2014_%28cropped%29.jpg/500px-Antonio_Banderas_2014_%28cropped%29.jpg",
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Puso la voz al personaje del Gato con Botas en la saga de películas de Shrek."
   },
   {
@@ -58,14 +58,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Comenzó su carrera como presentadora de televisión antes de convertirse en una aclamada actriz."
   },
   {
@@ -81,14 +81,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Saltó a la fama por su papel en la serie 'El Internado'."
   },
   {
@@ -104,7 +104,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -127,7 +127,7 @@
     "bandera": "🇦🇺",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine",
       "marvel",
@@ -135,7 +135,7 @@
       "altos"
     ],
     "foto": null,
-    "color": "#fecaca",
+    "color": "#14b8a6",
     "funFact": "Antes de conseguir el papel de Thor, fue eliminado en la fase previa de la versión australiana de 'Dancing with the Stars'."
   },
   {
@@ -151,14 +151,14 @@
     "bandera": "🇬🇧",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "reino-unido"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Es conocido por filmar con cámaras IMAX y por su uso de efectos prácticos en lugar de CGI."
   },
   {
@@ -174,7 +174,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor / Director",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -182,7 +182,7 @@
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Fue alcalde de Carmel-by-the-Sea, California, en los años 80."
   },
   {
@@ -198,14 +198,14 @@
     "bandera": "🇲🇽",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "mexico"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Protagonizó 'Rogue One: una historia de Star Wars' y la serie 'Andor'."
   },
   {
@@ -221,7 +221,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor / Ex-Luchador",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -229,7 +229,7 @@
       "ex-luchador"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Su apodo 'The Rock' proviene de su época como luchador profesional en la WWE."
   },
   {
@@ -245,14 +245,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Ester_Exp%C3%B3sito_en_2020_%28cropped%29.jpg/500px-Ester_Exp%C3%B3sito_en_2020_%28cropped%29.jpg",
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Se convirtió en la española con más seguidores en Instagram gracias a su papel en 'Élite'."
   },
   {
@@ -268,13 +268,13 @@
     "bandera": "🇬🇧",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cine",
       "reinounido"
     ],
     "foto": null,
-    "color": "#6ee7b7",
+    "color": "#14b8a6",
     "funFact": "Empezó su carrera publicando covers de canciones en YouTube con su guitarra antes de que un cásting la descubriera para su primer papel cinematográfico."
   },
   {
@@ -290,14 +290,14 @@
     "bandera": "🇲🇽",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "mexico"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Protagonizó la aclamada película 'Amores perros', que lanzó su carrera internacional."
   },
   {
@@ -313,14 +313,14 @@
     "bandera": "🇲🇽",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "mexico"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Tiene una casa llamada 'Bleak House' que funciona como un museo privado con su colección de libros, cómics y objetos de terror."
   },
   {
@@ -336,7 +336,7 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -359,14 +359,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Javier_Bardem_2018.jpg/500px-Javier_Bardem_2018.jpg",
-    "color": "#f59e0b",
+    "color": "#14b8a6",
     "funFact": "Fue el primer actor español en ganar un Premio Óscar, por su papel en 'No Country for Old Men'."
   },
   {
@@ -382,14 +382,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cine",
       "eeuu",
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Jenna_Ortega_by_Gage_Skidmore.jpg/500px-Jenna_Ortega_by_Gage_Skidmore.jpg",
-    "color": "#bbf7d0",
+    "color": "#14b8a6",
     "funFact": "Empezó su carrera actuando en anuncios publicitarios a los 8 años. Es la cuarta de seis hermanos en una familia de origen mexicano."
   },
   {
@@ -405,7 +405,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
@@ -428,7 +428,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -451,7 +451,7 @@
     "bandera": "🇨🇦",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "canada",
@@ -474,14 +474,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Es un conocido activista medioambiental y ha donado millones a causas ecologistas."
   },
   {
@@ -497,13 +497,13 @@
     "bandera": "🇦🇺",
     "profesion": "Actriz / Productora",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cine",
       "australia"
     ],
     "foto": null,
-    "color": "#ddd6fe",
+    "color": "#14b8a6",
     "funFact": "Antes de ser famosa trabajaba como camarera y limpiadora en Australia para pagarse las clases de interpretación."
   },
   {
@@ -519,14 +519,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Ha ganado dos Premios Goya y es una de las actrices más respetadas de España."
   },
   {
@@ -542,14 +542,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Mario_Casas_2018.jpg/500px-Mario_Casas_2018.jpg",
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Ganó su primer Goya por la película 'No matarás' tras una larga carrera de éxitos en taquilla."
   },
   {
@@ -565,14 +565,14 @@
     "bandera": "🇺🇸",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Originalmente quería ser sacerdote antes de decidirse por el cine."
   },
   {
@@ -588,14 +588,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#14b8a6",
     "funFact": "Es la actriz con más nominaciones a los Premios Óscar de la historia."
   },
   {
@@ -611,7 +611,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -634,7 +634,7 @@
     "bandera": "🇪🇸",
     "profesion": "Actor / Director",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -642,7 +642,7 @@
       "espana"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Es mundialmente conocido por su papel de 'El Luisma' en la serie de comedia 'Aída'."
   },
   {
@@ -658,14 +658,14 @@
     "bandera": "🇪🇸",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "espana"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Trabajó en la compañía telefónica nacional de España durante 12 años antes de poder dedicarse al cine."
   },
   {
@@ -681,13 +681,13 @@
     "bandera": "🇨🇱",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine",
       "latinoamerica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pedro_Pascal_at_the_2025_Cannes_Film_Festival_04.jpg/500px-Pedro_Pascal_at_the_2025_Cannes_Film_Festival_04.jpg",
-    "color": "#bfdbfe",
+    "color": "#14b8a6",
     "funFact": "Sus padres fueron exiliados políticos de Chile durante la dictadura de Pinochet. Llegó a Estados Unidos siendo un bebé y creció en diversas ciudades americanas."
   },
   {
@@ -703,14 +703,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pen%C3%A9lope_Cruz_2018.jpg/500px-Pen%C3%A9lope_Cruz_2018.jpg",
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Fue la primera actriz española en ganar un Premio Óscar."
   },
   {
@@ -726,14 +726,14 @@
     "bandera": "🇺🇸",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Trabajó en un videoclub antes de convertirse en uno de los directores más influyentes del cine moderno."
   },
   {
@@ -749,14 +749,14 @@
     "bandera": "🇦🇷",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "argentina",
       "cine-tv"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Protagonizó 'El secreto de sus ojos', película que ganó el Óscar a la Mejor Película Extranjera."
   },
   {
@@ -772,14 +772,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Su papel como Iron Man inauguró el exitoso Universo Cinematográfico de Marvel."
   },
   {
@@ -795,13 +795,13 @@
     "bandera": "🇨🇦",
     "profesion": "Actor / Director / Músico",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine",
       "canada"
     ],
     "foto": null,
-    "color": "#a5b4fc",
+    "color": "#14b8a6",
     "funFact": "De niño era fan de 'La Jungla de Cristal' y convenció a un compañero de colegio para que posara mientras le lanzaba cuchillos. Fue suspendido del colegio."
   },
   {
@@ -817,7 +817,7 @@
     "bandera": "🇨🇦",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "canada",
@@ -840,14 +840,14 @@
     "bandera": "🇲🇽",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "mexico"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Fue nominada al Óscar por su interpretación de la pintora Frida Kahlo."
   },
   {
@@ -863,7 +863,7 @@
     "bandera": "🇪🇸",
     "profesion": "Actor / Director",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -871,7 +871,7 @@
       "espana"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Es el creador de la saga de películas de 'Torrente', una de las más taquilleras de la historia de España."
   },
   {
@@ -887,14 +887,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#14b8a6",
     "funFact": "Ha sido la actriz mejor pagada del mundo en varias ocasiones."
   },
   {
@@ -910,14 +910,14 @@
     "bandera": "🇺🇸",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Dirigió 'Tiburón', que se considera el primer 'blockbuster' de verano de la historia."
   },
   {
@@ -933,13 +933,13 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine",
       "eeuu"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Timoth%C3%A9e_Chalamet_by_Gage_Skidmore.jpg/500px-Timoth%C3%A9e_Chalamet_by_Gage_Skidmore.jpg",
-    "color": "#fde047",
+    "color": "#14b8a6",
     "funFact": "Tiene doble nacionalidad estadounidense y francesa, habla ambos idiomas con fluidez y fue el tercer actor más joven nominado al Oscar a Mejor Actor."
   },
   {
@@ -955,7 +955,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -978,7 +978,7 @@
     "bandera": "🇬🇧",
     "profesion": "Actor",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine",
       "marvel",
@@ -986,7 +986,7 @@
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Tom_Holland_during_pro-am_Wentworth_golf_club_2023-2.jpg/500px-Tom_Holland_during_pro-am_Wentworth_golf_club_2023-2.jpg",
-    "color": "#e879f9",
+    "color": "#14b8a6",
     "funFact": "Estudió danza clásica desde los 9 años y protagonizó el musical Billy Elliot en el West End de Londres antes de conseguir el papel de Spider-Man."
   },
   {
@@ -1002,7 +1002,7 @@
     "bandera": "🇺🇸",
     "profesion": "Actor / Rapero",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cine-tv",
@@ -1010,7 +1010,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#14b8a6",
     "funFact": "Alcanzó la fama como rapero bajo el nombre de 'The Fresh Prince' antes de protagonizar la famosa serie de televisión."
   },
   {
@@ -1026,14 +1026,14 @@
     "bandera": "🇺🇸",
     "profesion": "Actriz / Cantante",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cine",
       "musica",
       "eeuu"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Zendaya_-_2019_by_Glenn_Francis.jpg/500px-Zendaya_-_2019_by_Glenn_Francis.jpg",
-    "color": "#67e8f9",
+    "color": "#14b8a6",
     "funFact": "Se convirtió en la actriz más joven en ganar el Emmy a Mejor Actriz Dramática en 2020 por su papel en Euphoria, con solo 24 años."
   },
   {
@@ -1049,14 +1049,14 @@
     "bandera": "🇪🇸",
     "profesion": "Director de Cine",
     "categoria": "cine-tv",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cine-tv",
       "director-de-cine",
       "espana"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#14b8a6",
     "funFact": "Antes de ser director de cine, fue dibujante de cómics."
   },
   {
@@ -1072,14 +1072,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "cine-tv",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cine-tv",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/%C3%9Arsula_Corber%C3%B3_2018.jpg/500px-%C3%9Arsula_Corber%C3%B3_2018.jpg",
-    "color": "#f43f5e",
+    "color": "#14b8a6",
     "funFact": "Alcanzó la fama mundial por su papel de 'Tokio' en la serie 'La casa de papel'."
   },
   {
@@ -1095,14 +1095,14 @@
     "bandera": "🇲🇽",
     "profesion": "Boxeador",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "boxeo",
       "deportes",
       "latinoamerica"
     ],
     "foto": null,
-    "color": "#ef4444",
+    "color": "#a855f7",
     "funFact": "Es el único boxeador en la historia en haber unificado los cuatro títulos mundiales de la categoría supermedio de forma simultánea."
   },
   {
@@ -1118,14 +1118,14 @@
     "bandera": "🇪🇸",
     "profesion": "Tenista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "tenis",
       "deportes",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Carlos_Alcaraz_%282023%29_cropped.jpg/500px-Carlos_Alcaraz_%282023%29_cropped.jpg",
-    "color": "#2dd4bf",
+    "color": "#a855f7",
     "funFact": "Se convirtió en septiembre de 2022 en el jugador más joven de la historia en alcanzar el número 1 del ranking ATP, con tan solo 19 años y 4 meses."
   },
   {
@@ -1141,14 +1141,14 @@
     "bandera": "🇪🇸",
     "profesion": "Jugadora de Bádminton",
     "categoria": "deportes",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "deportes",
       "espana",
       "jugadora-de-badminton"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Carolina_Mar%C3%ADn_2016.jpg/500px-Carolina_Mar%C3%ADn_2016.jpg",
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Fue campeona olímpica, tres veces campeona del mundo y seis veces campeona de Europa."
   },
   {
@@ -1164,14 +1164,14 @@
     "bandera": "🇮🇪",
     "profesion": "Luchador de MMA",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "irlanda",
       "luchador-de-mma"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Fue el primer luchador en la historia de la UFC en ostentar títulos en dos categorías de peso simultáneamente."
   },
   {
@@ -1187,14 +1187,14 @@
     "bandera": "🇪🇸",
     "profesion": "Piloto de F1",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "piloto-de-f1"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fernando_Alonso_2016_Malaysia_2.jpg/500px-Fernando_Alonso_2016_Malaysia_2.jpg",
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Ganó dos campeonatos del mundo de Fórmula 1 y es conocido por su longevidad en el deporte."
   },
   {
@@ -1210,14 +1210,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Boxeador",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "ex-boxeador"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#a855f7",
     "funFact": "Se retiró con un récord perfecto de 50-0 y es conocido por su ostentoso estilo de vida."
   },
   {
@@ -1233,14 +1233,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Tenista",
     "categoria": "deportes",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "deportes",
       "espana",
       "ex-tenista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Llegó a ser número 1 del mundo y ganó Roland Garros y Wimbledon."
   },
   {
@@ -1256,14 +1256,14 @@
     "bandera": "🇪🇸",
     "profesion": "Luchador de MMA",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "luchador-de-mma"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Ilia_Topuria_UFC_298.jpg/500px-Ilia_Topuria_UFC_298.jpg",
-    "color": "#f43f5e",
+    "color": "#a855f7",
     "funFact": "Se convirtió en el primer campeón español de la UFC, apodado 'El Matador'."
   },
   {
@@ -1279,14 +1279,14 @@
     "bandera": "🇪🇸",
     "profesion": "Golfista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "golfista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Ha sido número 1 del ranking mundial de golf y ha ganado dos majors."
   },
   {
@@ -1302,14 +1302,14 @@
     "bandera": "🇷🇺",
     "profesion": "Ex-Luchador de MMA",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "ex-luchador-de-mma",
       "rusia"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#a855f7",
     "funFact": "Se retiró invicto con un récord de 29 victorias y 0 derrotas."
   },
   {
@@ -1325,7 +1325,7 @@
     "bandera": "🇺🇸",
     "profesion": "Jugador de Baloncesto",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncesto",
       "deportes",
@@ -1333,7 +1333,7 @@
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/500px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg",
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "En 2023 se convirtió en el máximo anotador de toda la historia de la NBA, superando el legendario récord de Kareem Abdul-Jabbar que llevaba 39 años invicto."
   },
   {
@@ -1349,14 +1349,14 @@
     "bandera": "🇬🇧",
     "profesion": "Piloto de F1",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "piloto-de-f1",
       "reino-unido"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "Tiene el récord de más campeonatos del mundo de Fórmula 1, empatado con Michael Schumacher."
   },
   {
@@ -1372,14 +1372,14 @@
     "bandera": "🇸🇮",
     "profesion": "Baloncestista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncestista",
       "deportes",
       "eslovenia"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "Debutó como profesional en el Real Madrid con solo 16 años."
   },
   {
@@ -1395,14 +1395,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Baloncestista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "ex-baloncestista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Fue nombrado Mejor Defensor de la NBA en 2013."
   },
   {
@@ -1418,14 +1418,14 @@
     "bandera": "🇪🇸",
     "profesion": "Piloto de MotoGP",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "piloto-de-motogp"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Marc_M%C3%A0rquez_2019.jpg/500px-Marc_M%C3%A0rquez_2019.jpg",
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Es el piloto más joven en ganar un campeonato de MotoGP."
   },
   {
@@ -1441,14 +1441,14 @@
     "bandera": "🇳🇱",
     "profesion": "Piloto de F1",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "paises-bajos",
       "piloto-de-f1"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Es el piloto más joven en la historia en iniciar una carrera de Fórmula 1."
   },
   {
@@ -1464,7 +1464,7 @@
     "bandera": "🇺🇸",
     "profesion": "Exjugador de Baloncesto / Empresario",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncesto",
       "deportes",
@@ -1472,7 +1472,7 @@
       "altos"
     ],
     "foto": null,
-    "color": "#a78bfa",
+    "color": "#a855f7",
     "funFact": "En su segundo año de instituto no fue seleccionado para el equipo de baloncesto por ser 'demasiado bajo'. Esa humillación se convirtió en su mayor motivación."
   },
   {
@@ -1488,14 +1488,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Nadador",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "ex-nadador"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#a855f7",
     "funFact": "Es el atleta olímpico más condecorado de todos los tiempos, con un total de 28 medallas."
   },
   {
@@ -1511,14 +1511,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Boxeador",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "ex-boxeador"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "Se convirtió en el campeón de peso pesado más joven de la historia con solo 20 años."
   },
   {
@@ -1534,14 +1534,14 @@
     "bandera": "🇪🇸",
     "profesion": "Nadadora",
     "categoria": "deportes",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "deportes",
       "espana",
       "nadadora"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Es la nadadora española más condecorada de la historia, con cuatro medallas olímpicas."
   },
   {
@@ -1557,14 +1557,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Boxeador",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "ex-boxeador"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Es considerado por muchos el mejor boxeador de todos los tiempos y fue un icono de la lucha por los derechos civiles."
   },
   {
@@ -1580,14 +1580,14 @@
     "bandera": "🇷🇸",
     "profesion": "Tenista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "tenis",
       "deportes",
       "altos"
     ],
     "foto": null,
-    "color": "#38bdf8",
+    "color": "#a855f7",
     "funFact": "De niño entrenaba en una piscina vacía durante los bombardeos de la guerra de Yugoslavia antes de convertirse en el tenista con más Grand Slams."
   },
   {
@@ -1603,14 +1603,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Baloncestista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "espana",
       "ex-baloncestista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#a855f7",
     "funFact": "Ganó dos campeonatos de la NBA con Los Angeles Lakers junto a Kobe Bryant."
   },
   {
@@ -1626,14 +1626,14 @@
     "bandera": "🇪🇸",
     "profesion": "Tenista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "tenis",
       "deportes",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Rafael_Nadal_2022_%28cropped%29.jpg/500px-Rafael_Nadal_2022_%28cropped%29.jpg",
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Es el único tenista en la historia en ganar el mismo Grand Slam en 14 ocasiones: Roland Garros."
   },
   {
@@ -1649,14 +1649,14 @@
     "bandera": "🇪🇸",
     "profesion": "Baloncestista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncestista",
       "deportes",
       "espana"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Fue el jugador más joven en debutar en la Liga ACB española, con solo 14 años."
   },
   {
@@ -1672,14 +1672,14 @@
     "bandera": "🇨🇭",
     "profesion": "Ex-Tenista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "ex-tenista",
       "suiza"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "Habla con fluidez suizo-alemán, alemán, francés e inglés."
   },
   {
@@ -1695,14 +1695,14 @@
     "bandera": "🇺🇸",
     "profesion": "Tenista (retirada)",
     "categoria": "deportes",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "tenis",
       "deportes",
       "eeuu"
     ],
     "foto": null,
-    "color": "#4ade80",
+    "color": "#a855f7",
     "funFact": "Ganó el Abierto de Australia en 2017 cuando estaba embarazada de dos meses sin saberlo. Lo ganó compitiendo con un bebé en camino."
   },
   {
@@ -1718,14 +1718,14 @@
     "bandera": "🇦🇷",
     "profesion": "Ex-Futbolista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "deportes",
       "ex-futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Es el máximo goleador histórico del Manchester City. Ahora es un popular streamer."
   },
   {
@@ -1741,7 +1741,7 @@
     "bandera": "🇺🇸",
     "profesion": "Exjugador de Baloncesto / Empresario",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncesto",
       "deportes",
@@ -1749,7 +1749,7 @@
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TechCrunch_Disrupt_2023_-_Day_1_%28cropped%29.jpg/500px-TechCrunch_Disrupt_2023_-_Day_1_%28cropped%29.jpg",
-    "color": "#60a5fa",
+    "color": "#a855f7",
     "funFact": "A pesar de su imagen de estrella del deporte, Shaq tiene un doctorado en Liderazgo Educativo. Sus zapatos son del número 23 americano (talla 58 europea)."
   },
   {
@@ -1765,7 +1765,7 @@
     "bandera": "🇺🇸",
     "profesion": "Gimnasta",
     "categoria": "deportes",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "gimnasia",
       "deportes",
@@ -1773,7 +1773,7 @@
       "bajos"
     ],
     "foto": null,
-    "color": "#c084fc",
+    "color": "#a855f7",
     "funFact": "Con tan solo 1,42m, ha ganado más medallas en Campeonatos del Mundo de gimnasia que ningún otro deportista, hombre o mujer."
   },
   {
@@ -1789,14 +1789,14 @@
     "bandera": "🇺🇸",
     "profesion": "Baloncestista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncestista",
       "deportes",
       "estados-unidos"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#a855f7",
     "funFact": "Es considerado el mejor tirador de la historia del baloncesto."
   },
   {
@@ -1812,14 +1812,14 @@
     "bandera": "🇺🇸",
     "profesion": "Golfista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "golfista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#a855f7",
     "funFact": "Ha ganado 15 majors de golf, solo superado por Jack Nicklaus."
   },
   {
@@ -1835,14 +1835,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Jugador de NFL",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "estados-unidos",
       "ex-jugador-de-nfl"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#a855f7",
     "funFact": "Ha ganado más Super Bowls (7) que cualquier franquicia en la historia de la NFL."
   },
   {
@@ -1858,14 +1858,14 @@
     "bandera": "🇯🇲",
     "profesion": "Atleta / Velocista",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "atletismo",
       "deportes",
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Usain_Bolt_-_240422_190142_%28cropped%29.jpg/500px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Usain_Bolt_-_240422_190142_%28cropped%29.jpg",
-    "color": "#fbbf24",
+    "color": "#a855f7",
     "funFact": "Estableció el récord mundial de los 100 metros lisos (9,58 segundos) en el Mundial de Berlín de 2009, un récord que sigue vigente más de 15 años después."
   },
   {
@@ -1881,14 +1881,14 @@
     "bandera": "🇮🇹",
     "profesion": "Ex-Piloto de MotoGP",
     "categoria": "deportes",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "deportes",
       "ex-piloto-de-motogp",
       "italia"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#a855f7",
     "funFact": "Es considerado uno de los mejores pilotos de motociclismo de todos los tiempos, con 9 campeonatos del mundo."
   },
   {
@@ -1904,14 +1904,14 @@
     "bandera": "🇲🇦",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "marruecos"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es uno de los laterales más rápidos del mundo."
   },
   {
@@ -1927,7 +1927,7 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
@@ -1950,14 +1950,14 @@
     "bandera": "🇧🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Marcó un gol de cabeza en el último minuto para el Liverpool, siendo el primer portero en hacerlo para el club."
   },
   {
@@ -1973,14 +1973,14 @@
     "bandera": "🇨🇦",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "canada",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Nació en un campo de refugiados en Ghana después de que sus padres huyeran de la guerra civil de Liberia."
   },
   {
@@ -1996,14 +1996,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "escocia",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Trabajó en un supermercado y estuvo a punto de dejar el fútbol antes de su ascenso a la élite."
   },
   {
@@ -2019,14 +2019,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Marcó el gol que le dio a España su primera y única Copa del Mundo en 2010."
   },
   {
@@ -2042,14 +2042,14 @@
     "bandera": "🇫🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "francia",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es un gran aficionado a la cultura uruguaya, bebe mate y es amigo de muchos jugadores uruguayos."
   },
   {
@@ -2065,7 +2065,7 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
@@ -2088,7 +2088,7 @@
     "bandera": "🇵🇹",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -2111,14 +2111,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es apodado 'El Panda' y es conocido por su activismo en redes sociales por la igualdad."
   },
   {
@@ -2134,14 +2134,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "inglaterra"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es conocido por su humildad y su celebración característica con las manos en la espalda."
   },
   {
@@ -2157,14 +2157,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Rechazó varias ofertas para dejar el Barcelona, club en el que jugó toda su carrera."
   },
   {
@@ -2180,14 +2180,14 @@
     "bandera": "🇺🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es el jugador estadounidense más caro de la historia."
   },
   {
@@ -2203,7 +2203,7 @@
     "bandera": "🇵🇹",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
@@ -2211,7 +2211,7 @@
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cristiano_Ronaldo_2275_%28cropped%29.jpg/500px-Cristiano_Ronaldo_2275_%28cropped%29.jpg",
-    "color": "#4ade80",
+    "color": "#f59e0b",
     "funFact": "Es el único futbolista de la historia en marcar goles en cinco ediciones diferentes de la Copa del Mundo."
   },
   {
@@ -2227,7 +2227,7 @@
     "bandera": "🇬🇧",
     "profesion": "Ex-Futbolista / Empresario",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "ex-futbolista",
@@ -2251,14 +2251,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "inglaterra"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Fue el fichaje más caro de la historia del Arsenal."
   },
   {
@@ -2274,14 +2274,14 @@
     "bandera": "🇦🇷",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Marcó dos de los goles más famosos de la historia en el mismo partido: la 'Mano de Dios' y el 'Gol del Siglo'."
   },
   {
@@ -2297,14 +2297,14 @@
     "bandera": "🇺🇾",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "uruguay"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es un apasionado de la caza, la pesca y la vida en el campo."
   },
   {
@@ -2320,14 +2320,14 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es famoso por sus tácticas de intimidación en las tandas de penaltis, que le valieron el apodo 'Dibu'."
   },
   {
@@ -2343,14 +2343,14 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Fue nombrado Mejor Jugador Joven de la Copa del Mundo 2022."
   },
   {
@@ -2366,14 +2366,14 @@
     "bandera": "🇳🇴",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Erling_Haaland_June_2025.jpg/500px-Erling_Haaland_June_2025.jpg",
-    "color": "#fbbf24",
+    "color": "#f59e0b",
     "funFact": "Es hijo del ex futbolista Alfie Haaland. Erling nació en Leeds mientras su padre jugaba allí."
   },
   {
@@ -2389,7 +2389,7 @@
     "bandera": "🇺🇾",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -2412,14 +2412,14 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue clave en la histórica temporada del Bayer Leverkusen en la que ganaron la Bundesliga invictos."
   },
   {
@@ -2435,7 +2435,7 @@
     "bandera": "🇳🇱",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -2458,14 +2458,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Gavi_2022_%28cropped%29.jpg/500px-Gavi_2022_%28cropped%29.jpg",
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Juega con los cordones desatados porque no sabe atárselos bien."
   },
   {
@@ -2481,7 +2481,7 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista / Empresario",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "espana",
@@ -2489,7 +2489,7 @@
       "futbol"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gerard_Piqu%C3%A9_2018.jpg/500px-Gerard_Piqu%C3%A9_2018.jpg",
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es el fundador de la Kings League, una popular competición de fútbol 7."
   },
   {
@@ -2505,14 +2505,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "inglaterra"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es el máximo goleador histórico tanto de la selección de Inglaterra como del Tottenham Hotspur."
   },
   {
@@ -2528,14 +2528,14 @@
     "bandera": "🇲🇽",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "mexico"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es apodado 'Chucky' porque de niño se escondía debajo de la cama para asustar a sus compañeros."
   },
   {
@@ -2551,14 +2551,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es una leyenda del Celta de Vigo, conocido como 'El Príncipe de las Bateas'."
   },
   {
@@ -2574,14 +2574,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es el presidente del equipo 1K FC en la Kings League."
   },
   {
@@ -2597,14 +2597,14 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Jugó para las categorías inferiores de Inglaterra antes de decidir representar a Alemania."
   },
   {
@@ -2620,14 +2620,14 @@
     "bandera": "🇨🇴",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "colombia",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Ganó la Bota de Oro en la Copa del Mundo 2014."
   },
   {
@@ -2643,7 +2643,7 @@
     "bandera": "🇸🇮",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "eslovenia",
       "futbol",
@@ -2666,14 +2666,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es una leyenda del Real Betis y famoso por su sentido del humor y sus chistes."
   },
   {
@@ -2689,7 +2689,7 @@
     "bandera": "🇳🇱",
     "profesion": "Ex-Futbolista / Entrenador",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "entrenador",
       "ex-futbolista",
@@ -2697,7 +2697,7 @@
       "paises-bajos"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Revolucionó el fútbol con su filosofía del 'Fútbol Total' tanto en el Ajax como en el Barcelona."
   },
   {
@@ -2713,7 +2713,7 @@
     "bandera": "🇵🇹",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -2736,14 +2736,14 @@
     "bandera": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Jude_Bellingham_2023_%28cropped%29.jpg/500px-Jude_Bellingham_2023_%28cropped%29.jpg",
-    "color": "#fdba74",
+    "color": "#f59e0b",
     "funFact": "Se convirtió en el primer jugador inglés en marcar en sus primeros seis partidos de Liga con el Real Madrid."
   },
   {
@@ -2759,14 +2759,14 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es el primer jugador argentino en ganar la Copa Libertadores, la Champions League y la Copa del Mundo."
   },
   {
@@ -2782,7 +2782,7 @@
     "bandera": "🇫🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "francia",
       "futbol",
@@ -2805,7 +2805,7 @@
     "bandera": "🇧🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "belgica",
       "futbol",
@@ -2828,14 +2828,14 @@
     "bandera": "🇨🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "costa-rica",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Fue el primer jugador de CONCACAF en ganar tres Champions League consecutivas."
   },
   {
@@ -2851,7 +2851,7 @@
     "bandera": "🇬🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -2874,14 +2874,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es el jugador con más partidos en la historia del Atlético de Madrid."
   },
   {
@@ -2897,14 +2897,14 @@
     "bandera": "🇫🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "francia"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_%28cropped%29.jpg/500px-2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_%28cropped%29.jpg",
-    "color": "#f87171",
+    "color": "#f59e0b",
     "funFact": "Durante el Mundial 2018, donó íntegramente su salario como internacional francés a organizaciones benéficas."
   },
   {
@@ -2920,14 +2920,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Lamine_Yamal_Euro_2024_%28cropped%29.jpg/500px-Lamine_Yamal_Euro_2024_%28cropped%29.jpg",
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es el goleador más joven en la historia de LaLiga y de la selección española."
   },
   {
@@ -2943,14 +2943,14 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Su apodo es 'El Toro' por su fuerza y tenacidad en el campo."
   },
   {
@@ -2966,7 +2966,7 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
@@ -2974,7 +2974,7 @@
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Lionel_Messi_NE_Revolution_Inter_Miami_7.9.25-178.jpg/500px-Lionel_Messi_NE_Revolution_Inter_Miami_7.9.25-178.jpg",
-    "color": "#38bdf8",
+    "color": "#f59e0b",
     "funFact": "Fue diagnosticado con deficiencia de hormona del crecimiento a los 11 años. El FC Barcelona pagó su costoso tratamiento a cambio de que firmara su primer contrato en una servilleta."
   },
   {
@@ -2990,7 +2990,7 @@
     "bandera": "🇺🇾",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -3013,7 +3013,7 @@
     "bandera": "🇭🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
@@ -3021,7 +3021,7 @@
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/ISL-CRO_%286%29_%28cropped%29.jpg/500px-ISL-CRO_%286%29_%28cropped%29.jpg",
-    "color": "#d8b4fe",
+    "color": "#f59e0b",
     "funFact": "De niño tuvo que huir con su familia durante la Guerra de los Balcanes y vivió en un hotel de refugiados antes de convertirse en Balón de Oro."
   },
   {
@@ -3037,14 +3037,14 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es famoso por su habilidad para jugar con los pies, actuando casi como un líbero."
   },
   {
@@ -3060,14 +3060,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es conocido por su increíble físico y su estricta dieta paleolítica."
   },
   {
@@ -3083,14 +3083,14 @@
     "bandera": "🇪🇬",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "egipto",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es considerado un héroe nacional en Egipto por sus logros deportivos y su labor caritativa."
   },
   {
@@ -3106,14 +3106,14 @@
     "bandera": "🇧🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es el máximo goleador histórico de la selección de Brasil."
   },
   {
@@ -3129,14 +3129,14 @@
     "bandera": "🇧🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "brasil"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Neymar_Jr._with_Al_Hilal%2C_3_October_2023_-_03_%28cropped%29.jpg",
-    "color": "#7dd3fc",
+    "color": "#f59e0b",
     "funFact": "Jugó al fútbol sala de forma profesional hasta los 11 años antes de pasarse al fútbol 11. Esa base técnica explica en parte su habilidad con el balón."
   },
   {
@@ -3152,14 +3152,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Juega en el Athletic Club junto a su hermano mayor, Iñaki Williams."
   },
   {
@@ -3175,14 +3175,14 @@
     "bandera": "🇫🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "francia",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es ambidiestro, capaz de jugar y disparar con la misma eficacia con ambos pies."
   },
   {
@@ -3198,7 +3198,7 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
@@ -3221,14 +3221,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pedri_in_2022_%28cropped%29.jpg/500px-Pedri_in_2022_%28cropped%29.jpg",
-    "color": "#a78bfa",
+    "color": "#f59e0b",
     "funFact": "Llegó al FC Barcelona con solo 17 años y en su primera temporada disputó 73 partidos, más que cualquier otro jugador del equipo ese año."
   },
   {
@@ -3244,14 +3244,14 @@
     "bandera": "🇧🇷",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es el único jugador en la historia que ha ganado tres Copas del Mundo."
   },
   {
@@ -3267,14 +3267,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "inglaterra"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Pep Guardiola lo describió como 'el jugador más talentoso que he visto'."
   },
   {
@@ -3290,14 +3290,14 @@
     "bandera": "🇨🇴",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "colombia",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Su apodo es 'El Tigre' y es el máximo goleador histórico de la selección de Colombia."
   },
   {
@@ -3313,7 +3313,7 @@
     "bandera": "🇩🇿",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argelia",
       "futbol",
@@ -3336,14 +3336,14 @@
     "bandera": "🇵🇱",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Robert_Lewandowski%2C_FC_Bayern_M%C3%BCnchen_%28by_Sven_Mandel%2C_2019-05-27%29_01.jpg/500px-Robert_Lewandowski%2C_FC_Bayern_M%C3%BCnchen_%28by_Sven_Mandel%2C_2019-05-27%29_01.jpg",
-    "color": "#86efac",
+    "color": "#f59e0b",
     "funFact": "Marcó 5 goles en tan solo 9 minutos en un partido de la Bundesliga contra el Wolfsburgo en 2015, estableciendo un récord histórico."
   },
   {
@@ -3359,7 +3359,7 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
@@ -3382,7 +3382,7 @@
     "bandera": "🇺🇾",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
@@ -3405,14 +3405,14 @@
     "bandera": "🇧🇷",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "ex-futbolista",
       "futbol"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue aplaudido de pie en el estadio Santiago Bernabéu por los aficionados del Real Madrid."
   },
   {
@@ -3428,7 +3428,7 @@
     "bandera": "🇧🇷",
     "profesion": "Ex-Futbolista / Empresario",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "empresario",
@@ -3436,7 +3436,7 @@
       "futbol"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Ganó dos Copas del Mundo con Brasil y es el propietario del Real Valladolid."
   },
   {
@@ -3452,14 +3452,14 @@
     "bandera": "🇸🇳",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "senegal"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Ha financiado la construcción de un hospital, una escuela y una mezquita en su pueblo natal de Bambali."
   },
   {
@@ -3475,14 +3475,14 @@
     "bandera": "🇪🇸",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "futbol",
       "futbolista"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sergio_Ramos_2018_%28cropped%29.jpg/500px-Sergio_Ramos_2018_%28cropped%29.jpg",
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es el jugador con más tarjetas rojas en la historia de LaLiga."
   },
   {
@@ -3498,14 +3498,14 @@
     "bandera": "🇰🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "corea-del-sur",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Su padre, un ex futbolista profesional, lo sometió a un entrenamiento muy estricto desde niño."
   },
   {
@@ -3521,7 +3521,7 @@
     "bandera": "🇧🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "belgica",
       "futbol",
@@ -3544,7 +3544,7 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
@@ -3567,14 +3567,14 @@
     "bandera": "🇬🇧",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "inglaterra"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es un gran aficionado al ajedrez y ha jugado contra el campeón del mundo Magnus Carlsen."
   },
   {
@@ -3590,14 +3590,14 @@
     "bandera": "🇳🇬",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "nigeria"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Juega con una máscara protectora debido a una grave lesión facial que sufrió."
   },
   {
@@ -3613,14 +3613,14 @@
     "bandera": "🇧🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "deportes",
       "brasil"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Vinicius_Jr_2022_%28cropped%29.jpg/500px-Vinicius_Jr_2022_%28cropped%29.jpg",
-    "color": "#fb7185",
+    "color": "#f59e0b",
     "funFact": "El Real Madrid lo fichó con 16 años por 45 millones de euros mientras aún jugaba en el Flamengo sub-17."
   },
   {
@@ -3636,14 +3636,14 @@
     "bandera": "🇧🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "brasil",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Creó una fundación para ayudar a mejorar la educación en Brasil."
   },
   {
@@ -3659,14 +3659,14 @@
     "bandera": "🇳🇱",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "futbol",
       "futbolista",
       "paises-bajos"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Trabajó como lavaplatos en un restaurante antes de convertirse en futbolista profesional."
   },
   {
@@ -3682,7 +3682,7 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista / Entrenador",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "entrenador",
       "espana",
@@ -3690,7 +3690,7 @@
       "futbol"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es considerado uno de los mejores centrocampistas de la historia y el cerebro de la España que ganó el Mundial."
   },
   {
@@ -3706,7 +3706,7 @@
     "bandera": "🇫🇷",
     "profesion": "Ex-Futbolista / Entrenador",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "entrenador",
       "ex-futbolista",
@@ -3714,7 +3714,7 @@
       "futbol"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Ganó la Copa del Mundo como jugador y la Champions League tres veces seguidas como entrenador."
   },
   {
@@ -3730,7 +3730,7 @@
     "bandera": "🇸🇪",
     "profesion": "Ex-Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "ex-futbolista",
       "futbol",
@@ -3753,14 +3753,14 @@
     "bandera": "🇦🇷",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Ha marcado goles en finales de Juegos Olímpicos, Copa América y Copa del Mundo."
   },
   {
@@ -3776,14 +3776,14 @@
     "bandera": "🇩🇪",
     "profesion": "Futbolista",
     "categoria": "futbol",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "futbol",
       "futbolista"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Marcó el gol más rápido en la historia de las finales de la FA Cup."
   },
   {
@@ -3799,14 +3799,14 @@
     "bandera": "🇺🇸",
     "profesion": "Creadora de contenido / Actriz",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "influencer",
       "tiktok",
       "eeuu"
     ],
     "foto": null,
-    "color": "#fb7185",
+    "color": "#22c55e",
     "funFact": "Según Forbes, fue la creadora de contenido de TikTok mejor pagada del mundo en 2020, con unos ingresos estimados de 5 millones de dólares."
   },
   {
@@ -3822,14 +3822,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "youtube",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/AuronPlay_en_2023.jpg/500px-AuronPlay_en_2023.jpg",
-    "color": "#86efac",
+    "color": "#22c55e",
     "funFact": "Lleva más de 15 años en YouTube y fue uno de los primeros creadores de contenido en español en superar los 10 millones de suscriptores."
   },
   {
@@ -3845,7 +3845,7 @@
     "bandera": "🇵🇭",
     "profesion": "Influencer / Cantante",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "filipinas",
@@ -3853,7 +3853,7 @@
       "influencers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#22c55e",
     "funFact": "Tiene el vídeo con más 'me gusta' de la historia de TikTok. Sirvió en la Marina de los EE. UU."
   },
   {
@@ -3869,14 +3869,14 @@
     "bandera": "🇺🇸",
     "profesion": "Creadora de contenido / Bailarina",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "influencer",
       "tiktok",
       "eeuu"
     ],
     "foto": null,
-    "color": "#f0abfc",
+    "color": "#22c55e",
     "funFact": "Pasó de 0 a 1 millón de seguidores en TikTok en tan solo 6 meses en 2019, el crecimiento más rápido en la historia de la plataforma."
   },
   {
@@ -3892,7 +3892,7 @@
     "bandera": "🇮🇹",
     "profesion": "Influencer / Empresaria",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "empresaria",
       "influencer",
@@ -3900,7 +3900,7 @@
       "italia"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#22c55e",
     "funFact": "Su blog, 'The Blonde Salad', se convirtió en un caso de estudio en la Universidad de Harvard."
   },
   {
@@ -3916,7 +3916,7 @@
     "bandera": "🇺🇸",
     "profesion": "Influencer / Cantante",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "estados-unidos",
@@ -3924,7 +3924,7 @@
       "influencers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#22c55e",
     "funFact": "Al igual que su hermana Charli, ha lanzado una carrera musical tras su éxito en TikTok."
   },
   {
@@ -3940,14 +3940,14 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
       "influencers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#22c55e",
     "funFact": "Fue una de las pioneras del mundo de los blogs de moda en España antes de saltar a Instagram."
   },
   {
@@ -3963,7 +3963,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "youtube",
@@ -3971,7 +3971,7 @@
       "altos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/El_Rubius_en_el_Festival_de_cinema_de_Sitges_2018_%28recorte%29.jpg/500px-El_Rubius_en_el_Festival_de_cinema_de_Sitges_2018_%28recorte%29.jpg",
-    "color": "#fcd34d",
+    "color": "#22c55e",
     "funFact": "Tiene padre español y madre noruega, y creció entre ambos países. Durante años fue el youtuber más seguido de España."
   },
   {
@@ -3987,7 +3987,7 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer / Modelo",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
@@ -3995,7 +3995,7 @@
       "modelo"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#22c55e",
     "funFact": "Trabajaba como dependienta en una tienda de Gucci cuando conoció a Cristiano Ronaldo."
   },
   {
@@ -4011,14 +4011,14 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "influencer",
       "influencers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#22c55e",
     "funFact": "Ganó el reality de aventuras 'El Conquistador del Fin del Mundo'."
   },
   {
@@ -4034,14 +4034,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Comentarista",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "streaming",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5e/As%C3%AD_fue_la_Presentaci%C3%B3n_de_la_Velada_del_A%C3%B1o_5_24.jpg",
-    "color": "#93c5fd",
+    "color": "#22c55e",
     "funFact": "Empezó como comentarista de esports y llegó a narrar el Mundial de League of Legends antes de convertirse en el streamer de habla hispana más seguido del mundo."
   },
   {
@@ -4057,7 +4057,7 @@
     "bandera": "🇺🇸",
     "profesion": "Influencer / Boxeador",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "boxeador",
       "estados-unidos",
@@ -4065,7 +4065,7 @@
       "influencers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#22c55e",
     "funFact": "Ha construido una carrera como boxeador profesional, enfrentándose a ex luchadores de UFC y otros boxeadores."
   },
   {
@@ -4081,14 +4081,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Podcaster",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "podcast",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Jordi_Wild_en_2022.png/500px-Jordi_Wild_en_2022.png",
-    "color": "#60a5fa",
+    "color": "#22c55e",
     "funFact": "Comenzó su carrera en YouTube haciendo vídeos de culturismo y fitness antes de reinventarse como entrevistador con 'The Wild Project'."
   },
   {
@@ -4104,14 +4104,14 @@
     "bandera": "🇬🇧",
     "profesion": "YouTuber / Boxeador / Músico",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "youtube",
       "reinounido"
     ],
     "foto": null,
-    "color": "#34d399",
+    "color": "#22c55e",
     "funFact": "Empezó en YouTube en 2009 haciendo vídeos del videojuego FIFA. Hoy es además boxeador profesional y músico."
   },
   {
@@ -4127,14 +4127,14 @@
     "bandera": "🇸🇳",
     "profesion": "Influencer",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "influencers",
       "senegal"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#22c55e",
     "funFact": "Se hizo famoso por sus vídeos reaccionando en silencio a 'life-hacks' absurdos."
   },
   {
@@ -4150,7 +4150,7 @@
     "bandera": "🇺🇸",
     "profesion": "Influencer / Empresaria",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "empresaria",
       "estados-unidos",
@@ -4158,7 +4158,7 @@
       "influencers"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kim_Kardashian_2023.jpg/500px-Kim_Kardashian_2023.jpg",
-    "color": "#fb923c",
+    "color": "#22c55e",
     "funFact": "Su reality show 'Keeping Up with the Kardashians' estuvo al aire durante 20 temporadas."
   },
   {
@@ -4174,7 +4174,7 @@
     "bandera": "🇲🇽",
     "profesion": "Influencer / Cantante",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "influencer",
@@ -4182,7 +4182,7 @@
       "mexico"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#22c55e",
     "funFact": "Es una de las personalidades de redes sociales más seguidas de todo México."
   },
   {
@@ -4198,7 +4198,7 @@
     "bandera": "🇺🇸",
     "profesion": "Influencer / Empresaria",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "empresaria",
       "estados-unidos",
@@ -4206,7 +4206,7 @@
       "influencers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#22c55e",
     "funFact": "Fundó la compañía de cosméticos Kylie Cosmetics, que la convirtió en multimillonaria."
   },
   {
@@ -4222,7 +4222,7 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer / Podcaster",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
@@ -4230,7 +4230,7 @@
       "podcaster"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#22c55e",
     "funFact": "Tiene un exitoso podcast llamado 'Entre el cielo y las nubes'."
   },
   {
@@ -4246,13 +4246,13 @@
     "bandera": "🇻🇪",
     "profesion": "Creadora de contenido / Cantante",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "influencer",
       "latinoamerica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#22c55e",
     "funFact": "Fue la primera persona en superar los 10 mil millones de vistas en la red social Vine antes de que cerrara en 2017."
   },
   {
@@ -4268,7 +4268,7 @@
     "bandera": "🇺🇸",
     "profesion": "Influencer / Luchador",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "influencer",
@@ -4276,7 +4276,7 @@
       "luchador"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#22c55e",
     "funFact": "Ha peleado en combates de boxeo contra Floyd Mayweather y ahora es una estrella de la WWE."
   },
   {
@@ -4292,14 +4292,14 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
       "influencers"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#22c55e",
     "funFact": "Tiene su propio documental en Amazon Prime Video."
   },
   {
@@ -4315,14 +4315,14 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
       "influencers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#22c55e",
     "funFact": "Es una de las influencers más importantes de España y ha creado su propia marca de ropa."
   },
   {
@@ -4338,7 +4338,7 @@
     "bandera": "🇺🇸",
     "profesion": "YouTuber / Filántropo",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "youtube",
@@ -4346,7 +4346,7 @@
       "altos"
     ],
     "foto": null,
-    "color": "#fda4af",
+    "color": "#22c55e",
     "funFact": "Reinvierte casi la totalidad de sus ingresos en la producción de sus vídeos y ha donado decenas de millones de dólares a causas benéficas."
   },
   {
@@ -4362,13 +4362,13 @@
     "bandera": "🇸🇪",
     "profesion": "YouTuber / Streamer",
     "categoria": "influencers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "influencer",
       "youtube"
     ],
     "foto": null,
-    "color": "#7c3aed",
+    "color": "#22c55e",
     "funFact": "Fue el primer canal independiente en superar los 10, 20, 30, 40, 50 y 100 millones de suscriptores en YouTube."
   },
   {
@@ -4384,14 +4384,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTubers",
     "categoria": "influencers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencers",
       "youtubers"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#22c55e",
     "funFact": "Son tres hermanos que comenzaron su canal de YouTube siendo muy niños."
   },
   {
@@ -4407,14 +4407,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "la-velada"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#ec4899",
     "funFact": "Participó en La Velada del Año III mostrando una increíble transformación física."
   },
   {
@@ -4430,14 +4430,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -4453,14 +4453,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "la-velada",
       "mexico",
       "streamer"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Ganó el primer combate femenino en la historia de La Velada del Año."
   },
   {
@@ -4476,14 +4476,14 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#ec4899",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -4499,14 +4499,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "la-velada"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Sustituyó a Jaime Lorente en La Velada II y ganó su combate contra Mister Jagger."
   },
   {
@@ -4522,14 +4522,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "la-velada",
       "mexico",
       "streamer"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Participante anunciado para el evento principal de La Velada del Año IV."
   },
   {
@@ -4545,14 +4545,14 @@
     "bandera": "🇸🇻",
     "profesion": "YouTuber",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "el-salvador",
       "la-velada",
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Es una de las leyendas de YouTube en español y volvió de su retiro para pelear en La Velada III."
   },
   {
@@ -4568,14 +4568,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#ec4899",
     "funFact": "Fue el primer ganador de un combate en La Velada del Año."
   },
   {
@@ -4591,14 +4591,14 @@
     "bandera": "🇨🇱",
     "profesion": "YouTuber",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "chile",
       "la-velada",
       "youtuber"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#ec4899",
     "funFact": "Es una de las mayores leyendas de la historia de YouTube, conocido por su canal 'HolaSoyGerman'."
   },
   {
@@ -4614,14 +4614,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#ec4899",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -4637,14 +4637,14 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -4660,14 +4660,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Conocida como Marina Rivers, se enfrentó a la streamer mexicana Rivers en un combate muy polémico."
   },
   {
@@ -4683,14 +4683,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Ganó su combate en La Velada II contra Luzu."
   },
   {
@@ -4706,14 +4706,14 @@
     "bandera": "🇧🇬",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "bulgaria",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Se lesionó el hombro al lanzar un golpe en su combate de La Velada III."
   },
   {
@@ -4729,7 +4729,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Humorista",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "humorista",
@@ -4737,7 +4737,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#ec4899",
     "funFact": "Ganó el evento principal de la primera Velada y es conocido por su humor surrealista."
   },
   {
@@ -4753,14 +4753,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Participó en el primer combate femenino de La Velada."
   },
   {
@@ -4776,14 +4776,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "youtuber"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#ec4899",
     "funFact": "Conocido por sus vídeos de viajes extremos, participará en La Velada del Año IV."
   },
   {
@@ -4799,14 +4799,14 @@
     "bandera": "🇨🇱",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "chile",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#ec4899",
     "funFact": "Ganó su combate en La Velada III en pocos segundos debido a una lesión de su rival."
   },
   {
@@ -4822,14 +4822,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
       "streamer"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#ec4899",
     "funFact": "Participó en el primer combate de la historia de La Velada del Año."
   },
   {
@@ -4845,7 +4845,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Boxeador",
     "categoria": "la-velada",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "boxeador",
       "espana",
@@ -4853,7 +4853,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#ec4899",
     "funFact": "Ha participado en múltiples ediciones de La Velada y ha continuado su carrera en el boxeo."
   },
   {
@@ -4869,14 +4869,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante / Actriz",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "pop",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Premios_Dial_2024_-_Aitana_%28cropped%29.jpg/500px-Premios_Dial_2024_-_Aitana_%28cropped%29.jpg",
-    "color": "#34d399",
+    "color": "#8b5cf6",
     "funFact": "Fue la concursante más joven de Operación Triunfo 2017 con solo 18 años y quedó segunda, convirtiéndose en la más exitosa del concurso."
   },
   {
@@ -4892,14 +4892,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Es el artista español con el mayor número de premios Grammy Latinos."
   },
   {
@@ -4915,14 +4915,14 @@
     "bandera": "🇧🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "brasil",
       "cantante",
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Es una de las artistas brasileñas más exitosas a nivel mundial y canta en portugués, español e inglés."
   },
   {
@@ -4938,7 +4938,7 @@
     "bandera": "🇵🇷",
     "profesion": "Rapero / Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
@@ -4946,7 +4946,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Grabó parte de su primer álbum desde la cárcel, usando el teléfono."
   },
   {
@@ -4962,7 +4962,7 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante / Actriz",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cantante",
@@ -4970,7 +4970,7 @@
       "musica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ariana_Grande_Grammys_Red_Carpet_2020.png/500px-Ariana_Grande_Grammys_Red_Carpet_2020.png",
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Comenzó su carrera en el musical '13' de Broadway antes de saltar a la fama en Nickelodeon."
   },
   {
@@ -4986,14 +4986,14 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante / Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "musica",
       "reggaeton",
       "latinoamerica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg/500px-Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg",
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Antes de ser famoso trabajaba como empacador en un supermercado Econo en Puerto Rico mientras grababa música en su habitación."
   },
   {
@@ -5009,14 +5009,14 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "estados-unidos",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Es la artista con más premios Grammy de la historia."
   },
   {
@@ -5032,7 +5032,7 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante / Compositora",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "pop",
@@ -5040,7 +5040,7 @@
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/BillieEilishO2140725-39_-_54665577407_%28cropped%29.jpg/500px-BillieEilishO2140725-39_-_54665577407_%28cropped%29.jpg",
-    "color": "#a3e635",
+    "color": "#8b5cf6",
     "funFact": "Grabó su primer hit mundial 'Ocean Eyes' a los 13 años en el dormitorio de su casa, una canción que su hermano Finneas había compuesto originalmente para su banda."
   },
   {
@@ -5056,13 +5056,13 @@
     "bandera": "🇦🇷",
     "profesion": "Productor Musical / DJ",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "musica",
       "argentina"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Bizarrap_en_Argentina_%28cropped%29.jpg/500px-Bizarrap_en_Argentina_%28cropped%29.jpg",
-    "color": "#60a5fa",
+    "color": "#8b5cf6",
     "funFact": "Empezó produciendo música en su habitación y publicando vídeos en YouTube sin ningún presupuesto antes de convertirse en el productor más escuchado del mundo."
   },
   {
@@ -5078,7 +5078,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante / Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
@@ -5086,7 +5086,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Estudió filosofía y antes de su éxito musical fue conocido en el circuito de batallas de rap como 'Crema'."
   },
   {
@@ -5102,14 +5102,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Es famoso por su característico bigote y por escribir canciones para muchos otros artistas."
   },
   {
@@ -5125,7 +5125,7 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante / Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
@@ -5133,7 +5133,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Es conocido como el 'Rey del Reggaetón' y fue quien popularizó el género a nivel mundial con 'Gasolina'."
   },
   {
@@ -5149,7 +5149,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
@@ -5172,7 +5172,7 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante / Actor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cantante",
@@ -5180,7 +5180,7 @@
       "puerto-rico"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Antes de la música, fue pastor en una iglesia cristiana."
   },
   {
@@ -5196,14 +5196,14 @@
     "bandera": "🇨🇦",
     "profesion": "Rapero / Cantante / Actor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "musica",
       "rap",
       "canada"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Drake_at_The_Carter_Effect_2017_%2836818935200%29_%28cropped%29.jpg/500px-Drake_at_The_Carter_Effect_2017_%2836818935200%29_%28cropped%29.jpg",
-    "color": "#2dd4bf",
+    "color": "#8b5cf6",
     "funFact": "Antes de ser músico, fue actor durante 7 temporadas en la serie canadiense 'Degrassi: The Next Generation'."
   },
   {
@@ -5219,14 +5219,14 @@
     "bandera": "🇬🇧",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "musica",
       "reino-unido"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Dua_Lipa_%28cropped%29.png/500px-Dua_Lipa_%28cropped%29.png",
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Sus padres son de origen albanokosovar y su nombre, Dua, significa 'amor' en albanés."
   },
   {
@@ -5242,7 +5242,7 @@
     "bandera": "🇦🇷",
     "profesion": "Rapero / Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "cantante",
@@ -5266,7 +5266,7 @@
     "bandera": "🇬🇧",
     "profesion": "Cantante / Compositor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "compositor",
@@ -5274,7 +5274,7 @@
       "reino-unido"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Escribió la canción 'Thinking Out Loud' en solo 20 minutos con una amiga."
   },
   {
@@ -5290,7 +5290,7 @@
     "bandera": "🇺🇸",
     "profesion": "Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "musica",
@@ -5313,14 +5313,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Es uno de los artistas latinos más vendidos de todos los tiempos."
   },
   {
@@ -5336,14 +5336,14 @@
     "bandera": "🇪🇸",
     "profesion": "Músicos",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "musica",
       "musicos"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Los hermanos Muñoz trabajaban en una fábrica de SEAT antes de alcanzar la fama."
   },
   {
@@ -5359,14 +5359,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Su apodo 'Ferxxo' y el color verde se han convertido en sus señas de identidad."
   },
   {
@@ -5382,14 +5382,14 @@
     "bandera": "🇪🇸",
     "profesion": "Músico",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "musica",
       "musico"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Fito Cabrales, el líder de la banda, también fue el cantante de Platero y Tú."
   },
   {
@@ -5405,7 +5405,7 @@
     "bandera": "🇬🇧",
     "profesion": "Cantante / Actor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "cantante",
@@ -5413,7 +5413,7 @@
       "reino-unido"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Antes de One Direction, trabajaba en una panadería."
   },
   {
@@ -5429,14 +5429,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Es un gran aficionado a la moda y ha colaborado con marcas como Guess y Air Jordan."
   },
   {
@@ -5452,14 +5452,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantautor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantautor",
       "espana",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Es famoso por su bombín, que se ha convertido en una de sus señas de identidad."
   },
   {
@@ -5475,14 +5475,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "musica"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Antes de ser cantante, fue portero en las categorías inferiores del Real Madrid."
   },
   {
@@ -5498,7 +5498,7 @@
     "bandera": "🇨🇦",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "canada",
       "cantante",
@@ -5521,7 +5521,7 @@
     "bandera": "🇺🇸",
     "profesion": "Rapero / Productor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "musica",
@@ -5545,14 +5545,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante / Compositora",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "reggaeton",
       "latinoamerica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Karol_G_-_Bichota_Tour_%28cropped%29.jpg/500px-Karol_G_-_Bichota_Tour_%28cropped%29.jpg",
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Su nombre artístico Karol G viene de su nombre real Carolina (Karol) y su apellido Giraldo (G). Empezó a cantar a los 14 años."
   },
   {
@@ -5568,7 +5568,7 @@
     "bandera": "🇦🇷",
     "profesion": "Rapero / Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "cantante",
@@ -5576,7 +5576,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Es conocido por su increíble velocidad y flow a la hora de rapear."
   },
   {
@@ -5592,7 +5592,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante / Bailarina",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "bailarina",
       "cantante",
@@ -5600,7 +5600,7 @@
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Antes de ser cantante, fue profesora de baile y participó en el programa 'Fama, ¡a bailar!'."
   },
   {
@@ -5616,14 +5616,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Su nombre artístico es una combinación de los nombres de su madre, padre y hermana."
   },
   {
@@ -5639,14 +5639,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Saltó a la fama con la canción 'Una Lady Como Tú' que se volvió viral."
   },
   {
@@ -5662,14 +5662,14 @@
     "bandera": "🇦🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "argentina",
       "cantante",
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Antes de ser cantante, era una popular YouTuber de entretenimiento."
   },
   {
@@ -5685,14 +5685,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Es conocido por su estilo musical que fusiona rumba, rock y pop."
   },
   {
@@ -5708,7 +5708,7 @@
     "bandera": "🇵🇷",
     "profesion": "Rapero / Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
@@ -5732,14 +5732,14 @@
     "bandera": "🇦🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "argentina",
       "cantante",
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Es conocida por su fusión de estilos musicales, que van desde el hip-hop hasta la salsa."
   },
   {
@@ -5755,7 +5755,7 @@
     "bandera": "🇦🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "argentina",
       "cantante",
@@ -5778,14 +5778,14 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "estados-unidos",
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Vivió un resurgimiento de su carrera tras mudarse a Colombia y superar problemas personales."
   },
   {
@@ -5801,7 +5801,7 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante / Actriz",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cantante",
@@ -5809,7 +5809,7 @@
       "musica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Su canción debut 'drivers license' rompió el récord de Spotify de más reproducciones en un solo día."
   },
   {
@@ -5825,14 +5825,14 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
       "puerto-rico"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#8b5cf6",
     "funFact": "Es conocido por su voz aguda y su característico osito de peluche como logo."
   },
   {
@@ -5848,14 +5848,14 @@
     "bandera": "🇦🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "cantante",
       "musica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Tuvo una pausa de varios años en su carrera musical debido a una disputa contractual."
   },
   {
@@ -5871,14 +5871,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "musica"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Quevedo_%28cantante%29.jpg/500px-Quevedo_%28cantante%29.jpg",
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Su sesión con Bizarrap, 'Quédate', fue un éxito mundial que lo catapultó a la fama internacional."
   },
   {
@@ -5894,14 +5894,14 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
       "puerto-rico"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Es conocido por sus habilidades de baile, incorporando complejas coreografías en sus shows."
   },
   {
@@ -5917,14 +5917,14 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "musica",
       "puerto-rico"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Comenzó su carrera en el grupo juvenil Menudo."
   },
   {
@@ -5940,7 +5940,7 @@
     "bandera": "🇧🇧",
     "profesion": "Cantante / Empresaria",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "barbados",
       "cantante",
@@ -5948,7 +5948,7 @@
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Lanzó su exitosa marca de cosméticos Fenty Beauty, que la convirtió en multimillonaria."
   },
   {
@@ -5964,14 +5964,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante / Artista",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "flamenco",
       "espana"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/2023-11-16_Gala_de_los_Latin_Grammy%2C_27_%28cropped%29.jpg/500px-2023-11-16_Gala_de_los_Latin_Grammy%2C_27_%28cropped%29.jpg",
-    "color": "#f472b6",
+    "color": "#8b5cf6",
     "funFact": "Estudió cante flamenco durante 8 años en la Escola Superior de Música de Catalunya antes de saltarse a la fama mundial."
   },
   {
@@ -5987,14 +5987,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "musica"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#8b5cf6",
     "funFact": "Cantó 'Dos Oruguitas' en la ceremonia de los Premios Óscar para la película Encanto."
   },
   {
@@ -6010,7 +6010,7 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante / Compositora",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "pop",
@@ -6018,7 +6018,7 @@
       "bajos"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2023-11-16_Gala_de_los_Latin_Grammy%2C_03_%28cropped%2902.jpg/500px-2023-11-16_Gala_de_los_Latin_Grammy%2C_03_%28cropped%2902.jpg",
-    "color": "#818cf8",
+    "color": "#8b5cf6",
     "funFact": "Habla cinco idiomas con fluidez: español, inglés, portugués, italiano y árabe, idioma que aprendió por sus raíces libanesas."
   },
   {
@@ -6034,14 +6034,14 @@
     "bandera": "🇺🇸",
     "profesion": "Cantante / Compositora",
     "categoria": "musica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "musica",
       "pop",
       "eeuu"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/500px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png",
-    "color": "#c084fc",
+    "color": "#8b5cf6",
     "funFact": "A los 14 años se mudó con su familia a Nashville, Tennessee, para perseguir su sueño de convertirse en artista de música country."
   },
   {
@@ -6057,14 +6057,14 @@
     "bandera": "🇨🇦",
     "profesion": "Cantante / Compositor / Productor",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "musica",
       "rnb",
       "canada"
     ],
     "foto": null,
-    "color": "#facc15",
+    "color": "#8b5cf6",
     "funFact": "Su nombre artístico surgió porque a los 17 años abandonó su casa un fin de semana sin decir nada a su familia y nunca regresó."
   },
   {
@@ -6080,7 +6080,7 @@
     "bandera": "🇦🇷",
     "profesion": "Cantante / Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "cantante",
@@ -6088,7 +6088,7 @@
       "rapero"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#8b5cf6",
     "funFact": "Antes de la música, compitió en batallas de freestyle."
   },
   {
@@ -6104,14 +6104,14 @@
     "bandera": "🇦🇷",
     "profesion": "Rapero",
     "categoria": "musica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "musica",
       "rapero"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#8b5cf6",
     "funFact": "Fue campeón de la Red Bull Batalla de los Gallos Argentina y de la FMS Argentina."
   },
   {
@@ -6127,7 +6127,7 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "la-velada",
       "mexico",
@@ -6135,7 +6135,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Participante anunciada para La Velada del Año IV."
   },
   {
@@ -6151,14 +6151,14 @@
     "bandera": "🇩🇪",
     "profesion": "Científico",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "alemania",
       "cientifico",
       "otros"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Su cerebro fue conservado después de su muerte para ser estudiado."
   },
   {
@@ -6174,7 +6174,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero / Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
@@ -6182,7 +6182,7 @@
       "presentador"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es conocido por su programa 'Pesadilla en la cocina', la versión española del programa de Gordon Ramsay."
   },
   {
@@ -6198,7 +6198,7 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "la-velada",
       "mexico",
@@ -6206,7 +6206,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Participante anunciada para La Velada del Año IV."
   },
   {
@@ -6222,14 +6222,14 @@
     "bandera": "🇪🇸",
     "profesion": "Empresario",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es el fundador de Inditex (Zara) y una de las personas más ricas del mundo, conocido por su vida privada."
   },
   {
@@ -6245,7 +6245,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante / Actriz",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cantante",
@@ -6253,7 +6253,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Comenzó su carrera siendo niña en un programa de televisión musical."
   },
   {
@@ -6269,7 +6269,7 @@
     "bandera": "🇪🇸",
     "profesion": "Periodista / Presentadora",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "otros",
@@ -6277,7 +6277,7 @@
       "presentadora"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es una de las presentadoras de televisión más longevas y reconocidas de España."
   },
   {
@@ -6293,14 +6293,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Ganó el Goya a Mejor Actriz Revelación por 'El Olivo'."
   },
   {
@@ -6316,7 +6316,7 @@
     "bandera": "🇪🇸",
     "profesion": "Escritor / Periodista",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "escritor",
       "espana",
@@ -6324,7 +6324,7 @@
       "periodista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue corresponsal de guerra durante 21 años antes de dedicarse a la literatura."
   },
   {
@@ -6340,7 +6340,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "espana",
@@ -6363,7 +6363,7 @@
     "bandera": "🇺🇸",
     "profesion": "Empresario / Filántropo",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "estados-unidos",
@@ -6371,7 +6371,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Co-fundó Microsoft y ahora dedica la mayor parte de su tiempo a la Fundación Bill y Melinda Gates."
   },
   {
@@ -6387,7 +6387,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Boxeador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "boxeador",
       "espana",
@@ -6396,7 +6396,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Se ha confirmado su regreso al ring en La Velada del Año IV."
   },
   {
@@ -6412,7 +6412,7 @@
     "bandera": "🇪🇸",
     "profesion": "Periodista / Locutor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "locutor",
@@ -6420,7 +6420,7 @@
       "periodista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es uno de los locutores de radio más influyentes y escuchados de España."
   },
   {
@@ -6436,14 +6436,14 @@
     "bandera": "🇪🇸",
     "profesion": "Piloto de F1",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
       "piloto-de-f1"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Su padre, Carlos Sainz Sr., es una leyenda de los rallies."
   },
   {
@@ -6459,14 +6459,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Su restaurante DiverXO tiene tres estrellas Michelín y es famoso por su cresta."
   },
   {
@@ -6482,7 +6482,7 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer / Modelo",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "influencer",
@@ -6490,7 +6490,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es un reconocido influencer de viajes y aventura."
   },
   {
@@ -6506,7 +6506,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
@@ -6529,7 +6529,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -6537,7 +6537,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Ex-jugador profesional de League of Legends, participará en La Velada del Año IV."
   },
   {
@@ -6553,14 +6553,14 @@
     "bandera": "🇿🇦",
     "profesion": "Empresario",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "otros",
       "sudafrica"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es el CEO de Tesla y SpaceX, y su objetivo es hacer de la humanidad una especie multiplanetaria."
   },
   {
@@ -6576,14 +6576,14 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Futbolista",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "ex-futbolista",
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Conocido como 'El Niño', marcó el gol que dio a España la Eurocopa 2008."
   },
   {
@@ -6599,14 +6599,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Su restaurante El Bulli fue votado como el mejor del mundo cinco veces y es considerado el padre de la gastronomía molecular."
   },
   {
@@ -6622,7 +6622,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -6631,7 +6631,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es conocido por su contenido de Pokémon y por participar en La Velada del Año IV."
   },
   {
@@ -6647,14 +6647,14 @@
     "bandera": "🇵🇷",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "otros",
       "puerto-rico"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Su canción 'Despacito' fue un fenómeno global y la más vista en YouTube durante años."
   },
   {
@@ -6670,7 +6670,7 @@
     "bandera": "🇪🇸",
     "profesion": "Naturalista / Youtuber",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -6679,7 +6679,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Participará en La Velada del Año IV y es conocido por su trabajo con animales salvajes."
   },
   {
@@ -6695,14 +6695,14 @@
     "bandera": "🇲🇽",
     "profesion": "Pintora",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "mexico",
       "otros",
       "pintora"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Su casa, la 'Casa Azul', es ahora un museo popular en la Ciudad de México."
   },
   {
@@ -6718,14 +6718,14 @@
     "bandera": "🇮🇹",
     "profesion": "Astrónomo",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "astronomo",
       "italia",
       "otros"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Fue condenado por la Inquisición por su defensa del heliocentrismo."
   },
   {
@@ -6741,7 +6741,7 @@
     "bandera": "🇬🇷",
     "profesion": "Baloncestista",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncestista",
       "grecia",
@@ -6764,14 +6764,14 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "influencer",
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es conocida por su estilo personal y sus consejos de moda y belleza."
   },
   {
@@ -6787,7 +6787,7 @@
     "bandera": "🇪🇸",
     "profesion": "Periodista / Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
@@ -6795,7 +6795,7 @@
       "presentador"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es conocido por presentar programas de misterio como 'Cuarto Milenio' y 'Milenio Live'."
   },
   {
@@ -6811,7 +6811,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "espana",
@@ -6834,14 +6834,14 @@
     "bandera": "🇬🇧",
     "profesion": "Científico",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cientifico",
       "otros",
       "reino-unido"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Descubrió la gravedad, según la leyenda, al ver una manzana caer de un árbol."
   },
   {
@@ -6857,14 +6857,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Además de actriz, es cantante en un grupo de rock y activista social."
   },
   {
@@ -6880,14 +6880,14 @@
     "bandera": "🇺🇸",
     "profesion": "Empresario",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "estados-unidos",
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Fundó Amazon en el garaje de su casa en 1994."
   },
   {
@@ -6903,7 +6903,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
@@ -6926,7 +6926,7 @@
     "bandera": "🇪🇸",
     "profesion": "Periodista / Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
@@ -6950,7 +6950,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero / Filántropo",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
@@ -6958,7 +6958,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Es famoso por su organización World Central Kitchen, que proporciona alimentos en zonas de desastre."
   },
   {
@@ -6974,14 +6974,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Ganó el Goya a Mejor Actor por la película 'No habrá paz para los malvados'."
   },
   {
@@ -6997,14 +6997,14 @@
     "bandera": "🇪🇸",
     "profesion": "Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
       "presentador"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es conocido por presentar programas de televisión dedicados a personas mayores en Andalucía."
   },
   {
@@ -7020,14 +7020,14 @@
     "bandera": "🇨🇴",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "colombia",
       "otros"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es un activista por la paz y ha fundado la organización 'Mi Sangre'."
   },
   {
@@ -7043,7 +7043,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cocinero / Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cocinero",
       "espana",
@@ -7051,7 +7051,7 @@
       "presentador"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Lleva más de 30 años en televisión y es famoso por contar chistes mientras cocina."
   },
   {
@@ -7067,7 +7067,7 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer / Humorista",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "argentina",
       "humorista",
@@ -7076,7 +7076,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Participante anunciada para La Velada del Año IV."
   },
   {
@@ -7092,7 +7092,7 @@
     "bandera": "🇮🇹",
     "profesion": "Artista / Inventor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "artista",
       "inventor",
@@ -7100,7 +7100,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Era ambidiestro y podía escribir con una mano mientras dibujaba con la otra (escritura especular)."
   },
   {
@@ -7116,14 +7116,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Es uno de los actores más premiados del cine español, con tres Premios Goya."
   },
   {
@@ -7139,7 +7139,7 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "espana",
@@ -7162,7 +7162,7 @@
     "bandera": "🇪🇸",
     "profesion": "Ex-Presidente del Gobierno",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "ex-presidente-del-gobierno",
@@ -7185,14 +7185,14 @@
     "bandera": "🇵🇱",
     "profesion": "Científica",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cientifica",
       "otros",
       "polonia"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue la primera persona en recibir dos Premios Nobel en distintas especialidades: Física y Química."
   },
   {
@@ -7208,7 +7208,7 @@
     "bandera": "🇺🇸",
     "profesion": "Empresario",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "estados-unidos",
@@ -7231,7 +7231,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -7239,7 +7239,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -7255,7 +7255,7 @@
     "bandera": "🇪🇸",
     "profesion": "Periodista / Presentadora",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "otros",
@@ -7263,7 +7263,7 @@
       "presentadora"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Presentó la primera edición de Gran Hermano en España y es un icono de la televisión."
   },
   {
@@ -7279,14 +7279,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "espana",
       "otros"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Miguel_Herr%C3%A1n_2018.jpg/500px-Miguel_Herr%C3%A1n_2018.jpg",
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Ganó un Premio Goya al mejor actor revelación por la película 'A cambio de nada'."
   },
   {
@@ -7302,7 +7302,7 @@
     "bandera": "🇪🇸",
     "profesion": "Actriz / Cantante",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "cantante",
@@ -7326,14 +7326,14 @@
     "bandera": "🇯🇵",
     "profesion": "Tenista",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "japon",
       "otros",
       "tenista"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue la primera tenista asiática en ser número 1 del mundo en la era Open."
   },
   {
@@ -7349,14 +7349,14 @@
     "bandera": "🇺🇸",
     "profesion": "Astronauta",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "astronauta",
       "estados-unidos",
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Fue la primera persona en caminar sobre la Luna en 1969."
   },
   {
@@ -7372,14 +7372,14 @@
     "bandera": "🇷🇸",
     "profesion": "Baloncestista",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "baloncestista",
       "otros",
       "serbia"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Apodado 'The Joker', ha ganado varios premios MVP de la NBA."
   },
   {
@@ -7395,7 +7395,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "la-velada",
@@ -7419,7 +7419,7 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
@@ -7442,14 +7442,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cantante",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Participó en la sexta edición de Operación Triunfo en 2008."
   },
   {
@@ -7465,7 +7465,7 @@
     "bandera": "🇪🇸",
     "profesion": "Presentador",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
@@ -7488,14 +7488,14 @@
     "bandera": "🇪🇸",
     "profesion": "Pintor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
       "pintor"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Co-fundó el cubismo y es uno de los artistas más influyentes del siglo XX."
   },
   {
@@ -7511,7 +7511,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -7519,7 +7519,7 @@
       "streamer"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f59e0b",
     "funFact": "Participante anunciado para La Velada del Año IV."
   },
   {
@@ -7535,7 +7535,7 @@
     "bandera": "🇺🇸",
     "profesion": "Luchadora de MMA / Luchadora WWE",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "estados-unidos",
       "luchadora-de-mma",
@@ -7543,7 +7543,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#f59e0b",
     "funFact": "Fue la primera mujer estadounidense en ganar una medalla olímpica en judo."
   },
   {
@@ -7559,14 +7559,14 @@
     "bandera": "🇪🇸",
     "profesion": "Político",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "otros",
       "politico"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es el presidente del partido político Vox en España."
   },
   {
@@ -7582,7 +7582,7 @@
     "bandera": "🇪🇸",
     "profesion": "Influencer / Modelo",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "influencer",
@@ -7590,7 +7590,7 @@
       "otros"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Participó en el reality 'Supervivientes' en Honduras."
   },
   {
@@ -7606,14 +7606,14 @@
     "bandera": "🇬🇧",
     "profesion": "Científico",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "cientifico",
       "otros",
       "reino-unido"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "A pesar de ser diagnosticado con ELA a los 21 años y recibir un pronóstico de pocos años de vida, vivió hasta los 76."
   },
   {
@@ -7629,14 +7629,14 @@
     "bandera": "🇪🇸",
     "profesion": "Cantante",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "cantante",
       "espana",
       "otros"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Ha escrito canciones para numerosos artistas, además de su propia exitosa carrera."
   },
   {
@@ -7652,7 +7652,7 @@
     "bandera": "🇬🇧",
     "profesion": "Escritor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "escritor",
       "otros",
@@ -7675,14 +7675,14 @@
     "bandera": "🇪🇸",
     "profesion": "Política",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "otros",
       "politica"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f59e0b",
     "funFact": "Es la vicepresidenta segunda del Gobierno de España y Ministra de Trabajo."
   },
   {
@@ -7698,7 +7698,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "otros",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "la-velada",
@@ -7722,14 +7722,14 @@
     "bandera": "🇪🇸",
     "profesion": "Actor",
     "categoria": "otros",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "actor",
       "espana",
       "otros"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/%C3%81lvaro_Morte_2018.jpg/500px-%C3%81lvaro_Morte_2018.jpg",
-    "color": "#14b8a6",
+    "color": "#f59e0b",
     "funFact": "Es mundialmente conocido por su papel de 'El Profesor' en la serie 'La casa de papel'."
   },
   {
@@ -7745,14 +7745,14 @@
     "bandera": "🇩🇪",
     "profesion": "Ex-Política",
     "categoria": "politica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "alemania",
       "ex-politica",
       "politica"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#fb923c",
     "funFact": "Tiene un doctorado en química cuántica."
   },
   {
@@ -7768,14 +7768,14 @@
     "bandera": "🇺🇸",
     "profesion": "Ex-Presidente",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "ex-presidente",
       "politica"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#fb923c",
     "funFact": "Ganó dos premios Grammy por las versiones en audiolibro de sus memorias."
   },
   {
@@ -7791,7 +7791,7 @@
     "bandera": "🇺🇸",
     "profesion": "Empresario / Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "empresario",
       "estados-unidos",
@@ -7799,7 +7799,7 @@
       "politico"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#fb923c",
     "funFact": "Antes de ser presidente, fue el presentador del reality show 'The Apprentice'."
   },
   {
@@ -7815,7 +7815,7 @@
     "bandera": "🇫🇷",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "francia",
       "politica",
@@ -7838,14 +7838,14 @@
     "bandera": "🇪🇸",
     "profesion": "Rey",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "politica",
       "rey"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#fb923c",
     "funFact": "Fue abanderado del equipo olímpico español en los Juegos Olímpicos de Barcelona 1992."
   },
   {
@@ -7861,13 +7861,13 @@
     "bandera": "🇪🇸",
     "profesion": "Política",
     "categoria": "politica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "politica"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#fb923c",
     "funFact": "Dirigió el área de redes sociales de la cuenta del perro de Esperanza Aguirre, Pecas."
   },
   {
@@ -7883,14 +7883,14 @@
     "bandera": "🇺🇸",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "politica",
       "politico"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#fb923c",
     "funFact": "Superó un tartamudeo en su infancia recitando poesía frente a un espejo."
   },
   {
@@ -7906,14 +7906,14 @@
     "bandera": "🇨🇦",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "canada",
       "politica",
       "politico"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#fb923c",
     "funFact": "Antes de dedicarse a la política, trabajó como profesor de francés y matemáticas."
   },
   {
@@ -7929,7 +7929,7 @@
     "bandera": "🇸🇻",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "el-salvador",
       "politica",
@@ -7952,14 +7952,14 @@
     "bandera": "🇦🇷",
     "profesion": "Líder Religioso",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "lider-religioso",
       "politica"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#fb923c",
     "funFact": "Trabajó como técnico químico y como portero de una discoteca en su juventud."
   },
   {
@@ -7975,14 +7975,14 @@
     "bandera": "🇪🇸",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "politica",
       "politico"
     ],
     "foto": null,
-    "color": "#f43f5e",
+    "color": "#fb923c",
     "funFact": "Es el primer presidente del Gobierno de España que ha sido autor de una moción de censura exitosa."
   },
   {
@@ -7998,14 +7998,14 @@
     "bandera": "🇪🇸",
     "profesion": "Reina",
     "categoria": "politica",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "politica",
       "reina"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#fb923c",
     "funFact": "Antes de casarse con el Rey Felipe VI, fue una reconocida periodista y presentadora de informativos."
   },
   {
@@ -8021,7 +8021,7 @@
     "bandera": "🇷🇺",
     "profesion": "Político",
     "categoria": "politica",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "politica",
       "politico",
@@ -8044,7 +8044,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8052,7 +8052,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Forma parte del grupo de amigos de ElRubius y Mangel, siendo de los primeros YouTubers en España."
   },
   {
@@ -8068,14 +8068,14 @@
     "bandera": "🇺🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "estados-unidos",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es una de las streamers más controvertidas y exitosas, conocida por sus directos en piscinas y ASMR."
   },
   {
@@ -8091,7 +8091,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -8100,7 +8100,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es conocido por su contenido de Fortnite y por formar parte del 'Team Heretics'."
   },
   {
@@ -8116,7 +8116,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8124,7 +8124,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es conocido por su contenido de Fortnite y por formar parte del 'Team Heretics'."
   },
   {
@@ -8140,14 +8140,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "mexico",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es una de las streamers femeninas más grandes de habla hispana."
   },
   {
@@ -8163,14 +8163,14 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Su nombre real es Rodrigo Carrera y es conocido por su humor absurdo."
   },
   {
@@ -8186,7 +8186,7 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "la-velada",
@@ -8194,7 +8194,7 @@
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es el creador de la 'Coscu Army', una de las comunidades más grandes y fieles de Latinoamérica."
   },
   {
@@ -8210,7 +8210,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Presentadora",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "presentadora",
@@ -8218,7 +8218,7 @@
       "streamers"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Ha sido reportera de eSports y presentadora en varios programas de televisión."
   },
   {
@@ -8234,7 +8234,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8242,7 +8242,7 @@
       "youtuber"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DjMaRiiO_2022.jpg/500px-DjMaRiiO_2022.jpg",
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es el creador de contenido de FIFA / EA Sports FC más grande del mundo."
   },
   {
@@ -8258,14 +8258,14 @@
     "bandera": "🇺🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es conocido por sus extensas retransmisiones benéficas, recaudando millones para la caridad."
   },
   {
@@ -8281,14 +8281,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamers",
       "youtuber"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es uno de los mayores expertos de Minecraft en español y conocido por sus series técnicas."
   },
   {
@@ -8304,7 +8304,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8327,14 +8327,14 @@
     "bandera": "🇵🇪",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "peru",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es uno de los streamers más grandes de Perú."
   },
   {
@@ -8350,7 +8350,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "streamer",
@@ -8373,14 +8373,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "espana",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es presidenta de Porcinas FC en la Queens League, junto a Ibai Llanos."
   },
   {
@@ -8396,14 +8396,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
       "streamers"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ibai_Llanos_en_La_Velada_del_A%C3%B1o_3.jpg/500px-Ibai_Llanos_en_La_Velada_del_A%C3%B1o_3.jpg",
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Organiza 'La Velada del Año', un evento de boxeo que rompe récords de audiencia en Twitch."
   },
   {
@@ -8419,7 +8419,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8442,14 +8442,14 @@
     "bandera": "🇨🇴",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "colombia",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Está casado con la streamer Ari Gameplays y reside en México."
   },
   {
@@ -8465,7 +8465,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8488,14 +8488,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es uno de los streamers más veteranos de España, conocido por su tranquilidad y su contenido variado."
   },
   {
@@ -8511,7 +8511,7 @@
     "bandera": "🇲🇽",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "mexico",
       "streamers",
@@ -8534,7 +8534,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -8543,7 +8543,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Vivió muchos años en Los Ángeles, lo que le dio una perspectiva internacional a su contenido."
   },
   {
@@ -8559,7 +8559,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8567,7 +8567,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Vivió muchos años en Los Ángeles, lo que le dio una perspectiva internacional a su contenido."
   },
   {
@@ -8583,7 +8583,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8591,7 +8591,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es uno de los mejores amigos de ElRubius y pionero de YouTube España."
   },
   {
@@ -8607,7 +8607,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8615,7 +8615,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es uno de los mejores amigos de ElRubius y pionero de YouTube España."
   },
   {
@@ -8631,7 +8631,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Actriz",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "actriz",
       "espana",
@@ -8639,7 +8639,7 @@
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es actriz de doblaje y ha participado en series y películas."
   },
   {
@@ -8655,14 +8655,14 @@
     "bandera": "🇲🇽",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "mexico",
       "streamers",
       "youtuber"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Su contenido se caracteriza por un humor muy particular y una edición muy trabajada."
   },
   {
@@ -8678,14 +8678,14 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es conocido por sus retransmisiones desde lugares insólitos y su pasión por el fútbol."
   },
   {
@@ -8701,7 +8701,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / Humorista",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "humorista",
@@ -8725,14 +8725,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamers",
       "youtuber"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es famoso por sus vídeos de viajes y retos extremos."
   },
   {
@@ -8748,14 +8748,14 @@
     "bandera": "🇺🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Fue una de las primeras superestrellas de Twitch gracias a su dominio en el juego Fortnite."
   },
   {
@@ -8771,7 +8771,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Comunicador",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "comunicador",
       "espana",
@@ -8779,7 +8779,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es periodista y uno de los creadores de contenido más respetados de la comunidad española."
   },
   {
@@ -8795,7 +8795,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "la-velada",
@@ -8803,7 +8803,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Participó en La Velada del Año III pero tuvo que retirarse por un problema médico."
   },
   {
@@ -8819,7 +8819,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8827,7 +8827,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es el presidente de Los Troncos FC en la Kings League junto a su amigo Violeta."
   },
   {
@@ -8843,14 +8843,14 @@
     "bandera": "🇨🇦",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "canada",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es una de las streamers femeninas más populares y exitosas del mundo."
   },
   {
@@ -8866,7 +8866,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8889,7 +8889,7 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "la-velada",
       "mexico",
@@ -8897,7 +8897,7 @@
       "streamers"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Es presidenta del equipo PIO FC en la Kings League y la Queens League."
   },
   {
@@ -8913,14 +8913,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "mexico",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es presidenta del equipo PIO FC en la Kings League y la Queens League."
   },
   {
@@ -8936,7 +8936,7 @@
     "bandera": "🇦🇷",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "streamer",
@@ -8944,7 +8944,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Ha lanzado varias canciones y ha realizado giras musicales."
   },
   {
@@ -8960,7 +8960,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8984,7 +8984,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -8992,7 +8992,7 @@
       "youtuber"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es uno de los YouTubers más seguidos del mundo y pionero en España."
   },
   {
@@ -9008,14 +9008,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "mexico",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Es un streamer francés que ganó popularidad en la comunidad hispanohablante jugando a Minecraft."
   },
   {
@@ -9031,14 +9031,14 @@
     "bandera": "🇦🇷",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "argentina",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#f59e0b",
+    "color": "#f43f5e",
     "funFact": "Es uno de los streamers de Twitch de habla hispana con mayor crecimiento en los últimos años."
   },
   {
@@ -9054,14 +9054,14 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamers",
       "youtuber"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es presidente del Rayo de Barcelona en la Kings League."
   },
   {
@@ -9077,7 +9077,7 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer / YouTuber",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -9085,7 +9085,7 @@
       "youtuber"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/TheGrefg.jpg/500px-TheGrefg.jpg",
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Tuvo el récord Guinness de la retransmisión de Twitch más vista simultáneamente."
   },
   {
@@ -9101,7 +9101,7 @@
     "bandera": "🇺🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "estados-unidos",
       "streamer",
@@ -9124,14 +9124,14 @@
     "bandera": "🇺🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "female",
+    "genero": "femenino",
     "tags": [
       "estados-unidos",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es copropietaria de la organización de eSports 100 Thieves."
   },
   {
@@ -9147,7 +9147,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -9171,7 +9171,7 @@
     "bandera": "🇪🇸",
     "profesion": "YouTuber / Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
@@ -9179,7 +9179,7 @@
       "youtuber"
     ],
     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Willyrex_en_2022.jpg/500px-Willyrex_en_2022.jpg",
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Fue uno de los pioneros de YouTube en España, especialmente con contenido de Call of Duty."
   },
   {
@@ -9195,14 +9195,14 @@
     "bandera": "🇲🇽",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "mexico",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#14b8a6",
+    "color": "#f43f5e",
     "funFact": "Es conocido por su humor y por ser uno de los pioneros de Twitch en México."
   },
   {
@@ -9218,14 +9218,14 @@
     "bandera": "🇪🇸",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "espana",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#fb923c",
+    "color": "#f43f5e",
     "funFact": "Conocido por su contenido variado y su sentido del humor."
   },
   {
@@ -9241,14 +9241,14 @@
     "bandera": "🇨🇦",
     "profesion": "Streamer",
     "categoria": "streamers",
-    "genero": "male",
+    "genero": "masculino",
     "tags": [
       "canada",
       "streamer",
       "streamers"
     ],
     "foto": null,
-    "color": "#8b5cf6",
+    "color": "#f43f5e",
     "funFact": "Antes de ser streamer a tiempo completo, fue jugador profesional de Overwatch."
   },
   {
