@@ -30,10 +30,28 @@ const refCm = members.length > 0 ? Math.max(...members.map(f => f.estaturaCm)) :
 const rangeLabel = rango.tipo === 'especial'
   ? rango.slug.replace(/-/g, ' ')
   : `${rango.min_cm}-${rango.max_cm}cm`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": rango.seo.title,
+  "description": rango.seo.description,
+  "numberOfItems": members.length,
+  "itemListElement": members.slice(0, 10).map((f, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Person",
+      "name": f.fullName || f.nombre,
+      "height": { "@type": "QuantitativeValue", "value": f.estaturaCm, "unitCode": "CMT" },
+    }
+  })),
+};
 ---
 <Base
   title={rango.seo.title}
   description={rango.seo.description}
+  schema={schema}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
     <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">

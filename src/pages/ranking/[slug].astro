@@ -77,10 +77,28 @@ const allSlugs = [
 ];
 const currentSlug = Astro.params.slug;
 const otherRankings = allSlugs.filter(r => r.slug !== currentSlug);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": titulo,
+  "description": descripcion,
+  "numberOfItems": top.length,
+  "itemListElement": top.map((f, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Person",
+      "name": f.fullName || f.nombre,
+      "height": { "@type": "QuantitativeValue", "value": f.estaturaCm, "unitCode": "CMT" },
+    }
+  })),
+};
 ---
 <Base
   title={`${titulo} | Estaturas.com`}
   description={descripcion}
+  schema={schema}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
     <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2">

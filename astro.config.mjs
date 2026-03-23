@@ -8,7 +8,12 @@ export default defineConfig({
   integrations: [
     tailwind(),
     react(),
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        item.lastmod = new Date().toISOString();
+        return item;
+      },
+    }),
   ],
   output: 'static',
 });

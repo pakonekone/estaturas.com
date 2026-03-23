@@ -24,10 +24,28 @@ const nearby = famososData.filter(f => Math.abs(f.estaturaCm - cm) <= 2 && f.est
 const ftIn = cmToFtIn(cm);
 const diff = cm - PROMEDIO_H;
 const diffM = cm - PROMEDIO_M;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Famosos que miden ${cm}cm`,
+  "description": `Celebridades y famosos que miden ${cm}cm (${ftIn}).`,
+  "numberOfItems": exact.length,
+  "itemListElement": exact.slice(0, 10).map((f, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Person",
+      "name": f.fullName || f.nombre,
+      "height": { "@type": "QuantitativeValue", "value": f.estaturaCm, "unitCode": "CMT" },
+    }
+  })),
+};
 ---
 <Base
   title={`Famosos que miden ${cm}cm (${ftIn}) | estaturas.com`}
   description={`${exact.length > 0 ? exact.map(f => f.nombre).join(', ') + ' miden' : 'Famosos que miden'} ${cm}cm (${ftIn}). ${exact.length + nearby.length} celebridades con esta estatura aproximada.`}
+  schema={schema}
 >
   <div class="max-w-3xl mx-auto px-4 py-10">
     <nav class="text-sm text-stone-500 mb-6 flex items-center gap-2">
@@ -91,6 +109,17 @@ const diffM = cm - PROMEDIO_M;
         style="background: linear-gradient(135deg, #d97706, #f59e0b)">
         🔄 Abrir comparador
       </a>
+    </div>
+
+    <!-- Related rankings -->
+    <div class="mt-10">
+      <h2 class="text-lg font-bold text-white mb-3">Rankings relacionados</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <a href="/ranking/los-mas-altos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Los famosos más altos</a>
+        <a href="/ranking/los-mas-bajos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Los famosos más bajos</a>
+        {cm >= 190 && <a href="/estatura/famosos-altos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos altos (+190cm)</a>}
+        {cm < 165 && <a href="/estatura/famosos-bajos" class="glass rounded-xl px-4 py-3 text-stone-400 hover:text-white text-sm transition-colors">Famosos bajos (-165cm)</a>}
+      </div>
     </div>
 
     <!-- Browse nearby heights -->
