@@ -340,5 +340,692 @@
         "los-mas-altos-global"
       ]
     }
+  },
+  {
+    "slug": "streamers-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "streamers"
+    },
+    "seo": {
+      "title": "Streamers más altos | estaturas.com",
+      "description": "Ranking de los streamers más altos. Spreen lidera con 193cm.",
+      "keywords": [
+        "streamers mas altos",
+        "cuanto miden los streamers",
+        "streamers estatura"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el streamer más alto? De Ibai a TheGrefg, aquí tienes el ranking completo.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los streamers es de 177cm.",
+      "related_rankings": [
+        "streamers-mas-bajos",
+        "influencers-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "streamers-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "streamers"
+    },
+    "seo": {
+      "title": "Streamers más bajos | estaturas.com",
+      "description": "Los streamers con menor estatura. Rivers_gg con 158cm.",
+      "keywords": [
+        "streamers mas bajos",
+        "streamers bajitos",
+        "streamers estatura baja"
+      ]
+    },
+    "content": {
+      "intro": "Los streamers más bajitos demuestran que la estatura no importa para triunfar en internet.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los streamers es de 177cm.",
+      "related_rankings": [
+        "streamers-mas-altos",
+        "influencers-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "la-velada-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "la-velada"
+    },
+    "seo": {
+      "title": "Participantes de La Velada más altos | estaturas.com",
+      "description": "Ranking de los participantes más altos de La Velada. Misho lidera con 195cm.",
+      "keywords": [
+        "la velada estaturas",
+        "la velada mas altos",
+        "velada ibai estaturas"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el participante más alto en la historia de La Velada de Ibai? Ranking completo.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura de los participantes de La Velada es de 175cm.",
+      "related_rankings": [
+        "la-velada-mas-bajos",
+        "streamers-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "la-velada-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "la-velada"
+    },
+    "seo": {
+      "title": "Participantes de La Velada más bajos | estaturas.com",
+      "description": "Los participantes más bajos de La Velada. Roro Bueno con 150cm.",
+      "keywords": [
+        "la velada bajitos",
+        "la velada estaturas bajas",
+        "velada mas bajo"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el participante más bajo de La Velada? En el ring la estatura puede ser una ventaja... o no.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura de los participantes de La Velada es de 175cm.",
+      "related_rankings": [
+        "la-velada-mas-altos",
+        "streamers-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "politicos-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "politica"
+    },
+    "seo": {
+      "title": "Políticos más altos del mundo | estaturas.com",
+      "description": "Ranking de los políticos y líderes con mayor estatura. Felipe VI de España lidera con 197cm.",
+      "keywords": [
+        "politicos mas altos",
+        "politicos estatura",
+        "presidente mas alto"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el político más alto? De Felipe VI a Pedro Sánchez, descubre quién mide más.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los políticos es de 177cm.",
+      "related_rankings": [
+        "politicos-mas-bajos",
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "politicos-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "politica"
+    },
+    "seo": {
+      "title": "Políticos más bajos del mundo | estaturas.com",
+      "description": "Los políticos con menor estatura. Yolanda Díaz con 160cm.",
+      "keywords": [
+        "politicos mas bajos",
+        "politicos bajitos",
+        "politico mas bajo"
+      ]
+    },
+    "content": {
+      "intro": "La estatura no determina el liderazgo. Estos son los políticos más bajitos.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los políticos es de 177cm.",
+      "related_rankings": [
+        "politicos-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "hombres-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "genero": "masculino"
+    },
+    "seo": {
+      "title": "Famosos hombres más altos | estaturas.com",
+      "description": "Los hombres famosos con mayor estatura. Shaquille O'Neal lidera con 216cm.",
+      "keywords": [
+        "hombres famosos mas altos",
+        "famosos altos",
+        "hombre mas alto famoso"
+      ]
+    },
+    "content": {
+      "intro": "Los hombres famosos que más miden. Deportistas, actores, políticos y streamers.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los hombres famosos es de 181cm.",
+      "related_rankings": [
+        "hombres-mas-bajos",
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "hombres-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "genero": "masculino"
+    },
+    "seo": {
+      "title": "Famosos hombres más bajos | estaturas.com",
+      "description": "Los hombres famosos con menor estatura. Pablo Picasso con 163cm.",
+      "keywords": [
+        "hombres famosos bajitos",
+        "famosos bajos",
+        "famoso mas bajo"
+      ]
+    },
+    "content": {
+      "intro": "Pequeños en estatura pero gigantes en sus carreras. Los hombres famosos que menos miden.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los hombres famosos es de 181cm.",
+      "related_rankings": [
+        "hombres-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "mujeres-mas-altas",
+    "tipo": "mas-altos",
+    "filtro": {
+      "genero": "femenino"
+    },
+    "seo": {
+      "title": "Famosas mujeres más altas | estaturas.com",
+      "description": "Las mujeres famosas con mayor estatura. Garbiñe Muguruza lidera con 182cm.",
+      "keywords": [
+        "mujeres famosas mas altas",
+        "famosas altas",
+        "mujer mas alta famosa"
+      ]
+    },
+    "content": {
+      "intro": "Las mujeres famosas que más miden. Actrices, cantantes, deportistas e influencers.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre las mujeres famosas es de 165cm.",
+      "related_rankings": [
+        "mujeres-mas-bajas",
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "mujeres-mas-bajas",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "genero": "femenino"
+    },
+    "seo": {
+      "title": "Famosas mujeres más bajas | estaturas.com",
+      "description": "Las mujeres famosas con menor estatura. Simone Biles con 142cm.",
+      "keywords": [
+        "mujeres famosas bajitas",
+        "famosas bajas",
+        "famosa mas baja"
+      ]
+    },
+    "content": {
+      "intro": "La estatura no define el talento. Las mujeres famosas que menos miden.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre las mujeres famosas es de 165cm.",
+      "related_rankings": [
+        "mujeres-mas-altas",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-españa-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Famosos españoles más altos | estaturas.com",
+      "description": "Ranking de los famosos españoles con mayor estatura. Pau Gasol lidera con 215cm.",
+      "keywords": [
+        "famosos españoles mas altos",
+        "famosos de España estatura",
+        "cuanto miden los famosos españoles"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de España 🇪🇸 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos españoles en nuestra base de datos es de 176cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-estados-unidos-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Estados Unidos"
+    },
+    "seo": {
+      "title": "Famosos estadounidenses más altos | estaturas.com",
+      "description": "Ranking de los famosos estadounidenses con mayor estatura. Shaquille O'Neal lidera con 216cm.",
+      "keywords": [
+        "famosos estadounidenses mas altos",
+        "famosos de Estados Unidos estatura",
+        "cuanto miden los famosos estadounidenses"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Estados Unidos 🇺🇸 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos estadounidenses en nuestra base de datos es de 178cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-argentina-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Argentina"
+    },
+    "seo": {
+      "title": "Famosos argentinos más altos | estaturas.com",
+      "description": "Ranking de los famosos argentinos con mayor estatura. Emiliano Martínez lidera con 195cm.",
+      "keywords": [
+        "famosos argentinos mas altos",
+        "famosos de Argentina estatura",
+        "cuanto miden los famosos argentinos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Argentina 🇦🇷 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos argentinos en nuestra base de datos es de 174cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-mexico-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "México"
+    },
+    "seo": {
+      "title": "Famosos mexicanos más altos | estaturas.com",
+      "description": "Ranking de los famosos mexicanos con mayor estatura. El Mariana lidera con 194cm.",
+      "keywords": [
+        "famosos mexicanos mas altos",
+        "famosos de México estatura",
+        "cuanto miden los famosos mexicanos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de México 🇲🇽 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos mexicanos en nuestra base de datos es de 169cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-colombia-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Colombia"
+    },
+    "seo": {
+      "title": "Famosos colombianos más altos | estaturas.com",
+      "description": "Ranking de los famosos colombianos con mayor estatura. James Rodríguez lidera con 180cm.",
+      "keywords": [
+        "famosos colombianos mas altos",
+        "famosos de Colombia estatura",
+        "cuanto miden los famosos colombianos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Colombia 🇨🇴 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos colombianos en nuestra base de datos es de 173cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-reino-unido-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Reino Unido"
+    },
+    "seo": {
+      "title": "Famosos británicos más altos | estaturas.com",
+      "description": "Ranking de los famosos británicos con mayor estatura. Harry Styles lidera con 183cm.",
+      "keywords": [
+        "famosos británicos mas altos",
+        "famosos de Reino Unido estatura",
+        "cuanto miden los famosos británicos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Reino Unido 🇬🇧 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos británicos en nuestra base de datos es de 174cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-puerto-rico-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Puerto Rico"
+    },
+    "seo": {
+      "title": "Famosos puertorriqueños más altos | estaturas.com",
+      "description": "Ranking de los famosos puertorriqueños con mayor estatura. Myke Towers lidera con 188cm.",
+      "keywords": [
+        "famosos puertorriqueños mas altos",
+        "famosos de Puerto Rico estatura",
+        "cuanto miden los famosos puertorriqueños"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Puerto Rico 🇵🇷 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos puertorriqueños en nuestra base de datos es de 177cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-brasil-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Brasil"
+    },
+    "seo": {
+      "title": "Famosos brasileños más altos | estaturas.com",
+      "description": "Ranking de los famosos brasileños con mayor estatura. Alisson Becker lidera con 191cm.",
+      "keywords": [
+        "famosos brasileños mas altos",
+        "famosos de Brasil estatura",
+        "cuanto miden los famosos brasileños"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Brasil 🇧🇷 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos brasileños en nuestra base de datos es de 177cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-alemania-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "pais": "Alemania"
+    },
+    "seo": {
+      "title": "Famosos alemanes más altos | estaturas.com",
+      "description": "Ranking de los famosos alemanes con mayor estatura. Antonio Rüdiger lidera con 190cm.",
+      "keywords": [
+        "famosos alemanes mas altos",
+        "famosos de Alemania estatura",
+        "cuanto miden los famosos alemanes"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Alemania 🇩🇪 ordenados por estatura. ¿Quién es el más alto?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos alemanes en nuestra base de datos es de 180cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "otros-famosos-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "otros"
+    },
+    "seo": {
+      "title": "Otros famosos más altos | estaturas.com",
+      "description": "Ranking de famosos de diferentes categorías con mayor estatura. Giannis Antetokounmpo con 211cm.",
+      "keywords": [
+        "famosos mas altos",
+        "otros famosos estatura",
+        "famosos alto"
+      ]
+    },
+    "content": {
+      "intro": "Famosos de diferentes ámbitos: empresarios, presentadores, modelos y más. Ordenados por estatura.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura en esta categoría es de 174cm.",
+      "related_rankings": [
+        "otros-famosos-mas-bajos",
+        "los-mas-altos-global"
+      ]
+    }
+  },
+  {
+    "slug": "otros-famosos-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "otros"
+    },
+    "seo": {
+      "title": "Otros famosos más bajos | estaturas.com",
+      "description": "Los famosos de diferentes categorías con menor estatura. Marie Curie con 153cm.",
+      "keywords": [
+        "famosos mas bajos",
+        "famosos bajitos",
+        "famoso bajo"
+      ]
+    },
+    "content": {
+      "intro": "Personalidades de múltiples ámbitos que no necesitan estatura para destacar.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura en esta categoría es de 174cm.",
+      "related_rankings": [
+        "otros-famosos-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-espana-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Famosos españoles más bajos | estaturas.com",
+      "description": "Los famosos españoles con menor estatura. Roro Bueno con 150cm.",
+      "keywords": [
+        "famosos españoles bajitos",
+        "famosos españa mas bajos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de España 🇪🇸 que menos miden. ¡La estatura no lo es todo!",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos españoles es de 176cm.",
+      "related_rankings": [
+        "famosos-espana-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-argentina-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "Argentina"
+    },
+    "seo": {
+      "title": "Famosos argentinos más bajos | estaturas.com",
+      "description": "Los famosos argentinos con menor estatura. Nicki Nicole con 150cm.",
+      "keywords": [
+        "famosos argentinos bajitos",
+        "famosos argentina mas bajos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Argentina 🇦🇷 que menos miden.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos argentinos es de 174cm.",
+      "related_rankings": [
+        "famosos-argentina-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-mexico-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "México"
+    },
+    "seo": {
+      "title": "Famosos mexicanos más bajos | estaturas.com",
+      "description": "Los famosos mexicanos con menor estatura. Salma Hayek con 157cm.",
+      "keywords": [
+        "famosos mexicanos bajitos",
+        "famosos mexico mas bajos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de México 🇲🇽 que menos miden.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos mexicanos es de 169cm.",
+      "related_rankings": [
+        "famosos-mexico-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-colombia-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "pais": "Colombia"
+    },
+    "seo": {
+      "title": "Famosos colombianos más bajos | estaturas.com",
+      "description": "Los famosos colombianos con menor estatura. Shakira con 157cm.",
+      "keywords": [
+        "famosos colombianos bajitos",
+        "famosos colombia mas bajos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Colombia 🇨🇴 que menos miden.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos colombianos es de 173cm.",
+      "related_rankings": [
+        "famosos-colombia-mas-altos",
+        "los-mas-bajos-global"
+      ]
+    }
+  },
+  {
+    "slug": "politicos-espanoles-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "categoria": "politica",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Políticos españoles más altos | estaturas.com",
+      "description": "Ranking de los políticos españoles con mayor estatura. Felipe VI de España lidera con 197cm.",
+      "keywords": [
+        "politicos españoles mas altos",
+        "politicos españa estatura",
+        "presidente mas alto españa"
+      ]
+    },
+    "content": {
+      "intro": "¿Quién es el político español más alto? De Felipe VI a Pedro Sánchez.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los políticos españoles es de 176cm.",
+      "related_rankings": [
+        "politicos-mas-bajos",
+        "famosos-espana-mas-altos"
+      ]
+    }
+  },
+  {
+    "slug": "politicos-espanoles-mas-bajos",
+    "tipo": "mas-bajos",
+    "filtro": {
+      "categoria": "politica",
+      "pais": "España"
+    },
+    "seo": {
+      "title": "Políticos españoles más bajos | estaturas.com",
+      "description": "Los políticos españoles con menor estatura. Yolanda Díaz con 160cm.",
+      "keywords": [
+        "politicos españoles mas bajos",
+        "politico español mas bajo"
+      ]
+    },
+    "content": {
+      "intro": "Los políticos españoles que menos miden. ¿Quién es el más bajito del Congreso?",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los políticos españoles es de 176cm.",
+      "related_rankings": [
+        "politicos-espanoles-mas-altos",
+        "famosos-espana-mas-bajos"
+      ]
+    }
+  },
+  {
+    "slug": "famosos-latinos-mas-altos",
+    "tipo": "mas-altos",
+    "filtro": {
+      "region": "latinoamerica"
+    },
+    "seo": {
+      "title": "Famosos latinos más altos | estaturas.com",
+      "description": "Ranking de los famosos latinoamericanos con mayor estatura. Emiliano Martínez lidera con 195cm.",
+      "keywords": [
+        "famosos latinos mas altos",
+        "latinoamericanos estatura",
+        "famosos latinos altos"
+      ]
+    },
+    "content": {
+      "intro": "Los famosos de Latinoamérica que más miden. Futbolistas, músicos y streamers.",
+      "datos_extra": {},
+      "conclusion": "El promedio de estatura entre los famosos latinos es de 174cm.",
+      "related_rankings": [
+        "los-mas-altos-global"
+      ]
+    }
   }
 ]

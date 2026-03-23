@@ -33,7 +33,7 @@ export function getStaticPaths() {
         intro: r.content.intro,
         conclusion: r.content.conclusion,
         categoria: r.filtro.categoria ?? null,
-        filtroPais: undefined as string | undefined,
+        filtroPais: (r.filtro as any).pais as string | undefined,
         filtrosPais: undefined as string[] | undefined,
         filtroGenero: r.filtro.genero as string | undefined,
         orden: (r.tipo === 'mas-bajos' ? 'asc' : 'desc') as 'asc' | 'desc',
@@ -53,6 +53,8 @@ if (categoria) {
 }
 if (filtroPais === 'espana') {
   filtered = filtered.filter(f => f.pais.toLowerCase().includes('españa'));
+} else if (filtroPais) {
+  filtered = filtered.filter(f => f.pais === filtroPais);
 }
 if (filtrosPais) {
   filtered = filtered.filter(f => filtrosPais.includes(f.pais));
