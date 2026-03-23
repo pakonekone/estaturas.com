@@ -1,0 +1,273 @@
+---
+import Base from '../layouts/Base.astro';
+import famososData from '../data/famosos.json';
+
+// All 20 La Velada VI participants (by id)
+const veladaIds = [
+  // Combate 1: Edu Aguirre vs Gastón Edul
+  'edu-aguirre', 'gaston-edul',
+  // Combate 2: Fabiana Sevillana vs La Parce
+  'fabiana-sevillana', 'la-parce',
+  // Combate 3: Clersss vs Natalia MX
+  'clersss', 'natalia-mx',
+  // Combate 4: Lit Killah vs Kidd Keo
+  'lit-killah', 'kidd-keo',
+  // Combate 5: Alondrissa vs Angie Velasco
+  'alondrissa', 'angie-velasco',
+  // Combate 6: Gero Arias vs Viruzz
+  'gero-arias', 'viruzz',
+  // Combate 7: Samy Rivers vs Roro
+  'samy-rivers', 'roro-bueno',
+  // Combate 8: Marta Díaz vs Tatiana Kaer
+  'marta-diaz', 'tatiana-kaer',
+  // Combate 9 (Leyendas): Fernanfloo vs Plex
+  'fernanfloo', 'plex',
+  // Combate 10 (Estelar): IlloJuan vs TheGrefg
+  'illojuan', 'thegrefg',
+];
+
+const fights = [
+  { a: 'edu-aguirre', b: 'gaston-edul', label: 'Combate 1', tag: 'España vs Argentina' },
+  { a: 'fabiana-sevillana', b: 'la-parce', label: 'Combate 2', tag: 'TikTok Wars' },
+  { a: 'clersss', b: 'natalia-mx', label: 'Combate 3', tag: 'Creadoras' },
+  { a: 'lit-killah', b: 'kidd-keo', label: 'Combate 4', tag: 'Rap Battle' },
+  { a: 'alondrissa', b: 'angie-velasco', label: 'Combate 5', tag: 'Streamers' },
+  { a: 'gero-arias', b: 'viruzz', label: 'Combate 6', tag: 'El Bruto' },
+  { a: 'samy-rivers', b: 'roro-bueno', label: 'Combate 7', tag: 'La Revancha' },
+  { a: 'marta-diaz', b: 'tatiana-kaer', label: 'Combate 8', tag: 'Influencers' },
+  { a: 'fernanfloo', b: 'plex', label: 'Combate 9', tag: '🏆 Leyendas' },
+  { a: 'illojuan', b: 'thegrefg', label: 'Combate 10', tag: '⭐ Estelar' },
+];
+
+const famososMap = new Map(famososData.map(f => [f.id, f]));
+
+const cmToFtIn = (cm: number) => {
+  const i = cm / 2.54, ft = Math.floor(i / 12);
+  return `${ft}'${Math.round(i % 12)}"`;
+};
+
+// All participants sorted by height
+const allParticipants = veladaIds
+  .map(id => famososMap.get(id))
+  .filter(Boolean)
+  .sort((a, b) => b!.estaturaCm - a!.estaturaCm);
+
+const tallest = allParticipants[0];
+const shortest = allParticipants[allParticipants.length - 1];
+const avgHeight = Math.round(allParticipants.reduce((s, f) => s + f!.estaturaCm, 0) / allParticipants.length);
+
+const title = 'La Velada del Año VI: Estaturas de todos los participantes | 25 julio 2026';
+const description = `Las estaturas reales de los 20 participantes de La Velada VI de Ibai Llanos. 10 combates, comparaciones visuales y datos curiosos. ✓ Verificado.`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "La Velada del Año VI",
+  "startDate": "2026-07-25",
+  "location": {
+    "@type": "Place",
+    "name": "Estadio La Cartuja",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sevilla", "addressCountry": "ES" }
+  },
+  "organizer": { "@type": "Person", "name": "Ibai Llanos" },
+  "description": "Evento de boxeo entre creadores de contenido organizado por Ibai Llanos."
+};
+---
+<Base title={title} description={description} schema={schema}>
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Breadcrumbs -->
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <a href="/categoria/la-velada" class="hover:text-slate-300 transition-colors">La Velada</a>
+      <span>›</span>
+      <span class="text-slate-300">La Velada VI</span>
+    </nav>
+
+    <!-- Hero -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold mb-4"
+        style="background: linear-gradient(135deg, #ec4899, #8b5cf6); color: white;">
+        🥊 25 julio 2026 · Sevilla, La Cartuja
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mb-4">
+        La Velada del Año <span style="color: #ec4899;">VI</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+        Las estaturas reales de los <strong class="text-white">20 participantes</strong> en los 10 combates del evento de boxeo más grande del streaming.
+      </p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="grid grid-cols-3 gap-3 mb-12">
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black" style="color: #ec4899;">20</p>
+        <p class="text-slate-500 text-xs">Participantes</p>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black" style="color: #8b5cf6;">10</p>
+        <p class="text-slate-500 text-xs">Combates</p>
+      </div>
+      <div class="glass rounded-2xl p-4 text-center">
+        <p class="text-2xl font-black" style="color: #14b8a6;">{avgHeight}cm</p>
+        <p class="text-slate-500 text-xs">Media</p>
+      </div>
+    </div>
+
+    <!-- Fights -->
+    <h2 class="text-2xl font-black text-white mb-6">🥊 Los 10 combates</h2>
+    <div class="space-y-4 mb-16">
+      {fights.map(fight => {
+        const a = famososMap.get(fight.a);
+        const b = famososMap.get(fight.b);
+        if (!a || !b) return null;
+        const diff = Math.abs(a.estaturaCm - b.estaturaCm);
+        const taller = a.estaturaCm >= b.estaturaCm ? a : b;
+        const isEstelar = fight.tag.includes('Estelar');
+        const isLeyendas = fight.tag.includes('Leyendas');
+        const borderColor = isEstelar ? '#f59e0b' : isLeyendas ? '#8b5cf6' : '#ec489944';
+        return (
+          <div class={`glass rounded-2xl p-5 transition-all ${isEstelar ? 'ring-2 ring-amber-500/30' : isLeyendas ? 'ring-1 ring-purple-500/20' : ''}`}
+            style={`border-color: ${borderColor}`}>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">{fight.label}</span>
+              <span class="text-xs px-2 py-0.5 rounded-full font-bold"
+                style={`background: ${isEstelar ? '#f59e0b22' : isLeyendas ? '#8b5cf622' : '#ec489922'}; color: ${isEstelar ? '#f59e0b' : isLeyendas ? '#8b5cf6' : '#ec4899'}`}>
+                {fight.tag}
+              </span>
+            </div>
+            <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+              {/* Fighter A */}
+              <a href={`/${a.id}`} class="group text-center">
+                <p class="text-2xl mb-1">{a.bandera}</p>
+                <p class="font-bold text-white group-hover:text-pink-400 transition-colors text-sm sm:text-base">{a.nombre}</p>
+                <p class="text-xs text-slate-500">{a.profesion?.split('/')[0].trim()}</p>
+                <p class="font-black text-lg mt-1" style="color: #ec4899">{a.estaturaCm}cm</p>
+                <p class="text-slate-600 text-xs">{cmToFtIn(a.estaturaCm)}</p>
+              </a>
+              {/* VS center */}
+              <div class="text-center">
+                <div class="text-xl font-black text-slate-600">VS</div>
+                {diff > 0 && (
+                  <p class="text-xs text-slate-500 mt-1">{diff}cm de diferencia</p>
+                )}
+                {diff === 0 && (
+                  <p class="text-xs text-slate-500 mt-1">Misma estatura</p>
+                )}
+              </div>
+              {/* Fighter B */}
+              <a href={`/${b.id}`} class="group text-center">
+                <p class="text-2xl mb-1">{b.bandera}</p>
+                <p class="font-bold text-white group-hover:text-pink-400 transition-colors text-sm sm:text-base">{b.nombre}</p>
+                <p class="text-xs text-slate-500">{b.profesion?.split('/')[0].trim()}</p>
+                <p class="font-black text-lg mt-1" style="color: #8b5cf6">{b.estaturaCm}cm</p>
+                <p class="text-slate-600 text-xs">{cmToFtIn(b.estaturaCm)}</p>
+              </a>
+            </div>
+            {/* Height comparison bar */}
+            <div class="mt-3 flex items-center gap-2">
+              <div class="flex-1 h-2 rounded-full" style="background: rgba(148,163,184,0.1)">
+                <div class="h-2 rounded-full" style={`width: ${(a.estaturaCm / Math.max(a.estaturaCm, b.estaturaCm)) * 100}%; background: #ec4899`}></div>
+              </div>
+              <div class="flex-1 h-2 rounded-full" style="background: rgba(148,163,184,0.1)">
+                <div class="h-2 rounded-full ml-auto" style={`width: ${(b.estaturaCm / Math.max(a.estaturaCm, b.estaturaCm)) * 100}%; background: #8b5cf6`}></div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Full ranking by height -->
+    <h2 class="text-2xl font-black text-white mb-6">📏 Ranking por estatura</h2>
+    <p class="text-slate-400 mb-6">Los 20 participantes de La Velada VI ordenados de más alto a más bajo.</p>
+    <div class="space-y-2 mb-16">
+      {allParticipants.map((f, i) => {
+        if (!f) return null;
+        const barPct = (f.estaturaCm / (tallest?.estaturaCm ?? 200)) * 100;
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : null;
+        return (
+          <a href={`/${f.id}`}
+            class="group block glass rounded-2xl p-4 transition-all hover:-translate-y-0.5"
+            onmouseover={`this.style.borderColor='#ec489944'`}
+            onmouseout={`this.style.borderColor=''`}>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <div class="w-8 flex-shrink-0 text-center">
+                {medal
+                  ? <span class="text-xl">{medal}</span>
+                  : <span class="text-slate-500 font-mono text-sm font-bold">{i + 1}</span>
+                }
+              </div>
+              <div class="text-xl flex-shrink-0">{f.bandera}</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-baseline justify-between mb-1.5">
+                  <div class="min-w-0">
+                    <p class="font-bold text-white group-hover:text-pink-400 transition-colors truncate">
+                      {f.nombre}
+                    </p>
+                    <p class="text-slate-500 text-xs truncate">{f.profesion?.split('/')[0].trim()}</p>
+                  </div>
+                  <div class="text-right flex-shrink-0 ml-3">
+                    <span class="font-black text-xl" style="color: #ec4899">{f.estaturaCm}cm</span>
+                    <span class="text-slate-500 text-xs ml-1.5 hidden sm:inline">{cmToFtIn(f.estaturaCm)}</span>
+                  </div>
+                </div>
+                <div class="w-full rounded-full h-1.5" style="background: rgba(148,163,184,0.1)">
+                  <div class="h-1.5 rounded-full transition-all duration-700"
+                    style={`width: ${barPct}%; background: linear-gradient(to right, #ec489988, #ec4899)`} />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Fun facts section -->
+    <h2 class="text-2xl font-black text-white mb-6">🎉 Datos curiosos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-16">
+      <div class="glass rounded-2xl p-5">
+        <p class="text-sm text-slate-500 mb-1">El más alto</p>
+        <p class="font-bold text-white">{tallest?.nombre} — <span style="color: #ec4899">{tallest?.estaturaCm}cm</span></p>
+      </div>
+      <div class="glass rounded-2xl p-5">
+        <p class="text-sm text-slate-500 mb-1">La más baja</p>
+        <p class="font-bold text-white">{shortest?.nombre} — <span style="color: #8b5cf6">{shortest?.estaturaCm}cm</span></p>
+      </div>
+      <div class="glass rounded-2xl p-5">
+        <p class="text-sm text-slate-500 mb-1">Mayor diferencia</p>
+        <p class="font-bold text-white">{tallest?.estaturaCm && shortest?.estaturaCm ? tallest.estaturaCm - shortest.estaturaCm : '?'}cm entre {tallest?.nombre} y {shortest?.nombre}</p>
+      </div>
+      <div class="glass rounded-2xl p-5">
+        <p class="text-sm text-slate-500 mb-1">Estatura media</p>
+        <p class="font-bold text-white">{avgHeight}cm — {cmToFtIn(avgHeight)}</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mb-12">
+      <a href="/"
+        class="btn-glow inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-xl text-lg"
+        style="background: linear-gradient(135deg, #ec4899, #8b5cf6)">
+        🔄 Compara a los participantes
+      </a>
+    </div>
+
+    <!-- Related links -->
+    <h2 class="text-2xl font-black text-white mb-6">Más contenido</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <a href="/categoria/la-velada" class="glass rounded-xl p-4 text-sm text-slate-400 hover:text-white transition-colors group">
+        <p class="font-semibold group-hover:text-pink-400 transition-colors">🥊 Todos los participantes de La Velada (todas las ediciones)</p>
+      </a>
+      <a href="/categoria/streamers" class="glass rounded-xl p-4 text-sm text-slate-400 hover:text-white transition-colors group">
+        <p class="font-semibold group-hover:text-pink-400 transition-colors">🎮 Estaturas de Streamers</p>
+      </a>
+      <a href="/categoria/musica" class="glass rounded-xl p-4 text-sm text-slate-400 hover:text-white transition-colors group">
+        <p class="font-semibold group-hover:text-pink-400 transition-colors">🎵 Estaturas de Músicos</p>
+      </a>
+      <a href="/ranking/futbolistas-mas-altos" class="glass rounded-xl p-4 text-sm text-slate-400 hover:text-white transition-colors group">
+        <p class="font-semibold group-hover:text-pink-400 transition-colors">⚽ Futbolistas más altos</p>
+      </a>
+    </div>
+  </div>
+</Base>
