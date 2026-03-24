@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({ params: { id: post.id.replace(/\.md$/, '') }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.date,
+  "author": { "@type": "Organization", "name": "estaturas.com" },
+  "publisher": { "@type": "Organization", "name": "estaturas.com", "url": "https://estaturas.com" }
+};
+---
+<Base title={`${post.data.title} | estaturas.com`} description={post.data.description} schema={schema}>
+  <article class="max-w-3xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-slate-300 transition-colors">Inicio</a>
+      <span>›</span>
+      <a href="/blog" class="hover:text-slate-300 transition-colors">Blog</a>
+      <span>›</span>
+      <span class="text-slate-300 truncate">{post.data.title}</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <time class="text-sm text-slate-500">{new Date(post.data.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        {post.data.tags.map(tag => (
+          <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background: #ec489922; color: #ec4899;">{tag}</span>
+        ))}
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">{post.data.title}</h1>
+    </header>
+
+    <div class="prose prose-invert prose-slate max-w-none
+      prose-headings:font-black prose-headings:text-white
+      prose-a:text-pink-400 prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-white
+      prose-p:text-slate-300 prose-p:leading-relaxed
+      prose-li:text-slate-300
+      prose-img:rounded-xl">
+      <Content />
+    </div>
+
+    <div class="mt-12 pt-8 border-t" style="border-color: rgba(255,245,235,0.06);">
+      <a href="/blog" class="text-pink-400 hover:underline font-medium">&larr; Volver al blog</a>
+    </div>
+  </article>
+</Base>

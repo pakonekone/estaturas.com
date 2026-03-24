@@ -62,6 +62,7 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
       <nav class="flex items-center gap-1">
         {[
           { href: '/famosos', label: 'Famosos' },
+          { href: '/blog', label: 'Blog' },
           { href: '/quiz', label: 'Quiz' },
           { href: '/ranking/futbolistas-mas-altos', label: 'Rankings' },
         ].map(n => (
