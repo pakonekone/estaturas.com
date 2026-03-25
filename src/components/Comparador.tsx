@@ -72,21 +72,84 @@ const PersonBar: FC<{
   );
 };
 
-/* ─── Person Visual (silhouette PNG with bar fallback) ──────────────── */
+/* ─── Person Photo Fallback ─────────────────────────────────────────── */
+// Shows celebrity photo in a rounded capsule shape when silhouette is missing.
+const PersonPhoto: FC<{
+  foto: string; colorFrom: string; colorTo: string; gradId: string;
+  displayH: number; animate: boolean; clipId: string;
+}> = ({ foto, colorFrom, colorTo, gradId, displayH, animate, clipId }) => {
+  const [ready, setReady] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  useEffect(() => {
+    const t = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(t);
+  }, []);
+
+  const scale = ready && animate ? 1 : animate ? 0 : 1;
+  const capsuleW = 36;
+  const capsuleH = Math.max(displayH, 20);
+  const totalW = Math.max(BAR_W, HEAD_R * 2);
+  const capsuleX = totalW / 2 - capsuleW / 2;
+  const borderR = capsuleW / 2;
+
+  if (imgError) {
+    return (
+      <PersonBar
+        colorFrom={colorFrom} colorTo={colorTo}
+        gradId={gradId} displayH={displayH} animate={animate}
+      />
+    );
+  }
+
+  return (
+    <g style={{ transformBox: 'fill-box', transformOrigin: 'bottom', transform: `scaleY(${scale})`, transition: 'transform 0.5s cubic-bezier(0.34,1.2,0.64,1)' }}>
+      <defs>
+        <clipPath id={clipId}>
+          <rect x={capsuleX} y={0} width={capsuleW} height={capsuleH} rx={borderR} />
+        </clipPath>
+        <linearGradient id={`${gradId}-overlay`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={colorFrom} stopOpacity="0" />
+          <stop offset="85%" stopColor={colorTo} stopOpacity="0.5" />
+        </linearGradient>
+      </defs>
+      {/* Photo clipped to capsule */}
+      <image
+        href={foto}
+        x={capsuleX - 8}
+        y={0}
+        width={capsuleW + 16}
+        height={capsuleH}
+        preserveAspectRatio="xMidYMid slice"
+        clipPath={`url(#${clipId})`}
+        onError={() => setImgError(true)}
+      />
+      {/* Gradient overlay for visual consistency */}
+      <rect x={capsuleX} y={0} width={capsuleW} height={capsuleH} rx={borderR}
+        fill={`url(#${gradId}-overlay)`} />
+      {/* Subtle border */}
+      <rect x={capsuleX} y={0} width={capsuleW} height={capsuleH} rx={borderR}
+        fill="none" stroke={colorFrom} strokeWidth={1} strokeOpacity={0.3} />
+    </g>
+  );
+};
+
+/* ─── Person Visual (silhouette PNG with photo/bar fallback) ────────── */
 const PersonVisual: FC<{
   persona: Persona; displayH: number; palette: { from: string; to: string };
   gradId: string; animate: boolean;
 }> = ({ persona, displayH, palette, gradId, animate }) => {
   const [silData, setSilData] = useState<{ w: number; h: number } | null>(null);
-  const [error, setError] = useState(false);
+  const [silError, setSilError] = useState(false);
   const [ready, setReady] = useState(false);
+  const clipId = `${gradId}-clip`;
 
   useEffect(() => {
-    if (!persona.esFamoso) { setError(true); return; }
+    if (!persona.esFamoso) { setSilError(true); return; }
     const img = new Image();
     img.src = `/silhouettes/${persona.id}.png`;
     img.onload = () => setSilData({ w: img.naturalWidth, h: img.naturalHeight });
-    img.onerror = () => setError(true);
+    img.onerror = () => setSilError(true);
   }, [persona.id, persona.esFamoso]);
 
   useEffect(() => {
@@ -94,8 +157,16 @@ const PersonVisual: FC<{
     return () => cancelAnimationFrame(t);
   }, []);
 
-  // No silhouette or custom person → fallback to bar
-  if (error || !silData) {
+  // No silhouette → try photo fallback, then bar
+  if (silError || !silData) {
+    if (persona.foto && persona.esFamoso) {
+      return (
+        <PersonPhoto
+          foto={persona.foto} colorFrom={palette.from} colorTo={palette.to}
+          gradId={gradId} displayH={displayH} animate={animate} clipId={clipId}
+        />
+      );
+    }
     return (
       <PersonBar
         colorFrom={palette.from} colorTo={palette.to}
